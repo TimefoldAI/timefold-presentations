@@ -1,5 +1,14 @@
-
-// image::docs/src/modules/ROOT/images/shared/timefold-logo.png[link="https://timefold.ai",Timefold,150,150,align="center"]
+image::src/timefold-solver-docs/shared/timefold-logo.png[link="https://timefold.ai",Timefold,150,150,align="center"]
 
 _Planning optimization made easy._ +
 https://timefold.ai[timefold.ai]
+
+== Copy images and extract SVG layers as PNG
+
+. Clone this repo next to a `tf-main` dir which contains `timefold-solver` and `timefold-quickstarts`.
+
+. Run the script
++
+----
+$ src/script/copyImagesAndExtractSvgLayers.sh
+----
