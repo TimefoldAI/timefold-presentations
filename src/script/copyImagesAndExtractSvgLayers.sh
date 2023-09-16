@@ -9,9 +9,14 @@ timefoldPresentationsDir=`pwd`
 timefoldSolverDir=../tf-main/timefold-solver
 timefoldQuickstartsDir=../tf-main/timefold-quickstarts
 
+if ! which inkscape > /dev/null; then
+  echo "ERROR Inkscape is not installed. Install it first."
+  exit
+fi
+
 function processImages() {
   if [ $# -ne 2 ]; then
-    echo "ERROR processImages: invalid number of arguments ($2)"
+    echo "ERROR processImages: invalid number of arguments ($#)"
     exit
   fi
 
@@ -40,6 +45,24 @@ function processImages() {
     echo "Copying ${svgOutputFile}"
     mkdir -p ${outputDir}${relativeParentDirPath}
     cp ${svgInputFile} ${svgOutputFile}
+    extractLayers ${svgOutputFile}
+  done
+}
+
+function extractLayers() {
+  if [ $# -ne 1 ]; then
+    echo "ERROR extractLayers: invalid number of arguments ($#)"
+    exit
+  fi
+
+  svgFile=$1
+  noExtensionFile=`echo ${svgFile} | sed "s|\.svg||g"`
+  layerIdList=($(inkscape --query-all ${svgFile} | grep layer | sed "s|,.*||g" | sort))
+
+  for index in "${!layerIdList[@]}";
+  do
+    select=`echo "${layerIdList[@]:($index + 1)}" | sed "s| |,|g"`
+    inkscape ${svgFile} --select="${select}" --actions="delete" -j -C --export-type=png --export-filename=${noExtensionFile}_${index}.png
   done
 }
 

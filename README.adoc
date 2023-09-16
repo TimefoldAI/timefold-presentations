@@ -12,3 +12,5 @@ https://timefold.ai[timefold.ai]
 ----
 $ src/script/copyImagesAndExtractSvgLayers.sh
 ----
+
+WARNING: Before committing the changes, make sure you delete any old svg or png files that got moved.
