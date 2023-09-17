@@ -13,4 +13,8 @@ https://timefold.ai[timefold.ai]
 $ src/script/syncImages.sh
 ----
 
+IMPORTANT: The SVG layers in upstream must have *the first slide at the bottom layer*
+and the last slide at the top layer.
+This way, later slides can overwrite earlier slides.
+
 WARNING: Before committing the changes, make sure you delete any old svg or png files that got moved.

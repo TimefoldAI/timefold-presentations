@@ -58,7 +58,8 @@ function extractLayers() {
 
   svgFile=$1
   noExtensionFile=`echo ${svgFile} | sed "s|\.svg||g"`
-  layerIdList=($(inkscape --query-all ${svgFile} | grep layer | sed "s|,.*||g" | sort --version-sort))
+  # Do not sort the layerIds. Deliberately keep them from the bottom to top layer.
+  layerIdList=($(inkscape --query-all ${svgFile} | grep layer | sed "s|,.*||g"))
 
   echo "    <section>" >> slidedecks/inventory.html
   for index in "${!layerIdList[@]}";
