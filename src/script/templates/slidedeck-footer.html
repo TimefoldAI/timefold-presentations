@@ -1,0 +1,33 @@
+</div></div>
+
+<script src="../src/web/jquery/jquery.min.js"></script>
+<script src="../src/web/reveal/js/reveal.js"></script>
+
+<script>
+  var showControls = true;
+  if (window.location.search.match(/print-pdf/gi) || window.location.search.match(/noInstructions/gi)) {
+    showControls = false;
+    $('.instruction').remove();
+  }
+
+  Reveal.initialize({
+    controls: showControls,
+    progress: true,
+    history: true,
+    center: false,
+    theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+    transition: Reveal.getQueryHash().transition || 'linear', // page/linear/fade/none
+
+    margin: 0.05,
+    minScale: 0.2,
+    maxScale: 100.0
+  });
+</script>
+<script src="../src/web/highlight/highlight.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+  hljs.LANGUAGES.drl=function(a){return{k:"rule when then end",c:[a.CLCM,a.CBLCLM,a.ASM,a.QSM]}}(hljs);
+</script>
+
+</body>
+</html>

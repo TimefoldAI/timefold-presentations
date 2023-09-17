@@ -1,0 +1,1123 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Timefold presentation</title>
+    <meta name="description" content="This slide deck explains Timefold: an open source constraint satisfaction solver in Java">
+<!--    <link href="https://github.com/TimefoldAI/timefold-presentations" rel="canonical">-->
+
+    <link rel="stylesheet" href="../src/web/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../src/web/reveal/css/reveal.css">
+    <link rel="stylesheet" href="../src/web/reveal/css/theme/simple.css" id="theme">
+    <script>
+      if (window.location.search.match(/print-pdf/gi)) {
+        document.write('<link rel="stylesheet" href="../src/web/reveal/css/print/pdf.css">');
+      }
+    </script>
+    <link rel="stylesheet" href="../src/web/highlight/highlight.css">
+    <link rel="stylesheet" href="../src/web/timefold-presentation.css">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+
+<body>
+<div class="reveal">
+    <div class="watermark watermark-left">
+        <p>
+            <img src="../src/web/social/twitter-logo.png"/>
+            @GeoffreyDeSmet
+        </p>
+    </div>
+    <div class="slides">
+    <section>
+        <img src="../src/content/timefold-solver-docs/benchmarking-and-tweaking/benchmarkAggregator_0.png" class="fullImage">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/benchmarking-and-tweaking/benchmarkOverview_0.png" class="fullImage">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/benchmarking-and-tweaking/letTheBestScoreStatisticGuideYou_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/benchmarking-and-tweaking/letTheBestScoreStatisticGuideYou_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/benchmarking-and-tweaking/letTheBestScoreStatisticGuideYou_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/benchmarking-and-tweaking/letTheBestScoreStatisticGuideYou_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/configuration/bidirectionalVariable_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/configuration/bidirectionalVariable_1.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/configuration/chainCorrection_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/configuration/chainCorrection_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/configuration/chainCorrection_2.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/configuration/chainPrinciples_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/configuration/chainPrinciples_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/configuration/chainPrinciples_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/configuration/chainPrinciples_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/configuration/chainPrinciples_4.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/configuration/inputOutputOverviewEmployeeRostering_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/configuration/inputOutputOverviewEmployeeRostering_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/configuration/inputOutputOverviewEmployeeRostering_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/configuration/inputOutputOverviewEmployeeRostering_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/configuration/inputOutputOverview_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/configuration/inputOutputOverview_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/configuration/inputOutputOverview_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/configuration/inputOutputOverview_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/configuration/inputOutputOverviewVehicleRouting_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/configuration/inputOutputOverviewVehicleRouting_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/configuration/inputOutputOverviewVehicleRouting_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/configuration/inputOutputOverviewVehicleRouting_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/configuration/planningVariableListener_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/configuration/planningVariableListener_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/configuration/planningVariableListener_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/configuration/planningVariableListener_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/configuration/shadowVariableOrder_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/configuration/shadowVariableOrder_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/configuration/shadowVariableOrder_2.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/configuration/solutionCloning_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/configuration/solutionCloning_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/configuration/solutionCloning_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/configuration/solutionCloning_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/configuration/solvedNQueens04_0.png" class="fullImage">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/configuration/uninitializedNQueens04_0.png" class="fullImage">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamFilter_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamFilter_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamFilter_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamFilter_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamFilter_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamFilter_5.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamGroupBy_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamGroupBy_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamGroupBy_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamGroupBy_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamIfExists_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamIfExists_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamIfExists_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamIfExists_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamIncrementalCalculation_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamIncrementalCalculation_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamIncrementalCalculation_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamIncrementalCalculation_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamIncrementalCalculation_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamIncrementalCalculation_5.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamIntroduction_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamIntroduction_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamIntroduction_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamIntroduction_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamJoinWithJoiners_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamJoinWithJoiners_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamJoinWithJoiners_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamJoinWithJoiners_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamJoinWithoutJoiners_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamJoinWithoutJoiners_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamJoinWithoutJoiners_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamJoinWithoutJoiners_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamJoinWithoutJoiners_4.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamJustification_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamJustification_1.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/fairnessScoreConstraintPitfall_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/fairnessScoreConstraintPitfall_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/fairnessScoreConstraintPitfall_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/fairnessScoreConstraintPitfall_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/fairnessScoreConstraintPitfall_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/fairnessScoreConstraintPitfall_5.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/fairnessScoreConstraintPitfall_6.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/fairnessScoreConstraint_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/fairnessScoreConstraint_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/fairnessScoreConstraint_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/fairnessScoreConstraint_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/fairnessScoreConstraint_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/fairnessScoreConstraint_5.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/fairnessScoreConstraint_6.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/fairnessScoreConstraint_7.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/fairnessScoreConstraint_8.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/incrementalScoreCalculationEmployeeRostering_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/incrementalScoreCalculationEmployeeRostering_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/incrementalScoreCalculationEmployeeRostering_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/incrementalScoreCalculationEmployeeRostering_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/incrementalScoreCalculationEmployeeRostering_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/incrementalScoreCalculationEmployeeRostering_5.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/incrementalScoreCalculationEmployeeRostering_6.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/incrementalScoreCalculationEmployeeRostering_7.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/incrementalScoreCalculationNQueens04_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/incrementalScoreCalculationNQueens04_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/incrementalScoreCalculationNQueens04_2.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/incrementalScoreCalculatorSequenceDiagram_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/incrementalScoreCalculatorSequenceDiagram_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/incrementalScoreCalculatorSequenceDiagram_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/incrementalScoreCalculatorSequenceDiagram_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/incrementalScoreCalculatorSequenceDiagram_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/incrementalScoreCalculatorSequenceDiagram_5.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/optimalWithIncompleteConstraints_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/optimalWithIncompleteConstraints_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/optimalWithIncompleteConstraints_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/optimalWithIncompleteConstraints_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/optimalWithIncompleteConstraints_4.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/parameterizeTheScoreWeights_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/parameterizeTheScoreWeights_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/parameterizeTheScoreWeights_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/parameterizeTheScoreWeights_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/paretoOptimizationScoring_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/paretoOptimizationScoring_1.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/positiveAndNegativeConstraints_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/positiveAndNegativeConstraints_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/positiveAndNegativeConstraints_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/positiveAndNegativeConstraints_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/positiveAndNegativeConstraints_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/positiveAndNegativeConstraints_5.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreClassDiagram_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreClassDiagram_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreClassDiagram_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreClassDiagram_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_5.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_6.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_7.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_8.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonVehicleRouting_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonVehicleRouting_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonVehicleRouting_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonVehicleRouting_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonVehicleRouting_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonVehicleRouting_5.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonVehicleRouting_6.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonVehicleRouting_7.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonVehicleRouting_8.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComposition_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComposition_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComposition_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComposition_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComposition_4.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreFoldingIsBroken_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreFoldingIsBroken_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreFoldingIsBroken_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreFoldingIsBroken_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreFoldingIsBroken_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreFoldingIsBroken_5.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreFoldingIsBroken_6.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreLevels_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreLevels_1.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreTradeoffInPerspective_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreTradeoffInPerspective_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreTradeoffInPerspective_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreTradeoffInPerspective_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreTradeoffInPerspective_4.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreTrap_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreTrap_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreTrap_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreTrap_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreTrap_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreTrap_5.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreVisualization_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreVisualization_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreVisualization_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreVisualization_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreWeighting_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreWeighting_1.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreWeightType_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreWeightType_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreWeightType_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreWeightType_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreWeightType_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreWeightType_5.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreWeightType_6.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/design-patterns/assigningTimeToPlanningEntities2_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/design-patterns/assigningTimeToPlanningEntities2_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/design-patterns/assigningTimeToPlanningEntities2_2.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/design-patterns/assigningTimeToPlanningEntities_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/design-patterns/assigningTimeToPlanningEntities_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/design-patterns/assigningTimeToPlanningEntities_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/design-patterns/assigningTimeToPlanningEntities_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/design-patterns/chainedThroughTimeAutomaticCollapse_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/design-patterns/chainedThroughTimeAutomaticCollapse_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/design-patterns/chainedThroughTimeAutomaticCollapse_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/design-patterns/chainedThroughTimeAutomaticCollapse_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/design-patterns/chainedThroughTimeAutomaticDelayUntilLastLoop_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/design-patterns/chainedThroughTimeAutomaticDelayUntilLastLoop_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/design-patterns/chainedThroughTimeAutomaticDelayUntilLastLoop_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/design-patterns/chainedThroughTimeAutomaticDelayUntilLastLoop_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/design-patterns/chainedThroughTimeAutomaticDelayUntilLast_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/design-patterns/chainedThroughTimeAutomaticDelayUntilLast_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/design-patterns/chainedThroughTimeAutomaticDelayUntilLast_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/design-patterns/chainedThroughTimeAutomaticDelayUntilLast_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/design-patterns/chainedThroughTimeAutomaticDelayUntilLast_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/design-patterns/chainedThroughTimeAutomaticDelayUntilLast_5.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/design-patterns/employeeShiftRosteringModelingGuideA_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/design-patterns/employeeShiftRosteringModelingGuideA_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/design-patterns/employeeShiftRosteringModelingGuideA_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/design-patterns/employeeShiftRosteringModelingGuideA_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/design-patterns/employeeShiftRosteringModelingGuideA_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/design-patterns/employeeShiftRosteringModelingGuideA_5.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/design-patterns/employeeShiftRosteringModelingGuideB_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/design-patterns/employeeShiftRosteringModelingGuideB_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/design-patterns/employeeShiftRosteringModelingGuideB_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/design-patterns/employeeShiftRosteringModelingGuideB_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/design-patterns/employeeShiftRosteringModelingGuideB_4.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/design-patterns/entityVariableAndValueExamples_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/design-patterns/entityVariableAndValueExamples_1.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/design-patterns/realTimePlanningCloudArchitecture_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/design-patterns/realTimePlanningCloudArchitecture_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/design-patterns/realTimePlanningCloudArchitecture_2.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/design-patterns/serverlessCloudArchitecture_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/design-patterns/serverlessCloudArchitecture_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/design-patterns/serverlessCloudArchitecture_2.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/development/demandSupplyScopeReuseDecision_0.png" class="fullImage">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/development/methodologyOverview_0.png" class="fullImage">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/development/moveRebaseDecision_0.png" class="fullImage">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/development/moveRebaseSequenceDiagram_0.png" class="fullImage">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/integration/integrationOverview_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/integration/integrationOverview_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/integration/integrationOverview_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/integration/integrationOverview_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/integration/integrationOverview_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/integration/integrationOverview_5.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/integration/integrationOverview_6.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/integration/integrationOverview_7.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/integration/integrationOverview_8.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/integration/keepTheUserInControl_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/integration/keepTheUserInControl_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/integration/keepTheUserInControl_2.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/integration/sizingHardware_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/integration/sizingHardware_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/integration/sizingHardware_2.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/introduction/compatibility_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/introduction/compatibility_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/introduction/compatibility_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/introduction/compatibility_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/introduction/compatibility_4.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/introduction/theRightAIForTheJob_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/introduction/theRightAIForTheJob_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/introduction/theRightAIForTheJob_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/introduction/theRightAIForTheJob_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/introduction/theRightAIForTheJob_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/introduction/theRightAIForTheJob_5.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/introduction/theRightAIForTheJob_6.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/introduction/theRightAIForTheJob_7.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/introduction/theRightAIForTheJob_8.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/introduction/theRightAIForTheJob_9.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/introduction/useCaseOverview_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/introduction/useCaseOverview_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/introduction/useCaseOverview_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/introduction/useCaseOverview_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/introduction/useCaseOverview_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/introduction/useCaseOverview_5.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/introduction/whatIsAPlanningProblem_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/introduction/whatIsAPlanningProblem_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/introduction/whatIsAPlanningProblem_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/introduction/whatIsAPlanningProblem_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/allStepsNQueens04_0.png" class="fullImage">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/architectureOverview_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/architectureOverview_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/architectureOverview_2.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/bruteForceNQueens04_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/bruteForceNQueens04_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/bruteForceNQueens04_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/bruteForceNQueens04_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/bruteForceNQueens04_4.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/cachedShuffledSelection_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/cachedShuffledSelection_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/cachedShuffledSelection_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/cachedShuffledSelection_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/cachedShuffledSelection_4.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/changeMove_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/changeMove_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/changeMove_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/changeMove_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/cheapestInsertionNQueens04_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/cheapestInsertionNQueens04_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/cheapestInsertionNQueens04_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/cheapestInsertionNQueens04_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/cheapestInsertionNQueens04_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/cheapestInsertionNQueens04_5.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/cheapestInsertionNQueens04_6.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/cheapestInsertionNQueens04_7.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/cheapestInsertionNQueens04_8.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/cloudBalanceSearchSpaceSize_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/cloudBalanceSearchSpaceSize_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/cloudBalanceSearchSpaceSize_2.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/decideNextStepNQueens04_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/decideNextStepNQueens04_1.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/depthFirstBranchAndBoundNQueens04_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/depthFirstBranchAndBoundNQueens04_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/depthFirstBranchAndBoundNQueens04_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/depthFirstBranchAndBoundNQueens04_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/depthFirstBranchAndBoundNQueens04_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/depthFirstBranchAndBoundNQueens04_5.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/depthFirstBranchAndBoundNQueens04_6.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/depthFirstBranchAndBoundNQueens04_7.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/depthFirstBranchAndBoundNQueens04_8.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/entityTabuSearch_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/entityTabuSearch_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/entityTabuSearch_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/entityTabuSearch_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/entityTabuSearch_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/entityTabuSearch_5.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/entityTabuSearch_6.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/entityTabuSearch_7.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/entityTabuSearch_8.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/filteredSelection_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/filteredSelection_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/filteredSelection_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/filteredSelection_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/firstFitDecreasingNQueens04_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/firstFitDecreasingNQueens04_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/firstFitDecreasingNQueens04_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/firstFitDecreasingNQueens04_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/firstFitDecreasingNQueens04_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/firstFitDecreasingNQueens04_5.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/firstFitDecreasingNQueens04_6.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/firstFitDecreasingNQueens04_7.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/firstFitDecreasingNQueens04_8.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/firstFitDecreasingNQueens04_9.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/firstFitNQueens04_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/firstFitNQueens04_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/firstFitNQueens04_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/firstFitNQueens04_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/firstFitNQueens04_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/firstFitNQueens04_5.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/firstFitNQueens04_6.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/firstFitNQueens04_7.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/firstFitNQueens04_8.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/firstFitNQueens04_9.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/generalPhaseSequence_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/generalPhaseSequence_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/generalPhaseSequence_2.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/hillClimbingGetsStuckInLocalOptimaNQueens04_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/hillClimbingGetsStuckInLocalOptimaNQueens04_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/hillClimbingGetsStuckInLocalOptimaNQueens04_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/hillClimbingGetsStuckInLocalOptimaNQueens04_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/hillClimbingGetsStuckInLocalOptimaNQueens04_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/hillClimbingGetsStuckInLocalOptimaNQueens04_5.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/hillClimbingGetsStuckInLocalOptimaNQueens04_6.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/hillClimbingNQueens04_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/hillClimbingNQueens04_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/hillClimbingNQueens04_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/hillClimbingNQueens04_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/hillClimbingNQueens04_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/hillClimbingNQueens04_5.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/hillClimbingNQueens04_6.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/jitRandomSelection_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/jitRandomSelection_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/jitRandomSelection_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/jitRandomSelection_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/jitRandomSelection_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/jitRandomSelection_5.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/koptMove_0.png" class="fullImage">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/lateAcceptance_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/lateAcceptance_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/lateAcceptance_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/lateAcceptance_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/lateAcceptance_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/lateAcceptance_5.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/localSearchScoreOverTime_0.png" class="fullImage">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/mapReduceIsTerribleForTsp_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/mapReduceIsTerribleForTsp_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/mapReduceIsTerribleForTsp_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/mapReduceIsTerribleForTsp_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/mapReduceIsTerribleForTsp_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/mapReduceIsTerribleForTsp_5.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/multiThreadingStrategies_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/multiThreadingStrategies_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/multiThreadingStrategies_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/multiThreadingStrategies_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/multiThreadingStrategies_4.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/multiVariableConstructionHeuristics_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/multiVariableConstructionHeuristics_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/multiVariableConstructionHeuristics_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/multiVariableConstructionHeuristics_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/nearbySelectionMotivation_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/nearbySelectionMotivation_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/nearbySelectionMotivation_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/nearbySelectionMotivation_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/nearbySelectionRandomDistribution_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/nearbySelectionRandomDistribution_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/nearbySelectionRandomDistribution_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/nearbySelectionRandomDistribution_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/partitionedSearchThreading_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/partitionedSearchThreading_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/partitionedSearchThreading_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/partitionedSearchThreading_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/partitionedSearchThreading_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/partitionedSearchThreading_5.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/partitionedSearchThreading_6.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/partitionedSearchThreading_7.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/partitionedSearchThreading_8.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/pillarChangeMove_0.png" class="fullImage">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/pillarSwapMove_0.png" class="fullImage">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/possibleMovesNQueens04_0.png" class="fullImage">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/probabilisticSelection_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/probabilisticSelection_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/probabilisticSelection_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/probabilisticSelection_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/probabilisticSelection_4.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/scalabilityOfOptimizationAlgorithms_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/scalabilityOfOptimizationAlgorithms_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/scalabilityOfOptimizationAlgorithms_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/scalabilityOfOptimizationAlgorithms_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/scopeOverview_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/scopeOverview_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/scopeOverview_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/scopeOverview_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/searchSpaceSizeCalculation_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/searchSpaceSizeCalculation_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/searchSpaceSizeCalculation_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/searchSpaceSizeCalculation_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/selectorProbabilityInUnion_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/selectorProbabilityInUnion_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/selectorProbabilityInUnion_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/selectorProbabilityInUnion_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/selectorProbabilityInUnion_4.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/selectorTree_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/selectorTree_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/selectorTree_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/selectorTree_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/selectorTree_4.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/sequentialMovesNQueens04_0.png" class="fullImage">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/simulatedAnnealing_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/simulatedAnnealing_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/simulatedAnnealing_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/simulatedAnnealing_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/simulatedAnnealing_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/simulatedAnnealing_5.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/singleMoveNQueens04_0.png" class="fullImage">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/swapMove_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/swapMove_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/swapMove_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/swapMove_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/quickstart/quarkus/quarkusDevRestart_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/quickstart/quarkus/quarkusDevRestart_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/quarkus/quarkusDevRestart_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/quarkus/quarkusDevRestart_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/quarkus/quarkusDevRestart_4.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureQuarkus_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureQuarkus_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureQuarkus_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureQuarkus_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureQuarkus_4.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureSpringBoot_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureSpringBoot_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureSpringBoot_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureSpringBoot_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureSpringBoot_4.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingClassDiagram_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingClassDiagram_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingClassDiagram_2.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingCovidConstraints_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingCovidConstraints_1.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingGreedyAlgorithm_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingGreedyAlgorithm_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingGreedyAlgorithm_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingGreedyAlgorithm_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingGreedyAlgorithm_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingGreedyAlgorithm_5.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingGreedyAlgorithm_6.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingGreedyAlgorithm_7.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingGreedyAlgorithm_8.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingHardConstraints_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingHardConstraints_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingHardConstraints_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingHardConstraints_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingHardConstraints_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingHardConstraints_5.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingHardConstraints_6.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingHardConstraints_7.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingHardConstraints_8.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingHardConstraints_9.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingInputOutput_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingInputOutput_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingInputOutput_2.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingLocalSearchAlgorithms_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingLocalSearchAlgorithms_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingLocalSearchAlgorithms_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingLocalSearchAlgorithms_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingLocalSearchAlgorithms_4.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingSearchSpace_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingSearchSpace_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingSearchSpace_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingSearchSpace_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingSearchSpace_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingSearchSpace_5.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingSearchSpace_6.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingSearchSpace_7.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingSearchSpace_8.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingSearchSpace_9.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingSearchSpace_10.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/responding-to-change/continuousPlanningEmployeeRostering_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/continuousPlanningEmployeeRostering_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/continuousPlanningEmployeeRostering_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/continuousPlanningEmployeeRostering_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/responding-to-change/continuousPlanningPatientAdmissionSchedule_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/continuousPlanningPatientAdmissionSchedule_1.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/responding-to-change/continuousPublishingWithRotation_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/continuousPublishingWithRotation_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/continuousPublishingWithRotation_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/continuousPublishingWithRotation_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/continuousPublishingWithRotation_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/continuousPublishingWithRotation_5.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/responding-to-change/multiStagePlanning_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/multiStagePlanning_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/multiStagePlanning_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/multiStagePlanning_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/multiStagePlanning_4.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/responding-to-change/nonDisruptiveReplanning_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/nonDisruptiveReplanning_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/nonDisruptiveReplanning_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/nonDisruptiveReplanning_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/nonDisruptiveReplanning_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/nonDisruptiveReplanning_5.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/responding-to-change/overconstrainedPlanning_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/overconstrainedPlanning_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/overconstrainedPlanning_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/overconstrainedPlanning_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/overconstrainedPlanning_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/overconstrainedPlanning_5.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/responding-to-change/realTimePlanningConcurrencySequenceDiagram_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/realTimePlanningConcurrencySequenceDiagram_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/realTimePlanningConcurrencySequenceDiagram_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/realTimePlanningConcurrencySequenceDiagram_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/responding-to-change/realTimePlanningVehicleRouting_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/realTimePlanningVehicleRouting_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/realTimePlanningVehicleRouting_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/realTimePlanningVehicleRouting_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/realTimePlanningVehicleRouting_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/realTimePlanningVehicleRouting_5.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/bed-allocation/hospitalBedAllocationClassDiagram_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/bed-allocation/hospitalBedAllocationClassDiagram_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/bed-allocation/hospitalBedAllocationClassDiagram_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/bed-allocation/hospitalBedAllocationClassDiagram_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/bed-allocation/patientAdmissionScheduleUseCase_0.png" class="fullImage">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/cloud-balancing/cloudBalanceClassDiagram_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/cloud-balancing/cloudBalanceClassDiagram_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/cloud-balancing/cloudBalanceClassDiagram_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/cloud-balancing/cloudBalanceClassDiagram_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/cloud-balancing/cloudBalanceClassDiagram_4.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/cloud-balancing/cloudBalanceUseCase_0.png" class="fullImage">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/cloud-balancing/cloudOptimizationValueProposition_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/cloud-balancing/cloudOptimizationValueProposition_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/cloud-balancing/cloudOptimizationValueProposition_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/cloud-balancing/cloudOptimizationValueProposition_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/cloud-balancing/scoreComparisonCloudBalancing_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/cloud-balancing/scoreComparisonCloudBalancing_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/cloud-balancing/scoreComparisonCloudBalancing_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/cloud-balancing/scoreComparisonCloudBalancing_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/cloud-balancing/scoreComparisonCloudBalancing_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/cloud-balancing/scoreComparisonCloudBalancing_5.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/cloud-balancing/scoreComparisonCloudBalancing_6.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/cloud-balancing/scoreComparisonCloudBalancing_7.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/cloud-balancing/scoreComparisonCloudBalancing_8.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingArchitecture_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingArchitecture_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingArchitecture_2.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingClassDiagram_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingClassDiagram_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingClassDiagram_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingClassDiagram_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_5.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_6.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_7.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_8.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_9.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_10.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_11.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_12.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_13.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_14.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingMilestonesTimeline_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingMilestonesTimeline_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingMilestonesTimeline_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingMilestonesTimeline_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingMilestonesTimeline_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingMilestonesTimeline_5.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingOptimalIsImperfect_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingOptimalIsImperfect_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingOptimalIsImperfect_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingOptimalIsImperfect_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingPartitioning_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingPartitioning_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingPartitioning_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingPartitioning_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingProblem_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingProblem_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingProblem_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingProblem_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingSearchSpace_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingSearchSpace_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingSearchSpace_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingSearchSpace_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingSearchSpace_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingSearchSpace_5.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingSearchSpace_6.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingValueProposition_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingValueProposition_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingValueProposition_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingValueProposition_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/course-timetabling/curriculumCourseClassDiagram_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/course-timetabling/curriculumCourseClassDiagram_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/course-timetabling/curriculumCourseClassDiagram_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/course-timetabling/curriculumCourseClassDiagram_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/exam-timetabling/examinationTimetablingUseCase_0.png" class="fullImage">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/machine-reassignment/cloudOptimizationIsLikeTetris_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/machine-reassignment/cloudOptimizationIsLikeTetris_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/machine-reassignment/cloudOptimizationIsLikeTetris_2.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/machine-reassignment/machineReassignmentClassDiagram_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/machine-reassignment/machineReassignmentClassDiagram_1.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/maintenance-scheduling/maintenanceSchedulingArchitectureQuarkus_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/maintenance-scheduling/maintenanceSchedulingArchitectureQuarkus_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/maintenance-scheduling/maintenanceSchedulingArchitectureQuarkus_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/maintenance-scheduling/maintenanceSchedulingArchitectureQuarkus_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/maintenance-scheduling/maintenanceSchedulingArchitectureQuarkus_4.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/maintenance-scheduling/maintenanceSchedulingClassDiagram_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/maintenance-scheduling/maintenanceSchedulingClassDiagram_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/maintenance-scheduling/maintenanceSchedulingClassDiagram_2.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/maintenance-scheduling/maintenanceSchedulingInputOutput_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/maintenance-scheduling/maintenanceSchedulingInputOutput_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/maintenance-scheduling/maintenanceSchedulingInputOutput_2.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/nqueens/partiallySolvedNQueens04Explained_0.png" class="fullImage">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/nurse-rostering/employeeRosteringClassDiagram_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/nurse-rostering/employeeRosteringClassDiagram_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/nurse-rostering/employeeRosteringClassDiagram_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/nurse-rostering/employeeRosteringClassDiagram_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/nurse-rostering/employeeRosteringClassDiagram_4.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/nurse-rostering/employeeRosteringValueProposition_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/nurse-rostering/employeeRosteringValueProposition_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/nurse-rostering/employeeRosteringValueProposition_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/nurse-rostering/employeeRosteringValueProposition_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/nurse-rostering/employeeRosteringValueProposition_4.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/nurse-rostering/employeeShiftRosteringUseCase_0.png" class="fullImage">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/nurse-rostering/medicalStaffRosteringCovidConstraints_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/nurse-rostering/medicalStaffRosteringCovidConstraints_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/nurse-rostering/medicalStaffRosteringCovidConstraints_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/nurse-rostering/medicalStaffRosteringCovidConstraints_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/nurse-rostering/medicalStaffRosteringCovidConstraints_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/nurse-rostering/medicalStaffRosteringCovidConstraints_5.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/nurse-rostering/nurseRosteringClassDiagram_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/nurse-rostering/nurseRosteringClassDiagram_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/nurse-rostering/nurseRosteringClassDiagram_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/nurse-rostering/nurseRosteringClassDiagram_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/project-job-scheduling/projectJobSchedulingUseCase_0.png" class="fullImage">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/surface-bin-packing/binPackingIsNpComplete1_0.png" class="fullImage">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/surface-bin-packing/binPackingIsNpComplete2_0.png" class="fullImage">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/surface-bin-packing/binPackingUseCase_0.png" class="fullImage">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/task-assigning/taskAssigningClassDiagram_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/task-assigning/taskAssigningClassDiagram_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/task-assigning/taskAssigningClassDiagram_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/task-assigning/taskAssigningClassDiagram_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/task-assigning/taskAssigningClassDiagram_4.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/task-assigning/taskAssigningValueProposition_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/task-assigning/taskAssigningValueProposition_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/task-assigning/taskAssigningValueProposition_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/task-assigning/taskAssigningValueProposition_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/task-assigning/taskAssigningValueProposition_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/task-assigning/taskAssigningValueProposition_5.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/tennis-scheduling/tennisClassDiagram_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/tennis-scheduling/tennisClassDiagram_1.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/travelling-salesman/tspOptimalSolutionVolatility_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/travelling-salesman/tspOptimalSolutionVolatility_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/travelling-salesman/tspOptimalSolutionVolatility_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/travelling-salesman/tspOptimalSolutionVolatility_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/travelling-tournament/travelingTournamentUseCase_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/travelling-tournament/travelingTournamentUseCase_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/travelling-tournament/travelingTournamentUseCase_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/travelling-tournament/travelingTournamentUseCase_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/travelling-tournament/travelingTournamentUseCase_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/travelling-tournament/travelingTournamentUseCase_5.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/travelling-tournament/travelingTournamentUseCase_6.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/travelling-tournament/travelingTournamentUseCase_7.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/travelling-tournament/travelingTournamentUseCase_8.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vaccination-scheduling/vaccinationSchedulingContinuousPlanning_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vaccination-scheduling/vaccinationSchedulingContinuousPlanning_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vaccination-scheduling/vaccinationSchedulingContinuousPlanning_2.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vaccination-scheduling/vaccinationSchedulingPartitioning_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vaccination-scheduling/vaccinationSchedulingPartitioning_1.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vaccination-scheduling/vaccinationSchedulingProcessPatterns_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vaccination-scheduling/vaccinationSchedulingProcessPatterns_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vaccination-scheduling/vaccinationSchedulingProcessPatterns_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vaccination-scheduling/vaccinationSchedulingProcessPatterns_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vaccination-scheduling/vaccinationSchedulingProcessPatterns_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vaccination-scheduling/vaccinationSchedulingProcessPatterns_5.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vaccination-scheduling/vaccinationSchedulingProcessPatterns_6.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vaccination-scheduling/vaccinationSchedulingProcessPatterns_7.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vaccination-scheduling/vaccinationSchedulingValueProposal_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vaccination-scheduling/vaccinationSchedulingValueProposal_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vaccination-scheduling/vaccinationSchedulingValueProposal_2.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/integrationWithRealMaps_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/integrationWithRealMaps_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/integrationWithRealMaps_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/integrationWithRealMaps_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/roadDistanceTriangleInequality_0.png" class="fullImage">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/vehicleRoutingClassDiagram_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/vehicleRoutingClassDiagram_1.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/vehicleRoutingDistanceType_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/vehicleRoutingDistanceType_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/vehicleRoutingDistanceType_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/vehicleRoutingDistanceType_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/vehicleRoutingValueProposition_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/vehicleRoutingValueProposition_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/vehicleRoutingValueProposition_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/vehicleRoutingValueProposition_3.png" class="fullImage fragment">
+    </section>
+</div></div>
+
+<script src="../src/web/jquery/jquery.min.js"></script>
+<script src="../src/web/reveal/js/reveal.js"></script>
+
+<script>
+  var showControls = true;
+  if (window.location.search.match(/print-pdf/gi) || window.location.search.match(/noInstructions/gi)) {
+    showControls = false;
+    $('.instruction').remove();
+  }
+
+  Reveal.initialize({
+    controls: showControls,
+    progress: true,
+    history: true,
+    center: false,
+    theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+    transition: Reveal.getQueryHash().transition || 'linear', // page/linear/fade/none
+
+    margin: 0.05,
+    minScale: 0.2,
+    maxScale: 100.0
+  });
+</script>
+<script src="../src/web/highlight/highlight.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+  hljs.LANGUAGES.drl=function(a){return{k:"rule when then end",c:[a.CLCM,a.CBLCLM,a.ASM,a.QSM]}}(hljs);
+</script>
+
+</body>
+</html>

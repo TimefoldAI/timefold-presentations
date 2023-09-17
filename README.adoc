@@ -10,7 +10,7 @@ https://timefold.ai[timefold.ai]
 . Run the script
 +
 ----
-$ src/script/copyImagesAndExtractSvgLayers.sh
+$ src/script/syncImages.sh
 ----
 
 WARNING: Before committing the changes, make sure you delete any old svg or png files that got moved.
