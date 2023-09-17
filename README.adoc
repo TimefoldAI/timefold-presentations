@@ -3,7 +3,17 @@ image::src/timefold-solver-docs/shared/timefold-logo.png[link="https://timefold.
 _Planning optimization made easy._ +
 https://timefold.ai[timefold.ai]
 
-== Copy images and extract SVG layers as PNG
+== Run a presentation
+
+There are 2 presentation types:
+
+* A *reusable slide deck* in `slidedecks`. Useful to start from.
+** The `inventory.html` is a special case, it just contains _all_ slides from the docs in arbitrary order.
+* An *event specific deck* in `events`. Useful for history purposes.
+
+== Sync the images
+
+To sync the images and extract the SVG layers as PNG:
 
 . Clone this repo next to a `tf-main` dir which contains `timefold-solver` and `timefold-quickstarts`.
 
@@ -18,3 +28,4 @@ and the last slide at the top layer.
 This way, later slides can overwrite earlier slides.
 
 WARNING: Before committing the changes, make sure you delete any old svg or png files that got moved.
+TODO automate this in the script.
