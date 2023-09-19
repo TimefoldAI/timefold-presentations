@@ -37,17 +37,6 @@
         </h2>
     </section>
     <section>
-        <img src="../src/content/timefold-solver-docs/integration/sizingHardware_0.png" class="fullImage">
-        <img src="../src/content/timefold-solver-docs/integration/sizingHardware_1.png" class="fullImage fragment">
-        <img src="../src/content/timefold-solver-docs/integration/sizingHardware_2.png" class="fullImage fragment">
-    </section>
-    <section>
-        <h3>
-            Solver calculations<br/> are time bound
-        </h3>
-        <p>Performance == solution quality</p>
-    </section>
-    <section>
         <h3>Free performance gains</h3>
         <table style="margin-top: 50px">
             <thead>
@@ -67,8 +56,49 @@
             </tr>
             </tbody>
         </table>
-        <p style="margin-top: 50px">No code changes.</p>
-        <p>More for G1GC.</p>
+        <p style="margin-top: 50px" class="fragment">More for G1 GC.</p>
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/integration/sizingHardware_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/integration/sizingHardware_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/integration/sizingHardware_2.png" class="fullImage fragment">
+    </section>
+    <section>
+        <h3>
+            Solver calculations<br/> are time bound
+        </h3>
+        <p>Performance == solution quality</p>
+        <img src="../src/content/static/benchmarks/vehicle-routing-belgium-n500-k20-community-best-score.png"/>
+    </section>
+    <section>
+        <h3>The best Garbage Collector?</h3>
+        <table style="margin-top: 50px">
+            <thead>
+            <tr>
+                <th>Goal</th>
+                <th>Throughput</th>
+                <th>Latency</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>G1 GC (default)</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Parallel GC</td>
+                <td style="color: green">Better</td>
+                <td style="color: red">Worse</td>
+            </tr>
+            <tr>
+                <td>ZGC</td>
+                <td style="color: red">Worse</td>
+                <td style="color: green">Better</td>
+            </tr>
+            </tbody>
+        </table>
+        <p style="margin-top: 50px" class="fragment">YMMV, especially with only 1 vCPU.</p>
     </section>
 
 </div></div>
