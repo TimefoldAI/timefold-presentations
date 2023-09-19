@@ -41,6 +41,35 @@
         <img src="../src/content/timefold-solver-docs/integration/sizingHardware_1.png" class="fullImage fragment">
         <img src="../src/content/timefold-solver-docs/integration/sizingHardware_2.png" class="fullImage fragment">
     </section>
+    <section>
+        <h3>
+            Solver calculations<br/> are time bound
+        </h3>
+        <p>Performance == solution quality</p>
+    </section>
+    <section>
+        <h3>Free performance gains</h3>
+        <table style="margin-top: 50px">
+            <thead>
+            <tr>
+                <th>Java version</th>
+                <th>8 ⇒ 11</th>
+                <th>11 ⇒ 17</th>
+                <th>17 ⇒ 21</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Average gain<br/>(Parallel GC)</td>
+                <td>4.5%</td>
+                <td>6.5%</td>
+                <td>2.0%</td>
+            </tr>
+            </tbody>
+        </table>
+        <p style="margin-top: 50px">No code changes.</p>
+        <p>More for G1GC.</p>
+    </section>
 
 </div></div>
 
