@@ -18,8 +18,12 @@ footer {
     color: #BABDB6;
 }
 
-.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5 {
-    line-height: 1.2em;
+.reveal h1 {
+    font-size: 2.5em;
+}
+.reveal h2 {
+    /* HACK to vertical align middle */
+    margin-top: 20%;
 }
 
 .reveal sup {
