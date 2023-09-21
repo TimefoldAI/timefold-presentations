@@ -48,6 +48,7 @@ function processImages() {
     cp ${svgInputFile} ${svgOutputFile}
     extractLayers ${svgOutputFile}
   done
+  git add -A ${outputDir}
 }
 
 function extractLayers() {
@@ -78,6 +79,7 @@ function extractLayers() {
 
 cat src/script/templates/slidedeck-header.html > slidedecks/inventory.html
 processImages "${timefoldSolverDir}/docs/src/modules/ROOT/images" "${timefoldPresentationsDir}/src/content/timefold-solver-docs"
+processImages "${timefoldQuickstartsDir}/build/quickstarts-showcase/src/main/resources/META-INF/resources/screenshot" "${timefoldPresentationsDir}/src/content/timefold-quickstarts-screenshot"
 cat src/script/templates/slidedeck-footer.html >> slidedecks/inventory.html
 git add slidedecks/inventory.html
 
