@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Timefold presentation</title>
+    <meta name="description" content="This slide deck explains Timefold: an open source constraint satisfaction solver in Java">
+<!--    <link href="https://github.com/TimefoldAI/timefold-presentations" rel="canonical">-->
+
+    <link rel="stylesheet" href="../src/web/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../src/web/reveal/css/reveal.css">
+    <link rel="stylesheet" href="../src/web/reveal/css/theme/simple.css" id="theme">
+    <script>
+      if (window.location.search.match(/print-pdf/gi)) {
+        document.write('<link rel="stylesheet" href="../src/web/reveal/css/print/pdf.css">');
+      }
+    </script>
+    <link rel="stylesheet" href="../src/web/highlight/highlight.css">
+    <link rel="stylesheet" href="../src/web/timefold-presentation.css">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+
+<body>
+<div class="reveal">
+    <div class="watermark watermark-left">
+        <p>
+            <img src="../src/web/social/twitter-logo.png"/>
+            @TimefoldAI @GeoffreyDeSmet
+        </p>
+    </div>
+    <div class="slides">
+
+        <section>
+            <section>
+                <h3>Traveling Salesman Problem<br/>(TSP)<br/>&amp;<br/>Vehicle Routing Problem<br/>(VRP)</h3>
+            </section>
+            <section>
+                <h3>
+                    The story<br/>
+                    of<br/>
+                    the ultimate American road trip
+                </h3>
+            </section>
+            <section>
+                <img src="../src/content/static/vehicle-routing/road-trip/americanRoadTrip-theWashingtonPost.png" class="fullImage">
+                <p class="fullImagePara sourceUrl">https://www.washingtonpost.com/news/wonk/wp/2015/03/10/a-data-genius-computes-the-ultimate-american-road-trip/</p>
+            </section>
+            <section>
+                <img src="../src/content/static/vehicle-routing/road-trip/americanRoadTrip-problem.png" class="fullImage">
+                <p class="fullImagePara">Road trip for 50 landmarks, monuments, etc.</p>
+            </section>
+            <section>
+                <img src="../src/content/static/vehicle-routing/road-trip/americanRoadTrip-road-time-asymmetric-firstFitDecreasing.png" class="fullImage">
+                <p class="fullImagePara">
+                    Traditional algorithm: <code>271h 35m 16s</code><br/>
+                    Is it optimal?
+                </p>
+            </section>
+            <section>
+                <img src="../src/content/static/vehicle-routing/road-trip/americanRoadTrip-road-time-asymmetric-olson.png" class="fullImage">
+                <p class="fullImagePara">
+                    Olson's trip: <code>232h 43m 10s</code><br/>
+                    ⇒ <code>38h 52m 6s</code> faster (<code>14%</code>)<br/>
+                    Is it optimal?
+                </p>
+            </section>
+            <section>
+                <img src="../src/content/static/vehicle-routing/road-trip/americanRoadTrip-iowa-comparison_0.png" class="fullImage">
+                <img src="../src/content/static/vehicle-routing/road-trip/americanRoadTrip-iowa-comparison_1.png" class="fullImage fragment">
+            </section>
+            <section>
+                <img src="../src/content/static/vehicle-routing/road-trip/roads-are-asymmetric_0.png" class="fullImage">
+                <img src="../src/content/static/vehicle-routing/road-trip/roads-are-asymmetric_1.png" class="fullImage fragment">
+            </section>
+            <section>
+                <img src="../src/content/static/vehicle-routing/road-trip/americanRoadTrip-carolina-comparison_0.png" class="fullImage">
+                <img src="../src/content/static/vehicle-routing/road-trip/americanRoadTrip-carolina-comparison_1.png" class="fullImage fragment">
+            </section>
+            <!--<section>-->
+            <!--<img src="_Blog/fastest-vs-shortest.png" class="fullImage">-->
+            <!--</section>-->
+            <section>
+                <img src="../src/content/static/vehicle-routing/road-trip/americanRoadTrip-road-time-asymmetric-olson.png" class="fullImage">
+                <p class="fullImagePara">
+                    Olson's trip: <code>232h 43m 10s</code><br/>
+                    Not optimal
+                </p>
+            </section>
+            <section>
+                <img src="../src/content/static/vehicle-routing/road-trip/americanRoadTrip-road-time-asymmetric-timefold.png" class="fullImage">
+                <p class="fullImagePara">
+                    Timefold's trip: <code>230h 17m 54s</code><br/>
+                    ⇒ Another <code>2h 25m 16s</code> faster (<code>1%</code> ⇒ <code>15%</code> in total)<br/>
+                    <b>Optimal</b>, also <code>33km 710m</code> (= <code>20.95 miles</code>) shorter
+                </p>
+            </section>
+
+
+            <section>
+                <h3>What is constraint solving?</h3>
+                <p>TSP DEMO</p>
+            </section>
+            <section>
+                <img src="../src/content/timefold-solver-docs/use-cases-and-examples/travelling-salesman/tspOptimalSolutionVolatility_0.png" class="fullImage">
+                <img src="../src/content/timefold-solver-docs/use-cases-and-examples/travelling-salesman/tspOptimalSolutionVolatility_1.png" class="fullImage fragment">
+                <img src="../src/content/timefold-solver-docs/use-cases-and-examples/travelling-salesman/tspOptimalSolutionVolatility_2.png" class="fullImage fragment">
+                <img src="../src/content/timefold-solver-docs/use-cases-and-examples/travelling-salesman/tspOptimalSolutionVolatility_3.png" class="fullImage fragment">
+            </section>
+            <section>
+                <img src="../src/content/timefold-solver-docs/optimization-algorithms/mapReduceIsTerribleForTsp_0.png" class="fullImage">
+                <img src="../src/content/timefold-solver-docs/optimization-algorithms/mapReduceIsTerribleForTsp_1.png" class="fullImage fragment">
+                <img src="../src/content/timefold-solver-docs/optimization-algorithms/mapReduceIsTerribleForTsp_2.png" class="fullImage fragment">
+                <img src="../src/content/timefold-solver-docs/optimization-algorithms/mapReduceIsTerribleForTsp_3.png" class="fullImage fragment">
+                <img src="../src/content/timefold-solver-docs/optimization-algorithms/mapReduceIsTerribleForTsp_4.png" class="fullImage fragment">
+                <img src="../src/content/timefold-solver-docs/optimization-algorithms/mapReduceIsTerribleForTsp_5.png" class="fullImage fragment">
+            </section>
+            <section>
+                <h2>
+                    TSP<br/>
+                    is an academic problem
+                </h2>
+            </section>
+
+            <section>
+                <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/vehicleRoutingValueProposition_0.png" class="fullImage">
+                <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/vehicleRoutingValueProposition_1.png" class="fullImage fragment">
+                <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/vehicleRoutingValueProposition_2.png" class="fullImage fragment">
+                <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/vehicleRoutingValueProposition_3.png" class="fullImage fragment">
+            </section>
+            <section>
+                <h3>Vehicle Routing Problem (VRP)</h3>
+                <p>DEMO</p>
+            </section>
+            <section>
+                <h2>Real-time planning</h2>
+                <p>Warm starts to solve in milliseconds</p>
+            </section>
+            <section>
+                <img src="../src/content/timefold-solver-docs/responding-to-change/realTimePlanningVehicleRouting_0.png" class="fullImage">
+                <img src="../src/content/timefold-solver-docs/responding-to-change/realTimePlanningVehicleRouting_1.png" class="fullImage fragment">
+                <img src="../src/content/timefold-solver-docs/responding-to-change/realTimePlanningVehicleRouting_2.png" class="fullImage fragment">
+                <img src="../src/content/timefold-solver-docs/responding-to-change/realTimePlanningVehicleRouting_3.png" class="fullImage fragment">
+                <img src="../src/content/timefold-solver-docs/responding-to-change/realTimePlanningVehicleRouting_4.png" class="fullImage fragment">
+                <img src="../src/content/timefold-solver-docs/responding-to-change/realTimePlanningVehicleRouting_5.png" class="fullImage fragment">
+            </section>
+
+            <section>
+                <h2>Real roads</h2>
+            </section>
+            <section>
+                <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/vehicleRoutingGoogleMapsDirections.png" class="fullImage">
+            </section>
+            <section>
+                <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/integrationWithRealMaps_0.png" class="fullImage">
+                <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/integrationWithRealMaps_1.png" class="fullImage fragment">
+                <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/integrationWithRealMaps_2.png" class="fullImage fragment">
+                <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/integrationWithRealMaps_3.png" class="fullImage fragment">
+            </section>
+
+            <section>
+                <h2>False presumptions VRP</h2>
+            </section>
+            <section>
+                <img src="../src/content/static/vehicle-routing/presumptions/vrpPresumptions01.png" class="vrpPresumptionImage">
+                <img src="../src/content/static/vehicle-routing/presumptions/vrpPresumptions02.png" class="vrpPresumptionImage fragment">
+                <p class="vrpPresumptionBottomPara fragment">Assumption: <b>An optimal VRP route uses only 1 vehicle.</b></p>
+            </section>
+            <section>
+                <p class="vrpPresumptionTopPara">Assumption: <b>An optimal VRP route uses only 1 vehicle. (false)</b></p>
+                <img src="../src/content/static/vehicle-routing/presumptions/vrpPresumptions03.png" class="vrpPresumptionImage">
+                <img src="../src/content/static/vehicle-routing/presumptions/vrpPresumptions04.png" class="vrpPresumptionImage fragment">
+                <p class="vrpPresumptionBottomPara fragment">Assumption: <b>An optimal VRP route has no crossing lines.</b></p>
+            </section>
+            <section>
+                <p class="vrpPresumptionTopPara">Assumption: <b>An optimal VRP route has no crossing lines. (false)</b></p>
+                <img src="../src/content/static/vehicle-routing/presumptions/vrpPresumptions05.png" class="vrpPresumptionImage">
+                <img src="../src/content/static/vehicle-routing/presumptions/vrpPresumptions06.png" class="vrpPresumptionImage fragment">
+                <p class="vrpPresumptionBottomPara fragment">Assumption: <b>An optimal, feasible VRP route with n vehicles is still optimal for n+1 vehicles.</b></p>
+            </section>
+            <section>
+                <p class="vrpPresumptionTopPara">Assumption: <b>An optimal, feasible VRP route with n vehicles is still optimal for n+1 vehicles. (false)</b></p>
+                <img src="../src/content/static/vehicle-routing/presumptions/vrpPresumptions07.png" class="vrpPresumptionImage">
+                <p class="vrpPresumptionBottomPara fragment">Assumption: <b>An optimal VRP route has no crossing lines of the same color.</b></p>
+            </section>
+            <section>
+                <p class="vrpPresumptionTopPara">Assumption: <b>An optimal VRP route has no crossing lines of the same color. (false)</b></p>
+                <img src="../src/content/static/vehicle-routing/presumptions/vrpPresumptions08.png" class="vrpPresumptionImage">
+                <img src="../src/content/static/vehicle-routing/presumptions/vrpPresumptions09.png" class="vrpPresumptionImage fragment">
+                <p class="vrpPresumptionBottomPara fragment">Assumption: <b>We can focus on time windows before focusing on capacity (or vice versa).</b></p>
+            </section>
+            <section>
+                <p class="vrpPresumptionTopPara">Assumption: <b>We can focus on time windows before focusing on capacity (or vice versa). (false)</b></p>
+                <img src="../src/content/static/vehicle-routing/presumptions/vrpPresumptions10.png" class="vrpPresumptionImage">
+                <img src="../src/content/static/vehicle-routing/presumptions/vrpPresumptions11.png" class="vrpPresumptionImage fragment">
+                <p class="vrpPresumptionBottomPara fragment">Assumption: <b>Humans optimize VRP optimally.</b></p>
+            </section>
+            <section>
+                <p class="vrpPresumptionTopPara">Assumption: <b>Humans optimize VRP optimally. (false)</b></p>
+                <img src="../src/content/static/vehicle-routing/presumptions/vrpPresumptions12.png" class="vrpPresumptionImage">
+                <p class="vrpPresumptionBottomPara">Can a manager reasonable judge if this is optimal?</p>
+            </section>
+        </section>
+</div></div>
+
+<script src="../src/web/jquery/jquery.min.js"></script>
+<script src="../src/web/reveal/js/reveal.js"></script>
+
+<script>
+  var showControls = true;
+  if (window.location.search.match(/print-pdf/gi) || window.location.search.match(/noInstructions/gi)) {
+    showControls = false;
+    $('.instruction').remove();
+  }
+
+  Reveal.initialize({
+    controls: showControls,
+    progress: true,
+    history: true,
+    center: false,
+    theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+    transition: Reveal.getQueryHash().transition || 'linear', // page/linear/fade/none
+
+    margin: 0.05,
+    minScale: 0.2,
+    maxScale: 100.0
+  });
+</script>
+<script src="../src/web/highlight/highlight.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+</body>
+</html>
