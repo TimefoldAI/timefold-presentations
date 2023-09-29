@@ -301,7 +301,31 @@
             <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingClassDiagram_1.png" class="fullImage fragment">
         </section>
         <section>
-            <h3>TODO Calculate score</h3>
+            <h3>Calculate score</h3>
+            <pre xml:space="preserve"><code class="java">
+private long calculateScore(TimeTable timeTable) {
+    long hardScore = 0;
+    for (Lesson lesson1 : timeTable.getLessonList()) {
+        for (Lesson lesson2 : timeTable.getLessonList()) {
+            if (lesson1 == lesson2) {
+                break;
+            }
+            if (lesson1.getRoom() == lesson2.getRoom()
+                    && lesson1.getTimeslot() == lesson2.getTimeslot()) {
+                hardScore--;
+            }
+            if (lesson1.getTeacher() == lesson2.getTeacher()
+                    && lesson1.getTimeslot() == lesson2.getTimeslot()) {
+                hardScore--;
+            }
+            if (lesson1.getStudentGroup() == lesson2.getStudentGroup()
+                    && lesson1.getTimeslot() == lesson2.getTimeslot()) {
+                hardScore--;
+            }
+        }
+    }
+    return hardScore;
+}</code></pre>
         </section>
         <section data-background-color="#b6adfd">
             <h2>Greedy algorithm</h2>
@@ -318,7 +342,30 @@
             <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingGreedyAlgorithm_8.png" class="fullImage fragment">
         </section>
         <section>
-            <h3>TODO Greedy code</h3>
+            <h3>Greedy code</h3>
+            <pre xml:space="preserve"><code class="java">for (Lesson lesson : timeTable.getLessonList()) {
+    long bestScore = Long.MIN_VALUE;
+    Room bestRoom = null;
+    Timeslot bestTimeslot = null;
+    for (Timeslot timeslot : timeTable.getTimeslotList()) {
+        lesson.setTimeslot(timeslot);
+        for (Room room : timeTable.getRoomList()) {
+            lesson.setRoom(room);
+            long score = calculateScore(timeTable);
+            if (score > bestScore) {
+                bestScore = score;
+                bestRoom = room;
+                bestTimeslot = timeslot;
+            }
+            lesson.setRoom(null);
+        }
+        lesson.setTimeslot(null);
+    }
+    lesson.setTimeslot(bestTimeslot);
+    lesson.setRoom(bestRoom);
+}
+timeTable.setScore(calculateScore(timeTable));
+return timeTable;</code></pre>
         </section>
         <section>
             <h3>DEMO</h3>
@@ -364,7 +411,26 @@
             </table>
         </section>
         <section>
-            <h3>TODO Brute force code</h3>
+            <h3>Brute force code</h3>
+            <pre xml:space="preserve"><code class="java">int bestScore = Integer.MIN_VALUE;
+for (Timeslot timeslotLesson1 : timeslotList) {
+    lesson1.setTimeslot(timeslotLesson1);
+    for (Room roomLesson1 : roomList) {
+        lesson1.setRoom(roomLesson1);
+
+        for (Timeslot timeslotLesson2 : timeslotList) {
+            lesson2.setTimeslot(timeslotLesson2);
+            for (Room roomLesson2 : roomList) {
+                lesson2.setRoom(roomLesson2);
+                ...
+
+                for (Timeslot timeslotLessonN : timeslotList) {
+                    lessonN.setTimeslot(timeslotLessonN);
+                    for (Room roomLessonN : roomList) {
+                        lessonN.setRoom(roomLessonN);
+                        int score = calculateScore(timeTable);
+                        if (score > bestScore)
+                            ...</code></pre>
         </section>
         <section>
             <h3>DEMO</h3>
@@ -461,10 +527,23 @@
         </section>
         <section>
             <h3>Easy score calculator</h3>
-            <pre xml:space="preserve"><code class="java">
-public HardSoftScore calculateScore(TODO) {
-  ...
-  return TODO;
+            <pre xml:space="preserve"><code class="java">public HardSoftScore calculateScore(TODO) {
+    long hardScore = 0;
+    for (Lesson lesson1 : timeTable.getLessonList()) {
+        for (Lesson lesson2 : timeTable.getLessonList()) {
+            if (lesson1 == lesson2)
+                break;
+            if (lesson1.getTimeslot() != lesson2.getTimeslot())
+                break;
+            if (lesson1.getRoom() == lesson2.getRoom())
+                hardScore--;
+            if (lesson1.getTeacher() == lesson2.getTeacher())
+                hardScore--;
+            if (lesson1.getStudentGroup() == lesson2.getStudentGroup())
+                hardScore--;
+        }
+    }
+    return hardScore;
 }</code></pre>
         </section>
         <section>
