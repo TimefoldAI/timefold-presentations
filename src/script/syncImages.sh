@@ -78,8 +78,14 @@ function extractLayers() {
 }
 
 cat src/script/templates/slidedeck-header.html > slidedecks/inventory.html
+
+# Upstream images
 processImages "${timefoldSolverDir}/docs/src/modules/ROOT/images" "${timefoldPresentationsDir}/src/content/timefold-solver-docs"
 processImages "${timefoldQuickstartsDir}/build/quickstarts-showcase/src/main/resources/META-INF/resources/screenshot" "${timefoldPresentationsDir}/src/content/timefold-quickstarts-screenshot"
+
+# A selection of static images
+extractLayers src/content/static/benchmarks/bruteForceHitsTheWall.svg
+
 cat src/script/templates/slidedeck-footer.html >> slidedecks/inventory.html
 git add slidedecks/inventory.html
 
