@@ -148,7 +148,7 @@
             <p class="fragment">⇒ -100 million $ cost per year</p>
         </section>
         <section data-background-color="#3e00ff">
-            <h2>The bet</h2>
+            <h2>Devoxx scheduling</h2>
         </section>
         <section>
             <h2>Act 1</h2>
@@ -183,7 +183,7 @@
             <h3 class="fragment">... and declares victory.</h3>
         </section>
         <section>
-            <h3>My mistake</h3>
+            <h3>Feasible, not optimal</h3>
             <figure>
                 <img src="../src/content/static/social/twitter-2023-03-20-geoffrey-made-a-mistake.png"/>
             </figure>
@@ -199,8 +199,8 @@
             <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_3.png" class="fullImage fragment">
             <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_4.png" class="fullImage fragment">
             <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_5.png" class="fullImage fragment">
-<!--            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_6.png" class="fullImage fragment">-->
-<!--            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_7.png" class="fullImage fragment">-->
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_6.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_7.png" class="fullImage fragment">
         </section>
         <section>
             <h3>Feasible is easy</h3>
@@ -215,6 +215,12 @@
             <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_12.png" class="fullImage fragment">
             <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_13.png" class="fullImage fragment">
             <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_14.png" class="fullImage fragment">
+        </section>
+        <section>
+            <h3>My mistake</h3>
+            <figure>
+                <img src="../src/content/static/social/twitter-2023-03-20-geoffrey-made-a-mistake.png"/>
+            </figure>
         </section>
         <section>
             <figure style="margin-top:25%">
@@ -599,6 +605,82 @@ for (Timeslot timeslotLesson1 : timeslots) {
                     <td><span class="negative">Far from optimal</span></td>
                     <td><span class="positive">Optimal</span></td>
                     <td class="fragment"><span class="positive">(Near) Optimal</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h3>How good are humans?</h3>
+        </section>
+        <section>
+            <h3>Result comparison</h3>
+            <table style="margin-top: 100px; table-layout:fixed">
+                <thead>
+                <tr>
+                    <th>Humans</th>
+                    <th>Greedy</th>
+                    <th>Brute Force</th>
+                    <th>Meta heuristics</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="fragment"><span class="negative">Slow</span></td>
+                    <td><span class="positive">Fast</span></td>
+                    <td><span class="negative">Slow</span></td>
+                    <td><span class="positive">Fast</span></td>
+                </tr>
+                <tr>
+                    <td class="fragment"><span class="positive">Scalable</span></td>
+                    <td><span class="positive">Scalable</span></td>
+                    <td><span class="negative">Not scalable</span></td>
+                    <td><span class="positive">Scalable</span></td>
+                </tr>
+                <tr>
+                    <td class="fragment"><span class="negative">Far from optimal</span></td>
+                    <td><span class="negative">Far from optimal</span></td>
+                    <td><span class="positive">Optimal</span></td>
+                    <td><span class="positive">(Near) Optimal</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h3>How good is Generative AI?</h3>
+        </section>
+        <section>
+            <h3>Result comparison</h3>
+            <table style="margin-top: 100px; table-layout:fixed">
+                <thead>
+                <tr>
+                    <th>Humans</th>
+                    <th class="small">Generative AI</th>
+                    <th>Greedy</th>
+                    <th>Brute Force</th>
+                    <th>Meta heuristics</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><span class="negative">Slow</span></td>
+                    <td class="fragment"><span class="positive">Fast</span></td>
+                    <td><span class="positive">Fast</span></td>
+                    <td><span class="negative">Slow</span></td>
+                    <td><span class="positive">Fast</span></td>
+                </tr>
+                <tr>
+                    <td><span class="positive">Scalable</span></td>
+                    <td class="fragment"><span class="positive">Scalable?</span></td>
+                    <td><span class="positive">Scalable</span></td>
+                    <td><span class="negative">Not scalable</span></td>
+                    <td><span class="positive">Scalable</span></td>
+                </tr>
+                <tr>
+                    <td><span class="negative">Far from optimal</span></td>
+                    <td class="fragment"><span class="negative">Far from optimal</span></td>
+                    <td><span class="negative">Far from optimal</span></td>
+                    <td><span class="positive">Optimal</span></td>
+                    <td><span class="positive">(Near) Optimal</span></td>
                 </tr>
                 </tbody>
             </table>
@@ -1166,14 +1248,6 @@ public class Talk {
                     </ul>
                 </li>
             </ul>
-        </section>
-        <section>
-            <img src="../src/content/timefold-solver-docs/responding-to-change/nonDisruptiveReplanning_0.png" class="fullImage">
-            <img src="../src/content/timefold-solver-docs/responding-to-change/nonDisruptiveReplanning_1.png" class="fullImage fragment">
-            <img src="../src/content/timefold-solver-docs/responding-to-change/nonDisruptiveReplanning_2.png" class="fullImage fragment">
-            <img src="../src/content/timefold-solver-docs/responding-to-change/nonDisruptiveReplanning_3.png" class="fullImage fragment">
-            <img src="../src/content/timefold-solver-docs/responding-to-change/nonDisruptiveReplanning_4.png" class="fullImage fragment">
-            <img src="../src/content/timefold-solver-docs/responding-to-change/nonDisruptiveReplanning_5.png" class="fullImage fragment">
         </section>
 
         <section>
