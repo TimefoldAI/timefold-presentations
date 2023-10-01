@@ -816,6 +816,14 @@ for (Timeslot timeslotLesson1 : timeslots) {
             <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamIfExists_3.png" class="fullImage fragment">
         </section>
         <section>
+            <h3>Why not just Java Streams?</h3>
+            <ul>
+                <li class="fragment">Incremental</li>
+                <li class="fragment">Scoring specific</li>
+                <li class="fragment">Score explanation</li>
+            </ul>
+        </section>
+        <section>
             <h3>DEMO</h3>
             <p>Constraint Streams</p>
             <!-- Live coding school timetabling to build up the constraints one by one -->
@@ -1005,7 +1013,7 @@ public class TrainPlatformDeciderResource {
   SolverManager&lt;TrainCrewSolution, ...&gt; platformSolverManager;
 
   // Uses TrainWagonSolution's output as problem facts:
-  // Length of train impacts eligble platforms
+  // Length of train impacts eligible platforms
   ... platformSolverManager.solve(...)
 }</code></pre>
         </section>
@@ -1045,7 +1053,7 @@ public class Patient {
             <p>Don't use <code>java.util.Date</code> for time manipulation.<br/>
                 It's like asking your bartender how to treat cancer.</p>
             <p class="fragment" style="margin-top: 80px;">
-                Don't use <code>java.util.Calender</code> either,<br/>
+                Don't use <code>java.util.Calendar</code> either,<br/>
                 It's like asking your dog how to treat cancer.
             </p>
             <p class="fragment" style="margin-top: 80px;">Use <code>java.time.LocalDate</code>
