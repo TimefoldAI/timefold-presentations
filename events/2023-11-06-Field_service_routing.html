@@ -1,0 +1,1563 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Field Service Routing</title>
+    <meta name="description" content="This slide deck explains Timefold: an open source constraint satisfaction solver in Java">
+    <!--    <link href="https://github.com/TimefoldAI/timefold-presentations" rel="canonical">-->
+
+    <link rel="stylesheet" href="../src/web/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../src/web/reveal/css/reveal.css">
+    <link rel="stylesheet" href="../src/web/reveal/css/theme/simple.css" id="theme">
+    <script>
+      if (window.location.search.match(/print-pdf/gi)) {
+        document.write('<link rel="stylesheet" href="../src/web/reveal/css/print/pdf.css">');
+      }
+    </script>
+    <link rel="stylesheet" href="../src/web/highlight/highlight.css">
+    <link rel="stylesheet" href="../src/web/timefold-presentation.css">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+
+<body>
+<div class="reveal">
+<div class="watermark watermark-left">
+    <p>
+        <img src="../src/web/social/twitter-logo.png"/> @GeoffreyDeSmet
+    </p>
+</div>
+<div class="slides">
+    <section>
+        <h1>
+            Field Service Routing
+        </h1>
+        <div style="margin-top: 80px;">
+            <p>
+                <span style="font-size: smaller">by</span> Geoffrey De Smet<br/>
+                <span style="font-size: smaller">and</span> Pieter De Saeger<br/>
+            </p>
+        </div>
+    </section>
+
+
+    <section data-background-color="#3e00ff">
+        <h3>
+            The story<br/>
+            of<br/>
+            the ultimate American road trip
+        </h3>
+    </section>
+    <section>
+        <img src="../src/content/static/vehicle-routing/road-trip/americanRoadTrip-theWashingtonPost.png" class="fullImage">
+        <p class="fullImagePara sourceUrl">https://www.washingtonpost.com/news/wonk/wp/2015/03/10/a-data-genius-computes-the-ultimate-american-road-trip/</p>
+    </section>
+    <section>
+        <img src="../src/content/static/vehicle-routing/road-trip/americanRoadTrip-problem.png" class="fullImage">
+        <p class="fullImagePara">Road trip for 50 landmarks, monuments, etc.</p>
+    </section>
+    <section>
+        <img src="../src/content/static/vehicle-routing/road-trip/americanRoadTrip-road-time-asymmetric-firstFitDecreasing.png" class="fullImage">
+        <p class="fullImagePara">
+            Traditional algorithm: <code>271h 35m 16s</code><br/>
+            Is it optimal?
+        </p>
+    </section>
+    <section>
+        <img src="../src/content/static/vehicle-routing/road-trip/americanRoadTrip-road-time-asymmetric-olson.png" class="fullImage">
+        <p class="fullImagePara">
+            Olson's trip: <code>232h 43m 10s</code><br/>
+            ⇒ <code>38h 52m 6s</code> faster (<code>14%</code>)<br/>
+            Is it optimal?
+        </p>
+    </section>
+    <section>
+        <img src="../src/content/static/vehicle-routing/road-trip/americanRoadTrip-iowa-comparison_0.png" class="fullImage">
+        <img src="../src/content/static/vehicle-routing/road-trip/americanRoadTrip-iowa-comparison_1.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/static/vehicle-routing/road-trip/roads-are-asymmetric_0.png" class="fullImage">
+        <img src="../src/content/static/vehicle-routing/road-trip/roads-are-asymmetric_1.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/static/vehicle-routing/road-trip/americanRoadTrip-carolina-comparison_0.png" class="fullImage">
+        <img src="../src/content/static/vehicle-routing/road-trip/americanRoadTrip-carolina-comparison_1.png" class="fullImage fragment">
+    </section>
+    <!--<section>-->
+    <!--<img src="_Blog/fastest-vs-shortest.png" class="fullImage">-->
+    <!--</section>-->
+    <section>
+        <img src="../src/content/static/vehicle-routing/road-trip/americanRoadTrip-road-time-asymmetric-olson.png" class="fullImage">
+        <p class="fullImagePara">
+            Olson's trip: <code>232h 43m 10s</code><br/>
+            Not optimal
+        </p>
+    </section>
+    <section>
+        <img src="../src/content/static/vehicle-routing/road-trip/americanRoadTrip-road-time-asymmetric-timefold.png" class="fullImage">
+        <p class="fullImagePara">
+            Timefold's trip: <code>230h 17m 54s</code><br/>
+            ⇒ Another <code>2h 25m 16s</code> faster (<code>1%</code> ⇒ <code>15%</code> in total)<br/>
+            <b>Optimal</b>, also <code>33km 710m</code> (= <code>20.95 miles</code>) shorter
+        </p>
+    </section>
+
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/travelling-salesman/tspOptimalSolutionVolatility_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/travelling-salesman/tspOptimalSolutionVolatility_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/travelling-salesman/tspOptimalSolutionVolatility_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/travelling-salesman/tspOptimalSolutionVolatility_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/mapReduceIsTerribleForTsp_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/mapReduceIsTerribleForTsp_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/mapReduceIsTerribleForTsp_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/mapReduceIsTerribleForTsp_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/mapReduceIsTerribleForTsp_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/optimization-algorithms/mapReduceIsTerribleForTsp_5.png" class="fullImage fragment">
+    </section>
+    <section>
+        <h2>
+            TSP<br/>
+            is an academic problem
+        </h2>
+    </section>
+
+    <section data-background-color="#3e00ff">
+        <h2>Vehicle Routing Problem</h2>
+    </section>
+
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/vehicleRoutingValueProposition_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/vehicleRoutingValueProposition_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/vehicleRoutingValueProposition_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/vehicleRoutingValueProposition_3.png" class="fullImage fragment">
+    </section>
+    <section>
+        <h3>Vehicle Routing Problem (VRP)</h3>
+        <p>DEMO</p>
+    </section>
+    <section>
+        <h2>Real-time planning</h2>
+        <p>Warm starts to solve in milliseconds</p>
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/responding-to-change/realTimePlanningVehicleRouting_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/realTimePlanningVehicleRouting_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/realTimePlanningVehicleRouting_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/realTimePlanningVehicleRouting_3.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/realTimePlanningVehicleRouting_4.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/responding-to-change/realTimePlanningVehicleRouting_5.png" class="fullImage fragment">
+    </section>
+
+    <section>
+        <h2>Real roads</h2>
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/vehicleRoutingGoogleMapsDirections.png" class="fullImage">
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/integrationWithRealMaps_0.png" class="fullImage">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/integrationWithRealMaps_1.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/integrationWithRealMaps_2.png" class="fullImage fragment">
+        <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/integrationWithRealMaps_3.png" class="fullImage fragment">
+    </section>
+
+    <section>
+        <h2>False presumptions VRP</h2>
+    </section>
+    <section>
+        <img src="../src/content/static/vehicle-routing/presumptions/vrpPresumptions01.png" class="vrpPresumptionImage">
+        <img src="../src/content/static/vehicle-routing/presumptions/vrpPresumptions02.png" class="vrpPresumptionImage fragment">
+        <p class="vrpPresumptionBottomPara fragment">Assumption: <b>An optimal VRP route uses only 1 vehicle.</b></p>
+    </section>
+    <section>
+        <p class="vrpPresumptionTopPara">Assumption: <b>An optimal VRP route uses only 1 vehicle. (false)</b></p>
+        <img src="../src/content/static/vehicle-routing/presumptions/vrpPresumptions03.png" class="vrpPresumptionImage">
+        <img src="../src/content/static/vehicle-routing/presumptions/vrpPresumptions04.png" class="vrpPresumptionImage fragment">
+        <p class="vrpPresumptionBottomPara fragment">Assumption: <b>An optimal VRP route has no crossing lines.</b></p>
+    </section>
+    <section>
+        <p class="vrpPresumptionTopPara">Assumption: <b>An optimal VRP route has no crossing lines. (false)</b></p>
+        <img src="../src/content/static/vehicle-routing/presumptions/vrpPresumptions05.png" class="vrpPresumptionImage">
+        <img src="../src/content/static/vehicle-routing/presumptions/vrpPresumptions06.png" class="vrpPresumptionImage fragment">
+        <p class="vrpPresumptionBottomPara fragment">Assumption: <b>An optimal, feasible VRP route with n vehicles is still optimal for n+1 vehicles.</b></p>
+    </section>
+    <section>
+        <p class="vrpPresumptionTopPara">Assumption: <b>An optimal, feasible VRP route with n vehicles is still optimal for n+1 vehicles. (false)</b></p>
+        <img src="../src/content/static/vehicle-routing/presumptions/vrpPresumptions07.png" class="vrpPresumptionImage">
+        <p class="vrpPresumptionBottomPara fragment">Assumption: <b>An optimal VRP route has no crossing lines of the same color.</b></p>
+    </section>
+    <section>
+        <p class="vrpPresumptionTopPara">Assumption: <b>An optimal VRP route has no crossing lines of the same color. (false)</b></p>
+        <img src="../src/content/static/vehicle-routing/presumptions/vrpPresumptions08.png" class="vrpPresumptionImage">
+        <img src="../src/content/static/vehicle-routing/presumptions/vrpPresumptions09.png" class="vrpPresumptionImage fragment">
+        <p class="vrpPresumptionBottomPara fragment">Assumption: <b>We can focus on time windows before focusing on capacity (or vice versa).</b></p>
+    </section>
+    <section>
+        <p class="vrpPresumptionTopPara">Assumption: <b>We can focus on time windows before focusing on capacity (or vice versa). (false)</b></p>
+        <img src="../src/content/static/vehicle-routing/presumptions/vrpPresumptions10.png" class="vrpPresumptionImage">
+        <img src="../src/content/static/vehicle-routing/presumptions/vrpPresumptions11.png" class="vrpPresumptionImage fragment">
+        <p class="vrpPresumptionBottomPara fragment">Assumption: <b>Humans optimize VRP optimally.</b></p>
+    </section>
+    <section>
+        <p class="vrpPresumptionTopPara">Assumption: <b>Humans optimize VRP optimally. (false)</b></p>
+        <img src="../src/content/static/vehicle-routing/presumptions/vrpPresumptions12.png" class="vrpPresumptionImage">
+        <p class="vrpPresumptionBottomPara">Can a manager reasonable judge if this is optimal?</p>
+    </section>
+
+    <section>
+        <section data-background-color="#3e00ff">
+            <h2>The world is full<br/>
+                of scheduling problems</h2>
+        </section>
+        <section>
+            <h2>For example</h2>
+        </section>
+        <section>
+            <img src="../src/content/static/airport-story/airport-arrival.png" class="fullImage">
+        </section>
+        <section>
+            <img src="../src/content/static/airport-story/escalator_0.png" class="fullImage">
+            <img src="../src/content/static/airport-story/escalator_1.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/static/airport-story/check-in-counters_0.png" class="fullImage">
+            <img src="../src/content/static/airport-story/check-in-counters_1.png" class="fullImage fragment">
+            <img src="../src/content/static/airport-story/check-in-counters_2.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/static/airport-story/departures_0.png" class="fullImage">
+            <img src="../src/content/static/airport-story/departures_1.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/static/airport-story/security_0.png" class="fullImage">
+            <img src="../src/content/static/airport-story/security_1.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/static/airport-story/departure-gate_0.png" class="fullImage">
+            <img src="../src/content/static/airport-story/departure-gate_1.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/static/airport-story/airplanes-at-gates_0.png" class="fullImage">
+            <img src="../src/content/static/airport-story/airplanes-at-gates_1.png" class="fullImage fragment">
+            <img src="../src/content/static/airport-story/airplanes-at-gates_2.png" class="fullImage fragment">
+            <img src="../src/content/static/airport-story/airplanes-at-gates_3.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/static/airport-story/pilots_0.png" class="fullImage">
+            <img src="../src/content/static/airport-story/pilots_1.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/static/airport-story/stewards_0.png" class="fullImage">
+            <img src="../src/content/static/airport-story/stewards_1.png" class="fullImage fragment">
+        </section>
+        <section>
+            <h2>The world is full<br/>
+                of scheduling problems</h2>
+        </section>
+        <section>
+            <h2>Some are automated</h2>
+        </section>
+        <section>
+            <h2>Few are <b>optimized</b></h2>
+        </section>
+        <section>
+            <h2>Let's optimize them<br/>with Java and AI</h2>
+        </section>
+        <section data-background-color="#3e00ff">
+            <h2>Is optimization worth it?</h2>
+        </section>
+        <section>
+            <h3>Remember 2022?</h3>
+            <figure>
+                <img src="../src/content/static/gas-story/gas-price.png"/>
+            </figure>
+        </section>
+        <section>
+            <h3>Panic!</h3>
+        </section>
+        <section>
+            <h3>Reality</h3>
+            <figure>
+                <img src="../src/content/static/gas-story/gas-consumption.png"/>
+            </figure>
+            <small>Source: <a href="https://www.eru.cz/mesicni-spotreba-zemniho-plynu-2022">CZ govt. statistics</a></small>
+        </section>
+        <section>
+            <h3>Quick win</h3>
+            <ul>
+                <li>-15% natural gas consumption</li>
+                <li>Some impact on quality of life</li>
+            </ul>
+        </section>
+        <section>
+            <p>
+                Imagine if we optimize
+            </p>
+            <p>
+                for efficiency gains without sacrifices
+            </p>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/vehicleRoutingValueProposition_0.png" class="fullImage">
+        </section>
+        <section>
+            <h3>Vehicle routing case study</h3>
+            <p>Expected: -1% driving time</p>
+            <p class="fragment">Result: -25% driving time</p>
+            <p class="fragment">⇒ -10 million kg CO² emission per year</p>
+            <p class="fragment">⇒ -100 million $ cost per year</p>
+        </section>
+        <section data-background-color="#3e00ff">
+            <h2>Devoxx scheduling</h2>
+        </section>
+        <section>
+            <h2>Act 1</h2>
+            <p>March 2023</p>
+        </section>
+        <section>
+            <figure>
+                <img src="../src/content/static/social/twitter-2023-03-20-stephan-replaces-optaplanner.png"/>
+            </figure>
+        </section>
+        <section>
+            <h3>The bet</h3>
+            <figure>
+                <img src="../src/content/static/social/twitter-2023-03-20-geoffrey-proposes-a-bet.png"/>
+            </figure>
+        </section>
+        <section>
+            <h3>It's on!</h3>
+            <figure>
+                <img src="../src/content/static/social/twitter-2023-03-20-stephan-accepts-the-bet.png"/>
+            </figure>
+        </section>
+        <section>
+            <h2>Act 2</h2>
+            <p>May 2023</p>
+        </section>
+        <section>
+            <h3>Stephan generates a Voxxed schedule with GPT...</h3>
+            <figure>
+                <img src="../src/content/static/social/youtube-2023-05-10-stephan-generates-voxxed-schedule.png"/>
+            </figure>
+            <h3 class="fragment">... and declares victory.</h3>
+        </section>
+        <section>
+            <h3>Feasible, not optimal</h3>
+            <figure>
+                <img src="../src/content/static/social/twitter-2023-03-20-geoffrey-made-a-mistake.png"/>
+            </figure>
+        </section>
+        <section>
+            <h3>What is a feasible schedule?</h3>
+            <p>No hard constraints broken.</p>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_3.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_4.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_5.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_6.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_7.png" class="fullImage fragment">
+        </section>
+        <section>
+            <h3>Feasible is easy</h3>
+            <p>Optimal is hard.</p>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_7.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_8.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_9.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_10.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_11.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_12.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_13.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingConstraints_14.png" class="fullImage fragment">
+        </section>
+        <section>
+            <h3>My mistake</h3>
+            <figure>
+                <img src="../src/content/static/social/twitter-2023-03-20-geoffrey-made-a-mistake.png"/>
+            </figure>
+        </section>
+        <section>
+            <figure style="margin-top:25%">
+                <img src="../src/content/static/social/google-2023-05-10-rent-a-duke-costume.png"/>
+            </figure>
+        </section>
+        <section>
+            <h3>There is hope</h3>
+            <figure>
+                <img src="../src/content/static/social/twitter-2023-03-20-geoffrey-has-hope.png"/>
+            </figure>
+        </section>
+        <section>
+            <h3>Scale from Voxxed to Devoxx</h3>
+            <ul>
+                <li class="fragment">Voxxed: 30 sessions</li>
+                <li class="fragment">Devoxx: 210 sessions</li>
+                <li class="fragment">Is Devoxx just 7 times harder than Voxxed?</li>
+                <li class="fragment">Or is it 10<sup>365</sup> times harder?</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Act 3</h2>
+            <p>August 2023</p>
+        </section>
+        <section>
+            <h3>The Devoxx BE schedule<br/>was generated with ...</h3>
+            <figure>
+                <img src="../src/content/static/social/twitter-2023-08-11-devoxx-uses-timefold.png"/>
+            </figure>
+            <h3 class="fragment">Victory!</h3>
+        </section>
+        <section>
+            <h3>Victory over generative AI?</h3>
+        </section>
+        <section>
+            <img src="../src/content/static/social/devoxx-schedule-issue_0.png" class="fullImage">
+            <img src="../src/content/static/social/devoxx-schedule-issue_1.png" class="fullImage fragment">
+        </section>
+        <section>
+            <h3>Generate tags with GPT<br/>before solving</h3>
+            <figure>
+                <img src="../src/content/static/social/devoxx-generated-tags.png"/>
+            </figure>
+            <p class="fragment">Generative AI + Solver AI<br/>work together</p>
+        </section>
+    </section>
+
+    <section>
+        <section data-background-color="#3e00ff">
+            <h2>Why difficult to solve?</h2>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingInputOutput_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingInputOutput_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingInputOutput_2.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingHardConstraints_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingHardConstraints_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingHardConstraints_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingHardConstraints_3.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingHardConstraints_4.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingHardConstraints_5.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingHardConstraints_6.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingHardConstraints_7.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingHardConstraints_8.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingHardConstraints_9.png" class="fullImage fragment">
+        </section>
+        <section>
+            <h3>The web UI</h3>
+            <figure>
+                <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingScreenshot.png"/>
+            </figure>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureQuarkus_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureQuarkus_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureQuarkus_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureQuarkus_3.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingClassDiagram_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingClassDiagram_1.png" class="fullImage fragment">
+        </section>
+        <section>
+            <h3>Calculate score</h3>
+            <pre xml:space="preserve"><code class="java">public long calculateScore(TimeTable timeTable) {
+    long hardScore = 0;
+    for (Lesson lesson1 : timeTable.lessons) {
+        for (Lesson lesson2 : timeTable.lessons) {
+            if (lesson1.room == lesson2.room
+                    && lesson1.timeslot == lesson2.timeslot) {
+                hardScore--;
+            }
+            if (lesson1.teacher == lesson2.teacher
+                    && lesson1.timeslot == lesson2.timeslot) {
+                hardScore--;
+            }
+            if (lesson1.studentGroup == lesson2.studentGroup
+                    && lesson1.timeslot == lesson2.timeslot) {
+                hardScore--;
+            }
+        }
+    }
+    return hardScore;
+}</code></pre>
+        </section>
+        <section data-background-color="#b6adfd">
+            <h2>Greedy algorithm</h2>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingGreedyAlgorithm_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingGreedyAlgorithm_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingGreedyAlgorithm_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingGreedyAlgorithm_3.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingGreedyAlgorithm_4.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingGreedyAlgorithm_5.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingGreedyAlgorithm_6.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingGreedyAlgorithm_7.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingGreedyAlgorithm_8.png" class="fullImage fragment">
+        </section>
+        <section>
+            <h3>Greedy code</h3>
+            <pre xml:space="preserve"><code class="java">for (Lesson lesson : timeTable.lessons) {
+    long bestScore = Long.MIN_VALUE;
+    Room bestRoom = null;
+    Timeslot bestTimeslot = null;
+    for (Timeslot timeslot : timeTable.timeslots) {
+        lesson.setTimeslot(timeslot);
+        for (Room room : timeTable.rooms) {
+            lesson.setRoom(room);
+            long score = calculateScore(timeTable);
+            if (score > bestScore) {
+                bestScore = score;
+                bestRoom = room;
+                bestTimeslot = timeslot;
+            }
+        }
+    }
+    lesson.setTimeslot(bestTimeslot);
+    lesson.setRoom(bestRoom);
+}</code></pre>
+        </section>
+        <section>
+            <h3>DEMO</h3>
+            <p>Greedy algorithm</p>
+        </section>
+        <section>
+            <h3>Algorithm comparison</h3>
+            <table style="margin-top: 100px; table-layout:fixed">
+                <thead>
+                <tr>
+                    <th>Greedy</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="fragment"><span class="positive">Fast</span></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="fragment"><span class="positive">Scalable</span></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="fragment"><span class="negative">Far from optimal</span></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+        <section data-background-color="#b6adfd">
+            <h2>Brute force</h2>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingSearchSpace_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingSearchSpace_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingSearchSpace_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingSearchSpace_3.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingSearchSpace_4.png" class="fullImage fragment">
+        </section>
+        <section>
+            <h3>Brute force code</h3>
+            <pre xml:space="preserve"><code class="java">long bestScore = Long.MIN_VALUE;
+for (Timeslot timeslotLesson1 : timeslots) {
+    lesson1.setTimeslot(timeslotLesson1);
+    for (Room roomLesson1 : rooms) {
+        lesson1.setRoom(roomLesson1);
+
+        for (Timeslot timeslotLesson2 : timeslots) {
+            lesson2.setTimeslot(timeslotLesson2);
+            for (Room roomLesson2 : rooms) {
+                lesson2.setRoom(roomLesson2);
+                ...
+
+                for (Timeslot timeslotLessonN : timeslots) {
+                    lessonN.setTimeslot(timeslotLessonN);
+                    for (Room roomLessonN : rooms) {
+                        lessonN.setRoom(roomLessonN);
+                        int score = calculateScore(timeTable);
+                        if (score > bestScore)
+                            ...</code></pre>
+        </section>
+        <section>
+            <h3>DEMO</h3>
+            <p>Brute Force</p>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingSearchSpace_4.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingSearchSpace_5.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingSearchSpace_6.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingSearchSpace_7.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingSearchSpace_8.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingSearchSpace_9.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingSearchSpace_10.png" class="fullImage fragment">
+        </section>
+        <section>
+            <h3>How big is the search space?</h3>
+            <p>Search space for <i>n</i> lessons: <i>n<sup>n</sup></i></p>
+            <p>Search space for 400 lessons: 10<sup>1040</sup></p>
+            <figure class="fragment">
+                <p>Atoms in observable universe: 10<sup>80</sup></p>
+                <img src="../src/content/static/optimization-algorithms/universe.png" style="width: 200px; height: 200px;"/>
+            </figure>
+        </section>
+        <section>
+            <img src="../src/content/static/benchmarks/bruteForceHitsTheWall_0.png" class="fullImage">
+            <img src="../src/content/static/benchmarks/bruteForceHitsTheWall_1.png" class="fullImage fragment">
+            <img src="../src/content/static/benchmarks/bruteForceHitsTheWall_2.png" class="fullImage fragment">
+            <img src="../src/content/static/benchmarks/bruteForceHitsTheWall_3.png" class="fullImage fragment">
+            <img src="../src/content/static/benchmarks/bruteForceHitsTheWall_4.png" class="fullImage fragment">
+            <img src="../src/content/static/benchmarks/bruteForceHitsTheWall_5.png" class="fullImage fragment">
+            <img src="../src/content/static/benchmarks/bruteForceHitsTheWall_6.png" class="fullImage fragment">
+            <img src="../src/content/static/benchmarks/bruteForceHitsTheWall_7.png" class="fullImage fragment">
+            <img src="../src/content/static/benchmarks/voyager-nearby-star.png" class="fullImage fragment">
+            <img src="../src/content/static/benchmarks/bruteForceHitsTheWall_8.png" class="fullImage fragment">
+            <img src="../src/content/static/benchmarks/apollo-bootprint-fades.png" class="fullImage fragment">
+            <img src="../src/content/static/benchmarks/bruteForceHitsTheWall_9.png" class="fullImage fragment">
+            <img src="../src/content/static/benchmarks/sun-explodes.png" class="fullImage fragment">
+            <img src="../src/content/static/benchmarks/bruteForceHitsTheWall_10.png" class="fullImage fragment">
+        </section>
+        <section>
+            <h3>Algorithm comparison</h3>
+            <table style="margin-top: 100px; table-layout:fixed">
+                <thead>
+                <tr>
+                    <th>Greedy</th>
+                    <th>Brute Force</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><span class="positive">Fast</span></td>
+                    <td class="fragment"><span class="negative">Slow</span></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><span class="positive">Scalable</span></td>
+                    <td class="fragment"><span class="negative">Not scalable</span></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><span class="negative">Far from optimal</span></td>
+                    <td class="fragment"><span class="positive">Optimal</span></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+        <section data-background-color="#b6adfd" class="center">
+            <h2>Advanced algorithms</h2>
+        </section>
+        <section>
+            <h3>Metaheuristics</h3>
+            <ul>
+                <li>Local Search</li>
+                <li>Tabu Search</li>
+                <li>Simulated Annealing</li>
+                <li>Late Acceptance</li>
+                <li>...</li>
+            </ul>
+            <p class="fragment">+ advanced subsystem algorithms</p>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingLocalSearchAlgorithms_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingLocalSearchAlgorithms_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingLocalSearchAlgorithms_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingLocalSearchAlgorithms_3.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingLocalSearchAlgorithms_4.png" class="fullImage fragment">
+        </section>
+        <section>
+            <h2>Implement yourself?</h2>
+        </section>
+        <section>
+            <figure>
+                <img src="../src/content/static/technology/optaplanner-logo.png"/>
+            </figure>
+        </section>
+        <section data-transition="fade-out">
+            <figure>
+                <img src="../src/content/timefold-solver-docs/shared/timefold-logo.png"/>
+                <p><i>Planning optimization made easy</i></p>
+            </figure>
+            <ul style="margin-top: 100px;">
+                <li class="fragment">Library of optimization algorithms</li>
+                <li class="fragment">AI, not ML</li>
+                <li class="fragment">Open Source (Apache license)</li>
+                <li class="fragment">Actively developed by our Open Core company</li>
+            </ul>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/introduction/compatibility_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/introduction/compatibility_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/introduction/compatibility_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/introduction/compatibility_3.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/introduction/compatibility_4.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureQuarkus_3.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureQuarkus_4.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingClassDiagram_1.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingClassDiagram_2.png" class="fullImage fragment">
+        </section>
+        <section>
+            <h3>Easy score calculator</h3>
+            <pre xml:space="preserve"><code class="java">public HardSoftScore calculateScore(TimeTable timeTable) {
+    long hardScore = 0;
+    for (Lesson lesson1 : timeTable.lessons) {
+        for (Lesson lesson2 : timeTable.lessons) {
+            if (lesson1.room == lesson2.room
+                    && lesson1.timeslot == lesson2.timeslot) {
+                hardScore--;
+            }
+            if (lesson1.teacher == lesson2.teacher
+                    && lesson1.timeslot == lesson2.timeslot) {
+                hardScore--;
+            }
+            if (lesson1.studentGroup == lesson2.studentGroup
+                    && lesson1.timeslot == lesson2.timeslot) {
+                hardScore--;
+            }
+        }
+    }
+    return HardSoftScore.of(hardScore, 0);
+}</code></pre>
+        </section>
+        <section>
+            <h3>DEMO</h3>
+            <p>Metaheuristics</p>
+        </section>
+        <section>
+            <h3>Algorithm comparison</h3>
+            <table style="margin-top: 100px; table-layout:fixed">
+                <thead>
+                <tr>
+                    <th>Greedy</th>
+                    <th>Brute Force</th>
+                    <th>Metaheuristics</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><span class="positive">Fast</span></td>
+                    <td><span class="negative">Slow</span></td>
+                    <td class="fragment"><span class="positive">Fast</span></td>
+                </tr>
+                <tr>
+                    <td><span class="positive">Scalable</span></td>
+                    <td><span class="negative">Not scalable</span></td>
+                    <td class="fragment"><span class="positive">Scalable</span></td>
+                </tr>
+                <tr>
+                    <td><span class="negative">Far from optimal</span></td>
+                    <td><span class="positive">Optimal</span></td>
+                    <td class="fragment"><span class="positive">(Near) Optimal</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h3>How good are humans?</h3>
+        </section>
+        <section>
+            <h3>Result comparison</h3>
+            <table style="margin-top: 100px; table-layout:fixed">
+                <thead>
+                <tr>
+                    <th>Humans</th>
+                    <th>Greedy</th>
+                    <th>Brute Force</th>
+                    <th>Meta heuristics</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="fragment"><span class="negative">Slow</span></td>
+                    <td><span class="positive">Fast</span></td>
+                    <td><span class="negative">Slow</span></td>
+                    <td><span class="positive">Fast</span></td>
+                </tr>
+                <tr>
+                    <td class="fragment"><span class="positive">Scalable</span></td>
+                    <td><span class="positive">Scalable</span></td>
+                    <td><span class="negative">Not scalable</span></td>
+                    <td><span class="positive">Scalable</span></td>
+                </tr>
+                <tr>
+                    <td class="fragment"><span class="negative">Far from optimal</span></td>
+                    <td><span class="negative">Far from optimal</span></td>
+                    <td><span class="positive">Optimal</span></td>
+                    <td><span class="positive">(Near) Optimal</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h3>How good is Generative AI?</h3>
+        </section>
+        <section>
+            <h3>Result comparison</h3>
+            <table style="margin-top: 100px; table-layout:fixed">
+                <thead>
+                <tr>
+                    <th>Humans</th>
+                    <th class="small">Generative AI</th>
+                    <th>Greedy</th>
+                    <th>Brute Force</th>
+                    <th>Meta heuristics</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><span class="negative">Slow</span></td>
+                    <td class="fragment"><span class="positive">Fast</span></td>
+                    <td><span class="positive">Fast</span></td>
+                    <td><span class="negative">Slow</span></td>
+                    <td><span class="positive">Fast</span></td>
+                </tr>
+                <tr>
+                    <td><span class="positive">Scalable</span></td>
+                    <td class="fragment"><span class="positive">Scalable?</span></td>
+                    <td><span class="positive">Scalable</span></td>
+                    <td><span class="negative">Not scalable</span></td>
+                    <td><span class="positive">Scalable</span></td>
+                </tr>
+                <tr>
+                    <td><span class="negative">Far from optimal</span></td>
+                    <td class="fragment"><span class="negative">Far from optimal</span></td>
+                    <td><span class="negative">Far from optimal</span></td>
+                    <td><span class="positive">Optimal</span></td>
+                    <td><span class="positive">(Near) Optimal</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <img src="../src/content/timefold-solver-docs/optimization-algorithms/architectureOverview_0.png" class="fullImage">
+        </section>
+    </section>
+
+    <section>
+        <section data-background-color="#3e00ff">
+            <h2>Constraints</h2>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/positiveAndNegativeConstraints_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/positiveAndNegativeConstraints_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/positiveAndNegativeConstraints_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/positiveAndNegativeConstraints_3.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/positiveAndNegativeConstraints_4.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/positiveAndNegativeConstraints_5.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/positiveAndNegativeConstraints_6.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/positiveAndNegativeConstraints_7.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/positiveAndNegativeConstraints_8.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreWeighting_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreWeighting_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreWeighting_2.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreTradeoffInPerspective_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreTradeoffInPerspective_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreTradeoffInPerspective_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreTradeoffInPerspective_3.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreTradeoffInPerspective_4.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreLevels_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreLevels_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreLevels_2.png" class="fullImage fragment">
+        </section>
+
+        <section>
+            <h3>Let's try this out</h3>
+            <p class="fragment">after the break</p>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/nurse-rostering/employeeRosteringValueProposition_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/nurse-rostering/employeeRosteringValueProposition_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/nurse-rostering/employeeRosteringValueProposition_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/nurse-rostering/employeeRosteringValueProposition_3.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/nurse-rostering/employeeRosteringValueProposition_4.png" class="fullImage fragment">
+        </section>
+        <section>
+            <h3>DEMO</h3>
+            <p>Employee scheduling</p>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_3.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_4.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_5.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_6.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_7.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_8.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/incrementalScoreCalculationEmployeeRostering_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/incrementalScoreCalculationEmployeeRostering_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/incrementalScoreCalculationEmployeeRostering_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/incrementalScoreCalculationEmployeeRostering_3.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/incrementalScoreCalculationEmployeeRostering_4.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/incrementalScoreCalculationEmployeeRostering_5.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/incrementalScoreCalculationEmployeeRostering_6.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/incrementalScoreCalculationEmployeeRostering_7.png" class="fullImage fragment">
+        </section>
+        <section data-background-color="#3e00ff">
+            <h2>How do you define constraints?</h2>
+        </section>
+        <section>
+            <h3>Constraint Streams</h3>
+            <p>Get incremental score calculation<br/>
+                without writing incremental score calculation.</p>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamIntroduction_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamIntroduction_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamIntroduction_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamIntroduction_3.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamFilter_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamFilter_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamFilter_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamFilter_3.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamFilter_4.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamFilter_5.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamIncrementalCalculation_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamIncrementalCalculation_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamIncrementalCalculation_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamIncrementalCalculation_3.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamIncrementalCalculation_4.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamIncrementalCalculation_5.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamJoinWithoutJoiners_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamJoinWithoutJoiners_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamJoinWithoutJoiners_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamJoinWithoutJoiners_3.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamJoinWithoutJoiners_4.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamJoinWithJoiners_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamJoinWithJoiners_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamJoinWithJoiners_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamJoinWithJoiners_3.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamGroupBy_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamGroupBy_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamGroupBy_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamGroupBy_3.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamIfExists_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamIfExists_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamIfExists_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/constraintStreamIfExists_3.png" class="fullImage fragment">
+        </section>
+        <section>
+            <h3>Why not just Java Streams?</h3>
+            <ul>
+                <li class="fragment">Incremental</li>
+                <li class="fragment">Scoring specific</li>
+                <li class="fragment">Score explanation</li>
+            </ul>
+        </section>
+        <section>
+            <h3>DEMO</h3>
+            <p>Constraint Streams</p>
+            <!-- Live coding school timetabling to build up the constraints one by one -->
+            <!-- Run employee scheduling -->
+        </section>
+        <section>
+            <h3>Constraint Streams</h3>
+            <ul>
+                <li>Streams-like API</li>
+                <li>Fast and scalable
+                    <ul>
+                        <li>Incremental calculation</li>
+                        <li>Indexed joins</li>
+                    </ul>
+                </li>
+                <li>Custom code friendly</li>
+            </ul>
+        </section>
+    </section>
+
+    <section>
+        <section data-background-color="#3e00ff">
+            <h2>Responding to change</h2>
+        </section>
+
+        <section>
+            <h3 style="font-style: italic">
+                "Plans are of little importance,<br/>
+                but planning is essential."
+            </h3>
+            <div style="margin-top: 80px;">
+                <p>
+                    Winston Churchill<br/>
+                    (Prime Minister UK 1940-1945)<br/>
+                </p>
+            </div>
+        </section>
+        <section>
+            <h3 style="font-style: italic">
+                "Everybody has a plan<br/>
+                until they get punched<br/>
+                in the mouth…"
+            </h3>
+            <div style="margin-top: 80px;">
+                <p>
+                    Mike Tyson<br/>
+                    (Boxer, heavyweight champion 1987-1990)<br/>
+                </p>
+            </div>
+        </section>
+        <section>
+            <h3>
+                What kind of planning disruptions?
+            </h3>
+            <ul>
+                <li>Local disruption
+                    <ul>
+                        <li>Impact limited to one department/region</li>
+                    </ul>
+                </li>
+                <li>Global disruption
+                    <ul>
+                        <li>Impact across the board</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h3>Local disruption</h3>
+            <figure>
+                <img src="../src/content/static/responding-to-change/agilePlanningSickNote.png"/>
+            </figure>
+        </section>
+        <section>
+            <h3>Global disruptions</h3>
+            <ul>
+                <li>2001 - September 11 attacks
+                    <ul>
+                        <li>Air-traffic shut-down in North America for 2 days</li>
+                    </ul>
+                </li>
+                <li class="fragment">2010 - Eyjafjallajökull volcano eruption
+                    <ul>
+                        <li>Air-traffic shut-down in Europe for 8 days</li>
+                    </ul>
+                </li>
+                <li class="fragment">2020 - COVID-19
+                    <ul>
+                        <li>Flight cancellations</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h3>Planning agility paradox</h3>
+            <p style="margin-top: 80px;">
+                "We can <i>not</i> automate planning<br/>
+                because the plans will change."
+            </p>
+            <div class="fragment">
+                <p>⇒</p>
+                <p>
+                    "We <i>need</i> to automate (re)planning<br/>
+                    because the plans will change."
+                </p>
+            </div>
+            <div class="fragment" style="margin-top: 80px;">
+                <p>But how?</p>
+            </div>
+        </section>
+        <section>
+            <h2>
+                1) What is your<br/> publication deadline?
+            </h2>
+        </section>
+        <section>
+            <h3>Publication</h3>
+            <ul>
+                <li>Tell employees when/how/where to work</li>
+                <li>Publication deadline
+                    <ul>
+                        <li>Technician routing: 1 hour before departure</li>
+                        <li>School timetabling: before end of vacation</li>
+                        <li>Guards: 4 weeks before shift</li>
+                        <li>Nurses: 6 weeks before shift</li>
+                        <li>Facility location: 6 months before opening</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/responding-to-change/multiStagePlanning_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/responding-to-change/multiStagePlanning_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/responding-to-change/multiStagePlanning_2.png" class="fullImage fragment">
+        </section>
+        <section>
+            <h3>Multi-stage planning</h3>
+            <ul>
+                <li>Strategic: expand the maternity ward?</li>
+                <li>Tactical: hire a respiratory specialist?</li>
+                <li>Operational: assign a Monday shift to Ann?</li>
+            </ul>
+            <p>Each planning stage feeds into the next.</p>
+            <div class="fragment" style="margin-top: 80px;">
+                <p>Especially for trains, airplanes, etc</p>
+                <ul>
+                    <li>Strategic: add a stop in Philadelphia?</li>
+                    <li>Tactical: depart at 7 AM?</li>
+                    <li>Operational: Which locomotive and wagons?</li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/responding-to-change/multiStagePlanning_2.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/responding-to-change/multiStagePlanning_3.png" class="fullImage fragment">
+        </section>
+        <section>
+            <h3>Conway's law</h3>
+            <p style="font-style: italic">
+                "Any organization that designs a (software) system<br/>
+                will produce a design whose structure<br/>
+                is a copy of the organization's communication structure."
+            </p>
+            <div class="fragment">
+                <p>⇒</p>
+                <p>
+                    Planning problems solved by different groups<br/>
+                    should use different Solver instances<br/>
+                    (during the first year in production).
+                </p>
+            </div>
+        </section>
+        <section>
+            <h3>In practice</h3>
+            <pre xml:space="preserve"><code class="java">@Path("/trainWagon")
+public class TrainWagonDeciderResource {
+
+  @Inject
+  SolverManager&lt;TrainWagonSolution, ...&gt; wagonSolverManager;
+
+  ... wagonSolverManager.solve(...)
+}
+@Path("/trainPlatform")
+public class TrainPlatformDeciderResource {
+
+  @Inject
+  SolverManager&lt;TrainCrewSolution, ...&gt; platformSolverManager;
+
+  // Uses TrainWagonSolution's output as problem facts:
+  // Length of train impacts eligible platforms
+  ... platformSolverManager.solve(...)
+}</code></pre>
+        </section>
+        <section>
+            <h2>
+                2) Do you assign to time?
+            </h2>
+        </section>
+        <section>
+            <h3>No, domain lacks time data</h3>
+            <p>For example:</p>
+            <ul>
+                <li>Facility Location Problem</li>
+                <li>Knapsack Problem</li>
+            </ul>
+            <p class="fragment">No <code>java.time</code> import</p>
+        </section>
+        <section>
+            <h3>Yes, Domain has time<br/> but planning does not assign to time</h3>
+            <pre xml:space="preserve"><code class="java">import java.time.LocalDate;
+
+@PlanningEntity
+public class Patient {
+
+  private String name;
+  private LocalDate arrivalDate;
+  private LocalDate departureDate;
+  ...
+  @PlanningVariable(...)
+  private Bed bed;
+  ...
+}</code></pre>
+            <p>Hospital bed planning does not change<br/> a patient's arrival or departure date.</p>
+        </section>
+        <section>
+            <h3>By the way...</h3>
+            <p>Don't use <code>java.util.Date</code> for time manipulation.<br/>
+                It's like asking your bartender how to treat cancer.</p>
+            <p class="fragment" style="margin-top: 80px;">
+                Don't use <code>java.util.Calendar</code> either,<br/>
+                It's like asking your dog how to treat cancer.
+            </p>
+            <p class="fragment" style="margin-top: 80px;">Use <code>java.time.LocalDate</code>
+                or <code>java.time.LocalDateTime</code> instead!</p>
+        </section>
+        <section>
+            <h3>Yes, Domain has time<br/> and planning assigns to time</h3>
+            <p>Pick a good domain model.</p>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/design-patterns/assigningTimeToPlanningEntities_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/design-patterns/assigningTimeToPlanningEntities_1.png" class="fullImage fragment">
+        </section>
+<!--        <section>-->
+<!--            <h3>Planning assigns to time</h3>-->
+<!--            <pre xml:space="preserve"><code class="java">@PlanningEntity-->
+<!--public class Lesson {-->
+
+<!--  private String subject;-->
+<!--  ...-->
+<!--  @PlanningVariable(...)-->
+<!--  private Timeslot timeslot;-->
+<!--  ...-->
+<!--}-->
+
+<!--import java.time.DayOfWeek;-->
+<!--import java.time.LocalTime;-->
+
+<!--public class Timeslot {-->
+
+<!--  private DayOfWeek dayOfWeek;-->
+<!--  private LocalTime startTime;-->
+<!--  private LocalTime endTime;-->
+<!--  ...-->
+<!--}</code></pre>-->
+<!--        </section>-->
+        <section>
+            <img src="../src/content/timefold-solver-docs/design-patterns/assigningTimeToPlanningEntities_1.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/design-patterns/assigningTimeToPlanningEntities_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/design-patterns/assigningTimeToPlanningEntities_3.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/design-patterns/assigningTimeToPlanningEntities2_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/design-patterns/assigningTimeToPlanningEntities2_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/design-patterns/assigningTimeToPlanningEntities2_2.png" class="fullImage fragment">
+        </section>
+
+        <section>
+            <h2>
+                3) Do you replan<br/>
+                every week, day or hour?
+            </h2>
+            <h3>Continuous planning</h3>
+        </section>
+        <section>
+            <h3>What is continuous planning?</h3>
+            <figure>
+                <img src="../src/content/timefold-solver-docs/use-cases-and-examples/nurse-rostering/employeeRosteringValueProposition_0.png"/>
+            </figure>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/responding-to-change/continuousPlanningEmployeeRostering_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/responding-to-change/continuousPlanningEmployeeRostering_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/responding-to-change/continuousPlanningEmployeeRostering_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/responding-to-change/continuousPlanningEmployeeRostering_3.png" class="fullImage fragment">
+        </section>
+        <section>
+            <h3>Don't change history</h3>
+            <pre xml:space="preserve"><code class="java">@Entity
+public class Shift {
+
+  private LocalDateTime start;
+  private LocalDateTime end;
+
+  @PlanningPin
+  private boolean history;
+  ...
+  @PlanningVariable(...)
+  private Employee employee;
+  ...
+}</code></pre>
+        </section>
+        <section>
+            <h3>Don't change published shifts?</h3>
+            <pre xml:space="preserve"><code class="java">@PlanningEntity
+public class Shift {
+
+  private LocalDateTime start;
+  private LocalDateTime end;
+
+  @PlanningPin
+  // every historic shift is published
+  private boolean published;
+  ...
+  @PlanningVariable(...)
+  private Employee employee;
+  ...
+}</code></pre>
+            <p>Maybe</p>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/responding-to-change/continuousPublishingWithRotation_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/responding-to-change/continuousPublishingWithRotation_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/responding-to-change/continuousPublishingWithRotation_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/responding-to-change/continuousPublishingWithRotation_3.png" class="fullImage fragment">
+        </section>
+        <section>
+            <h3>How to paint yourself in a corner</h3>
+            <p>Assign all respiratory specialists<br/>
+                to the <i>last</i> shift of your planning window<br/>
+                (even in other wards as normal nurses).</p>
+            <div class="fragment">
+                <p>⇒</p>
+                <p>
+                    draft length &gt;= 2 * publish length
+                </p>
+            </div>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/responding-to-change/continuousPublishingWithRotation_3.png" class="fullImage">
+        </section>
+        <section>
+            <h3>Continuous planning</h3>
+            <ul>
+                <li>Publish notice ranges from long to short
+                    <ul>
+                        <li>Weeks: employee shift rostering, pharmacy on duty scheduling, ...</li>
+                        <li>Seconds: runway scheduling, gate scheduling, platform scheduling, ...</li>
+                    </ul>
+                </li>
+                <li class="fragment"><b>Domain must contain dates or timestamps data</b>
+                    <ul>
+                        <li>So domain probably has <code>import java.time</code></li>
+                        <li>Regardless if planning assigns to time or not.</li>
+                    </ul>
+                </li>
+                <li class="fragment"><b>Planning windows must overlap</b>
+                    <ul>
+                        <li class="fragment">⇒ School timetabling is not continuous planning</li>
+                    </ul></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>
+                4) Will published plan change?
+            </h2>
+            <h3>Non-disruptive Replanning</h3>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/responding-to-change/multiStagePlanning_2.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/responding-to-change/multiStagePlanning_4.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingProblem_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingProblem_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingProblem_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingProblem_3.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingMilestonesTimeline_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingMilestonesTimeline_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingMilestonesTimeline_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingMilestonesTimeline_3.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingMilestonesTimeline_4.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/conference-scheduling/conferenceSchedulingMilestonesTimeline_5.png" class="fullImage fragment">
+        </section>
+        <section>
+            <h3>Implementation</h3>
+            <pre xml:space="preserve"><code class="java">@PlanningEntity
+public class Talk {
+
+    private Timeslot publishedTimeslot;
+    ...
+
+    @PlanningVariable(...)
+    private Timeslot timeslot;
+
+}</code></pre>
+            <pre xml:space="preserve"><code class="java">  Constraint publishedTimeslot(ConstraintFactory f) {
+    return f.forEach(Talk.class)
+        .filter(talk -> talk.getPublishedTimeslot() != null
+            && talk.getTimeslot()
+                != talk.getPublishedTimeslot())
+        .penalize(HardMediumSoft.ONE_MEDIUM)
+                .asConstraint(PUBLISHED_TIMESLOT);
+  }</code></pre>
+        </section>
+        <section>
+            <h3>Non-disruptive Replanning</h3>
+            <ul>
+                <li>Medium penalty: disrupt only to become feasible
+                    <ul>
+                        <li>Timeslot in conference scheduling</li>
+                    </ul>
+                </li>
+                <li>Soft penalty: disrupt if gain is higher than a threshold
+                    <ul>
+                        <li>Room in conference scheduling</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>
+                5) Does your problem<br/>
+                change every few (milli)seconds?
+            </h2>
+            <h3>Real-time planning</h3>
+        </section>
+
+        <section>
+            <h3>Real-time planning</h3>
+            <p>DEMO</p>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/responding-to-change/realTimePlanningVehicleRouting_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/responding-to-change/realTimePlanningVehicleRouting_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/responding-to-change/realTimePlanningVehicleRouting_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/responding-to-change/realTimePlanningVehicleRouting_3.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/responding-to-change/realTimePlanningVehicleRouting_4.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/responding-to-change/realTimePlanningVehicleRouting_5.png" class="fullImage fragment">
+        </section>
+        <section>
+            <h3>Real-time planning</h3>
+            <ul>
+                <li><code>solver.addProblemFactChange(...)</code></li>
+                <li>Daemon mode
+                    <ul>
+                        <li>Don't waste CPU time at night and during breaks</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>
+                7) Do you have<br/>
+                a resource shortage?
+            </h2>
+            <h3>Overconstrained planning</h3>
+        </section>
+        <section>
+            <h3>Overconstrained planning</h3>
+            <ul>
+                <li>Nullable
+                    <ul>
+                        <li><code>@PlanningVariable(nullable = true)</code></li>
+                        <li>medium constraint penalizes unassigned entities</li>
+                        <li>Not yet supported for VRP, use dummy vehicle workaround.</li>
+                    </ul>
+                </li>
+                <li>Virtual resources
+                    <ul>
+                        <li>Add virtual resources to the input problem
+                            <pre xml:space="preserve"><code class="java">class Vehicle {
+  boolean virtual;
+}</code></pre>
+                        </li>
+                        <li>Soft constraint penalizes cost of virtual resources</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+    <section data-background-color="#3e00ff">
+        <h2>Benchmarker</h2>
+    </section>
+    <section>
+        <img src="../src/content/timefold-solver-docs/benchmarking-and-tweaking/benchmarkOverview_0.png" class="fullImage">
+    </section>
+    <section>
+        <h3>Benchmarker</h3>
+        <p>DEMO</p>
+    </section>
+
+    <section data-background-color="#3e00ff">
+        <h2>Get started</h2>
+    </section>
+    <section>
+        <h3>Start coding today</h3>
+        <ol>
+            <li>Go to <a href="https://timefold.ai">timefold.ai</a></li>
+            <li>Click the <a href="https://github.com/TimefoldAI/timefold-quickstarts"><i>Quickstarts repo</i></a> button.</li>
+            <li>Pick a quickstart from the README.</li>
+            <li>Run it:</li>
+        </ol>
+        <pre xml:space="preserve"><code class="bash">$ git clone https://github.com/TimefoldAI/timefold-quickstarts.git
+...
+$ cd timefold-quickstarts/use-cases/vehicle-routing-time-windows
+$ mvn quarkus:dev
+...</code></pre>
+    </section>
+    <section>
+        <h3>Q &amp; A</h3>
+        <table class="links">
+            <tr>
+                <th>Learn more</th>
+                <td><a href="https://timefold.ai">timefold.ai</a></td>
+            </tr>
+            <tr>
+                <th>Feedback</th>
+                <td>
+                    <img src="../src/web/social/twitter-logo.png"/> <a href="https://twitter.com/GeoffreyDeSmet">@GeoffreyDeSmet</a><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Get started</th>
+                <td>
+                    <img src="../src/content/static/cta/docs-HelloWorld-QR-code.png"/>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+</div></div>
+
+<script src="../src/web/jquery/jquery.min.js"></script>
+<script src="../src/web/reveal/js/reveal.js"></script>
+
+<script>
+  var showControls = false;
+  Reveal.initialize({
+    controls: showControls,
+    progress: true,
+    history: true,
+    center: false,
+    theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+    transition: Reveal.getQueryHash().transition || 'linear', // page/linear/fade/none
+
+    margin: 0.05,
+    minScale: 0.2,
+    maxScale: 100.0
+  });
+</script>
+<script src="../src/web/highlight/highlight.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+</body>
+</html>
