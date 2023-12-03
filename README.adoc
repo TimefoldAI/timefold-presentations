@@ -32,10 +32,22 @@ This way, later slides can overwrite earlier slides.
 WARNING: Before committing the changes, make sure you delete any old svg or png files that got moved.
 TODO automate this in the script.
 
-== Legal: attribution of images
+== Legal
+
+=== Reuse
+
+You are free to reuse these slides to promote Timefold (but not to demote it),
+including for conference talks, user groups, YouTube videos, internal events, etc
+without prior approval.
+
+=== Attribution of images
 
 All images are either copyrighted by Timefold
 or instead, are distributed under a free, commercial-friendly license from:
 
 * https://commons.wikimedia.org[Wikimedia commons]
 * https://www.pexels.com[Pexels]
+* OptaPlanner (Apache License)
+
+Timefold was https://timefold.ai/blog/2023/optaplanner-fork/[forked] on 20 April 2023 from OptaPlanner,
+which was entirely Apache-2.0 licensed (a permissive license).
