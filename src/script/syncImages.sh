@@ -32,7 +32,7 @@ function processImages() {
     relativeFilePath=`echo ${pngInputFile} | sed "s|${inputDir}||g"`
     relativeParentDirPath=`echo ${relativeFilePath} | sed "s|/[^/]*\.png||g"`
     pngOutputFile=${outputDir}${relativeFilePath}
-    echo "Copying ${pngOutputFile}"
+    echo "Copy ${pngOutputFile}"
     mkdir -p ${outputDir}${relativeParentDirPath}
     cp ${pngInputFile} ${pngOutputFile}
   done
@@ -43,7 +43,7 @@ function processImages() {
     relativeParentDirPath=`echo ${relativeFilePath} | sed "s|/[^/]*\.svg||g"`
     svgOutputFile=`echo "${outputDir}${relativeFilePath}" | sed "s|${timefoldPresentationsDir}/||g"`
 
-    echo "Copying ${svgOutputFile}"
+    echo "Copy and extract ${svgOutputFile}"
     mkdir -p ${outputDir}${relativeParentDirPath}
     cp ${svgInputFile} ${svgOutputFile}
     extractLayers ${svgOutputFile}
@@ -66,7 +66,7 @@ function extractLayers() {
   for index in "${!layerIdList[@]}";
   do
     select=`echo "${layerIdList[@]:($index + 1)}" | sed "s| |,|g"`
-    inkscape ${svgFile} --select="${select}" --actions="delete" -j -C --export-type=png --export-filename=${noExtensionFile}_${index}.png > /dev/null
+    inkscape ${svgFile} --select="${select}" --actions="delete" -j -C --export-type=png --export-filename=${noExtensionFile}_${index}.png > /dev/null || exit
 
     if [ $index -eq 0 ]; then
       echo "        <img src=\"../${noExtensionFile}_${index}.png\" class=\"fullImage\">" >> slidedecks/inventory.html
