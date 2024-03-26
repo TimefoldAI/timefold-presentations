@@ -27,6 +27,9 @@ function processImages() {
   echo " processImages ${inputDir}"
   echo "********************"
 
+  git rm $outputDir/**/*.png
+  git rm $outputDir/**/*.svg
+
   pngInputFileList=`find ${inputDir} -type f -name "*.png" | sort`
   for pngInputFile in ${pngInputFileList[@]}; do
     relativeFilePath=`echo ${pngInputFile} | sed "s|${inputDir}||g"`
@@ -81,7 +84,7 @@ cat src/script/templates/slidedeck-header.html > slidedecks/inventory.html
 
 # Upstream images
 processImages "${timefoldSolverDir}/docs/src/modules/ROOT/images" "${timefoldPresentationsDir}/src/content/timefold-solver-docs"
-processImages "${timefoldQuickstartsDir}/build/quickstarts-showcase/src/main/resources/META-INF/resources/screenshot" "${timefoldPresentationsDir}/src/content/timefold-quickstarts-screenshot"
+# processImages "${timefoldQuickstartsDir}/build/quickstarts-showcase/src/main/resources/META-INF/resources/screenshot" "${timefoldPresentationsDir}/src/content/timefold-quickstarts-screenshot"
 
 # A selection of static images
 extractLayers src/content/static/benchmarks/bruteForceHitsTheWall.svg
