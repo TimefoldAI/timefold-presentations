@@ -84,7 +84,7 @@ cat src/script/templates/slidedeck-header.html > slidedecks/inventory.html
 
 # Upstream images
 processImages "${timefoldSolverDir}/docs/src/modules/ROOT/images" "${timefoldPresentationsDir}/src/content/timefold-solver-docs"
-# processImages "${timefoldQuickstartsDir}/build/quickstarts-showcase/src/main/resources/META-INF/resources/screenshot" "${timefoldPresentationsDir}/src/content/timefold-quickstarts-screenshot"
+processImages "${timefoldQuickstartsDir}" "${timefoldPresentationsDir}/src/content/timefold-quickstarts"
 
 # A selection of static images
 extractLayers src/content/static/benchmarks/bruteForceHitsTheWall.svg
