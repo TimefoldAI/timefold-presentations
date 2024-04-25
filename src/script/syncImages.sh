@@ -9,6 +9,7 @@ cd ../.. || exit
 timefoldPresentationsDir=`pwd`
 timefoldSolverDir=../tf-main/timefold-solver
 timefoldQuickstartsDir=../tf-main/timefold-quickstarts
+timefoldModelsDir=../orbit-main/models
 
 if ! which inkscape > /dev/null; then
   echo "ERROR Inkscape is not installed. Install it first."
@@ -85,6 +86,12 @@ cat src/script/templates/slidedeck-header.html > slidedecks/inventory.html
 # Upstream images
 processImages "${timefoldSolverDir}/docs/src/modules/ROOT/images" "${timefoldPresentationsDir}/src/content/timefold-solver-docs"
 processImages "${timefoldQuickstartsDir}" "${timefoldPresentationsDir}/src/content/timefold-quickstarts"
+
+#for modelId in `ls ${timefoldModelsDir}`;
+#do
+#  echo ${modelId}
+##  processImages "${timefoldModelsDir}/${modelId}/docs/modules/user-guide/images/" "${timefoldPresentationsDir}/src/content/timefold-models/${modelId}"
+#done
 
 # A selection of static images
 extractLayers src/content/static/benchmarks/bruteForceHitsTheWall.svg
