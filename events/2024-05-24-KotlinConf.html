@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>KotlinConf</title>
-    <meta name="description" content="This slide deck explains Timefold: an open source constraint satisfaction solver in Java">
+    <meta name="description" content="This slide deck explains Timefold: an open source constraint satisfaction solver in Kotlin">
     <!--    <link href="https://github.com/TimefoldAI/timefold-presentations" rel="canonical">-->
 
     <link rel="stylesheet" href="../src/web/bootstrap/css/bootstrap.min.css">
@@ -113,16 +113,6 @@
             <p class="fragment">Result: -25% driving time</p>
             <p class="fragment">⇒ -10 million kg CO² emission per year</p>
             <p class="fragment">⇒ -100 million $ cost per year</p>
-        </section>
-
-
-
-
-        <section>
-            <img src="../src/content/timefold-solver-docs/introduction/whatIsAPlanningProblem_0.png" class="fullImage">
-            <img src="../src/content/timefold-solver-docs/introduction/whatIsAPlanningProblem_1.png" class="fullImage fragment">
-            <img src="../src/content/timefold-solver-docs/introduction/whatIsAPlanningProblem_2.png" class="fullImage fragment">
-            <img src="../src/content/timefold-solver-docs/introduction/whatIsAPlanningProblem_3.png" class="fullImage fragment">
         </section>
     </section>
 
@@ -408,25 +398,25 @@ for (timeslotLesson1 in timeTable.timeslots) {
         </section>
         <section>
             <h3>Easy score calculator</h3>
-            <pre xml:space="preserve"><code class="java">public HardSoftScore calculateScore(TimeTable timeTable) {
-    long hardScore = 0;
-    for (Lesson lesson1 : timeTable.lessons) {
-        for (Lesson lesson2 : timeTable.lessons) {
-            if (lesson1.room == lesson2.room
-                    && lesson1.timeslot == lesson2.timeslot) {
-                hardScore--;
+            <pre xml:space="preserve"><code class="kotlin">fun calculateScore(timeTable: TimeTable): HardSoftScore {
+    var hardScore: Long = 0
+    for (lesson1 in timeTable.lessons) {
+        for (lesson2 in timeTable.lessons) {
+            if (lesson1.room === lesson2.room
+                && lesson1.timeslot === lesson2.timeslot) {
+                hardScore--
             }
-            if (lesson1.teacher == lesson2.teacher
-                    && lesson1.timeslot == lesson2.timeslot) {
-                hardScore--;
+            if (lesson1.teacher === lesson2.teacher
+                && lesson1.timeslot === lesson2.timeslot) {
+                hardScore--
             }
-            if (lesson1.studentGroup == lesson2.studentGroup
-                    && lesson1.timeslot == lesson2.timeslot) {
-                hardScore--;
+            if (lesson1.studentGroup === lesson2.studentGroup
+                && lesson1.timeslot === lesson2.timeslot) {
+                hardScore--
             }
         }
     }
-    return HardSoftScore.of(hardScore, 0);
+    return HardSoftScore.of(hardScore, 0)
 }</code></pre>
         </section>
         <section>
