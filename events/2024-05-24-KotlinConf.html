@@ -138,18 +138,18 @@
             <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingHardConstraints_8.png" class="fullImage fragment">
             <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingHardConstraints_9.png" class="fullImage fragment">
         </section>
-        <section>
-            <h3>The web UI</h3>
-            <figure>
-                <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingScreenshot.png"/>
-            </figure>
-        </section>
-        <section>
-            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureQuarkus_0.png" class="fullImage">
-            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureQuarkus_1.png" class="fullImage fragment">
-            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureQuarkus_2.png" class="fullImage fragment">
-            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureQuarkus_3.png" class="fullImage fragment">
-        </section>
+<!--        <section>-->
+<!--            <h3>The web UI</h3>-->
+<!--            <figure>-->
+<!--                <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingScreenshot.png"/>-->
+<!--            </figure>-->
+<!--        </section>-->
+<!--        <section>-->
+<!--            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureQuarkus_0.png" class="fullImage">-->
+<!--            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureQuarkus_1.png" class="fullImage fragment">-->
+<!--            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureQuarkus_2.png" class="fullImage fragment">-->
+<!--            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureQuarkus_3.png" class="fullImage fragment">-->
+<!--        </section>-->
         <section>
             <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingClassDiagram_0.png" class="fullImage">
             <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingClassDiagram_1.png" class="fullImage fragment">
@@ -160,16 +160,16 @@
     var hardScore: Long = 0
     for (lesson1 in timeTable.lessons) {
         for (lesson2 in timeTable.lessons) {
-            if (lesson1.room === lesson2.room
-                    && lesson1.timeslot === lesson2.timeslot) {
+            if (lesson1.room == lesson2.room
+                    && lesson1.timeslot == lesson2.timeslot) {
                 hardScore--
             }
-            if (lesson1.teacher === lesson2.teacher
-                    && lesson1.timeslot === lesson2.timeslot) {
+            if (lesson1.teacher == lesson2.teacher
+                    && lesson1.timeslot == lesson2.timeslot) {
                 hardScore--
             }
-            if (lesson1.studentGroup === lesson2.studentGroup
-                    && lesson1.timeslot === lesson2.timeslot) {
+            if (lesson1.studentGroup == lesson2.studentGroup
+                    && lesson1.timeslot == lesson2.timeslot) {
                 hardScore--
             }
         }
@@ -278,10 +278,10 @@ for (timeslotLesson1 in timeTable.timeslots) {
                         if (score > bestScore) {
                             ...</code></pre>
         </section>
-        <section>
-            <h3>DEMO</h3>
-            <p>Brute Force</p>
-        </section>
+<!--        <section>-->
+<!--            <h3>DEMO</h3>-->
+<!--            <p>Brute Force</p>-->
+<!--        </section>-->
         <section>
             <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingSearchSpace_4.png" class="fullImage">
             <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingSearchSpace_5.png" class="fullImage fragment">
@@ -388,10 +388,10 @@ for (timeslotLesson1 in timeTable.timeslots) {
             <img src="../src/content/timefold-solver-docs/introduction/compatibility_3.png" class="fullImage fragment">
             <img src="../src/content/timefold-solver-docs/introduction/compatibility_4.png" class="fullImage fragment">
         </section>
-        <section>
-            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureQuarkus_3.png" class="fullImage">
-            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureQuarkus_4.png" class="fullImage fragment">
-        </section>
+<!--        <section>-->
+<!--            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureQuarkus_3.png" class="fullImage">-->
+<!--            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureQuarkus_4.png" class="fullImage fragment">-->
+<!--        </section>-->
         <section>
             <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingClassDiagram_1.png" class="fullImage">
             <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingClassDiagram_2.png" class="fullImage fragment">
@@ -530,6 +530,20 @@ for (timeslotLesson1 in timeTable.timeslots) {
         </section>
     </section>
 
+    <section>
+        <section data-background-color="#3e00ff">
+            <h2>Vehicle Routing Problem (VRP)</h2>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/vehicleRoutingValueProposition_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/vehicleRoutingValueProposition_1.png" class="fullImage fragment">
+        </section>
+        <section>
+            <h3>DEMO</h3>
+            <p>Vehicle Routing</p>
+        </section>
+    </section>
+
     <section data-background-color="#3e00ff">
         <h2>Get started</h2>
     </section>
@@ -553,12 +567,14 @@ $ mvn quarkus:dev
                 <td><a href="https://timefold.ai">timefold.ai</a></td>
             </tr>
             <tr>
-                <th>Notebooks</th>
+                <th>Repo</th>
                 <td><a href="https://github.com/TimefoldAI/timefold-notebooks">github.com/TimefoldAI/<br/>timefold-notebooks</a></td>
             </tr>
             <tr>
-                <th>Quickstarts</th>
-                <td><a href="https://github.com/TimefoldAI/timefold-quickstarts">github.com/TimefoldAI/<br/>timefold-quickstarts</a></td>
+                <th></th>
+                <td>
+                    <img src="../src/content/static/cta/timefold-notebooks-QR-code.png"/>
+                </td>
             </tr>
             <tr>
                 <th>Feedback</th>
