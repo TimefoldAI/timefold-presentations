@@ -4,7 +4,7 @@
    inkscape:export-xdpi="96"
    inkscape:export-filename="timefold-input-output.png"
    sodipodi:docname="timefold-input-output.svg"
-   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25)"
    version="1.1"
    id="svg2"
    height="600"
@@ -2475,19 +2475,19 @@
      inkscape:snap-bbox="false"
      inkscape:snap-grids="true"
      inkscape:window-maximized="1"
-     inkscape:window-y="0"
+     inkscape:window-y="38"
      inkscape:window-x="0"
-     inkscape:window-height="995"
-     inkscape:window-width="1920"
+     inkscape:window-height="916"
+     inkscape:window-width="1512"
      gridtolerance="10"
      borderlayer="true"
      width="800px"
      showgrid="true"
      inkscape:current-layer="layer3"
      inkscape:document-units="px"
-     inkscape:cy="304.91132"
-     inkscape:cx="380.21827"
-     inkscape:zoom="1.2216667"
+     inkscape:cy="276.08775"
+     inkscape:cx="392.6273"
+     inkscape:zoom="1.081178"
      inkscape:pageshadow="2"
      inkscape:pageopacity="1"
      borderopacity="1.0"
@@ -2627,7 +2627,7 @@
          transform="translate(33.926,9.9995)">
         <path
            id="path2"
-           style="color:#000000;display:inline;overflow:visible;fill:#888a85;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"
+           style="color:#000000;display:inline;overflow:visible;fill:#eeeeec;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-dasharray:none"
            d="m 240,187.1325 25,40 -25,40 h 175 l 25,-40 -25,-40 z"
            sodipodi:nodetypes="ccccccc" />
         <flowRoot
@@ -2644,8 +2644,8 @@
                y="-91.972061"
                style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
              id="flowPara1305"
-             style="font-weight:bold;font-size:24px;line-height:1.25;text-align:center;text-anchor:middle">planning</flowPara><flowPara
-             style="font-weight:bold;font-size:24px;line-height:1.25;text-align:center;text-anchor:middle"
+             style="font-weight:normal;font-size:24px;line-height:1.25;text-align:center;text-anchor:middle">planning</flowPara><flowPara
+             style="font-weight:normal;font-size:24px;line-height:1.25;text-align:center;text-anchor:middle"
              id="flowPara4">problem</flowPara></flowRoot>
       </g>
       <g
@@ -2653,7 +2653,7 @@
          transform="translate(33.926,-9.9995)">
         <path
            id="path4"
-           style="color:#000000;display:inline;overflow:visible;fill:#888a85;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"
+           style="color:#000000;display:inline;overflow:visible;fill:#eeeeec;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-dasharray:none"
            d="m 440,332.8675 -25,40 25,40 H 265 l -25,-40 25,-40 z"
            sodipodi:nodetypes="ccccccc" />
         <flowRoot
@@ -2669,9 +2669,9 @@
                x="-120.35934"
                y="-91.972061"
                style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
-             style="font-weight:bold;font-size:24px;line-height:1.25;text-align:center;text-anchor:middle"
+             style="font-weight:normal;font-size:24px;line-height:1.25;text-align:center;text-anchor:middle"
              id="flowPara6">optimized</flowPara><flowPara
-             style="font-weight:bold;font-size:24px;line-height:1.25;text-align:center;text-anchor:middle"
+             style="font-weight:normal;font-size:24px;line-height:1.25;text-align:center;text-anchor:middle"
              id="flowPara7">solution</flowPara></flowRoot>
       </g>
     </g>
