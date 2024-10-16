@@ -1,20 +1,41 @@
 #!/bin/sh
-start=$(date +%s%N)
+start=$(date +%s)
 
 # Change directory to the directory of the script
 cd "$(dirname $0)" || exit
 
 cd ../.. || exit
 
+timefoldSolverDir=../../solver/timefold-solver
+timefoldQuickstartsDir=../../solver/timefold-quickstarts
+timefoldPlatformDir=../../platform/timefold-orbit
+timefoldModelsSdkDir=../../platform/timefold-models-sdk
+timefoldModelsDir=../../platform
+modelNames=("timefold-field-service-routing" "timefold-employee-scheduling")
+
 timefoldPresentationsDir=`pwd`
-timefoldSolverDir=../tf-main/timefold-solver
-timefoldQuickstartsDir=../tf-main/timefold-quickstarts
-timefoldModelsDir=../orbit-main/models
 
 if ! which inkscape > /dev/null; then
   echo "ERROR Inkscape is not installed. Install it first."
+  echo "  On mac, use: brew install --cask inkscape"
   exit
 fi
+
+function failIfDirDoesNotExist() {
+  if [ ! -d "$1" ]; then
+     echo "ERROR: the dir $1 does not exist."
+     echo "  Git clone it first."
+     exit
+  fi
+}
+failIfDirDoesNotExist $timefoldSolverDir
+failIfDirDoesNotExist $timefoldQuickstartsDir
+failIfDirDoesNotExist $timefoldPlatformDir
+failIfDirDoesNotExist $timefoldModelsSdkDir
+for modelName in "${modelNames[@]}"; do
+   failIfDirDoesNotExist $timefoldModelsDir/$modelName
+done
+
 
 function processImages() {
   if [ $# -ne 2 ]; then
@@ -99,7 +120,7 @@ extractLayers src/content/static/benchmarks/bruteForceHitsTheWall.svg
 cat src/script/templates/slidedeck-footer.html >> slidedecks/inventory.html
 git add slidedecks/inventory.html
 
-end=$(date +%s%N)
+end=$(date +%s)
 echo
 echo "*******************************"
 echo "*** SYNC SUCCESSFUL in $(( ($end - $start) / 1000000 )) ms ***"
