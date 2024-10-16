@@ -28,12 +28,12 @@ function failIfDirDoesNotExist() {
      exit
   fi
 }
-failIfDirDoesNotExist $timefoldSolverDir
-failIfDirDoesNotExist $timefoldQuickstartsDir
-failIfDirDoesNotExist $timefoldPlatformDir
-failIfDirDoesNotExist $timefoldModelsSdkDir
+failIfDirDoesNotExist ${timefoldSolverDir}
+failIfDirDoesNotExist ${timefoldQuickstartsDir}
+failIfDirDoesNotExist ${timefoldPlatformDir}
+failIfDirDoesNotExist ${timefoldModelsSdkDir}
 for modelName in "${modelNames[@]}"; do
-   failIfDirDoesNotExist $timefoldModelsDir/$modelName
+ failIfDirDoesNotExist ${timefoldModelsDir}/${modelName}
 done
 
 
@@ -44,7 +44,7 @@ function processImages() {
   fi
 
   inputDir=$1
-  outputDir=$2
+  outputDir=${timefoldPresentationsDir}/src/content/$2
   echo "********************"
   echo " processImages ${inputDir}"
   echo "********************"
@@ -54,7 +54,7 @@ function processImages() {
 
   pngInputFileList=`find ${inputDir} -type f -name "*.png" | sort`
   for pngInputFile in ${pngInputFileList[@]}; do
-    relativeFilePath=`echo ${pngInputFile} | sed "s|${inputDir}||g"`
+    relativeFilePath=`echo "${pngInputFile}" | sed "s|${inputDir}||g"`
     relativeParentDirPath=`echo ${relativeFilePath} | sed "s|/[^/]*\.png||g"`
     pngOutputFile=${outputDir}${relativeFilePath}
     echo "Copy ${pngOutputFile}"
@@ -105,14 +105,11 @@ function extractLayers() {
 cat src/script/templates/slidedeck-header.html > slidedecks/inventory.html
 
 # Upstream images
-processImages "${timefoldSolverDir}/docs/src/modules/ROOT/images" "${timefoldPresentationsDir}/src/content/timefold-solver-docs"
-processImages "${timefoldQuickstartsDir}" "${timefoldPresentationsDir}/src/content/timefold-quickstarts"
-
-#for modelId in `ls ${timefoldModelsDir}`;
-#do
-#  echo ${modelId}
-##  processImages "${timefoldModelsDir}/${modelId}/docs/modules/user-guide/images/" "${timefoldPresentationsDir}/src/content/timefold-models/${modelId}"
-#done
+processImages "${timefoldSolverDir}/docs/src/modules/ROOT/images" "timefold-solver-docs"
+processImages "${timefoldQuickstartsDir}" "timefold-quickstarts"
+for modelName in "${modelNames[@]}"; do
+  processImages "${timefoldModelsDir}/${modelName}/docs/modules/ROOT/images" "${modelName}"
+done
 
 # A selection of static images
 extractLayers src/content/static/benchmarks/bruteForceHitsTheWall.svg
@@ -123,5 +120,5 @@ git add slidedecks/inventory.html
 end=$(date +%s)
 echo
 echo "*******************************"
-echo "*** SYNC SUCCESSFUL in $(( ($end - $start) / 1000000 )) ms ***"
+echo "*** SYNC SUCCESSFUL in $(( ($end - $start) / 1000 )) ms ***"
 echo "*******************************"
