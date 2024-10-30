@@ -1,0 +1,350 @@
+<!doctype html>
+<!--suppress HtmlRequiredAltAttribute -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Field Service Routing</title>
+    <meta name="description" content="This slide deck explains Field Service Routing with Timefold">
+    <!--    <link href="https://github.com/TimefoldAI/timefold-presentations" rel="canonical">-->
+
+    <link rel="stylesheet" href="../src/web/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../src/web/reveal/css/reveal.css">
+    <link rel="stylesheet" href="../src/web/reveal/css/theme/simple.css" id="theme">
+    <script>
+      if (window.location.search.match(/print-pdf/gi)) {
+        document.write('<link rel="stylesheet" href="../src/web/reveal/css/print/pdf.css">');
+      }
+    </script>
+    <link rel="stylesheet" href="../src/web/highlight/highlight.css">
+    <link rel="stylesheet" href="../src/web/timefold-presentation.css">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+
+<body>
+<div class="reveal">
+<div class="watermark watermark-left">
+    <p>
+        <img src="../src/web/social/linkedin-logo.png"/> Geoffrey De Smet
+    </p>
+</div>
+<div class="slides">
+    <section>
+        <p>Build your own model</p>
+        <h1>
+            Score calculation
+        </h1>
+        <div style="margin-top: 80px;">
+            <p>
+                <span style="font-size: smaller">by</span> Geoffrey De Smet<br/>
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <section data-background-color="#3e00ff">
+            <h2>Architecture</h2>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/using-timefold-solver/inputOutputOverviewEmployeeRostering_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/using-timefold-solver/inputOutputOverviewEmployeeRostering_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/using-timefold-solver/inputOutputOverviewEmployeeRostering_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/using-timefold-solver/inputOutputOverviewEmployeeRostering_3.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/using-timefold-solver/inputOutputOverviewVehicleRouting_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/using-timefold-solver/inputOutputOverviewVehicleRouting_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/using-timefold-solver/inputOutputOverviewVehicleRouting_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/using-timefold-solver/inputOutputOverviewVehicleRouting_3.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/optimization-algorithms/overview/architectureOverview_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/optimization-algorithms/overview/architectureOverview_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/optimization-algorithms/overview/architectureOverview_2.png" class="fullImage fragment">
+        </section>
+    </section>
+    <section>
+        <section data-background-color="#3e00ff">
+            <h2>Scoring basics</h2>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_3.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_4.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_5.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_6.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_7.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_8.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/scoreWeighting_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/scoreWeighting_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/scoreWeighting_2.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/scoreTradeoffInPerspective_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/scoreTradeoffInPerspective_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/scoreTradeoffInPerspective_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/scoreTradeoffInPerspective_3.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/scoreTradeoffInPerspective_4.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/scoreLevels_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/scoreLevels_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/scoreLevels_2.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/scoreClassDiagram_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/scoreClassDiagram_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/scoreClassDiagram_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/scoreClassDiagram_3.png" class="fullImage fragment">
+        </section>
+
+
+
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonVehicleRouting_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonVehicleRouting_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonVehicleRouting_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonVehicleRouting_3.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonVehicleRouting_4.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonVehicleRouting_5.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonVehicleRouting_6.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonVehicleRouting_7.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonVehicleRouting_8.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_3.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_4.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_5.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_6.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_7.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_8.png" class="fullImage fragment">
+        </section>
+    </section>
+    <section>
+        <section data-background-color="#3e00ff">
+            <h2>Incremental score calculation</h2>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/performance/incrementalScoreCalculationEmployeeRostering_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/performance/incrementalScoreCalculationEmployeeRostering_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/performance/incrementalScoreCalculationEmployeeRostering_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/performance/incrementalScoreCalculationEmployeeRostering_3.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/performance/incrementalScoreCalculationEmployeeRostering_4.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/performance/incrementalScoreCalculationEmployeeRostering_5.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/performance/incrementalScoreCalculationEmployeeRostering_6.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/performance/incrementalScoreCalculationEmployeeRostering_7.png" class="fullImage fragment">
+        </section>
+        <section>
+            <h3>Required skill</h3>
+            <pre xml:space="preserve"><code class="java">for (Shift shift : shifts) {
+    if (!shift.employee.skills
+            .contains(shift.requiredSkill)) {
+        return true;
+    }
+}
+return false;</code></pre>
+        </section>
+        <section>
+            <h3>Constraint streams required skill?</h3>
+            <pre xml:space="preserve"><code class="java">Constraint requiredSkill(ConstraintFactory constraintFactory) {
+    return constraintFactory.forEach(Shift.class)
+            .groupBy(ConstraintCollectors.toList())<span class="fragment"> // BAD</span>
+            .filter(shifts -> {
+                for (Shift shift : shifts) {
+                    if (!shift.employee.skills
+                            .contains(shift.requiredSkill)) {
+                        return true;
+                    }
+                }
+                return false;
+            })
+            .penalize(ONE_HARD)
+            .asConstraint("Missing required skill");
+}</code></pre>
+        </section>
+        <section>
+            <h3>Constraint streams required skill (good way)</h3>
+            <pre xml:space="preserve"><code class="java">Constraint requiredSkill(ConstraintFactory constraintFactory) {
+    return constraintFactory.forEach(Shift.class)
+            .filter(shift -> !shift.employee.skills
+                    .contains(shift.requiredSkill))
+            .penalize(ONE_HARD)
+            .asConstraint("Missing required skill");
+}</code></pre>
+            <p class="fragment">Avoids a score trap.</p>
+        </section>
+    </section>
+    <section>
+        <section data-background-color="#3e00ff">
+            <h2>Constraint Streams</h2>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamConcat_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamConcat_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamConcat_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamConcat_3.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamFilter_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamFilter_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamFilter_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamFilter_3.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamFilter_4.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamFilter_5.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamGroupBy_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamGroupBy_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamGroupBy_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamGroupBy_3.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamIfExists_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamIfExists_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamIfExists_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamIfExists_3.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamIncrementalCalculation_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamIncrementalCalculation_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamIncrementalCalculation_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamIncrementalCalculation_3.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamIncrementalCalculation_4.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamIncrementalCalculation_5.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamIntroduction_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamIntroduction_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamIntroduction_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamIntroduction_3.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamJoinWithJoiners_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamJoinWithJoiners_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamJoinWithJoiners_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamJoinWithJoiners_3.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamJoinWithoutJoiners_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamJoinWithoutJoiners_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamJoinWithoutJoiners_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamJoinWithoutJoiners_3.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamJoinWithoutJoiners_4.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamJustification_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamJustification_1.png" class="fullImage fragment">
+        </section>
+    </section>
+
+
+    <section>
+        <section data-background-color="#3e00ff">
+            <h2>Unit testing</h2>
+        </section>
+        <section>
+            <h3>If it isn't tested, it doesn't work.<br/>
+            <span class="fragment">If it isn't documented, it isn't used.</span></h3>
+        </section>
+
+
+
+
+    </section>
+    <section>
+        <section data-background-color="#3e00ff">
+            <h2>Score corruption</h2>
+        </section>
+
+    </section>
+    <section>
+        <section data-background-color="#3e00ff">
+            <h2>Tips</h2>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/using-timefold-solver/benchmarking-and-tweaking/letTheBestScoreStatisticGuideYou_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/using-timefold-solver/benchmarking-and-tweaking/letTheBestScoreStatisticGuideYou_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/using-timefold-solver/benchmarking-and-tweaking/letTheBestScoreStatisticGuideYou_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/using-timefold-solver/benchmarking-and-tweaking/letTheBestScoreStatisticGuideYou_3.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/performance/scoreTrap_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/performance/scoreTrap_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/performance/scoreTrap_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/performance/scoreTrap_3.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/performance/scoreTrap_4.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/performance/scoreTrap_5.png" class="fullImage fragment">
+        </section>
+    </section>
+    <section>
+        <section data-background-color="#3e00ff">
+            <h2>Shadow variables</h2>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/using-timefold-solver/modeling-planning-problems/planningVariableListener_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/using-timefold-solver/modeling-planning-problems/planningVariableListener_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/using-timefold-solver/modeling-planning-problems/planningVariableListener_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/using-timefold-solver/modeling-planning-problems/planningVariableListener_3.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/using-timefold-solver/modeling-planning-problems/shadowVariableOrder_0.png" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/using-timefold-solver/modeling-planning-problems/shadowVariableOrder_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/using-timefold-solver/modeling-planning-problems/shadowVariableOrder_2.png" class="fullImage fragment">
+        </section>
+    </section>
+    <section>
+        <h3>Q &amp; A</h3>
+        <table class="links">
+            <tr>
+                <th>Learn more</th>
+                <td><a href="https://docs.timefold.ai">docs.timefold.ai</a></td>
+            </tr>
+            <tr>
+                <th>Get started</th>
+                <td><a href="https://github.com/TimefoldAI/timefold-quickstarts">timefold-quickstarts</a></td>
+            </tr>
+            <tr>
+                <th>Feedback</th>
+                <td>
+                    <img src="../src/web/social/linkedin-logo.png"/> <img src="../src/web/social/twitter-logo.png"/> <img src="../src/web/social/mastodon-logo.png"/> <a href="https://www.linkedin.com/in/ge0ffrey">Geoffrey De Smet</a>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+</div></div>
+
+<script src="../src/web/jquery/jquery.min.js"></script>
+<script src="../src/web/reveal/js/reveal.js"></script>
+
+<script>
+  const showControls = false;
+  Reveal.initialize({
+    controls: showControls,
+    progress: true,
+    history: true,
+    center: false,
+    theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+    transition: Reveal.getQueryHash().transition || 'linear', // page/linear/fade/none
+
+    margin: 0.05,
+    minScale: 0.2,
+    maxScale: 100.0
+  });
+</script>
+<script src="../src/web/highlight/highlight.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+</body>
+</html>
