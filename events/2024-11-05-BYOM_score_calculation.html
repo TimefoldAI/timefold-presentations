@@ -260,17 +260,21 @@ return false;</code></pre>
             <h3>Unit test</h3>
             <pre xml:space="preserve"><code class="java">@Test
 void requiredSkill() {
-    Employee employee = new Employee(
-        "Amy", Set.of(), null, null, null);
-    constraintVerifier.verifyThat(EmployeeSchedulingConstraintProvider::requiredSkill)
+    var employee = new Employee("Amy", Set.of());
+    constraintVerifier.verifyThat(
+             MyConstraintProvider::requiredSkill)
         .given(employee,
-            new Shift("1", DAY_START_TIME, DAY_END_TIME, "Location", "Plumber", employee))
+            new Shift("Plumber", employee))
         .penalizes(1);
-    employee = new Employee(
-        "Beth", Set.of("Skill"), null, null, null);
-    constraintVerifier.verifyThat(EmployeeSchedulingConstraintProvider::requiredSkill)
+}
+
+@Test
+void requiredSkill() {
+    var employee = new Employee("Beth", Set.of("Plumber"));
+    constraintVerifier.verifyThat(
+             MyConstraintProvider::requiredSkill)
         .given(employee,
-            new Shift("2", DAY_START_TIME, DAY_END_TIME, "Location", "Skill", employee))
+            new Shift("Plumber", employee))
         .penalizes(0);
 }</code></pre>
         </section>
