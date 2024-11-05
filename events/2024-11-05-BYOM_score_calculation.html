@@ -285,6 +285,28 @@ void requiredSkill() {
         <section data-background-color="#3e00ff">
             <h2>Score corruption</h2>
         </section>
+        <section>
+            <h3>Score corruption</h3>
+            <pre xml:space="preserve"><code class="java">Constraint dependencyTask(...) {
+    return constraintFactory.forEach(Task.class)
+            .filter(task ->
+                    task.start < task.dependencyTask.end)
+            .penalize(ONE_HARD)
+            .asConstraint("Starts before dependency task");
+}</code></pre>
+        </section>
+        <section>
+            <h3>No score corruption</h3>
+            <pre xml:space="preserve"><code class="java">Constraint dependencyTask(...) {
+    return constraintFactory.forEach(Task.class)
+            .join(Task.class, equal(task -> task,
+                    task -> task.dependencyTask)
+            .filter(task1, task2 ->
+                    task1.start < task2.end)
+            .penalize(ONE_HARD)
+            .asConstraint("Starts before dependency task");
+}</code></pre>
+        </section>
 
 
     </section>
