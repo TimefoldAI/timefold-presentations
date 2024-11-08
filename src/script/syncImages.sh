@@ -23,7 +23,7 @@ fi
 
 function failIfDirDoesNotExist() {
   if [ ! -d "$1" ]; then
-     echo "ERROR: the dir $1 does not exist."
+     echo "ERROR: the dir "$(pwd)/$1" does not exist."
      echo "  Git clone it first."
      exit
   fi
@@ -113,6 +113,10 @@ done
 
 # A selection of static images
 extractLayers src/content/static/benchmarks/bruteForceHitsTheWall.svg
+extractLayers src/content/static/benchmarks/bruteForceHitsTheWall-TSP.svg
+extractLayers src/content/static/santa/tree-of-greed.svg
+extractLayers src/content/static/santa/tree-of-greed2.svg
+extractLayers src/content/static/santa/vehicleRoutingClassDiagram-simplified.svg
 
 cat src/script/templates/slidedeck-footer.html >> slidedecks/inventory.html
 git add slidedecks/inventory.html
