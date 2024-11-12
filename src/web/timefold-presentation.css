@@ -18,12 +18,17 @@ footer {
     color: #BABDB6;
 }
 
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+    font-family: "Liberation Sans", sans-serif;
+}
+
 .reveal h1 {
     font-size: 2.5em;
-}
-.reveal h2 {
-    /* HACK to vertical align middle */
-    margin-top: 20%;
 }
 
 .reveal sup {
@@ -94,24 +99,15 @@ footer {
 * Images
 ******************************************************************************/
 
-.reveal h1,
-.reveal h2,
-.reveal h3,
-.reveal h4,
-.reveal h5,
-.reveal h6 {
-    font-family: "Liberation Sans", sans-serif;
-}
-
 /* Remove reveal border around images */
 .reveal section img {
     border: none;
     box-shadow: none;
 }
 
-/* Make images bigger */
-.reveal .slides section {
-  height: inherit;
+/* Make images bigger, but only for images in same section as direct child*/
+.reveal section:has(>img) {
+    height: inherit;
 }
 
 .reveal .fullImage {

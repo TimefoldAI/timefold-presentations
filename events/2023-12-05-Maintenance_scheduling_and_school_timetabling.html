@@ -15,7 +15,7 @@
         document.write('<link rel="stylesheet" href="../src/web/reveal/css/print/pdf.css">');
       }
     </script>
-    <link rel="stylesheet" href="../src/web/highlight/highlight.css">
+    <link rel="stylesheet" href="../src/web/reveal/plugin/highligh/a11y-light.css">
     <link rel="stylesheet" href="../src/web/timefold-presentation.css">
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -586,25 +586,21 @@ $ mvn quarkus:dev
 
 <script src="../src/web/jquery/jquery.min.js"></script>
 <script src="../src/web/reveal/js/reveal.js"></script>
+<script src="../src/web/reveal/plugin/highlight/highlight.js"></script>
+<script src="../src/web/reveal/plugin/notes/notes.js"></script>
 
 <script>
-  const showControls = false;
+
   Reveal.initialize({
-    controls: showControls,
+    controls: false,
     progress: true,
     history: true,
-    center: false,
-    theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-    transition: Reveal.getQueryHash().transition || 'linear', // page/linear/fade/none
-
+    center: true,
+    plugins: [ RevealHighlight, RevealNotes ],
     margin: 0.05,
     minScale: 0.2,
     maxScale: 100.0
   });
-</script>
-<script src="../src/web/highlight/highlight.js"></script>
-<script>
-  hljs.initHighlightingOnLoad();
 </script>
 
 </body>

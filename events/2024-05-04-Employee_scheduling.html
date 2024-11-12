@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Employee scheduling</title>
-    <meta name="description" content="This slide deck explains Employee Shift Scheduling with Timefold">
+    <meta name="description" content="This slide deck explains Timefold: an open source constraint satisfaction solver in Java">
     <!--    <link href="https://github.com/TimefoldAI/timefold-presentations" rel="canonical">-->
 
     <link rel="stylesheet" href="../src/web/bootstrap/css/bootstrap.min.css">
@@ -15,7 +15,7 @@
         document.write('<link rel="stylesheet" href="../src/web/reveal/css/print/pdf.css">');
       }
     </script>
-    <link rel="stylesheet" href="../src/web/highlight/highlight.css">
+    <link rel="stylesheet" href="../src/web/reveal/plugin/highligh/a11y-light.css">
     <link rel="stylesheet" href="../src/web/timefold-presentation.css">
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -25,72 +25,73 @@
 
 <body>
 <div class="reveal">
-<div class="watermark watermark-left">
-    <p>
-        <img src="../src/web/social/linkedin-logo.png"/> Geoffrey De Smet
-    </p>
-</div>
-<div class="slides">
-    <section>
-        <h1>
-            Employee Shift Scheduling
-        </h1>
-        <div style="margin-top: 80px;">
-            <p>
-                <span style="font-size: smaller">by</span> Geoffrey De Smet<br/>
-            </p>
-        </div>
-    </section>
-    <section>
-        <img src="../src/content/timefold-solver-docs/responding-to-change/continuousPlanningEmployeeRostering_0.png" class="fullImage">
-        <img src="../src/content/timefold-solver-docs/responding-to-change/continuousPlanningEmployeeRostering_1.png" class="fullImage fragment">
-        <img src="../src/content/timefold-solver-docs/responding-to-change/continuousPlanningEmployeeRostering_2.png" class="fullImage fragment">
-        <img src="../src/content/timefold-solver-docs/responding-to-change/continuousPlanningEmployeeRostering_3.png" class="fullImage fragment">
-    </section>
-    <section>
-        <h3>Q &amp; A</h3>
-        <table class="links">
-            <tr>
-                <th>Learn more</th>
-                <td><a href="https://timefold.ai">timefold.ai</a></td>
-            </tr>
-            <tr>
-                <th>Get started</th>
-                <td><a href="https://app.timefold.ai">app.timefold.ai</a></td>
-            </tr>
-            <tr>
-                <th>Feedback</th>
-                <td>
-                    <img src="../src/web/social/linkedin-logo.png"/> <img src="../src/web/social/twitter-logo.png"/> <img src="../src/web/social/mastodon-logo.png"/> <a href="https://www.linkedin.com/in/ge0ffrey">Geoffrey De Smet</a>
-                </td>
-            </tr>
-        </table>
-    </section>
+    <div class="watermark watermark-left">
+        <p>
+            <img src="../src/web/social/twitter-logo.png"/> @GeoffreyDeSmet
+        </p>
+    </div>
+    <div class="slides">
+        <section>
+            <h1>
+                Employee Scheduling
+            </h1>
+            <div style="margin-top: 80px;">
+                <p>
+                    <span style="font-size: smaller">by</span> Geoffrey De Smet<br/>
+                </p>
+            </div>
+        </section>
+        <section>
+            <section>
+                <img src="../src/content/timefold-solver-docs/responding-to-change/continuousPlanningEmployeeRostering_0.png" class="fullImage">
+                <img src="../src/content/timefold-solver-docs/responding-to-change/continuousPlanningEmployeeRostering_1.png" class="fullImage fragment">
+                <img src="../src/content/timefold-solver-docs/responding-to-change/continuousPlanningEmployeeRostering_2.png" class="fullImage fragment">
+                <img src="../src/content/timefold-solver-docs/responding-to-change/continuousPlanningEmployeeRostering_3.png" class="fullImage fragment">
+            </section>
+        </section>
 
-</div></div>
+        <section>
+            <h3>Q &amp; A</h3>
+            <table class="links">
+                <tr>
+                    <th>Learn more</th>
+                    <td><a href="https://timefold.ai">timefold.ai</a></td>
+                </tr>
+                <tr>
+                    <th>Feedback</th>
+                    <td>
+                        <img src="../src/web/social/twitter-logo.png"/> <a href="https://twitter.com/GeoffreyDeSmet">@GeoffreyDeSmet</a><br/>
+                        <img src="../src/web/social/mastodon-logo.png"/> <a href="https://mastodon.social/@geoffreydesmet">@GeoffreyDeSmet@mastodon.social</a><br/>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Get started</th>
+                    <td>
+                        <img src="../src/content/static/cta/docs-HelloWorld-QR-code.png"/>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </div>
+</div>
 
 <script src="../src/web/jquery/jquery.min.js"></script>
 <script src="../src/web/reveal/js/reveal.js"></script>
+<script src="../src/web/reveal/plugin/highlight/highlight.js"></script>
+<script src="../src/web/reveal/plugin/notes/notes.js"></script>
 
 <script>
-  const showControls = false;
   Reveal.initialize({
-    controls: showControls,
+    controls: false,
+
     progress: true,
     history: true,
-    center: false,
-    theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-    transition: Reveal.getQueryHash().transition || 'linear', // page/linear/fade/none
-
+    center: true,
+    plugins: [ RevealHighlight, RevealNotes ],
     margin: 0.05,
     minScale: 0.2,
     maxScale: 100.0
   });
 </script>
-<script src="../src/web/highlight/highlight.js"></script>
-<script>
-  hljs.initHighlightingOnLoad();
-</script>
-
 </body>
 </html>

@@ -15,9 +15,15 @@ There are 2 presentation types:
 
 == Sync the images
 
+> This functionality is only available for the Timefold team.
+
 To sync the images and extract the SVG layers as PNG:
 
-. Clone this repo next to a `tf-main` dir which contains `timefold-solver` and `timefold-quickstarts`.
+. Clone this repo in a `presentations` directory. The `presentations` directory should be next to:
+ - a `solver` dir which contains `timefold-solver` and `timefold-quickstarts`.
+ - a `platform` dir which contains `timefold-orbit`, `timefold-models-sdk` and all models repositories.
+
+If you miss one, the script will tell you which directory is not placed correctly.
 
 . Run the script
 +
@@ -48,6 +54,8 @@ or instead, are distributed under a free, commercial-friendly license from:
 * https://commons.wikimedia.org[Wikimedia commons]
 * https://www.pexels.com[Pexels]
 * OptaPlanner (Apache License)
+* OpenAI / ChatGPT AI generated images (filenames postfixed with `-genai-chatgpt`)
+* https://www.iconfinder.com[Iconfinder]
 
 Timefold was https://timefold.ai/blog/2023/optaplanner-fork/[forked] on 20 April 2023 from OptaPlanner,
 which was entirely Apache-2.0 licensed (a permissive license).

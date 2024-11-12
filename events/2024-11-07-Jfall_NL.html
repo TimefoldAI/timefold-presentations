@@ -1,0 +1,601 @@
+<!doctype html>
+<!--suppress HtmlRequiredAltAttribute -->
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <title>J-Fall 2024</title>
+    <meta name="description" content="This slide deck talks about how we can Optimize Santa's travels using Timefold.ai">
+    <!--    <link href="https://github.com/TimefoldAI/timefold-presentations" rel="canonical">-->
+
+    <link rel="stylesheet" href="../src/web/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../src/web/reveal/css/reveal.css">
+    <link rel="stylesheet" href="../src/web/reveal/css/theme/simple.css" id="theme">
+    <script>
+        if (window.location.search.match(/print-pdf/gi)) {
+            document.write('<link rel="stylesheet" href="../src/web/reveal/css/print/pdf.css">');
+        }
+    </script>
+    <style>
+        .endingcard {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to right, rgba(255,77,77,0.95), rgba(0,107,60,0.95)), url("../src/content/static/santa/route-genai-chatgpt.webp");
+            background-size: cover;
+            color: white;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .highlight {
+            color: #3e00ff;
+        }
+    </style>
+    <link rel="stylesheet" href="../src/web/reveal/plugin/highlight/a11y-light.css">
+    <link rel="stylesheet" href="../src/web/timefold-presentation.css">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+
+<body>
+<div class="reveal">
+    <div class="watermark watermark-left">
+        <p>
+            <img src="../src/web/social/twitter-logo.png"/> @TCoolsIT
+            <img src="../src/web/social/timefold-logo.png"/> timefold.ai
+        </p>
+    </div>
+    <div class="slides">
+        <section>
+            <h2>
+                Optimizing Santa's Travels 🎄
+            </h2>
+            <div style="margin-top: 80px;">
+                <p>
+                    <span style="font-size: smaller">by</span> Tom Cools<br/>
+                </p>
+            </div>
+        </section>
+        <section>
+            <section>Halloween is behind us</section>
+            <section>Days are getting darker and colder</section>
+            <section><christmas-countdown></christmas-countdown></section>
+            <section data-background-image="../src/content/static/santa/productionline-genai-chatgpt.png" data-background-size="cover">
+                <aside class="notes">
+                    Packages need to be created
+                </aside>
+            </section>
+            <section data-background-image="../src/content/static/santa/schedule-genai-chatgpt.webp" data-background-size="cover">
+                <aside class="notes">
+                    Elves need to be assigned shifts
+                </aside>
+            </section>
+            <section data-background-image="../src/content/static/santa/route-genai-chatgpt.webp" data-background-size="cover">
+                <aside class="notes">
+                    Santa needs to figure out the route to all children
+                </aside>
+            </section>
+            <section>
+                <h2>These are all </br> <span class="highlight">planning problems</span></h2>
+                <aside class="notes">PROMISE by the end of this session, you'll get a better grasp</aside>
+                <p class="fragment"> <span class="highlight">Optimize goals</span> with <span class="highlight">limited resources</span> under <span class="highlight">constraints</span></p>
+            </section>
+            <section data-background-image="../src/content/static/santa/route-genai-chatgpt.webp" data-background-size="cover">
+                <aside class="notes">
+                    Our focus for today
+                </aside>
+            </section>
+        </section>
+
+        <section>
+            <section data-background-color="#3e00ff">
+                <h2>Tackling the problem</h2>
+                <aside class="notes">
+                    Show demo of what would happen if you just take the in the order you received the letters.
+                </aside>
+            </section>
+            <section>
+                <h2>Greedy Algorithms</h2>
+            </section>
+            <section>
+                <h3><span class="highlight">Greedy algorithms</span> make <span class="highlight">locally optimal choices</span> at each step, but do not consider effects on follow up steps.</h3>
+            </section>
+            <section>
+                <h3>Greedy code</h3>
+                <pre>
+                    <code class="hljs language-java">var remaining = new ArrayList<>(allVisits); //copy
+var visitOrder = new ArrayList<>();
+
+Visit latest = remaining.getFirst();
+visitOrder.add(latest);
+remaining.remove(latest);
+
+int remainingSize = remaining.size();
+for (int i = 0; i < remainingSize-1; i++) {
+    Visit closestVisit = findClosest(latest, remaining);
+    visitOrder.add(closestVisit);
+    remaining.remove(closestVisit);
+    latest = closestVisit;
+}
+                    </code>
+                </pre>
+            </section>
+            <section>
+                Greed != Good
+            </section>
+            <section>
+                <img src="../src/content/static/santa/tree-of-greed_0.png" class="fullImage">
+                <img src="../src/content/static/santa/tree-of-greed_1.png" class="fullImage fragment">
+                <img src="../src/content/static/santa/tree-of-greed_2.png" class="fullImage fragment">
+                <img src="../src/content/static/santa/tree-of-greed_3.png" class="fullImage fragment">
+                <img src="../src/content/static/santa/tree-of-greed_4.png" class="fullImage fragment">
+                <img src="../src/content/static/santa/tree-of-greed_5.png" class="fullImage fragment">
+            </section>
+            <section>
+                <img src="../src/content/static/santa/tree-of-greed2_0.png" class="fullImage">
+                <img src="../src/content/static/santa/tree-of-greed2_1.png" class="fullImage fragment">
+                <img src="../src/content/static/santa/tree-of-greed2_2.png" class="fullImage fragment">
+                <img src="../src/content/static/santa/tree-of-greed2_3.png" class="fullImage fragment">
+                <img src="../src/content/static/santa/tree-of-greed2_4.png" class="fullImage fragment">
+                <img src="../src/content/static/santa/tree-of-greed2_5.png" class="fullImage fragment">
+            </section>
+            <section>
+                <aside class="notes">
+                    <h3>Santa is somewhat disappointed, he expected the <b>Optimal</b> solution, not just a <b>Feasible</b> solution</h3>
+
+                    Mention "THE" optimal solution is a tricky question.
+                </aside>
+                <h3>Algorithm comparison</h3>
+                <table style="margin-top: 100px; table-layout:fixed">
+                    <thead>
+                    <tr>
+                        <th>Greedy</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="fragment"><span class="positive">Fast</span></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="fragment"><span class="positive">Scalable</span></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="fragment"><span class="negative">Far from optimal</span></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <h2>Let's try everything! <br /><span class="highlight">Brute Force</span> 💪 </h2>
+            </section>
+            <section>
+                <h3>Brute Force Code</h3>
+                <pre xml:space="preserve">
+                    <code class="java">
+//  ⚠ RECURSION AHEAD ⚠!
+                    </code>
+                </pre>
+                <aside class="notes">
+                    Shall we wait for the system to finish?
+                </aside>
+            </section>
+            <section>
+                <h3>How big is the search space?</h3>
+                <p>Search space for <i>n</i> 🎁: <i>n!</i></p>
+                <p class="fragment">Search space for 100 🎁: 10<sup>157</sup></p>
+                <p class="fragment">Search space for 1000 🎁: 10<sup>2567</sup></p>
+                <figure class="fragment">
+                    <p>Atoms in observable universe: 10<sup>80</sup></p>
+                    <img src="../src/content/static/optimization-algorithms/universe.png" style="width: 200px; height: 200px;"/>
+                </figure>
+            </section>
+            <section>
+                <img src="../src/content/static/benchmarks/bruteForceHitsTheWall-TSP_0.png" class="fullImage">
+                <img src="../src/content/static/benchmarks/bruteForceHitsTheWall-TSP_1.png" class="fullImage fragment">
+                <img src="../src/content/static/benchmarks/bruteForceHitsTheWall-TSP_2.png" class="fullImage fragment">
+                <img src="../src/content/static/benchmarks/bruteForceHitsTheWall-TSP_3.png" class="fullImage fragment">
+                <img src="../src/content/static/benchmarks/bruteForceHitsTheWall-TSP_4.png" class="fullImage fragment">
+                <img src="../src/content/static/benchmarks/bruteForceHitsTheWall-TSP_5.png" class="fullImage fragment">
+                <img src="../src/content/static/benchmarks/bruteForceHitsTheWall-TSP_6.png" class="fullImage fragment">
+                <img src="../src/content/static/benchmarks/bruteForceHitsTheWall-TSP_7.png" class="fullImage fragment">
+                <img src="../src/content/static/benchmarks/bruteForceHitsTheWall-TSP_8.png" class="fullImage fragment">
+                <img src="../src/content/static/benchmarks/bruteForceHitsTheWall-TSP_9.png" class="fullImage fragment">
+                <img src="../src/content/static/benchmarks/bruteForceHitsTheWall-TSP_10.png" class="fullImage fragment">
+            </section>
+            <section>
+                <div><christmas-countdown></christmas-countdown></div>
+                <div class="fragment">😱</div>
+            </section>
+            <section>
+                <h3>Algorithm comparison</h3>
+                <table style="margin-top: 100px; table-layout:fixed">
+                    <thead>
+                    <tr>
+                        <th>Greedy</th>
+                        <th>Brute Force</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span class="positive">Fast</span></td>
+                        <td class="fragment"><span class="negative">Slow</span></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><span class="positive">Scalable</span></td>
+                        <td class="fragment"><span class="negative">Not scalable</span></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><span class="negative">Far from optimal</span></td>
+                        <td class="fragment"><span class="positive">Optimal</span></td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+
+        <section>
+            <section data-background-color="#3e00ff">
+                <h2>Christmas Magic</h2>
+                or math.. probably math.
+            </section>
+            <section>
+                <h3>Metaheuristics</h3>
+                <ul>
+                    <li>Local Search</li>
+                    <li>Tabu Search</li>
+                    <li>Simulated Annealing</li>
+                    <li>Late Acceptance</li>
+                    <li>...</li>
+                </ul>
+            </section>
+            <section>
+                <img src="../src/content/timefold-solver-docs/optimization-algorithms/koptMove_0.png" class="fullImage">
+                <img src="../src/content/timefold-solver-docs/optimization-algorithms/koptMove_1.png" class="fullImage fragment">
+                <img src="../src/content/timefold-solver-docs/optimization-algorithms/koptMove_2.png" class="fullImage fragment">
+                <img src="../src/content/timefold-solver-docs/optimization-algorithms/koptMove_3.png" class="fullImage fragment">
+                <img src="../src/content/timefold-solver-docs/optimization-algorithms/koptMove_4.png" class="fullImage fragment">
+            </section>
+            <section>
+                <h2>Implement yourself?</h2>
+            </section>
+            <section data-transition="fade-out">
+                <figure>
+                    <img src="../src/content/timefold-solver-docs/shared/timefold-logo.png"/>
+                    <p><i>Planning optimization made easy</i></p>
+                </figure>
+                <ul style="margin-top: 10px;">
+                    <li class="fragment">Library of optimization algorithms</li>
+                    <li class="fragment">Open Source (Apache license)</li>
+                    <li class="fragment">Actively developed by our Open Core company</li>
+                    <li class="fragment">AI, not ML</li>
+                </ul>
+            </section>
+            <section>
+                <img src="../src/content/timefold-solver-docs/introduction/compatibility_0.png" class="fullImage">
+                <img src="../src/content/timefold-solver-docs/introduction/compatibility_1.png" class="fullImage fragment">
+                <img src="../src/content/timefold-solver-docs/introduction/compatibility_2.png" class="fullImage fragment">
+                <img src="../src/content/timefold-solver-docs/introduction/compatibility_3.png" class="fullImage fragment">
+                <img src="../src/content/timefold-solver-docs/introduction/compatibility_4.png" class="fullImage fragment">
+            </section>
+            <section>
+
+                <img src="../src/content/static/santa/vehicleRoutingClassDiagram-simplified_0.png" class="fullImage">
+                <img src="../src/content/static/santa/vehicleRoutingClassDiagram-simplified_1.png" class="fullImage fragment">
+                <img src="../src/content/static/santa/vehicleRoutingClassDiagram-simplified_2.png" class="fullImage fragment">
+            </section>
+            <section>
+                    <h3>Easy score calculator</h3>
+                    <pre xml:space="preserve"><code class="java">public HardSoftLongScore calculateScore(VehicleRoutePlan plan) {
+    long totalDrivingTime = 0;
+
+    for(Vehicle v : plan.getVehicles()) {
+        totalDrivingTime += v.getTotalDrivingTimeSeconds();
+    }
+
+    return HardSoftLongScore.of(0, totalDrivingTime*-1);
+}</code></pre>
+            </section>
+            <section>
+                <h3>Algorithm comparison</h3>
+                <table style="margin-top: 100px; table-layout:fixed">
+                    <thead>
+                    <tr>
+                        <th>Greedy</th>
+                        <th>Brute Force</th>
+                        <th>Metaheuristics</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span class="positive">Fast</span></td>
+                        <td><span class="negative">Slow</span></td>
+                        <td class="fragment"><span class="positive">Fast</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="positive">Scalable</span></td>
+                        <td><span class="negative">Not scalable</span></td>
+                        <td class="fragment"><span class="positive">Scalable</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="negative">Far from optimal</span></td>
+                        <td><span class="positive">Optimal</span></td>
+                        <td class="fragment"><span class="positive">(Near) Optimal</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <h3>How good are humans?</h3>
+            </section>
+            <section>
+                <h3>Result comparison</h3>
+                <table style="margin-top: 100px; table-layout:fixed">
+                    <thead>
+                    <tr>
+                        <th>Humans</th>
+                        <th>Greedy</th>
+                        <th>Brute Force</th>
+                        <th>Meta heuristics</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="fragment"><span class="negative">Slow</span></td>
+                        <td><span class="positive">Fast</span></td>
+                        <td><span class="negative">Slow</span></td>
+                        <td><span class="positive">Fast</span></td>
+                    </tr>
+                    <tr>
+                        <td class="fragment"><span class="positive">Scalable</span></td>
+                        <td><span class="positive">Scalable</span></td>
+                        <td><span class="negative">Not scalable</span></td>
+                        <td><span class="positive">Scalable</span></td>
+                    </tr>
+                    <tr>
+                        <td class="fragment"><span class="negative">Far from optimal</span></td>
+                        <td><span class="negative">Far from optimal</span></td>
+                        <td><span class="positive">Optimal</span></td>
+                        <td><span class="positive">(Near) Optimal</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <h3>How good is Generative AI?</h3>
+            </section>
+            <section>
+                <h3>Result comparison</h3>
+                <table style="margin-top: 100px; table-layout:fixed">
+                    <thead>
+                    <tr>
+                        <th>Humans</th>
+                        <th class="small">Generative AI</th>
+                        <th>Greedy</th>
+                        <th>Brute Force</th>
+                        <th>Meta heuristics</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span class="negative">Slow</span></td>
+                        <td class="fragment"><span class="positive">Fast</span></td>
+                        <td><span class="positive">Fast</span></td>
+                        <td><span class="negative">Slow</span></td>
+                        <td><span class="positive">Fast</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="positive">Scalable</span></td>
+                        <td class="fragment"><span class="positive">Scalable?</span></td>
+                        <td><span class="positive">Scalable</span></td>
+                        <td><span class="negative">Not scalable</span></td>
+                        <td><span class="positive">Scalable</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="negative">Far from optimal</span></td>
+                        <td class="fragment"><span class="negative">Far from optimal</span></td>
+                        <td><span class="negative">Far from optimal</span></td>
+                        <td><span class="positive">Optimal</span></td>
+                        <td><span class="positive">(Near) Optimal</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+        <section>
+            <section>We still have a challenge! <img src="../src/content/static/santa/fireplace.png" /></section>
+            <section>
+                Current score calculation is not scalable.
+                <aside class="notes">
+                    - Gets harder to unravel.
+                    - Also heavy on the score calculation itself
+                </aside>
+            </section>
+            <section data-background-color="#3e00ff">
+                <h2>Constraints</h2>
+            </section>
+            <section>
+                <h3>How do you define constraints?</h3>
+                <pre>
+                <code class="hljs language-java">
+Constraint minimizeTravelTime(ConstraintFactory factory) {
+    return factory.forEach(Vehicle.class)
+
+            .penalizeLong(HardSoftLongScore.ONE_SOFT,
+                    Vehicle::getTotalDrivingTimeSeconds)
+
+            .asConstraint("Minimize Travel Time");
+}
+                </code>
+                </pre>
+            </section>
+            <section>
+                <h3>More elaborate example</h3>
+                <pre>
+                <code class="hljs language-java">
+Constraint vehicleCapacity(ConstraintFactory factory) {
+    return factory.forEach(Visit.class)
+        .filter(visit -> visit.getVehicle() != null)
+
+        .groupBy(Visit::getVehicle, sum(Visit::giftAmount))
+
+        .filter((v, gifts) -> gifts > vehicle.getCapacity())
+
+        .penalizeLong(HardSoftLongScore.ONE_HARD,
+                (v, gifts) -> count - vehicle.getCapacity())
+
+        .asConstraint("Vehicle Capacity");
+}
+                </code>
+                </pre>
+            </section>
+            <section>
+                <h3>DEMO</h3>
+            </section>
+            <section>
+                <h3>Why use constraints?</h3>
+                <ul>
+                    <li class="fragment">Explainable Score</li>
+                    <li class="fragment">Incremental Score Calculation</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Incremental Score Calculation</h3>
+                Ex. Adding a new package: <img width="30px" style="filter: drop-shadow(0px 0px 10px red) hue-rotate(180deg) contrast(160%) " src="../src/content/static/santa/gift-marker.png" />
+                <br/>
+                <br/>
+                <span class="fragment">
+                    Before:
+                <img width="30px"  src="../src/content/static/santa/gift-marker.png" />
+                <img width="30px"  src="../src/content/static/santa/gift-marker.png" />
+                <img width="30px"  src="../src/content/static/santa/gift-marker.png" />
+                <img width="30px"  src="../src/content/static/santa/gift-marker.png" />
+                <img width="30px"  src="../src/content/static/santa/gift-marker.png" />
+                <img width="30px"  src="../src/content/static/santa/gift-marker.png" />
+                <img width="30px"  src="../src/content/static/santa/gift-marker.png" />
+                <img width="30px"  src="../src/content/static/santa/gift-marker.png" />
+                </span>
+                <br />
+                <span class="fragment">
+                After:
+                <img width="30px"  src="../src/content/static/santa/gift-marker.png" />
+                <img width="30px"  src="../src/content/static/santa/gift-marker.png" />
+                <img width="30px"  src="../src/content/static/santa/gift-marker.png" />
+                <img width="30px" style="filter: hue-rotate(180deg)"  src="../src/content/static/santa/gift-marker.png" />
+                <img width="30px" style="filter: drop-shadow(0px 0px 10px red) hue-rotate(180deg) contrast(160%) " src="../src/content/static/santa/gift-marker.png" />
+                <img width="30px" style="filter: hue-rotate(180deg)"  src="../src/content/static/santa/gift-marker.png" />
+                <img width="30px" src="../src/content/static/santa/gift-marker.png" />
+                <img width="30px" src="../src/content/static/santa/gift-marker.png" />
+                <img width="30px" src="../src/content/static/santa/gift-marker.png" />
+                </span>
+                <br />
+                <br />
+                <br />
+
+                <span class="fragment">
+                    Only Azure <img width="30px" style="filter: drop-shadow(0px 0px 10px red) hue-rotate(180deg) contrast(160%) " src="../src/content/static/santa/gift-marker.png" /> gifts are recalculated
+                </span>
+            </section>
+        </section>
+
+
+        <section>
+            <section data-background-color="#3e00ff">
+                <h2>In conclusion</h2>
+                Feasible is easy, Optimal is (impossibly)-hard
+            </section>
+            <section>
+                <h2>These are all </br> <span class="highlight">planning problems</span></h2>
+                <p class="fragment"> <span class="highlight">Optimize goals</span> with <span class="highlight">limited resources</span> under <span class="highlight">constraints</span></p>
+            </section>
+            <section>
+                <h3>🖊 Model domain</h3>
+                <h3 class="fragment">⚖️ Define constraints</h3>
+                <h3 class="fragment"><span class="highlight"> 🚀 Run!</span></h3>
+            </section>
+        <section>
+            <h3>Start coding today</h3>
+            <ol>
+                <li>Go to <a href="https://timefold.ai/open-source-solver">https://timefold.ai/open-source-solver</a></li>
+                <li>Click <a href="https://github.com/TimefoldAI/timefold-quickstarts"><i>Run a Quickstart</i></a>.</li>
+                <li>Pick a quickstart from the README.</li>
+                <li>Run it: 🚀</li>
+            </ol>
+        </section>
+            <section data-background-image="../src/content/static/santa/productionline-genai-chatgpt.png" data-background-size="cover">
+                <div class="endingcard fragment">Quickstart: Food Packaging</div>
+            </section>
+            <section data-background-image="../src/content/static/santa/schedule-genai-chatgpt.webp" data-background-size="cover">
+                <div class="endingcard fragment">Quickstart: Employee Scheduling</div>
+            </section>
+            <section data-background-image="../src/content/static/santa/route-genai-chatgpt.webp" data-background-size="cover">
+                <div class="endingcard fragment">Quickstart: Vehicle Routing</div>
+            </section>
+            <section data-background-image="../src/content/static/santa/route-genai-chatgpt.webp" data-background-size="cover">
+                <div class="endingcard fragment">Timefold Platform => app.timefold.ai</div>
+            </section>
+        <section>
+            <h3> <span class="highlight"> 🎁 Merry Christmas! 🎁</span></h3>
+            <table class="links">
+                <tr>
+                    <th>Learn more</th>
+                    <td><a href="https://timefold.ai">timefold.ai</a></td>
+                </tr>
+                <tr>
+                    <th>Feedback</th>
+                    <td>
+                        <img src="../src/web/social/twitter-logo.png"/> <a href="https://twitter.com/TCoolsIT">@TCoolsIt</a><br/>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Get started</th>
+                    <td>
+                        <img src="../src/content/static/cta/docs-HelloWorld-QR-code.png"/>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </div>
+</div>
+
+<script src="../src/web/jquery/jquery.min.js"></script>
+<script src="../src/web/reveal/js/reveal.js"></script>
+<script src="../src/web/reveal/plugin/highlight/highlight.js"></script>
+<script src="../src/web/reveal/plugin/notes/notes.js"></script>
+
+<script src="../src/content/elements/christmas-countdown.js"></script>
+
+<script>
+    Reveal.initialize({
+        center: true,
+        hash: true,
+        showNotes: false,
+        progress: false,
+        controls: false,
+        // This fixes Logitech Spotlight
+        keyboard: {
+            37: 'prev',
+            39: 'next',
+        },
+        plugins: [ RevealHighlight, RevealNotes ],
+        margin: 0.05,
+        minScale: 0.2,
+        maxScale: 100.0
+    });
+</script>
+
+</body>
+</html>
