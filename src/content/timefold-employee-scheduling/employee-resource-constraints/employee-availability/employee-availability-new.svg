@@ -35,7 +35,7 @@
        preserveAspectRatio="xMidYMid">
       <path
          transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         style="fill:currentColor;fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
          d="M 5.77,0 -2.88,5 V -5 Z"
          id="path135" />
     </marker>
@@ -292,7 +292,7 @@
          offset="0.0000000" />
       <stop
          id="stop8604-2"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          offset="1" />
     </radialGradient>
     <linearGradient
@@ -301,11 +301,11 @@
       <stop
          id="stop2809"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop2811"
          offset="1"
-         style="stop-color:#ffffff;stop-opacity:0;" />
+         style="stop-color:#ffffff;stop-opacity:0;" /> rx="5" ry="5"
     </linearGradient>
     <linearGradient
        id="linearGradient8543">
@@ -344,7 +344,7 @@
          id="stop8602-1-1" />
       <stop
          offset="1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          id="stop8604-3-7" />
     </radialGradient>
     <linearGradient
@@ -352,7 +352,7 @@
       <stop
          id="stop3879"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          style="stop-color:#eeeeec;stop-opacity:1;"
          offset="1"
@@ -361,7 +361,7 @@
     <linearGradient
        id="linearGradient3889">
       <stop
-         style="stop-color:#ffffff;stop-opacity:1;"
+         style="stop-color:#ffffff;stop-opacity:1;" rx="5" ry="5"
          offset="0"
          id="stop3891" />
       <stop
@@ -384,7 +384,7 @@
          id="stop4998" />
       <stop
          offset="1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          id="stop5000" />
     </radialGradient>
     <linearGradient
@@ -392,15 +392,15 @@
       <stop
          id="stop4085"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:0;" />
+         style="stop-color:#ffffff;stop-opacity:0;" /> rx="5" ry="5"
       <stop
-         style="stop-color:#ffffff;stop-opacity:0;"
+         style="stop-color:#ffffff;stop-opacity:0;" rx="5" ry="5"
          offset="0.75"
          id="stop4089" />
       <stop
          id="stop4087"
          offset="1"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
     </linearGradient>
     <linearGradient
        id="linearGradient4032">
@@ -451,7 +451,7 @@
          id="stop8602-1-1-5" />
       <stop
          offset="1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          id="stop8604-3-7-9" />
     </radialGradient>
     <radialGradient
@@ -469,7 +469,7 @@
          id="stop6008" />
       <stop
          offset="1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          id="stop6010" />
     </radialGradient>
     <radialGradient
@@ -487,7 +487,7 @@
          offset="0.0000000" />
       <stop
          id="stop8604-2-8"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          offset="1" />
     </radialGradient>
     <radialGradient
@@ -505,7 +505,7 @@
          offset="0.0000000" />
       <stop
          id="stop8604-2-9"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          offset="1" />
     </radialGradient>
     <radialGradient
@@ -523,7 +523,7 @@
          id="stop8602-1-1-4" />
       <stop
          offset="1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          id="stop8604-3-7-5" />
     </radialGradient>
     <radialGradient
@@ -541,7 +541,7 @@
          id="stop6377" />
       <stop
          offset="1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          id="stop6379" />
     </radialGradient>
     <linearGradient
@@ -569,7 +569,7 @@
          offset="0.0000000" />
       <stop
          id="stop8604-2-99"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          offset="1" />
     </radialGradient>
     <radialGradient
@@ -587,7 +587,7 @@
          id="stop8602-1-1-46" />
       <stop
          offset="1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          id="stop8604-3-7-94" />
     </radialGradient>
     <radialGradient
@@ -605,7 +605,7 @@
          id="stop6377-8" />
       <stop
          offset="1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          id="stop6379-8" />
     </radialGradient>
     <linearGradient
@@ -633,7 +633,7 @@
          offset="0.0000000" />
       <stop
          id="stop8604-2-0"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          offset="1" />
     </radialGradient>
     <radialGradient
@@ -651,7 +651,7 @@
          id="stop8602-1-1-59" />
       <stop
          offset="1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          id="stop8604-3-7-90" />
     </radialGradient>
     <radialGradient
@@ -669,7 +669,7 @@
          id="stop7647" />
       <stop
          offset="1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          id="stop7649" />
     </radialGradient>
     <linearGradient
@@ -718,7 +718,7 @@
          offset="0.0000000" />
       <stop
          id="stop8026"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          offset="1" />
     </radialGradient>
     <radialGradient
@@ -823,7 +823,7 @@
          id="stop8090" />
       <stop
          offset="1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          id="stop8092" />
     </radialGradient>
     <radialGradient
@@ -894,7 +894,7 @@
          id="stop8132" />
       <stop
          offset="1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          id="stop8134" />
     </radialGradient>
     <radialGradient
@@ -1361,7 +1361,7 @@
          offset="0.0000000" />
       <stop
          id="stop8604-2-8-9"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          offset="1" />
     </radialGradient>
     <radialGradient
@@ -1379,7 +1379,7 @@
          id="stop8602-1-1-5-9" />
       <stop
          offset="1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          id="stop8604-3-7-9-1" />
     </radialGradient>
     <radialGradient
@@ -1397,7 +1397,7 @@
          id="stop11914" />
       <stop
          offset="1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          id="stop11916" />
     </radialGradient>
     <radialGradient
@@ -1975,7 +1975,7 @@
   </defs>
   <sodipodi:namedview
      id="base"
-     pagecolor="#ffffff"
+     pagecolor="#ffffff" rx="5" ry="5"
      bordercolor="#666666"
      borderopacity="1.0"
      inkscape:pageopacity="1"
@@ -2009,7 +2009,7 @@
      inkscape:showpageshadow="2"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:export-bgcolor="#ffffffff">
+     inkscape:export-bgcolor="#ffffffff"> rx="5" ry="5"
     <inkscape:grid
        empspacing="10"
        visible="true"
@@ -2046,7 +2046,7 @@
      style="display:inline">
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.3333px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       style="fill:currentColor;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill-opacity:1;stroke:none"
        x="374.18881"
        y="471.34799"
        id="text18"
@@ -2057,11 +2057,11 @@
          id="tspan18"><tspan
            x="374.18881"
            y="471.34799"
-           style="font-family:'SF Mono';-inkscape-font-specification:'SF Mono'"
+           style="fill:currentColor;-inkscape-font-specification:'SF Mono'"
            id="tspan17">Employee availability</tspan></tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+       style="fill:currentColor;line-height:0.01%;text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill-opacity:1;stroke:none"
        x="376.14062"
        y="501.65979"
        id="text21"
@@ -2076,18 +2076,18 @@
        transform="translate(287.74007,303.87852)"
        inkscape:label="Calendar">
       <path
-         style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         style="display:inline;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
          d="M -182.26541,369.6082 V 250.31966"
          id="path17-0-9-8-1"
          sodipodi:nodetypes="cc" />
       <path
-         style="display:inline;fill:none;stroke:#000000;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         style="display:inline;fill:none;stroke:currentColor;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
          d="M 217.73459,369.53294 V 250.3953"
          id="path17-0-9-8-1-9"
          sodipodi:nodetypes="cc" />
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.9883px;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.00083;stroke-dasharray:none"
+         style="fill:currentColor;line-height:0.01%;text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;opacity:1;fill-opacity:1;stroke:none;stroke-width:1.00083;stroke-dasharray:none"
          x="-179.50096"
          y="259.6196"
          id="text16"
@@ -2099,11 +2099,11 @@
            style="stroke-width:1.00083"><tspan
              x="-179.50096"
              y="259.6196"
-             style="line-height:1.25;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';text-align:start;text-anchor:start;stroke-width:1.00083"
+             style="fill:currentColor;line-height:1.25;text-align:start;text-anchor:start;stroke-width:1.00083"
              id="tspan15">Mon 1 Feb</tspan></tspan></text>
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.9883px;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.00083;stroke-dasharray:none"
+         style="fill:currentColor;line-height:0.01%;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:1;fill-opacity:1;stroke:none;stroke-width:1.00083;stroke-dasharray:none"
          x="220.41827"
          y="259.6196"
          id="text14"
@@ -2115,23 +2115,23 @@
            style="stroke-width:1.00083"><tspan
              x="220.41827"
              y="259.6196"
-             style="line-height:1.25;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';stroke-width:1.00083"
+             style="fill:currentColor;line-height:1.25;stroke-width:1.00083"
              id="tspan13">Fri 5 Feb</tspan></tspan></text>
       <path
-         style="display:inline;opacity:1;mix-blend-mode:normal;fill:none;stroke:#000000;stroke-width:1.00083;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Triangle)"
+         style="display:inline;opacity:1;mix-blend-mode:normal;fill:none;stroke:currentColor;stroke-width:1.00083;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Triangle)"
          d="m 770.50196,650.98826 -201.3367,1e-5 -1.00167,3.00001 -1.00167,-6 -1.00167,3 h -97.16193 l -1.00167,3 -1.00167,-6 -0.9015,3 -97.2621,-2e-5 -1.00167,3.00002 -0.93656,-6 -1.06678,2.99998 h -97.16194 l -1.00167,3.00002 -1.00166,-6 -1.00167,2.99998 h -95.6583"
          id="path17-0"
          sodipodi:nodetypes="cccccccccccccccccc"
          transform="matrix(0.99833337,0,0,1,-351.98208,-361.02422)"
          inkscape:label="path17-0" />
       <path
-         style="display:inline;mix-blend-mode:normal;fill:none;stroke:#000000;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         style="display:inline;mix-blend-mode:normal;fill:none;stroke:currentColor;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
          d="M -82.265411,369.53294 V 250.3953"
          id="path17-0-9-8-1-9-2"
          sodipodi:nodetypes="cc" />
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.9883px;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;mix-blend-mode:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.00083;stroke-dasharray:none"
+         style="fill:currentColor;line-height:0.01%;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;mix-blend-mode:normal;fill-opacity:1;stroke:none;stroke-width:1.00083;stroke-dasharray:none"
          x="-79.832039"
          y="259.6196"
          id="text8"
@@ -2143,16 +2143,16 @@
            style="stroke-width:1.00083"><tspan
              x="-79.832039"
              y="259.6196"
-             style="line-height:1.25;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';stroke-width:1.00083"
+             style="fill:currentColor;line-height:1.25;stroke-width:1.00083"
              id="tspan7">Tue 2 Feb</tspan></tspan></text>
       <path
-         style="display:inline;mix-blend-mode:normal;fill:none;stroke:#000000;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         style="display:inline;mix-blend-mode:normal;fill:none;stroke:currentColor;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
          d="M 17.734589,369.53294 V 250.3953"
          id="path17-0-9-8-1-9-7"
          sodipodi:nodetypes="cc" />
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.9883px;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;mix-blend-mode:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.00083;stroke-dasharray:none"
+         style="fill:currentColor;line-height:0.01%;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;mix-blend-mode:normal;fill-opacity:1;stroke:none;stroke-width:1.00083;stroke-dasharray:none"
          x="20.25141"
          y="259.6196"
          id="text12"
@@ -2164,16 +2164,16 @@
            style="stroke-width:1.00083"><tspan
              x="20.25141"
              y="259.6196"
-             style="line-height:1.25;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';stroke-width:1.00083"
+             style="fill:currentColor;line-height:1.25;stroke-width:1.00083"
              id="tspan11">Wed 3 Feb</tspan></tspan></text>
       <path
-         style="display:inline;mix-blend-mode:normal;fill:none;stroke:#000000;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         style="display:inline;mix-blend-mode:normal;fill:none;stroke:currentColor;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
          d="M 117.73459,369.53294 V 250.3953"
          id="path17-0-9-8-1-9-1"
          sodipodi:nodetypes="cc" />
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.9883px;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;mix-blend-mode:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.00083;stroke-dasharray:none"
+         style="fill:currentColor;line-height:0.01%;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;mix-blend-mode:normal;fill-opacity:1;stroke:none;stroke-width:1.00083;stroke-dasharray:none"
          x="120.33485"
          y="259.6196"
          id="text10"
@@ -2185,12 +2185,12 @@
            style="stroke-width:1.00083"><tspan
              x="120.33485"
              y="259.6196"
-             style="line-height:1.25;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';stroke-width:1.00083"
+             style="fill:currentColor;line-height:1.25;stroke-width:1.00083"
              id="tspan9">Thu 4 Feb</tspan></tspan></text>
     </g>
     <text
        xml:space="preserve"
-       style="font-size:21.3333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;display:inline;fill:#12131c;fill-opacity:1;stroke:#313131;stroke-width:1.00157"
+       style="fill:currentColor;text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;display:inline;fill-opacity:1;stroke:#313131;stroke-width:1.00157"
        x="62.654827"
        y="163.22087"
        id="text1"
@@ -2200,7 +2200,7 @@
          id="tspan1"
          x="62.654827"
          y="163.22087"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:21.3333px;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';fill:#12131c;fill-opacity:1;stroke-width:1.00157">CARL</tspan></text>
+         style="fill:currentColor;fill-opacity:1;stroke-width:1.00157">CARL</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -2212,14 +2212,14 @@
        style="display:inline;fill:#4900f8;fill-opacity:1;stroke-width:1.03301;stroke-dasharray:none"
        inkscape:label="friday">
       <rect
-         style="fill:#00c85e;fill-opacity:1;stroke:#000000;stroke-width:1.03301;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="fill: #00c85e;fill-opacity:1;stroke: #00c85e;stroke-width:1.03301;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" rx="5" ry="5"
          id="rect57-60-4-1-3-75"
          width="102.47706"
          height="50"
          x="209.96062"
          y="652.82489"
-         rx="4.2634721"
-         ry="5.018621" />
+         
+          />
       <g
          inkscape:groupmode="layer"
          id="g3-85-2-7"
@@ -2227,37 +2227,37 @@
          style="display:none;opacity:1;fill:#4900f8;fill-opacity:1;stroke-width:1.03106;stroke-dasharray:none"
          transform="matrix(1.0671141,0,0,1,76.054852,417.33732)">
         <rect
-           style="display:inline;opacity:1;fill:#4900f8;fill-opacity:1;stroke:#000000;stroke-width:0.999995;stroke-linejoin:miter;stroke-miterlimit:9;stroke-dasharray:none;paint-order:markers fill stroke"
+           style="display:inline;opacity:1;fill: #4900f8;fill-opacity:1;stroke: #4900f8;stroke-width:0.999995;stroke-linejoin:miter;stroke-miterlimit:9;stroke-dasharray:none;paint-order:markers fill stroke" rx="5" ry="5"
            id="rect3-8-6-2"
            width="79.030128"
            height="18.968941"
            x="130.48494"
            y="260.4866"
-           rx="4.9999995"
-           ry="5" />
+           
+            />
         <text
            xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.24849px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';display:inline;opacity:1;fill:#4900f8;fill-opacity:1;stroke:none;stroke-width:1.03106;stroke-dasharray:none;stroke-opacity:1"
+           style="fill:white;display:inline;opacity:1;fill-opacity:1;stroke:none;stroke-width:1.03106;stroke-dasharray:none;stroke-opacity:1"
            x="227.51413"
            y="787.51044"
            id="text3-3-8-9"
            transform="matrix(1.0287883,0,0,0.91433361,-97.016635,-447.30839)"><tspan
              sodipodi:role="line"
              id="tspan3-0-9-7"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.24849px;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';fill:#4900f8;fill-opacity:1;stroke-width:1.03106;stroke-dasharray:none"
+             style="fill:white;fill-opacity:1;stroke-width:1.03106;stroke-dasharray:none"
              x="227.51413"
              y="787.51044">Security Guard</tspan></text>
       </g>
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.5282px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.03301;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:currentColor;display:inline;fill-opacity:1;stroke:none;stroke-width:1.03301;stroke-dasharray:none;stroke-opacity:1"
          x="206.25285"
          y="707.72479"
          id="text6-23-1-6-5"
          transform="scale(1.0330121,0.96804287)"><tspan
            sodipodi:role="line"
            id="tspan6-8-5-3-6"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';fill:#ffffff;fill-opacity:1;stroke-width:1.03301;stroke-dasharray:none"
+           style="fill:currentColor;fill-opacity:1;stroke-width:1.03301;stroke-dasharray:none"
            x="206.25285"
            y="707.72479">Available</tspan></text>
     </g>
@@ -2267,14 +2267,14 @@
        style="display:inline;fill:#4900f8;fill-opacity:1;stroke-width:1.03301;stroke-dasharray:none"
        inkscape:label="thursday">
       <rect
-         style="fill:#00c85e;fill-opacity:1;stroke:#000000;stroke-width:1.03301;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="fill: #00c85e;fill-opacity:1;stroke: #00c85e;stroke-width:1.03301;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" rx="5" ry="5"
          id="rect57-60-4-1-3"
          width="102.47706"
          height="50"
          x="209.96062"
          y="652.82489"
-         rx="4.2634721"
-         ry="5.018621" />
+         
+          />
       <g
          inkscape:groupmode="layer"
          id="g3-85-2"
@@ -2282,37 +2282,37 @@
          style="display:none;opacity:1;fill:#4900f8;fill-opacity:1;stroke-width:1.03106;stroke-dasharray:none"
          transform="matrix(1.0671141,0,0,1,76.054852,417.33732)">
         <rect
-           style="display:inline;opacity:1;fill:#4900f8;fill-opacity:1;stroke:#000000;stroke-width:0.999995;stroke-linejoin:miter;stroke-miterlimit:9;stroke-dasharray:none;paint-order:markers fill stroke"
+           style="display:inline;opacity:1;fill: #4900f8;fill-opacity:1;stroke: #4900f8;stroke-width:0.999995;stroke-linejoin:miter;stroke-miterlimit:9;stroke-dasharray:none;paint-order:markers fill stroke" rx="5" ry="5"
            id="rect3-8-6"
            width="79.030128"
            height="18.968941"
            x="130.48494"
            y="260.4866"
-           rx="4.9999995"
-           ry="5" />
+           
+            />
         <text
            xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.24849px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';display:inline;opacity:1;fill:#4900f8;fill-opacity:1;stroke:none;stroke-width:1.03106;stroke-dasharray:none;stroke-opacity:1"
+           style="fill:white;display:inline;opacity:1;fill-opacity:1;stroke:none;stroke-width:1.03106;stroke-dasharray:none;stroke-opacity:1"
            x="227.51413"
            y="787.51044"
            id="text3-3-8"
            transform="matrix(1.0287883,0,0,0.91433361,-97.016635,-447.30839)"><tspan
              sodipodi:role="line"
              id="tspan3-0-9"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.24849px;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';fill:#4900f8;fill-opacity:1;stroke-width:1.03106;stroke-dasharray:none"
+             style="fill:white;fill-opacity:1;stroke-width:1.03106;stroke-dasharray:none"
              x="227.51413"
              y="787.51044">Security Guard</tspan></text>
       </g>
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.5282px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.03301;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:currentColor;display:inline;fill-opacity:1;stroke:none;stroke-width:1.03301;stroke-dasharray:none;stroke-opacity:1"
          x="206.25285"
          y="707.72479"
          id="text6-23-1-6"
          transform="scale(1.0330121,0.96804287)"><tspan
            sodipodi:role="line"
            id="tspan6-8-5-3"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';fill:#ffffff;fill-opacity:1;stroke-width:1.03301;stroke-dasharray:none"
+           style="fill:currentColor;fill-opacity:1;stroke-width:1.03301;stroke-dasharray:none"
            x="206.25285"
            y="707.72479">Available</tspan></text>
     </g>
@@ -2327,24 +2327,24 @@
        style="display:inline;opacity:1;stroke-width:1.03106;stroke-dasharray:none"
        inkscape:label="thursday-overlay">
       <rect
-         style="fill:#4900f8;fill-opacity:1;stroke:#000000;stroke-width:1.03106;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="fill: #4900f8;fill-opacity:1;stroke: #4900f8;stroke-width:1.03106;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" rx="5" ry="5"
          id="rect57-60-4-3"
          width="102.08849"
          height="50"
          x="209.96062"
          y="652.82489"
-         rx="4.2473874"
-         ry="5.018621" />
+         
+          />
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.5282px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.03106;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:white;display:inline;fill-opacity:1;stroke:none;stroke-width:1.03106;stroke-dasharray:none;stroke-opacity:1"
          x="227.40755"
          y="706.65765"
          id="text6-23-3"
          transform="scale(1.0330121,0.96804287)"><tspan
            sodipodi:role="line"
            id="tspan6-8-9"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';fill:#ffffff;stroke-width:1.03106;stroke-dasharray:none"
+           style="fill:white;stroke-width:1.03106;stroke-dasharray:none"
            x="227.40755"
            y="706.65765">Shift</tspan></text>
       <g
@@ -2354,24 +2354,24 @@
          style="display:none;stroke-width:1.03106;stroke-dasharray:none"
          transform="matrix(1.0630882,0,0,1,76.560039,417.33732)">
         <rect
-           style="display:inline;opacity:1;fill:#fcaf3e;fill-opacity:1;stroke:#000000;stroke-width:0.999995;stroke-linejoin:miter;stroke-miterlimit:9;stroke-dasharray:none;paint-order:markers fill stroke"
+           style="display:inline;opacity:1;fill: #FC6D00;fill-opacity:1;stroke: #FC6D00;stroke-width:0.999995;stroke-linejoin:miter;stroke-miterlimit:9;stroke-dasharray:none;paint-order:markers fill stroke" rx="5" ry="5"
            id="rect3"
            width="79.030128"
            height="18.968941"
            x="130.48494"
            y="260.4866"
-           rx="4.9999995"
-           ry="5" />
+           
+            />
         <text
            xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.24849px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.03106;stroke-dasharray:none;stroke-opacity:1"
+           style="fill:white;display:inline;opacity:1;fill-opacity:1;stroke:none;stroke-width:1.03106;stroke-dasharray:none;stroke-opacity:1"
            x="227.51413"
            y="787.51044"
            id="text3"
            transform="matrix(1.0287883,0,0,0.91433361,-97.016635,-447.30839)"><tspan
              sodipodi:role="line"
              id="tspan3"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.24849px;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';stroke-width:1.03106;stroke-dasharray:none"
+             style="fill:white;stroke-width:1.03106;stroke-dasharray:none"
              x="227.51413"
              y="787.51044">Security Guard</tspan></text>
       </g>
@@ -2382,24 +2382,24 @@
        style="display:inline;opacity:1;stroke-width:1.03301;stroke-dasharray:none"
        inkscape:label="friday-overlay">
       <rect
-         style="fill:#4900f8;fill-opacity:1;stroke:#000000;stroke-width:1.03301;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="fill: #4900f8;fill-opacity:1;stroke: #4900f8;stroke-width:1.03301;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" rx="5" ry="5"
          id="rect57-60-4-1"
          width="102.47706"
          height="50"
          x="209.96062"
          y="652.82489"
-         rx="4.2634721"
-         ry="5.018621" />
+         
+          />
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.5282px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.03301;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:white;display:inline;fill-opacity:1;stroke:none;stroke-width:1.03301;stroke-dasharray:none;stroke-opacity:1"
          x="227.59563"
          y="706.65765"
          id="text6-23-1"
          transform="scale(1.0330121,0.96804287)"><tspan
            sodipodi:role="line"
            id="tspan6-8-5"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';fill:#ffffff;stroke-width:1.03301;stroke-dasharray:none"
+           style="fill:white;stroke-width:1.03301;stroke-dasharray:none"
            x="227.59563"
            y="706.65765">Shift</tspan></text>
       <g
@@ -2409,24 +2409,24 @@
          style="display:none;opacity:1;stroke-width:1.03106;stroke-dasharray:none"
          transform="matrix(1.0671141,0,0,1,76.054852,417.33732)">
         <rect
-           style="display:inline;opacity:1;fill:#fcaf3e;fill-opacity:1;stroke:#000000;stroke-width:0.999995;stroke-linejoin:miter;stroke-miterlimit:9;stroke-dasharray:none;paint-order:markers fill stroke"
+           style="display:inline;opacity:1;fill: #FC6D00;fill-opacity:1;stroke: #FC6D00;stroke-width:0.999995;stroke-linejoin:miter;stroke-miterlimit:9;stroke-dasharray:none;paint-order:markers fill stroke" rx="5" ry="5"
            id="rect3-8"
            width="79.030128"
            height="18.968941"
            x="130.48494"
            y="260.4866"
-           rx="4.9999995"
-           ry="5" />
+           
+            />
         <text
            xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.24849px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.03106;stroke-dasharray:none;stroke-opacity:1"
+           style="fill:white;display:inline;opacity:1;fill-opacity:1;stroke:none;stroke-width:1.03106;stroke-dasharray:none;stroke-opacity:1"
            x="227.51413"
            y="787.51044"
            id="text3-3"
            transform="matrix(1.0287883,0,0,0.91433361,-97.016635,-447.30839)"><tspan
              sodipodi:role="line"
              id="tspan3-0"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.24849px;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';stroke-width:1.03106;stroke-dasharray:none"
+             style="fill:white;stroke-width:1.03106;stroke-dasharray:none"
              x="227.51413"
              y="787.51044">Security Guard</tspan></text>
       </g>

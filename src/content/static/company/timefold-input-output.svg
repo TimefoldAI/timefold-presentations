@@ -272,18 +272,18 @@
          id="stop8602-4" />
       <stop
          offset="1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          id="stop8604-2" />
     </radialGradient>
     <linearGradient
        inkscape:collect="always"
        id="linearGradient2807">
       <stop
-         style="stop-color:#ffffff;stop-opacity:1;"
+         style="stop-color:#ffffff;stop-opacity:1;" rx="5" ry="5"
          offset="0"
          id="stop2809" />
       <stop
-         style="stop-color:#ffffff;stop-opacity:0;"
+         style="stop-color:#ffffff;stop-opacity:0;" rx="5" ry="5"
          offset="1"
          id="stop2811" />
     </linearGradient>
@@ -324,13 +324,13 @@
          offset="0.0000000" />
       <stop
          id="stop8604-3-7"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          offset="1" />
     </radialGradient>
     <linearGradient
        id="linearGradient3863">
       <stop
-         style="stop-color:#ffffff;stop-opacity:1;"
+         style="stop-color:#ffffff;stop-opacity:1;" rx="5" ry="5"
          offset="0"
          id="stop3879" />
       <stop
@@ -343,7 +343,7 @@
       <stop
          id="stop3891"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3893"
          offset="1"
@@ -364,21 +364,21 @@
          offset="0.0000000" />
       <stop
          id="stop5000"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          offset="1" />
     </radialGradient>
     <linearGradient
        id="linearGradient4083">
       <stop
-         style="stop-color:#ffffff;stop-opacity:0;"
+         style="stop-color:#ffffff;stop-opacity:0;" rx="5" ry="5"
          offset="0"
          id="stop4085" />
       <stop
          id="stop4089"
          offset="0.75"
-         style="stop-color:#ffffff;stop-opacity:0;" />
+         style="stop-color:#ffffff;stop-opacity:0;" /> rx="5" ry="5"
       <stop
-         style="stop-color:#ffffff;stop-opacity:1;"
+         style="stop-color:#ffffff;stop-opacity:1;" rx="5" ry="5"
          offset="1"
          id="stop4087" />
     </linearGradient>
@@ -431,7 +431,7 @@
          offset="0.0000000" />
       <stop
          id="stop8604-3-7-9"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          offset="1" />
     </radialGradient>
     <radialGradient
@@ -449,7 +449,7 @@
          offset="0.0000000" />
       <stop
          id="stop6010"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          offset="1" />
     </radialGradient>
     <radialGradient
@@ -467,7 +467,7 @@
          id="stop8602-4-2" />
       <stop
          offset="1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          id="stop8604-2-8" />
     </radialGradient>
     <radialGradient
@@ -485,7 +485,7 @@
          id="stop8602-4-5" />
       <stop
          offset="1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          id="stop8604-2-9" />
     </radialGradient>
     <radialGradient
@@ -503,7 +503,7 @@
          offset="0.0000000" />
       <stop
          id="stop8604-3-7-5"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          offset="1" />
     </radialGradient>
     <radialGradient
@@ -521,7 +521,7 @@
          offset="0.0000000" />
       <stop
          id="stop6379"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          offset="1" />
     </radialGradient>
     <linearGradient
@@ -549,7 +549,7 @@
          id="stop8602-4-4" />
       <stop
          offset="1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          id="stop8604-2-99" />
     </radialGradient>
     <radialGradient
@@ -567,7 +567,7 @@
          offset="0.0000000" />
       <stop
          id="stop8604-3-7-94"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          offset="1" />
     </radialGradient>
     <radialGradient
@@ -585,7 +585,7 @@
          offset="0.0000000" />
       <stop
          id="stop6379-8"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          offset="1" />
     </radialGradient>
     <linearGradient
@@ -613,7 +613,7 @@
          id="stop8602-4-8" />
       <stop
          offset="1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          id="stop8604-2-0" />
     </radialGradient>
     <radialGradient
@@ -631,7 +631,7 @@
          offset="0.0000000" />
       <stop
          id="stop8604-3-7-90"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          offset="1" />
     </radialGradient>
     <radialGradient
@@ -649,7 +649,7 @@
          offset="0.0000000" />
       <stop
          id="stop7649"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          offset="1" />
     </radialGradient>
     <linearGradient
@@ -698,7 +698,7 @@
          id="stop8024" />
       <stop
          offset="1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          id="stop8026" />
     </radialGradient>
     <radialGradient
@@ -803,7 +803,7 @@
          offset="0.0000000" />
       <stop
          id="stop8092"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          offset="1" />
     </radialGradient>
     <radialGradient
@@ -874,7 +874,7 @@
          offset="0.0000000" />
       <stop
          id="stop8134"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          offset="1" />
     </radialGradient>
     <radialGradient
@@ -1341,7 +1341,7 @@
          id="stop8602-4-2-3" />
       <stop
          offset="1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          id="stop8604-2-8-9" />
     </radialGradient>
     <radialGradient
@@ -1359,7 +1359,7 @@
          offset="0.0000000" />
       <stop
          id="stop8604-3-7-9-1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          offset="1" />
     </radialGradient>
     <radialGradient
@@ -1377,7 +1377,7 @@
          offset="0.0000000" />
       <stop
          id="stop11916"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          offset="1" />
     </radialGradient>
     <radialGradient
@@ -2492,12 +2492,12 @@
      inkscape:pageopacity="1"
      borderopacity="1.0"
      bordercolor="#666666"
-     pagecolor="#ffffff"
+     pagecolor="#ffffff" rx="5" ry="5"
      id="base"
      inkscape:showpageshadow="2"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:export-bgcolor="#ffffffff">
+     inkscape:export-bgcolor="#ffffffff"> rx="5" ry="5"
     <inkscape:grid
        originy="0"
        originx="0"
@@ -2536,7 +2536,7 @@
        transform="translate(0,19.999997)"
        id="g3709" />
     <flowRoot
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;overflow:visible;visibility:visible;opacity:1;vector-effect:none;fill:#a40000;fill-opacity:1;fill-rule:nonzero;stroke:#8f5902;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+       style="fill:currentColor;color:currentColor;text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;overflow:visible;visibility:visible;opacity:1;vector-effect:none;fill-opacity:1;fill-rule:nonzero;stroke:#8f5902;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
        id="flowRoot937"
        xml:space="preserve"><flowRegion
          id="flowRegion939"><rect
@@ -2550,7 +2550,7 @@
        xml:space="preserve"
        transform="translate(0,452.36218)"
        id="text10"
-       style="font-size:32px;line-height:1.15;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;white-space:pre;shape-inside:url(#rect10);display:inline;fill:#000000;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000" />
+       style="fill:white;line-height:1.15;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-color:currentColor;white-space:pre;shape-inside:url(#rect10);display:inline;fill: #FFFFFF;stroke: #FFFFFF;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;-inkscape-stroke:none;stop-color:currentColor" /> rx="5" ry="5"
   </g>
   <g
      inkscape:groupmode="layer"
@@ -2579,44 +2579,44 @@
     <g
        fill="#fff"
        id="g9"
-       style="display:inline;fill:#000000;fill-opacity:1;stroke-width:1.77777"
+       style="display:inline;fill:currentColor;fill-opacity:1;stroke-width:1.77777"
        transform="matrix(0.5625,0,0,0.5625,540,215.34937)">
       <path
          d="M 104,50 V 0 H 50 V 50 H 18.2 L 0,100 h 50 v 100 h 56.7 c 10.51,0 19.9,-6.57 23.49,-16.45 l 10.93,-30.03 c 0,0 1.29,-3.52 5.03,-3.52 h 79.25 l 18.2,-50 h -65.49 c -10.51,0 -19.9,6.57 -23.49,16.45 l -10.93,30.03 c 0,0 -1.28,3.52 -5.03,3.52 h -34.65 v -50 h 39.1 c 10.51,0 19.9,-6.57 23.49,-16.45 l 10.93,-30.03 c 0,0 1.29,-3.52 5.03,-3.52 h 89.25 L 290,0 H 214.51 C 204,0 194.61,6.57 191.02,16.45 l -10.93,30.03 c 0,0 -1.28,3.52 -5.03,3.52 h -71.05 z"
          id="path1"
-         style="fill:#000000;fill-opacity:1;stroke-width:1.77777" />
+         style="fill:currentColor;fill-opacity:1;stroke-width:1.77777" />
       <path
          d="m 26.3,291.3 -2.12,5.83 c -0.63,1.72 -2.26,2.86 -4.09,2.86 h -9.26 c -2.4,0 -4.34,-1.94 -4.34,-4.34 v -27.5 H 0 v -7.17 h 6.49 v -11 H 17.2 v 11 h 7.85 v 7.17 H 17.2 v 23.14 h 9.1 z"
          id="path2-4"
-         style="fill:#000000;fill-opacity:1;stroke-width:1.77777" />
+         style="fill:currentColor;fill-opacity:1;stroke-width:1.77777" />
       <path
          d="m 181.74,253.7 h -7.39 v 7.3 h 7.39 v 7.17 h -7.39 v 31.84 h -10.71 v -31.84 h -6.49 V 261 h 6.49 v -11.66 c 0,-2.4 1.94,-4.34 4.34,-4.34 h 16.93 l -3.16,8.7 z"
          id="path3"
-         style="fill:#000000;fill-opacity:1;stroke-width:1.77777" />
+         style="fill:currentColor;fill-opacity:1;stroke-width:1.77777" />
       <path
          d="m 30.48,255 v -10 h 10.71 v 10 z m 10.71,6 v 39 H 30.48 v -39 z"
          id="path4-9"
-         style="fill:#000000;fill-opacity:1;stroke-width:1.77777" />
+         style="fill:currentColor;fill-opacity:1;stroke-width:1.77777" />
       <path
          d="m 60.05,261 v 5.28 h 0.15 c 1.41,-2.01 3.1,-3.57 5.09,-4.68 1.99,-1.11 4.26,-1.66 6.83,-1.66 2.57,0 4.72,0.48 6.75,1.43 2.04,0.96 3.58,2.64 4.64,5.05 1.16,-1.71 2.73,-3.22 4.72,-4.53 1.99,-1.31 4.34,-1.96 7.05,-1.96 2.06,0 3.97,0.25 5.73,0.76 1.76,0.5 3.27,1.31 4.53,2.41 1.26,1.11 2.24,2.55 2.94,4.34 0.7,1.79 1.06,3.94 1.06,6.45 v 26.1 H 98.83 v -22.1 c 0,-1.31 -0.05,-2.54 -0.15,-3.7 -0.1,-1.16 -0.38,-2.16 -0.83,-3.02 -0.45,-0.85 -1.12,-1.53 -2,-2.04 -0.88,-0.5 -2.08,-0.75 -3.58,-0.75 -1.5,0 -2.73,0.29 -3.66,0.87 -0.93,0.58 -1.66,1.33 -2.19,2.26 -0.53,0.93 -0.88,1.99 -1.06,3.17 -0.18,1.18 -0.26,2.38 -0.26,3.58 v 21.73 H 74.39 v -21.88 c 0,-1.16 -0.03,-2.3 -0.08,-3.43 -0.05,-1.13 -0.26,-2.17 -0.64,-3.13 -0.38,-0.95 -1.01,-1.72 -1.89,-2.3 -0.88,-0.58 -2.18,-0.87 -3.89,-0.87 -0.5,0 -1.17,0.11 -2,0.34 -0.83,0.23 -1.63,0.65 -2.41,1.28 -0.78,0.63 -1.45,1.53 -2,2.71 -0.55,1.18 -0.83,2.73 -0.83,4.64 v 22.63 H 49.94 v -39 h 10.11 z"
          id="path5"
-         style="fill:#000000;fill-opacity:1;stroke-width:1.77777" />
+         style="fill:currentColor;fill-opacity:1;stroke-width:1.77777" />
       <path
          d="m 129.46,290.64 c 1.61,1.56 3.92,2.34 6.94,2.34 2.16,0 4.02,-0.54 5.58,-1.62 1.56,-1.08 2.51,-2.22 2.87,-3.43 h 9.43 c -1.51,4.68 -3.82,8.02 -6.94,10.03 -3.12,2.01 -6.89,3.02 -11.32,3.02 -3.07,0 -5.84,-0.49 -8.3,-1.47 -2.47,-0.98 -4.55,-2.38 -6.26,-4.19 -1.71,-1.81 -3.03,-3.97 -3.96,-6.49 -0.93,-2.51 -1.4,-5.28 -1.4,-8.3 0,-3.02 0.48,-5.63 1.43,-8.15 0.95,-2.51 2.31,-4.69 4.07,-6.53 1.76,-1.83 3.86,-3.28 6.3,-4.34 2.44,-1.06 5.14,-1.59 8.11,-1.59 3.32,0 6.21,0.64 8.68,1.92 2.46,1.28 4.49,3.01 6.07,5.17 1.58,2.16 2.73,4.63 3.43,7.39 0.7,2.77 0.95,5.66 0.75,8.68 H 126.8 c 0.15,3.47 1.03,5.99 2.64,7.54 z m 12.11,-20.52 c -1.28,-1.41 -3.23,-2.11 -5.85,-2.11 -1.71,0 -3.13,0.29 -4.26,0.87 -1.13,0.58 -2.04,1.3 -2.72,2.15 -0.68,0.86 -1.16,1.76 -1.43,2.72 -0.28,0.96 -0.44,1.81 -0.49,2.57 h 17.43 c -0.5,-2.72 -1.4,-4.78 -2.68,-6.19 z"
          id="path6"
-         style="fill:#000000;fill-opacity:1;stroke-width:1.77777" />
+         style="fill:currentColor;fill-opacity:1;stroke-width:1.77777" />
       <path
          d="m 186.64,272.05 c 0.95,-2.54 2.31,-4.7 4.07,-6.49 1.76,-1.79 3.87,-3.17 6.34,-4.15 2.46,-0.98 5.23,-1.47 8.3,-1.47 3.07,0 5.85,0.49 8.34,1.47 2.49,0.98 4.61,2.36 6.37,4.15 1.76,1.79 3.12,3.95 4.07,6.49 0.95,2.54 1.43,5.37 1.43,8.49 0,3.12 -0.48,5.94 -1.43,8.45 -0.96,2.51 -2.31,4.66 -4.07,6.45 -1.76,1.79 -3.89,3.16 -6.37,4.11 -2.49,0.96 -5.27,1.43 -8.34,1.43 -3.07,0 -5.84,-0.48 -8.3,-1.43 -2.47,-0.95 -4.58,-2.33 -6.34,-4.11 -1.76,-1.79 -3.12,-3.94 -4.07,-6.45 -0.96,-2.51 -1.43,-5.33 -1.43,-8.45 0,-3.12 0.48,-5.95 1.43,-8.49 z m 9.73,13.05 c 0.3,1.48 0.82,2.82 1.55,4 0.73,1.18 1.7,2.13 2.9,2.83 1.21,0.7 2.72,1.06 4.53,1.06 1.81,0 3.33,-0.35 4.56,-1.06 1.23,-0.7 2.21,-1.65 2.94,-2.83 0.73,-1.18 1.24,-2.51 1.55,-4 0.3,-1.48 0.45,-3 0.45,-4.57 0,-1.57 -0.15,-3.09 -0.45,-4.6 -0.3,-1.51 -0.82,-2.84 -1.55,-4 -0.73,-1.16 -1.71,-2.1 -2.94,-2.83 -1.23,-0.73 -2.75,-1.09 -4.56,-1.09 -1.81,0 -3.32,0.37 -4.53,1.09 -1.21,0.73 -2.18,1.67 -2.9,2.83 -0.73,1.16 -1.25,2.49 -1.55,4 -0.3,1.51 -0.45,3.04 -0.45,4.6 0,1.56 0.15,3.08 0.45,4.57 z"
          id="path7"
-         style="fill:#000000;fill-opacity:1;stroke-width:1.77777" />
+         style="fill:currentColor;fill-opacity:1;stroke-width:1.77777" />
       <path
          d="m 243.53,245 v 55 h -10.71 v -55 z"
          id="path8"
-         style="fill:#000000;fill-opacity:1;stroke-width:1.77777" />
+         style="fill:currentColor;fill-opacity:1;stroke-width:1.77777" />
       <path
          d="m 279.66,295.02 c -1.26,2.11 -2.9,3.63 -4.94,4.56 -2.04,0.93 -4.34,1.4 -6.9,1.4 -2.92,0 -5.48,-0.57 -7.69,-1.7 -2.21,-1.13 -4.04,-2.66 -5.47,-4.6 -1.43,-1.94 -2.52,-4.16 -3.24,-6.68 -0.73,-2.51 -1.09,-5.13 -1.09,-7.85 0,-2.72 0.36,-5.14 1.09,-7.58 0.73,-2.44 1.81,-4.59 3.24,-6.45 1.43,-1.86 3.23,-3.36 5.39,-4.49 2.16,-1.13 4.68,-1.7 7.54,-1.7 2.31,0 4.51,0.49 6.6,1.47 2.09,0.98 3.73,2.43 4.94,4.34 h 0.15 v -20.75 h 10.71 v 55 h -10.18 v -4.98 h -0.15 z m -0.45,-19.28 c -0.3,-1.48 -0.82,-2.79 -1.55,-3.92 -0.73,-1.13 -1.67,-2.05 -2.83,-2.75 -1.16,-0.7 -2.62,-1.06 -4.38,-1.06 -1.76,0 -3.24,0.35 -4.45,1.06 -1.21,0.71 -2.18,1.63 -2.9,2.79 -0.73,1.16 -1.26,2.48 -1.58,3.96 -0.33,1.48 -0.49,3.03 -0.49,4.64 0,1.51 0.18,3.02 0.53,4.53 0.35,1.51 0.92,2.86 1.7,4.04 0.78,1.18 1.76,2.14 2.94,2.87 1.18,0.73 2.6,1.09 4.26,1.09 1.76,0 3.23,-0.35 4.41,-1.06 1.18,-0.7 2.12,-1.65 2.83,-2.83 0.7,-1.18 1.21,-2.53 1.51,-4.04 0.3,-1.51 0.45,-3.07 0.45,-4.68 0,-1.61 -0.15,-3.16 -0.45,-4.64 z"
          id="path9"
-         style="fill:#000000;fill-opacity:1;stroke-width:1.77777" />
+         style="fill:currentColor;fill-opacity:1;stroke-width:1.77777" />
     </g>
     <g
        id="g18"
@@ -2627,24 +2627,24 @@
          transform="translate(33.926,9.9995)">
         <path
            id="path2"
-           style="color:#000000;display:inline;overflow:visible;fill:#eeeeec;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-dasharray:none"
+           style="color:currentColor;display:inline;overflow:visible;fill: #eeeeec;fill-opacity:1;stroke: #eeeeec;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-dasharray:none" rx="5" ry="5"
            d="m 240,187.1325 25,40 -25,40 h 175 l 25,-40 -25,-40 z"
            sodipodi:nodetypes="ccccccc" />
         <flowRoot
            transform="translate(355.91797,288.69213)"
            xml:space="preserve"
            id="flowRoot1307"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
-             style="text-align:center;text-anchor:middle"
+           style="fill:white;line-height:0.01%;text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill-opacity:1;stroke:none"><flowRegion
+             style="fill:white;text-align:center;text-anchor:middle"
              id="flowRegion1303"><rect
                id="rect1301"
                width="208.88278"
                height="73.142761"
                x="-120.35934"
                y="-91.972061"
-               style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+               style="fill:white;text-align:center;text-anchor:middle" /></flowRegion><flowPara
              id="flowPara1305"
-             style="font-weight:normal;font-size:24px;line-height:1.25;text-align:center;text-anchor:middle">planning</flowPara><flowPara
+             style="fill:white;line-height:1.25;text-align:center;text-anchor:middle">planning</flowPara><flowPara
              style="font-weight:normal;font-size:24px;line-height:1.25;text-align:center;text-anchor:middle"
              id="flowPara4">problem</flowPara></flowRoot>
       </g>
@@ -2653,22 +2653,22 @@
          transform="translate(33.926,-9.9995)">
         <path
            id="path4"
-           style="color:#000000;display:inline;overflow:visible;fill:#eeeeec;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-dasharray:none"
+           style="color:currentColor;display:inline;overflow:visible;fill: #eeeeec;fill-opacity:1;stroke: #eeeeec;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-dasharray:none" rx="5" ry="5"
            d="m 440,332.8675 -25,40 25,40 H 265 l -25,-40 25,-40 z"
            sodipodi:nodetypes="ccccccc" />
         <flowRoot
            transform="translate(355.91797,436.80018)"
            xml:space="preserve"
            id="flowRoot6"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
-             style="text-align:center;text-anchor:middle"
+           style="fill:white;line-height:0.01%;text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill-opacity:1;stroke:none"><flowRegion
+             style="fill:white;text-align:center;text-anchor:middle"
              id="flowRegion4"><rect
                id="rect4"
                width="208.88278"
                height="73.142761"
                x="-120.35934"
                y="-91.972061"
-               style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+               style="fill:white;text-align:center;text-anchor:middle" /></flowRegion><flowPara
              style="font-weight:normal;font-size:24px;line-height:1.25;text-align:center;text-anchor:middle"
              id="flowPara6">optimized</flowPara><flowPara
              style="font-weight:normal;font-size:24px;line-height:1.25;text-align:center;text-anchor:middle"
@@ -2679,15 +2679,15 @@
        transform="translate(190.91479,341.51865)"
        xml:space="preserve"
        id="flowRoot1307-0"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
-         style="font-size:40px;text-align:center;text-anchor:middle"
+       style="fill:currentColor;line-height:0.01%;text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill-opacity:1;stroke:none"><flowRegion
+         style="fill:currentColor;text-align:center;text-anchor:middle"
          id="flowRegion1303-6"><rect
            id="rect1301-8"
            width="217.13048"
            height="145.31721"
            x="-120.35934"
            y="-91.972061"
-           style="text-align:center;text-anchor:middle;font-size:40px" /></flowRegion><flowPara
+           style="fill:currentColor;text-align:center;text-anchor:middle;font-size:40px" /></flowRegion><flowPara
          style="font-weight:bold;font-size:40px;line-height:1.25;text-align:center;text-anchor:middle"
          id="flowPara4-2">your</flowPara><flowPara
          style="font-weight:bold;font-size:40px;line-height:1.25;text-align:center;text-anchor:middle"
