@@ -287,7 +287,7 @@
       <stop
          id="stop2669"
          offset="0.0000000"
-         style="stop-color:#ffffff;stop-opacity:1.0000000;" />
+         style="stop-color:#ffffff;stop-opacity:1.0000000;" /> rx="5" ry="5"
       <stop
          id="stop2671"
          offset="1.0000000"
@@ -1706,19 +1706,19 @@
     <linearGradient
        id="linearGradient178">
       <stop
-         style="stop-color:#ffffff;stop-opacity:0.0000000;"
+         style="stop-color:#ffffff;stop-opacity:0.0000000;" rx="5" ry="5"
          offset="0.0000000"
          id="stop179" />
       <stop
-         style="stop-color:#ffffff;stop-opacity:0.70658684;"
+         style="stop-color:#ffffff;stop-opacity:0.70658684;" rx="5" ry="5"
          offset="0.10827128"
          id="stop180-6" />
       <stop
-         style="stop-color:#ffffff;stop-opacity:0.70658684;"
+         style="stop-color:#ffffff;stop-opacity:0.70658684;" rx="5" ry="5"
          offset="0.92053902"
          id="stop181" />
       <stop
-         style="stop-color:#ffffff;stop-opacity:0.0000000;"
+         style="stop-color:#ffffff;stop-opacity:0.0000000;" rx="5" ry="5"
          offset="1.0000000"
          id="stop182-7" />
     </linearGradient>
@@ -1728,11 +1728,11 @@
       <stop
          id="stop6173"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop6175"
          offset="1"
-         style="stop-color:#ffffff;stop-opacity:0;" />
+         style="stop-color:#ffffff;stop-opacity:0;" /> rx="5" ry="5"
     </linearGradient>
     <linearGradient
        id="linearGradient6187"
@@ -1752,11 +1752,11 @@
       <stop
          id="stop6459"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop6461"
          offset="1"
-         style="stop-color:#ffffff;stop-opacity:0;" />
+         style="stop-color:#ffffff;stop-opacity:0;" /> rx="5" ry="5"
     </linearGradient>
     <linearGradient
        id="linearGradient3368">
@@ -1818,19 +1818,19 @@
     <linearGradient
        id="linearGradient3401">
       <stop
-         style="stop-color:#ffffff;stop-opacity:0.0000000;"
+         style="stop-color:#ffffff;stop-opacity:0.0000000;" rx="5" ry="5"
          offset="0.0000000"
          id="stop3403" />
       <stop
-         style="stop-color:#ffffff;stop-opacity:0.70658684;"
+         style="stop-color:#ffffff;stop-opacity:0.70658684;" rx="5" ry="5"
          offset="0.10827128"
          id="stop3405" />
       <stop
-         style="stop-color:#ffffff;stop-opacity:0.70658684;"
+         style="stop-color:#ffffff;stop-opacity:0.70658684;" rx="5" ry="5"
          offset="0.92053902"
          id="stop3407" />
       <stop
-         style="stop-color:#ffffff;stop-opacity:0.0000000;"
+         style="stop-color:#ffffff;stop-opacity:0.0000000;" rx="5" ry="5"
          offset="1.0000000"
          id="stop3409" />
     </linearGradient>
@@ -1866,11 +1866,11 @@
       <stop
          id="stop4422"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop4424"
          offset="1"
-         style="stop-color:#ffffff;stop-opacity:0;" />
+         style="stop-color:#ffffff;stop-opacity:0;" /> rx="5" ry="5"
     </linearGradient>
     <linearGradient
        id="linearGradient4412"
@@ -1878,11 +1878,11 @@
       <stop
          id="stop4414"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop4416"
          offset="1"
-         style="stop-color:#ffffff;stop-opacity:0;" />
+         style="stop-color:#ffffff;stop-opacity:0;" /> rx="5" ry="5"
     </linearGradient>
     <linearGradient
        id="linearGradient4449"
@@ -1890,53 +1890,53 @@
       <stop
          id="stop4451"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop4453"
          offset="1"
-         style="stop-color:#ffffff;stop-opacity:0;" />
+         style="stop-color:#ffffff;stop-opacity:0;" /> rx="5" ry="5"
     </linearGradient>
     <linearGradient
        id="linearGradient4509">
       <stop
-         style="stop-color:#000000;stop-opacity:1.0000000;"
+         style="stop-color:currentColor;stop-opacity:1.0000000;"
          offset="0.0000000"
          id="stop4511" />
       <stop
-         style="stop-color:#000000;stop-opacity:0.0000000;"
+         style="stop-color:currentColor;stop-opacity:0.0000000;"
          offset="1.0000000"
          id="stop4513" />
     </linearGradient>
     <linearGradient
        id="linearGradient3455">
       <stop
-         style="stop-color:#000000;stop-opacity:1.0000000;"
+         style="stop-color:currentColor;stop-opacity:1.0000000;"
          offset="0.0000000"
          id="stop3457" />
       <stop
-         style="stop-color:#000000;stop-opacity:0.0000000;"
+         style="stop-color:currentColor;stop-opacity:0.0000000;"
          offset="1.0000000"
          id="stop3459" />
     </linearGradient>
     <linearGradient
        id="linearGradient3504">
       <stop
-         style="stop-color:#000000;stop-opacity:1.0000000;"
+         style="stop-color:currentColor;stop-opacity:1.0000000;"
          offset="0.0000000"
          id="stop3506" />
       <stop
-         style="stop-color:#000000;stop-opacity:0.0000000;"
+         style="stop-color:currentColor;stop-opacity:0.0000000;"
          offset="1.0000000"
          id="stop3508" />
     </linearGradient>
     <linearGradient
        id="linearGradient3511">
       <stop
-         style="stop-color:#000000;stop-opacity:1.0000000;"
+         style="stop-color:currentColor;stop-opacity:1.0000000;"
          offset="0.0000000"
          id="stop3513" />
       <stop
-         style="stop-color:#000000;stop-opacity:0.0000000;"
+         style="stop-color:currentColor;stop-opacity:0.0000000;"
          offset="1.0000000"
          id="stop3515" />
     </linearGradient>
@@ -1953,11 +1953,11 @@
     <linearGradient
        id="linearGradient3518">
       <stop
-         style="stop-color:#000000;stop-opacity:1.0000000;"
+         style="stop-color:currentColor;stop-opacity:1.0000000;"
          offset="0.0000000"
          id="stop3520" />
       <stop
-         style="stop-color:#000000;stop-opacity:0.0000000;"
+         style="stop-color:currentColor;stop-opacity:0.0000000;"
          offset="1.0000000"
          id="stop3522" />
     </linearGradient>
@@ -2330,11 +2330,11 @@
       <stop
          id="stop4116"
          offset="0"
-         style="stop-color:#000000;stop-opacity:1;" />
+         style="stop-color:currentColor;stop-opacity:1;" />
       <stop
          id="stop4118"
          offset="1"
-         style="stop-color:#000000;stop-opacity:0;" />
+         style="stop-color:currentColor;stop-opacity:0;" />
     </linearGradient>
     <radialGradient
        inkscape:collect="always"
@@ -2383,11 +2383,11 @@
       <stop
          id="stop4352"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop4354"
          offset="1"
-         style="stop-color:#ffffff;stop-opacity:0;" />
+         style="stop-color:#ffffff;stop-opacity:0;" /> rx="5" ry="5"
     </linearGradient>
     <radialGradient
        inkscape:collect="always"
@@ -2405,7 +2405,7 @@
       <stop
          id="stop4752"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop4758"
          offset="0.37931034"
@@ -2431,7 +2431,7 @@
       <stop
          id="stop3236-2"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3238"
          offset="0.37931034"
@@ -2457,7 +2457,7 @@
       <stop
          id="stop3245"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3247"
          offset="0.37931034"
@@ -2483,7 +2483,7 @@
       <stop
          id="stop3254"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3256"
          offset="0.37931034"
@@ -2509,7 +2509,7 @@
       <stop
          id="stop3263"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3265"
          offset="0.37931034"
@@ -2535,7 +2535,7 @@
       <stop
          id="stop3272"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3274"
          offset="0.37931034"
@@ -2561,7 +2561,7 @@
       <stop
          id="stop3281"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3283"
          offset="0.37931034"
@@ -2587,7 +2587,7 @@
       <stop
          id="stop3290"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3292"
          offset="0.37931034"
@@ -2613,7 +2613,7 @@
       <stop
          id="stop3299"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3301"
          offset="0.37931034"
@@ -2639,7 +2639,7 @@
       <stop
          id="stop3308-2"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3310-1"
          offset="0.37931034"
@@ -2665,7 +2665,7 @@
       <stop
          id="stop3317"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3319"
          offset="0.37931034"
@@ -2691,7 +2691,7 @@
       <stop
          id="stop3326"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3328"
          offset="0.37931034"
@@ -2717,7 +2717,7 @@
       <stop
          id="stop3335"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3337"
          offset="0.37931034"
@@ -2743,7 +2743,7 @@
       <stop
          id="stop3344"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3346"
          offset="0.37931034"
@@ -2769,7 +2769,7 @@
       <stop
          id="stop3353"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3355"
          offset="0.37931034"
@@ -2795,7 +2795,7 @@
       <stop
          id="stop3362"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3364"
          offset="0.37931034"
@@ -2821,7 +2821,7 @@
       <stop
          id="stop3371"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3373"
          offset="0.37931034"
@@ -2847,7 +2847,7 @@
       <stop
          id="stop3380"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3382"
          offset="0.37931034"
@@ -2873,7 +2873,7 @@
       <stop
          id="stop3389"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3391"
          offset="0.37931034"
@@ -2899,7 +2899,7 @@
       <stop
          id="stop3398-5"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3400"
          offset="0.37931034"
@@ -2925,7 +2925,7 @@
       <stop
          id="stop3407-5"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3409-3"
          offset="0.37931034"
@@ -2951,7 +2951,7 @@
       <stop
          id="stop3416-4"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3418-7"
          offset="0.37931034"
@@ -2977,7 +2977,7 @@
       <stop
          id="stop3425"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3427"
          offset="0.37931034"
@@ -3003,7 +3003,7 @@
       <stop
          id="stop3434"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3436"
          offset="0.37931034"
@@ -3029,7 +3029,7 @@
       <stop
          id="stop3443"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3445"
          offset="0.37931034"
@@ -3055,7 +3055,7 @@
       <stop
          id="stop3452"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3454"
          offset="0.37931034"
@@ -3081,7 +3081,7 @@
       <stop
          id="stop3461"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3463"
          offset="0.37931034"
@@ -3107,7 +3107,7 @@
       <stop
          id="stop3470"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3472"
          offset="0.37931034"
@@ -3133,7 +3133,7 @@
       <stop
          id="stop3479"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3481"
          offset="0.37931034"
@@ -3159,7 +3159,7 @@
       <stop
          id="stop3488"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3490"
          offset="0.37931034"
@@ -3185,7 +3185,7 @@
       <stop
          id="stop3497"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3499"
          offset="0.37931034"
@@ -3211,7 +3211,7 @@
       <stop
          id="stop3506-2"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3508-7"
          offset="0.37931034"
@@ -3237,7 +3237,7 @@
       <stop
          id="stop3515-9"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3517"
          offset="0.37931034"
@@ -3263,7 +3263,7 @@
       <stop
          id="stop3524"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3526"
          offset="0.37931034"
@@ -3289,7 +3289,7 @@
       <stop
          id="stop3533"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3535"
          offset="0.37931034"
@@ -3315,7 +3315,7 @@
       <stop
          id="stop3542"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3544"
          offset="0.37931034"
@@ -3341,7 +3341,7 @@
       <stop
          id="stop3551"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3553"
          offset="0.37931034"
@@ -3367,7 +3367,7 @@
       <stop
          id="stop3560"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3562"
          offset="0.37931034"
@@ -3393,7 +3393,7 @@
       <stop
          id="stop3569"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3571"
          offset="0.37931034"
@@ -3419,7 +3419,7 @@
       <stop
          id="stop3578"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3580"
          offset="0.37931034"
@@ -3445,7 +3445,7 @@
       <stop
          id="stop3587"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop3589"
          offset="0.37931034"
@@ -3471,11 +3471,11 @@
       <stop
          id="stop4128-5"
          offset="0.0000000"
-         style="stop-color:#ffffff;stop-opacity:1.0000000;" />
+         style="stop-color:#ffffff;stop-opacity:1.0000000;" /> rx="5" ry="5"
       <stop
          id="stop4130"
          offset="1.0000000"
-         style="stop-color:#ffffff;stop-opacity:0.16494845;" />
+         style="stop-color:#ffffff;stop-opacity:0.16494845;" /> rx="5" ry="5"
     </linearGradient>
     <radialGradient
        r="43.526714"
@@ -6018,7 +6018,7 @@
       <stop
          id="stop2669-7"
          offset="0.0000000"
-         style="stop-color:#ffffff;stop-opacity:1.0000000;" />
+         style="stop-color:#ffffff;stop-opacity:1.0000000;" /> rx="5" ry="5"
       <stop
          id="stop2671-3"
          offset="1.0000000"
@@ -6256,19 +6256,19 @@
     <linearGradient
        id="linearGradient178-6">
       <stop
-         style="stop-color:#ffffff;stop-opacity:0.0000000;"
+         style="stop-color:#ffffff;stop-opacity:0.0000000;" rx="5" ry="5"
          offset="0.0000000"
          id="stop179-5" />
       <stop
-         style="stop-color:#ffffff;stop-opacity:0.70658684;"
+         style="stop-color:#ffffff;stop-opacity:0.70658684;" rx="5" ry="5"
          offset="0.10827128"
          id="stop180-6-3" />
       <stop
-         style="stop-color:#ffffff;stop-opacity:0.70658684;"
+         style="stop-color:#ffffff;stop-opacity:0.70658684;" rx="5" ry="5"
          offset="0.92053902"
          id="stop181-9" />
       <stop
-         style="stop-color:#ffffff;stop-opacity:0.0000000;"
+         style="stop-color:#ffffff;stop-opacity:0.0000000;" rx="5" ry="5"
          offset="1.0000000"
          id="stop182-7-6" />
     </linearGradient>
@@ -6301,22 +6301,22 @@
     <linearGradient
        id="linearGradient4509-2">
       <stop
-         style="stop-color:#000000;stop-opacity:1.0000000;"
+         style="stop-color:currentColor;stop-opacity:1.0000000;"
          offset="0.0000000"
          id="stop4511-4" />
       <stop
-         style="stop-color:#000000;stop-opacity:0.0000000;"
+         style="stop-color:currentColor;stop-opacity:0.0000000;"
          offset="1.0000000"
          id="stop4513-5" />
     </linearGradient>
     <linearGradient
        id="linearGradient9877">
       <stop
-         style="stop-color:#000000;stop-opacity:1.0000000;"
+         style="stop-color:currentColor;stop-opacity:1.0000000;"
          offset="0.0000000"
          id="stop9879" />
       <stop
-         style="stop-color:#000000;stop-opacity:0.0000000;"
+         style="stop-color:currentColor;stop-opacity:0.0000000;"
          offset="1.0000000"
          id="stop9881" />
     </linearGradient>
@@ -6338,33 +6338,33 @@
     <linearGradient
        id="linearGradient9949">
       <stop
-         style="stop-color:#000000;stop-opacity:1.0000000;"
+         style="stop-color:currentColor;stop-opacity:1.0000000;"
          offset="0.0000000"
          id="stop9951" />
       <stop
-         style="stop-color:#000000;stop-opacity:0.0000000;"
+         style="stop-color:currentColor;stop-opacity:0.0000000;"
          offset="1.0000000"
          id="stop9953" />
     </linearGradient>
     <linearGradient
        id="linearGradient9956">
       <stop
-         style="stop-color:#000000;stop-opacity:1.0000000;"
+         style="stop-color:currentColor;stop-opacity:1.0000000;"
          offset="0.0000000"
          id="stop9958" />
       <stop
-         style="stop-color:#000000;stop-opacity:0.0000000;"
+         style="stop-color:currentColor;stop-opacity:0.0000000;"
          offset="1.0000000"
          id="stop9960" />
     </linearGradient>
     <linearGradient
        id="linearGradient9963">
       <stop
-         style="stop-color:#000000;stop-opacity:1.0000000;"
+         style="stop-color:currentColor;stop-opacity:1.0000000;"
          offset="0.0000000"
          id="stop9965" />
       <stop
-         style="stop-color:#000000;stop-opacity:0.0000000;"
+         style="stop-color:currentColor;stop-opacity:0.0000000;"
          offset="1.0000000"
          id="stop9967" />
     </linearGradient>
@@ -6403,7 +6403,7 @@
       <stop
          id="stop4752-8"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop4758-1"
          offset="0.37931034"
@@ -6429,7 +6429,7 @@
       <stop
          id="stop9987"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop9989"
          offset="0.37931034"
@@ -6455,7 +6455,7 @@
       <stop
          id="stop9996"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop9998"
          offset="0.37931034"
@@ -6470,7 +6470,7 @@
       <stop
          id="stop10005"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10007"
          offset="0.37931034"
@@ -6496,7 +6496,7 @@
       <stop
          id="stop10014"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10016"
          offset="0.37931034"
@@ -6522,7 +6522,7 @@
       <stop
          id="stop10023"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10025"
          offset="0.37931034"
@@ -6537,7 +6537,7 @@
       <stop
          id="stop10032"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10034"
          offset="0.37931034"
@@ -6563,7 +6563,7 @@
       <stop
          id="stop10041"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10043"
          offset="0.37931034"
@@ -6589,7 +6589,7 @@
       <stop
          id="stop10050"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10052"
          offset="0.37931034"
@@ -6604,7 +6604,7 @@
       <stop
          id="stop10059"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10061"
          offset="0.37931034"
@@ -6630,7 +6630,7 @@
       <stop
          id="stop10068"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10070"
          offset="0.37931034"
@@ -6656,7 +6656,7 @@
       <stop
          id="stop10077"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10079"
          offset="0.37931034"
@@ -6671,7 +6671,7 @@
       <stop
          id="stop10086"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10088"
          offset="0.37931034"
@@ -6697,7 +6697,7 @@
       <stop
          id="stop10095"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10097"
          offset="0.37931034"
@@ -6723,7 +6723,7 @@
       <stop
          id="stop10104"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10106"
          offset="0.37931034"
@@ -6738,7 +6738,7 @@
       <stop
          id="stop10113"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10115"
          offset="0.37931034"
@@ -6764,7 +6764,7 @@
       <stop
          id="stop10122"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10124"
          offset="0.37931034"
@@ -6790,7 +6790,7 @@
       <stop
          id="stop10131"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10133"
          offset="0.37931034"
@@ -6805,7 +6805,7 @@
       <stop
          id="stop10140"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10142"
          offset="0.37931034"
@@ -6831,7 +6831,7 @@
       <stop
          id="stop10149"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10151"
          offset="0.37931034"
@@ -6857,7 +6857,7 @@
       <stop
          id="stop10158"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10160"
          offset="0.37931034"
@@ -6872,7 +6872,7 @@
       <stop
          id="stop10167"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10169"
          offset="0.37931034"
@@ -6898,7 +6898,7 @@
       <stop
          id="stop10176"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10178"
          offset="0.37931034"
@@ -6924,7 +6924,7 @@
       <stop
          id="stop10185"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10187"
          offset="0.37931034"
@@ -6939,7 +6939,7 @@
       <stop
          id="stop10194"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10196"
          offset="0.37931034"
@@ -6965,7 +6965,7 @@
       <stop
          id="stop10203"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10205"
          offset="0.37931034"
@@ -6991,7 +6991,7 @@
       <stop
          id="stop10212"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10214"
          offset="0.37931034"
@@ -7006,7 +7006,7 @@
       <stop
          id="stop10221"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10223"
          offset="0.37931034"
@@ -7032,7 +7032,7 @@
       <stop
          id="stop10230"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10232"
          offset="0.37931034"
@@ -7047,7 +7047,7 @@
       <stop
          id="stop10239"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10241"
          offset="0.37931034"
@@ -7073,7 +7073,7 @@
       <stop
          id="stop10248"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10250"
          offset="0.37931034"
@@ -7099,7 +7099,7 @@
       <stop
          id="stop10257"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10259"
          offset="0.37931034"
@@ -7114,7 +7114,7 @@
       <stop
          id="stop10266"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10268"
          offset="0.37931034"
@@ -7140,7 +7140,7 @@
       <stop
          id="stop10275"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10277"
          offset="0.37931034"
@@ -7155,7 +7155,7 @@
       <stop
          id="stop10284"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10286"
          offset="0.37931034"
@@ -7181,7 +7181,7 @@
       <stop
          id="stop10293"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10295"
          offset="0.37931034"
@@ -7207,7 +7207,7 @@
       <stop
          id="stop10302"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10304"
          offset="0.37931034"
@@ -7222,7 +7222,7 @@
       <stop
          id="stop10311"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10313"
          offset="0.37931034"
@@ -7248,7 +7248,7 @@
       <stop
          id="stop10320"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10322"
          offset="0.37931034"
@@ -7274,7 +7274,7 @@
       <stop
          id="stop10329"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10331"
          offset="0.37931034"
@@ -7289,7 +7289,7 @@
       <stop
          id="stop10338"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop10340"
          offset="0.37931034"
@@ -7304,16 +7304,16 @@
       <stop
          id="stop4128-5-5"
          offset="0.0000000"
-         style="stop-color:#ffffff;stop-opacity:1.0000000;" />
+         style="stop-color:#ffffff;stop-opacity:1.0000000;" /> rx="5" ry="5"
       <stop
          id="stop4130-6"
          offset="1.0000000"
-         style="stop-color:#ffffff;stop-opacity:0.16494845;" />
+         style="stop-color:#ffffff;stop-opacity:0.16494845;" /> rx="5" ry="5"
     </linearGradient>
   </defs>
   <sodipodi:namedview
      id="base"
-     pagecolor="#ffffff"
+     pagecolor="#ffffff" rx="5" ry="5"
      bordercolor="#666666"
      borderopacity="1.0"
      inkscape:pageopacity="1"
@@ -7381,19 +7381,19 @@
        id="g6493"
        transform="translate(0,-320.00009)">
       <path
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#fce94f;fill-opacity:1;fill-rule:nonzero;stroke:#c4a000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+         style="color:currentColor;display:inline;overflow:visible;visibility:visible;fill:#fce94f;fill-opacity:1;fill-rule:nonzero;stroke:#c4a000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
          d="m 79.999999,540.00002 10,-49.99363 10,-10 10.000001,5 10,-10 10,5 10,60 h 140 l 10,-50 10,-5 10,-10 10,10 10,-10 L 340,540"
          id="path7075"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cccccccccccccc" />
       <path
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+         style="color:currentColor;display:inline;overflow:visible;visibility:visible;fill:none;stroke:currentColor;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
          d="M 79.999999,540.00002 H 375.00254"
          id="path7077"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cc" />
       <path
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+         style="color:currentColor;display:inline;overflow:visible;visibility:visible;fill:none;stroke:currentColor;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
          d="m 365.00254,530.00003 10,9.99999 -10,10"
          id="path7079"
          inkscape:connector-curvature="0"
@@ -7402,18 +7402,18 @@
          transform="translate(-354.99958,654.87882)"
          xml:space="preserve"
          id="flowRoot7081"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
+         style="fill:currentColor;line-height:0.01%;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill-opacity:1;stroke:none"><flowRegion
            id="flowRegion7083"><rect
              id="rect7085"
              width="190"
              height="30.00036"
              x="374.99957"
              y="-224.87918"
-             style="font-weight:bold;font-size:15px;-inkscape-font-specification:'Arial Bold';text-align:start;text-anchor:start" /></flowRegion><flowPara
+             style="fill:currentColor;text-align:start;text-anchor:start" /></flowRegion><flowPara
            id="flowPara7087"
-           style="font-size:15px;line-height:1.25">I/O (Network, Disk, ...)</flowPara></flowRoot>
+           style="fill:currentColor;line-height:1.25">I/O (Network, Disk, ...)</flowPara></flowRoot>
       <path
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.2;stroke-opacity:1;marker:none;enable-background:accumulate"
+         style="color:currentColor;display:inline;overflow:visible;visibility:visible;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:currentColor;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.2;stroke-opacity:1;marker:none;enable-background:accumulate"
          d="M 79.999999,540.00002 V 460.00003"
          id="path7089"
          inkscape:connector-curvature="0"
@@ -7422,24 +7422,24 @@
          transform="translate(-6.2499998e-7,-282.36219)"
          xml:space="preserve"
          id="flowRoot7091"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
+         style="fill:currentColor;line-height:0.01%;text-align:end;writing-mode:lr-tb;text-anchor:end;display:inline;fill-opacity:1;stroke:none"><flowRegion
            id="flowRegion7093"><rect
              id="rect7095"
              width="100"
              height="30.000004"
              x="-35.000359"
              y="744.4469"
-             style="font-size:12.5px;text-align:end;text-anchor:end" /></flowRegion><flowPara
+             style="fill:currentColor;text-align:end;text-anchor:end" /></flowRegion><flowPara
            id="flowPara7097"
-           style="font-size:12.5px;line-height:1.25">100%</flowPara></flowRoot>
+           style="fill:currentColor;line-height:1.25">100%</flowPara></flowRoot>
       <path
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="path7099"
          d="m 79.999999,470.00003 h -10"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.2;stroke-opacity:1;marker:none;enable-background:accumulate" />
+         style="color:currentColor;display:inline;overflow:visible;visibility:visible;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:currentColor;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.2;stroke-opacity:1;marker:none;enable-background:accumulate" />
       <path
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.2;stroke-opacity:1;marker:none;enable-background:accumulate"
+         style="color:currentColor;display:inline;overflow:visible;visibility:visible;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:currentColor;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.2;stroke-opacity:1;marker:none;enable-background:accumulate"
          d="m 79.999999,470.00003 h -10"
          id="path7109"
          inkscape:connector-curvature="0"
@@ -7449,9 +7449,9 @@
          inkscape:connector-curvature="0"
          id="path7111"
          d="M 140,560.00002 V 470.00003"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+         style="color:currentColor;display:inline;overflow:visible;visibility:visible;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:currentColor;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
       <path
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+         style="color:currentColor;display:inline;overflow:visible;visibility:visible;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:currentColor;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
          d="M 280,560.00002 V 470.00003"
          id="path7113"
          inkscape:connector-curvature="0"
@@ -7460,36 +7460,36 @@
          transform="translate(-6.2499998e-7,-182.36215)"
          xml:space="preserve"
          id="flowRoot7115"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
+         style="fill:currentColor;line-height:0.01%;text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill-opacity:1;stroke:none"><flowRegion
            id="flowRegion7117"><rect
              id="rect7119"
              width="140.00002"
              height="19.999998"
              x="139.99998"
              y="724.95135"
-             style="font-size:15px;text-align:center;text-anchor:middle" /></flowRegion><flowPara
+             style="fill:currentColor;text-align:center;text-anchor:middle" /></flowRegion><flowPara
            id="flowPara7121"
-           style="font-size:15px;line-height:1.25">solver.solve()</flowPara></flowRoot>
+           style="fill:currentColor;line-height:1.25">solver.solve()</flowPara></flowRoot>
       <flowRoot
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+         style="fill:currentColor;line-height:0.01%;text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill-opacity:1;stroke:none"
          id="flowRoot7123"
          xml:space="preserve"
          transform="translate(-6.2499998e-7,-189.95541)"><flowRegion
            id="flowRegion7125"><rect
-             style="font-size:12.5px;text-align:center;text-anchor:middle"
+             style="fill:currentColor;text-align:center;text-anchor:middle"
              y="732.36218"
              x="80"
              height="40.000004"
              width="60"
              id="rect7127" /></flowRegion><flowPara
            id="flowPara7129"
-           style="font-size:12.5px;line-height:1.25">Read</flowPara><flowPara
+           style="fill:currentColor;line-height:1.25">Read</flowPara><flowPara
            id="flowPara7131"
-           style="font-size:12.5px;line-height:1.25"> problem</flowPara></flowRoot>
+           style="fill:currentColor;line-height:1.25"> problem</flowPara></flowRoot>
       <flowRoot
          xml:space="preserve"
          id="flowRoot7133"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+         style="fill:currentColor;line-height:0.01%;text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill-opacity:1;stroke:none"
          transform="translate(199.99963,-189.77231)"><flowRegion
            id="flowRegion7135"><rect
              id="rect7137"
@@ -7497,18 +7497,18 @@
              height="40.000004"
              x="80.000366"
              y="732.36218"
-             style="font-size:12.5px;text-align:center;text-anchor:middle" /></flowRegion><flowPara
+             style="fill:currentColor;text-align:center;text-anchor:middle" /></flowRegion><flowPara
            id="flowPara7139"
-           style="font-size:12.5px;line-height:1.25">Write</flowPara><flowPara
+           style="fill:currentColor;line-height:1.25">Write</flowPara><flowPara
            id="flowPara7141"
-           style="font-size:12.5px;line-height:1.25"> solution</flowPara></flowRoot>
+           style="fill:currentColor;line-height:1.25"> solution</flowPara></flowRoot>
       <flowRoot
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+         style="fill:currentColor;line-height:0.01%;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill-opacity:1;stroke:none"
          id="flowRoot7178"
          xml:space="preserve"
          transform="translate(162.79291,689.48602)"><flowRegion
            id="flowRegion7180"><rect
-             style="font-weight:bold;font-size:17.5px;-inkscape-font-specification:'Arial Bold';text-align:start;text-anchor:start"
+             style="fill:currentColor;text-align:start;text-anchor:start"
              y="-223.61003"
              x="277.20737"
              height="110"
@@ -7524,7 +7524,7 @@
     <flowRoot
        xml:space="preserve"
        id="flowRoot4302-3"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+       style="fill:currentColor;line-height:0.01%;text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill-opacity:1;stroke:none"
        transform="translate(-20.000005,-190.0002)"><flowRegion
          id="flowRegion4304-6"><rect
            id="rect4306-7"
@@ -7532,23 +7532,23 @@
            height="50"
            x="40"
            y="210.0002"
-           style="font-size:35px;text-align:center;text-anchor:middle" /></flowRegion><flowPara
+           style="fill:currentColor;text-align:center;text-anchor:middle" /></flowRegion><flowPara
          id="flowPara6079"
-         style="font-size:35px;line-height:1.25">Sizing hardware</flowPara></flowRoot>
+         style="fill:currentColor;line-height:1.25">Sizing hardware</flowPara></flowRoot>
     <flowRoot
        transform="translate(-20.000005,-70.00013)"
        xml:space="preserve"
        id="flowRoot4302-6-5"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
+       style="fill:currentColor;line-height:0.01%;text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill-opacity:1;stroke:none"><flowRegion
          id="flowRegion4304-7-3"><rect
            id="rect4306-3-5"
            width="760"
            height="39.999992"
            x="40"
            y="140.00014"
-           style="font-size:16px;text-align:center;text-anchor:middle" /></flowRegion><flowPara
+           style="fill:currentColor;text-align:center;text-anchor:middle" /></flowRegion><flowPara
          id="flowPara3347"
-         style="font-size:15px;line-height:1.25">During solving, there is no I/O, RAM is relatively stable and CPU is exhausted.</flowPara></flowRoot>
+         style="fill:currentColor;line-height:1.25">During solving, there is no I/O, RAM is relatively stable and CPU is exhausted.</flowPara></flowRoot>
   </g>
   <g
      inkscape:label="RAM"
@@ -7563,16 +7563,16 @@
     <flowRoot
        xml:space="preserve"
        id="flowRoot4157"
-       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:1;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
+       style="fill:currentColor;line-height:0.01%;letter-spacing:0px;word-spacing:0px;opacity:1;fill-opacity:1;stroke:none"><flowRegion
          id="flowRegion4159"
-         style="font-family:sans-serif"><rect
+         style="fill:currentColor;font-family:sans-serif"><rect
            id="rect4161"
            width="10.955056"
            height="72.471909"
            x="16.011236"
            y="-53.932568" /></flowRegion><flowPara
          id="flowPara4163"
-         style="font-size:40px;line-height:1.25;font-family:sans-serif"> </flowPara></flowRoot>
+         style="fill:currentColor;line-height:1.25;font-family:sans-serif"> </flowPara></flowRoot>
     <g
        id="g7380"
        transform="translate(0,-0.54940587)">
@@ -7581,55 +7581,55 @@
          inkscape:connector-curvature="0"
          id="path7382"
          d="m 80,832.36221 8,-10.00003 2,1 8,-6 2,2 8,-9 2,2 8,-7 2,1 8,-7 2,1 8,-8 2,5 8,-15 2,10 8,-12 2,10 8,-12 2,10 8,-12 2,10 8,-12 2,18 8,-10 2,10 8,-12 2,10 8,-12 2,10 8,-12 2,10 8,-12 2,18 8,-10 2,10 8,-12 2,10 8,-12 2,10 8,-12 2,16 h 10 l 8,-2 2,2 8,-2 2,2 8,-2 2,2 h 10 l 10,40.00003"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#fce94f;fill-opacity:1;fill-rule:nonzero;stroke:#c4a000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+         style="color:currentColor;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#fce94f;fill-opacity:1;fill-rule:nonzero;stroke:#c4a000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
       <path
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="path7384"
          d="M 80,832.36221 H 375.00254"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+         style="color:currentColor;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;stroke:currentColor;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
       <path
          sodipodi:nodetypes="ccc"
          inkscape:connector-curvature="0"
          id="path7386"
          d="m 365.00254,822.36221 10,10 -10,10"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+         style="color:currentColor;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;stroke:currentColor;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
       <flowRoot
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none"
+         style="fill:currentColor;line-height:0.01%;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:1;fill-opacity:1;stroke:none"
          id="flowRoot7388"
          xml:space="preserve"
          transform="translate(-354.99958,947.241)"><flowRegion
            id="flowRegion7390"><rect
-             style="font-weight:bold;font-size:15px;-inkscape-font-specification:'Arial Bold';text-align:start;text-anchor:start"
+             style="fill:currentColor;text-align:start;text-anchor:start"
              y="-224.87918"
              x="374.99957"
              height="30.00036"
              width="190"
              id="rect7392" /></flowRegion><flowPara
            id="flowPara7394"
-           style="font-size:15px;line-height:1.25">RAM usage</flowPara></flowRoot>
+           style="fill:currentColor;line-height:1.25">RAM usage</flowPara></flowRoot>
       <path
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="path7396"
          d="m 80,832.36221 v -80"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.2;stroke-opacity:1;marker:none;enable-background:accumulate" />
+         style="color:currentColor;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:currentColor;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.2;stroke-opacity:1;marker:none;enable-background:accumulate" />
       <flowRoot
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none"
+         style="fill:currentColor;line-height:0.01%;text-align:end;writing-mode:lr-tb;text-anchor:end;display:inline;opacity:1;fill-opacity:1;stroke:none"
          id="flowRoot7398"
          xml:space="preserve"
          transform="translate(0,9.9999868)"><flowRegion
            id="flowRegion7400"><rect
-             style="font-size:12.5px;text-align:end;text-anchor:end"
+             style="fill:currentColor;text-align:end;text-anchor:end"
              y="744.4469"
              x="-35.000359"
              height="30.000004"
              width="100"
              id="rect7402" /></flowRegion><flowPara
            id="flowPara7404"
-           style="font-size:12.5px;line-height:1.25">1GB</flowPara></flowRoot>
+           style="fill:currentColor;line-height:1.25">1GB</flowPara></flowRoot>
       <path
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.2;stroke-opacity:1;marker:none;enable-background:accumulate"
+         style="color:currentColor;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:currentColor;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.2;stroke-opacity:1;marker:none;enable-background:accumulate"
          d="M 80,762.36221 H 70"
          id="path7406"
          inkscape:connector-curvature="0"
@@ -7639,9 +7639,9 @@
          inkscape:connector-curvature="0"
          id="path7408"
          d="M 80,762.36221 H 70"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.2;stroke-opacity:1;marker:none;enable-background:accumulate" />
+         style="color:currentColor;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:currentColor;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.2;stroke-opacity:1;marker:none;enable-background:accumulate" />
       <path
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+         style="color:currentColor;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:currentColor;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
          d="m 140,852.36221 v -90"
          id="path7410"
          inkscape:connector-curvature="0"
@@ -7651,65 +7651,65 @@
          inkscape:connector-curvature="0"
          id="path7412"
          d="m 280,852.36221 v -90"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+         style="color:currentColor;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:currentColor;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
       <flowRoot
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none"
+         style="fill:currentColor;line-height:0.01%;text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;opacity:1;fill-opacity:1;stroke:none"
          id="flowRoot7414"
          xml:space="preserve"
          transform="translate(0,110.00003)"><flowRegion
            id="flowRegion7416"><rect
-             style="font-size:15px;text-align:center;text-anchor:middle"
+             style="fill:currentColor;text-align:center;text-anchor:middle"
              y="724.95135"
              x="139.99998"
              height="19.999998"
              width="140.00002"
              id="rect7418" /></flowRegion><flowPara
            id="flowPara7420"
-           style="font-size:15px;line-height:1.25">solver.solve()</flowPara></flowRoot>
+           style="fill:currentColor;line-height:1.25">solver.solve()</flowPara></flowRoot>
       <flowRoot
          transform="translate(0,102.40677)"
          xml:space="preserve"
          id="flowRoot7422"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
+         style="fill:currentColor;line-height:0.01%;text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;opacity:1;fill-opacity:1;stroke:none"><flowRegion
            id="flowRegion7424"><rect
              id="rect7426"
              width="60"
              height="40.000004"
              x="80"
              y="732.36218"
-             style="font-size:12.5px;text-align:center;text-anchor:middle" /></flowRegion><flowPara
+             style="fill:currentColor;text-align:center;text-anchor:middle" /></flowRegion><flowPara
            id="flowPara7428"
-           style="font-size:12.5px;line-height:1.25">Read</flowPara><flowPara
+           style="fill:currentColor;line-height:1.25">Read</flowPara><flowPara
            id="flowPara7430"
-           style="font-size:12.5px;line-height:1.25"> problem</flowPara></flowRoot>
+           style="fill:currentColor;line-height:1.25"> problem</flowPara></flowRoot>
       <flowRoot
          transform="translate(199.99963,102.58987)"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none"
+         style="fill:currentColor;line-height:0.01%;text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;opacity:1;fill-opacity:1;stroke:none"
          id="flowRoot7432"
          xml:space="preserve"><flowRegion
            id="flowRegion7434"><rect
-             style="font-size:12.5px;text-align:center;text-anchor:middle"
+             style="fill:currentColor;text-align:center;text-anchor:middle"
              y="732.36218"
              x="80.000366"
              height="40.000004"
              width="59.999996"
              id="rect7436" /></flowRegion><flowPara
            id="flowPara7438"
-           style="font-size:12.5px;line-height:1.25">Write</flowPara><flowPara
+           style="fill:currentColor;line-height:1.25">Write</flowPara><flowPara
            id="flowPara7440"
-           style="font-size:12.5px;line-height:1.25"> solution</flowPara></flowRoot>
+           style="fill:currentColor;line-height:1.25"> solution</flowPara></flowRoot>
       <flowRoot
          transform="translate(162.79291,981.84823)"
          xml:space="preserve"
          id="flowRoot7442"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
+         style="fill:currentColor;line-height:0.01%;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:1;fill-opacity:1;stroke:none"><flowRegion
            id="flowRegion7444"><rect
              id="rect7446"
              width="350.00003"
              height="110"
              x="277.20737"
              y="-223.61003"
-             style="font-weight:bold;font-size:17.5px;-inkscape-font-specification:'Arial Bold';text-align:start;text-anchor:start" /></flowRegion><flowPara
+             style="fill:currentColor;text-align:start;text-anchor:start" /></flowRegion><flowPara
            style="font-weight:normal;font-size:17.5px;line-height:1.25"
            id="flowPara7448">The dataset itself consumes most memory.</flowPara><flowPara
            style="font-weight:normal;font-size:17.5px;line-height:1.25"
@@ -7719,18 +7719,18 @@
            style="font-weight:normal;font-size:17.5px;line-height:1.25"
            id="flowPara7454" /></flowRoot>
       <path
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#4e9a06;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+         style="color:currentColor;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#4e9a06;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
          d="m 340,792.36218 c 0,0 5,0 5,-1.33334 v -6.66666 c 0,-1.33334 0.91352,-2 5,-2 -4.10758,0 -5,-0.66667 -5,-2 v -6.66667 c 0,-1.33333 -5,-1.33333 -5,-1.33333"
          id="path7456"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccccccc" />
       <flowRoot
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#4e9a06;fill-opacity:1;stroke:none"
+         style="fill:currentColor;line-height:0.01%;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill-opacity:1;stroke:none"
          id="flowRoot7458"
          xml:space="preserve"
          transform="translate(-198.96684,750.6025)"><flowRegion
            id="flowRegion7460"><rect
-             style="font-size:15px;text-align:start;text-anchor:start;fill:#4e9a06"
+             style="fill:currentColor;text-align:start;text-anchor:start;fill:#4e9a06"
              y="22.366911"
              x="558.96686"
              height="80"
@@ -7743,21 +7743,21 @@
          inkscape:connector-curvature="0"
          id="path7466"
          d="m 340,832.36218 c 0,0 5,0 5,-2.66668 v -13.33332 c 0,-2.66668 0.91352,-4 5,-4 -4.10758,0 -5,-1.33334 -5,-4 v -13.33334 c 0,-2.66666 -5,-2.66666 -5,-2.66666"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#ce5c00;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+         style="color:currentColor;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#ce5c00;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
       <flowRoot
          transform="translate(-198.96684,780.6025)"
          xml:space="preserve"
          id="flowRoot7468"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#ce5c00;fill-opacity:1;stroke:none"><flowRegion
+         style="fill:currentColor;line-height:0.01%;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill-opacity:1;stroke:none"><flowRegion
            id="flowRegion7470"><rect
              id="rect7472"
              width="169.99998"
              height="80"
              x="558.96686"
              y="22.366911"
-             style="font-size:15px;text-align:start;text-anchor:start;fill:#ce5c00" /></flowRegion><flowPara
+             style="fill:currentColor;text-align:start;text-anchor:start;fill:#ce5c00" /></flowRegion><flowPara
            id="flowPara7474"
-           style="font-size:15px;line-height:1.25;text-align:start;text-anchor:start;fill:#ce5c00">Dataset</flowPara></flowRoot>
+           style="fill:currentColor;line-height:1.25;text-align:start;text-anchor:start;fill:#ce5c00">Dataset</flowPara></flowRoot>
     </g>
   </g>
   <g
@@ -7774,55 +7774,55 @@
          inkscape:connector-curvature="0"
          id="path6937"
          d="m 80,672.26222 10,-20 10,10 10,-5 10,10 10,-5 10,-60 h 40 l 10,1 10,-1 h 30 l 10,2 10,-2 h 30 l 10,50 10,5 10,10 10,-10 10,10 10,5"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#fce94f;fill-opacity:1;fill-rule:nonzero;stroke:#c4a000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+         style="color:currentColor;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#fce94f;fill-opacity:1;fill-rule:nonzero;stroke:#c4a000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
       <path
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="path5897"
          d="M 80,672.26222 H 375.00254"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+         style="color:currentColor;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;stroke:currentColor;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
       <path
          sodipodi:nodetypes="ccc"
          inkscape:connector-curvature="0"
          id="path5899"
          d="m 365.00254,662.26222 10,10 -10,10"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+         style="color:currentColor;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;stroke:currentColor;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
       <flowRoot
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none"
+         style="fill:currentColor;line-height:0.01%;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:1;fill-opacity:1;stroke:none"
          id="flowRoot11985"
          xml:space="preserve"
          transform="translate(-354.99958,787.14104)"><flowRegion
            id="flowRegion11987"><rect
-             style="font-weight:bold;font-size:15px;-inkscape-font-specification:'Arial Bold';text-align:start;text-anchor:start"
+             style="fill:currentColor;text-align:start;text-anchor:start"
              y="-224.87918"
              x="374.99957"
              height="30.00036"
              width="190"
              id="rect11989" /></flowRegion><flowPara
            id="flowPara11991"
-           style="font-size:15px;line-height:1.25">CPU usage (1 core)</flowPara></flowRoot>
+           style="fill:currentColor;line-height:1.25">CPU usage (1 core)</flowPara></flowRoot>
       <path
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="path6883"
          d="m 80,672.26222 v -80"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.2;stroke-opacity:1;marker:none;enable-background:accumulate" />
+         style="color:currentColor;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:currentColor;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.2;stroke-opacity:1;marker:none;enable-background:accumulate" />
       <flowRoot
          transform="matrix(0.75,0,0,0.75,-736.75889,312.84322)"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none"
+         style="fill:currentColor;line-height:0.01%;text-align:end;writing-mode:lr-tb;text-anchor:end;display:inline;opacity:1;fill-opacity:1;stroke:none"
          id="flowRoot6885"
          xml:space="preserve"><flowRegion
            id="flowRegion6887"><rect
-             style="font-size:16.66666603px;text-align:end;text-anchor:end"
+             style="fill:currentColor;text-align:end;text-anchor:end"
              y="375.33826"
              x="935.67804"
              height="40.000004"
              width="133.33333"
              id="rect6889" /></flowRegion><flowPara
            id="flowPara6891"
-           style="font-size:16.6667px;line-height:1.25">100%</flowPara></flowRoot>
+           style="fill:currentColor;line-height:1.25">100%</flowPara></flowRoot>
       <path
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.2;stroke-opacity:1;marker:none;enable-background:accumulate"
+         style="color:currentColor;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:currentColor;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.2;stroke-opacity:1;marker:none;enable-background:accumulate"
          d="M 80,602.26222 H 70"
          id="path6893"
          inkscape:connector-curvature="0"
@@ -7832,9 +7832,9 @@
          inkscape:connector-curvature="0"
          id="path6903"
          d="M 80,602.26222 H 70"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.2;stroke-opacity:1;marker:none;enable-background:accumulate" />
+         style="color:currentColor;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:currentColor;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.2;stroke-opacity:1;marker:none;enable-background:accumulate" />
       <path
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+         style="color:currentColor;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:currentColor;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
          d="m 140,692.26222 v -90"
          id="path6905"
          inkscape:connector-curvature="0"
@@ -7844,71 +7844,71 @@
          inkscape:connector-curvature="0"
          id="path6907"
          d="m 280,692.26222 v -90"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+         style="color:currentColor;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:currentColor;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
       <flowRoot
          transform="translate(0,-50.099964)"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none"
+         style="fill:currentColor;line-height:0.01%;text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;opacity:1;fill-opacity:1;stroke:none"
          id="flowRoot6909"
          xml:space="preserve"><flowRegion
            id="flowRegion6911"><rect
-             style="font-size:15px;text-align:center;text-anchor:middle"
+             style="fill:currentColor;text-align:center;text-anchor:middle"
              y="724.95135"
              x="139.99998"
              height="19.999998"
              width="140.00002"
              id="rect6913" /></flowRegion><flowPara
            id="flowPara6915"
-           style="font-size:15px;line-height:1.25">solver.solve()</flowPara></flowRoot>
+           style="fill:currentColor;line-height:1.25">solver.solve()</flowPara></flowRoot>
       <flowRoot
          transform="translate(0,-57.693234)"
          xml:space="preserve"
          id="flowRoot6917"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
+         style="fill:currentColor;line-height:0.01%;text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;opacity:1;fill-opacity:1;stroke:none"><flowRegion
            id="flowRegion6919"><rect
              id="rect6921"
              width="60"
              height="40.000004"
              x="80"
              y="732.36218"
-             style="font-size:12.5px;text-align:center;text-anchor:middle" /></flowRegion><flowPara
+             style="fill:currentColor;text-align:center;text-anchor:middle" /></flowRegion><flowPara
            id="flowPara6923"
-           style="font-size:12.5px;line-height:1.25">Read</flowPara><flowPara
+           style="fill:currentColor;line-height:1.25">Read</flowPara><flowPara
            id="flowPara6925"
-           style="font-size:12.5px;line-height:1.25"> problem</flowPara></flowRoot>
+           style="fill:currentColor;line-height:1.25"> problem</flowPara></flowRoot>
       <flowRoot
          transform="translate(199.99963,-57.510124)"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none"
+         style="fill:currentColor;line-height:0.01%;text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;opacity:1;fill-opacity:1;stroke:none"
          id="flowRoot6927"
          xml:space="preserve"><flowRegion
            id="flowRegion6929"><rect
-             style="font-size:12.5px;text-align:center;text-anchor:middle"
+             style="fill:currentColor;text-align:center;text-anchor:middle"
              y="732.36218"
              x="80.000366"
              height="40.000004"
              width="59.999996"
              id="rect6931" /></flowRegion><flowPara
            id="flowPara6933"
-           style="font-size:12.5px;line-height:1.25">Write</flowPara><flowPara
+           style="fill:currentColor;line-height:1.25">Write</flowPara><flowPara
            id="flowPara6935"
-           style="font-size:12.5px;line-height:1.25"> solution</flowPara></flowRoot>
+           style="fill:currentColor;line-height:1.25"> solution</flowPara></flowRoot>
       <flowRoot
          transform="translate(162.79291,821.84855)"
          xml:space="preserve"
          id="flowRoot7158"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
+         style="fill:currentColor;line-height:0.01%;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:1;fill-opacity:1;stroke:none"><flowRegion
            id="flowRegion7160"><rect
              id="rect7162"
              width="350.00003"
              height="110"
              x="277.20737"
              y="-223.61003"
-             style="font-weight:bold;font-size:17.5px;-inkscape-font-specification:'Arial Bold';text-align:start;text-anchor:start;stroke-width:1" /></flowRegion><flowPara
+             style="fill:currentColor;text-align:start;text-anchor:start;stroke-width:1" /></flowRegion><flowPara
            id="flowPara7196"
-           style="font-weight:normal;font-size:17.5px;line-height:1.25">1 CPU per dataset</flowPara><flowPara
+           style="fill:currentColor;line-height:1.25">1 CPU per dataset</flowPara><flowPara
            id="flowPara7194"
-           style="font-weight:normal;font-size:17.5px;line-height:1.25">(more for Multithreaded Solving)</flowPara><flowPara
+           style="fill:currentColor;line-height:1.25">(more for Multithreaded Solving)</flowPara><flowPara
            id="flowPara7210"
-           style="font-weight:normal;font-size:17.5px;line-height:1.25" /><flowPara
+           style="fill:currentColor;line-height:1.25" /><flowPara
            style="font-weight:bold;font-size:17.5px;line-height:1.25"
            id="flowPara9638">It never blocks, so it drains its CPU(s).</flowPara><flowPara
            style="font-weight:bold;font-size:17.5px;line-height:1.25"

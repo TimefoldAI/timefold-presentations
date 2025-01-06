@@ -20,7 +20,7 @@
      id="defs6" />
   <sodipodi:namedview
      id="namedview4"
-     pagecolor="#ffffff"
+     pagecolor="#ffffff" rx="5" ry="5"
      bordercolor="#666666"
      borderopacity="1.0"
      inkscape:showpageshadow="2"
@@ -40,17 +40,17 @@
        id="g1943"
        transform="translate(-22.323486,152.13898)">
       <rect
-         style="color:#000000;overflow:visible;fill:#3e00ff;fill-opacity:0.75;stroke:none;stroke-linecap:round;stroke-linejoin:round;stop-color:#000000"
+         style="color:currentColor;overflow:visible;fill:#3e00ff;fill-opacity:0.75;stroke:none;stroke-linecap:round;stroke-linejoin:round;stop-color:currentColor"
          id="rect168"
          width="1000"
          height="100"
          x="322.32349"
          y="927.86102"
-         rx="50"
-         ry="50" />
+         
+          />
       <text
          xml:space="preserve"
-         style="font-size:64px;line-height:1.15;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;white-space:pre;shape-inside:url(#rect2949);display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+         style="fill:currentColor;line-height:1.15;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-color:currentColor;white-space:pre;shape-inside:url(#rect2949);display:inline;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;-inkscape-stroke:none;stop-color:currentColor"
          x="620.49976"
          y="1022.1143"
          id="text1837"
@@ -60,13 +60,13 @@
            id="tspan469">Title</tspan></text>
     </g>
     <rect
-       style="color:#000000;overflow:visible;fill:none;fill-opacity:1;stroke:#3e00ff;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+       style="color:currentColor;overflow:visible;fill:none;fill-opacity:1;stroke:#3e00ff;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;stop-color:currentColor"
        id="rect1945"
        width="190"
        height="190"
        x="705"
        y="505"
-       rx="50.000004"
-       ry="49.999996" />
+       
+        />
   </g>
 </svg>

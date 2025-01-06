@@ -272,7 +272,7 @@
          offset="0.0000000" />
       <stop
          id="stop8604-2"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          offset="1" />
     </radialGradient>
     <linearGradient
@@ -281,11 +281,11 @@
       <stop
          id="stop2809"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          id="stop2811"
          offset="1"
-         style="stop-color:#ffffff;stop-opacity:0;" />
+         style="stop-color:#ffffff;stop-opacity:0;" /> rx="5" ry="5"
     </linearGradient>
     <linearGradient
        id="linearGradient8543">
@@ -324,7 +324,7 @@
          id="stop8602-1-1" />
       <stop
          offset="1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          id="stop8604-3-7" />
     </radialGradient>
     <linearGradient
@@ -332,7 +332,7 @@
       <stop
          id="stop3879"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
       <stop
          style="stop-color:#eeeeec;stop-opacity:1;"
          offset="1"
@@ -341,7 +341,7 @@
     <linearGradient
        id="linearGradient3889">
       <stop
-         style="stop-color:#ffffff;stop-opacity:1;"
+         style="stop-color:#ffffff;stop-opacity:1;" rx="5" ry="5"
          offset="0"
          id="stop3891" />
       <stop
@@ -364,7 +364,7 @@
          id="stop4998" />
       <stop
          offset="1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          id="stop5000" />
     </radialGradient>
     <linearGradient
@@ -372,15 +372,15 @@
       <stop
          id="stop4085"
          offset="0"
-         style="stop-color:#ffffff;stop-opacity:0;" />
+         style="stop-color:#ffffff;stop-opacity:0;" /> rx="5" ry="5"
       <stop
-         style="stop-color:#ffffff;stop-opacity:0;"
+         style="stop-color:#ffffff;stop-opacity:0;" rx="5" ry="5"
          offset="0.75"
          id="stop4089" />
       <stop
          id="stop4087"
          offset="1"
-         style="stop-color:#ffffff;stop-opacity:1;" />
+         style="stop-color:#ffffff;stop-opacity:1;" /> rx="5" ry="5"
     </linearGradient>
     <linearGradient
        id="linearGradient4032">
@@ -431,7 +431,7 @@
          id="stop8602-1-1-5" />
       <stop
          offset="1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          id="stop8604-3-7-9" />
     </radialGradient>
     <radialGradient
@@ -449,7 +449,7 @@
          id="stop6008" />
       <stop
          offset="1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          id="stop6010" />
     </radialGradient>
     <radialGradient
@@ -467,7 +467,7 @@
          offset="0.0000000" />
       <stop
          id="stop8604-2-8"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          offset="1" />
     </radialGradient>
     <radialGradient
@@ -485,7 +485,7 @@
          offset="0.0000000" />
       <stop
          id="stop8604-2-9"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          offset="1" />
     </radialGradient>
     <radialGradient
@@ -503,7 +503,7 @@
          id="stop8602-1-1-4" />
       <stop
          offset="1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          id="stop8604-3-7-5" />
     </radialGradient>
     <radialGradient
@@ -521,7 +521,7 @@
          id="stop6377" />
       <stop
          offset="1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          id="stop6379" />
     </radialGradient>
     <radialGradient
@@ -539,7 +539,7 @@
          offset="0.0000000" />
       <stop
          id="stop8604-2-99"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          offset="1" />
     </radialGradient>
     <radialGradient
@@ -557,7 +557,7 @@
          id="stop8602-1-1-46" />
       <stop
          offset="1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          id="stop8604-3-7-94" />
     </radialGradient>
     <radialGradient
@@ -575,7 +575,7 @@
          id="stop6377-8" />
       <stop
          offset="1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          id="stop6379-8" />
     </radialGradient>
     <linearGradient
@@ -603,7 +603,7 @@
          offset="0.0000000" />
       <stop
          id="stop8604-2-0"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          offset="1" />
     </radialGradient>
     <radialGradient
@@ -621,7 +621,7 @@
          id="stop8602-1-1-59" />
       <stop
          offset="1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          id="stop8604-3-7-90" />
     </radialGradient>
     <radialGradient
@@ -639,7 +639,7 @@
          id="stop7647" />
       <stop
          offset="1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          id="stop7649" />
     </radialGradient>
     <linearGradient
@@ -688,7 +688,7 @@
          offset="0.0000000" />
       <stop
          id="stop8026"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          offset="1" />
     </radialGradient>
     <radialGradient
@@ -793,7 +793,7 @@
          id="stop8090" />
       <stop
          offset="1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          id="stop8092" />
     </radialGradient>
     <radialGradient
@@ -864,7 +864,7 @@
          id="stop8132" />
       <stop
          offset="1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          id="stop8134" />
     </radialGradient>
     <radialGradient
@@ -1303,7 +1303,7 @@
          offset="0.0000000" />
       <stop
          id="stop8604-2-8-9"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          offset="1" />
     </radialGradient>
     <radialGradient
@@ -1321,7 +1321,7 @@
          id="stop8602-1-1-5-9" />
       <stop
          offset="1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          id="stop8604-3-7-9-1" />
     </radialGradient>
     <radialGradient
@@ -1339,7 +1339,7 @@
          id="stop11914" />
       <stop
          offset="1"
-         style="stop-color:#000000"
+         style="stop-color:currentColor"
          id="stop11916" />
     </radialGradient>
     <radialGradient
@@ -3252,7 +3252,7 @@
   </defs>
   <sodipodi:namedview
      id="base"
-     pagecolor="#ffffff"
+     pagecolor="#ffffff" rx="5" ry="5"
      bordercolor="#666666"
      borderopacity="1.0"
      inkscape:pageopacity="1"
@@ -3323,54 +3323,54 @@
     <flowRoot
        xml:space="preserve"
        id="flowRoot4302"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.3333px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       style="fill:currentColor;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill-opacity:1;stroke:none"
        transform="translate(-20,252.36213)"><flowRegion
          id="flowRegion4304"
-         style="font-size:37.3333px"><rect
+         style="fill:currentColor;font-size:37.3333px"><rect
            id="rect4306"
            width="740"
            height="90"
            x="50"
            y="220.0002"
-           style="font-size:37.33333206px;text-align:center;text-anchor:middle" /></flowRegion><flowPara
+           style="fill:currentColor;text-align:center;text-anchor:middle" /></flowRegion><flowPara
          id="flowPara4621"
-         style="font-size:37.3333px">Domain model comparison</flowPara></flowRoot>
+         style="fill:currentColor;font-size:37.3333px">Domain model comparison</flowPara></flowRoot>
     <g
        id="g3709"
        transform="translate(0,19.999997)" />
     <flowRoot
        xml:space="preserve"
        id="flowRoot4157"
-       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><flowRegion
+       style="fill:currentColor;line-height:0.01%;letter-spacing:0px;word-spacing:0px;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><flowRegion
          id="flowRegion4159"
-         style="font-family:sans-serif"><rect
+         style="fill:currentColor;font-family:sans-serif"><rect
            id="rect4161"
            width="10.955056"
            height="72.471909"
            x="16.011236"
            y="-53.932568"
-           style="font-family:sans-serif" /></flowRegion><flowPara
+           style="fill:currentColor;font-family:sans-serif" /></flowRegion><flowPara
          id="flowPara4163"
-         style="font-size:40px;line-height:1.25;font-family:sans-serif"> </flowPara></flowRoot>
+         style="fill:currentColor;line-height:1.25;font-family:sans-serif"> </flowPara></flowRoot>
     <flowRoot
        transform="translate(-20,372.36182)"
        xml:space="preserve"
        id="flowRoot4302-6"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
+       style="fill:currentColor;line-height:0.01%;text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill-opacity:1;stroke:none"><flowRegion
          id="flowRegion4304-7"
-         style="font-size:16px"><rect
+         style="fill:currentColor;font-size:16px"><rect
            id="rect4306-3"
            width="740.00006"
            height="29.999973"
            x="50"
            y="150.00014"
-           style="font-size:16px;text-align:center;text-anchor:middle" /></flowRegion><flowPara
+           style="fill:currentColor;text-align:center;text-anchor:middle" /></flowRegion><flowPara
          id="flowPara4308-6"
-         style="font-size:16px;line-height:1.25">A MIP solver's model memory usage grows exponentially, unlike Timefold's.</flowPara></flowRoot>
+         style="fill:currentColor;line-height:1.25">A MIP solver's model memory usage grows exponentially, unlike Timefold's.</flowPara></flowRoot>
     <flowRoot
        xml:space="preserve"
        id="flowRoot937"
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;overflow:visible;visibility:visible;opacity:1;vector-effect:none;fill:#a40000;fill-opacity:1;fill-rule:nonzero;stroke:#8f5902;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"><flowRegion
+       style="fill:currentColor;color:currentColor;text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;overflow:visible;visibility:visible;opacity:1;vector-effect:none;fill-opacity:1;fill-rule:nonzero;stroke:#8f5902;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"><flowRegion
          id="flowRegion939"><rect
            id="rect941"
            width="52.987019"
@@ -3381,22 +3381,22 @@
     <text
        xml:space="preserve"
        id="text608"
-       style="color:#000000;font-size:18px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;white-space:pre;shape-inside:url(#rect610);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+       style="fill:currentColor;color:currentColor;line-height:1.15;text-align:center;white-space:pre;shape-inside:url(#rect610);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
        transform="translate(0,10.000238)"><tspan
          x="155.14502"
          y="567.67491"
          id="tspan3406"><tspan
-           style="font-weight:bold"
+           style="fill:currentColor;font-weight:bold"
            id="tspan3404">MIP solver</tspan></tspan></text>
     <text
        xml:space="preserve"
        id="text616"
-       style="color:#000000;font-size:18px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;white-space:pre;shape-inside:url(#rect618);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+       style="fill:currentColor;color:currentColor;line-height:1.15;text-align:center;white-space:pre;shape-inside:url(#rect618);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
        transform="translate(400.00031,10.000241)"><tspan
          x="162.66406"
          y="567.67491"
          id="tspan3410"><tspan
-           style="font-weight:bold"
+           style="fill:currentColor;font-weight:bold"
            id="tspan3408">Timefold</tspan></tspan></text>
     <g
        id="g1771"
@@ -3405,12 +3405,12 @@
          id="g1688"
          transform="translate(60,5)">
         <path
-           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+           style="color:currentColor;display:inline;overflow:visible;visibility:visible;fill:none;fill-rule:evenodd;stroke:currentColor;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
            d="M 400,862.36218 H 520"
            id="path1682"
            sodipodi:nodetypes="cc" />
         <path
-           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+           style="color:currentColor;display:inline;overflow:visible;visibility:visible;fill:none;fill-rule:evenodd;stroke:currentColor;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
            d="m 510,852.36218 10,10 -10,10"
            id="path1684" />
       </g>
@@ -3418,68 +3418,68 @@
          id="g1668"
          transform="translate(200.5,200.5)">
         <rect
-           style="color:#000000;overflow:visible;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           style="color:currentColor;overflow:visible;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
            id="rect1662"
            width="60"
            height="30"
            x="200"
            y="652.36218"
-           rx="5"
-           ry="5" />
+           
+            />
         <text
            xml:space="preserve"
            id="text1666"
-           style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;white-space:pre;shape-inside:url(#rect1670);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+           style="fill:currentColor;color:currentColor;line-height:1.15;text-align:center;white-space:pre;shape-inside:url(#rect1670);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
            transform="translate(155.50391,106.89269)"
            x="44.10791"
            y="0"><tspan
              x="58.992188"
              y="565.9734"
              id="tspan3414"><tspan
-               style="text-anchor:middle"
+               style="fill:currentColor;text-anchor:middle"
                id="tspan3412">Shift</tspan></tspan></text>
       </g>
       <g
          id="g1678"
          transform="translate(380.5,200.5)">
         <rect
-           style="color:#000000;overflow:visible;fill:none;stroke:#000000;stroke-width:0.999999;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           style="color:currentColor;overflow:visible;fill:none;stroke:currentColor;stroke-width:0.999999;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
            id="rect1672"
            width="90"
            height="30"
            x="200"
            y="652.36218"
-           rx="4.9999995"
-           ry="5" />
+           
+            />
         <text
            xml:space="preserve"
            id="text1676"
-           style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;white-space:pre;shape-inside:url(#rect1680);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+           style="fill:currentColor;color:currentColor;line-height:1.15;text-align:center;white-space:pre;shape-inside:url(#rect1680);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
            transform="translate(169.69922,106.89269)"
            x="44.10791"
            y="0"><tspan
              x="39.425781"
              y="565.9734"
              id="tspan3418"><tspan
-               style="text-anchor:middle"
+               style="fill:currentColor;text-anchor:middle"
                id="tspan3416">Employee</tspan></tspan></text>
       </g>
       <text
          xml:space="preserve"
          id="text1666-6"
-         style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:end;white-space:pre;shape-inside:url(#rect1670-3);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+         style="fill:currentColor;color:currentColor;line-height:1.15;text-align:end;white-space:pre;shape-inside:url(#rect1670-3);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
          transform="translate(411.2815,291.73266)"
          x="47.932129"
          y="0"><tspan
            x="123.3125"
            y="565.9734"
            id="tspan3422"><tspan
-             style="text-anchor:end"
+             style="fill:currentColor;text-anchor:end"
              id="tspan3420">0..1</tspan></tspan></text>
       <text
          xml:space="preserve"
          id="text1752"
-         style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:start;white-space:pre;shape-inside:url(#rect1754);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+         style="fill:currentColor;color:currentColor;line-height:1.15;text-align:start;white-space:pre;shape-inside:url(#rect1754);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
          transform="translate(470.74219,291.73266)"
          x="22.650879"
          y="0"><tspan
@@ -3490,7 +3490,7 @@
     <text
        xml:space="preserve"
        id="text2095"
-       style="color:#000000;font-size:18px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:start;white-space:pre;shape-inside:url(#rect2097);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+       style="fill:currentColor;color:currentColor;line-height:1.15;text-align:start;white-space:pre;shape-inside:url(#rect2097);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
        transform="translate(427.80355,56.778861)"
        x="-15.411621"
        y="0"><tspan
@@ -3503,7 +3503,7 @@
       <text
          xml:space="preserve"
          id="text2327"
-         style="color:#000000;font-size:18px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:start;white-space:pre;shape-inside:url(#rect2369);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+         style="fill:currentColor;color:currentColor;line-height:1.15;text-align:start;white-space:pre;shape-inside:url(#rect2369);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
          transform="translate(188.44468,52.085076)"
          x="-15.411621"
          y="0"><tspan
@@ -3513,7 +3513,7 @@
       <text
          xml:space="preserve"
          id="text2367"
-         style="color:#000000;font-size:18px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:start;white-space:pre;shape-inside:url(#rect2381);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+         style="fill:currentColor;color:currentColor;line-height:1.15;text-align:start;white-space:pre;shape-inside:url(#rect2381);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
          transform="translate(117.22231,52.085076)"
          x="-15.411621"
          y="0"><tspan
@@ -3530,7 +3530,7 @@
     <text
        xml:space="preserve"
        id="text622"
-       style="color:#000000;font-size:18px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:start;white-space:pre;shape-inside:url(#rect624-6);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+       style="fill:currentColor;color:currentColor;line-height:1.15;text-align:start;white-space:pre;shape-inside:url(#rect624-6);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
        transform="translate(210.05322,-345.29093)"
        x="-15.411621"
        y="0"><tspan
@@ -3542,7 +3542,7 @@
     <text
        xml:space="preserve"
        id="text2533"
-       style="color:#000000;font-size:18px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:start;white-space:pre;shape-inside:url(#rect2535-3);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+       style="fill:currentColor;color:currentColor;line-height:1.15;text-align:start;white-space:pre;shape-inside:url(#rect2535-3);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
        transform="translate(266.83203,-345.29094)"
        x="-15.411621"
        y="0"><tspan
@@ -3554,7 +3554,7 @@
     <text
        xml:space="preserve"
        id="text2541"
-       style="color:#000000;font-size:18px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:start;white-space:pre;shape-inside:url(#rect2543-1);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+       style="fill:currentColor;color:currentColor;line-height:1.15;text-align:start;white-space:pre;shape-inside:url(#rect2543-1);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
        transform="translate(329.14355,-345.29094)"
        x="-15.411621"
        y="0"><tspan
@@ -3566,7 +3566,7 @@
     <text
        xml:space="preserve"
        id="text577"
-       style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:start;white-space:pre;shape-inside:url(#rect579-7);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+       style="fill:currentColor;color:currentColor;line-height:1.15;text-align:start;white-space:pre;shape-inside:url(#rect579-7);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
        transform="translate(39.964844,-306.33277)"
        x="-15.411621"
        y="0"><tspan
@@ -3576,7 +3576,7 @@
     <text
        xml:space="preserve"
        id="text589"
-       style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:start;white-space:pre;shape-inside:url(#rect591-5);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+       style="fill:currentColor;color:currentColor;line-height:1.15;text-align:start;white-space:pre;shape-inside:url(#rect591-5);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
        transform="translate(39.964844,-266.33277)"
        x="-15.411621"
        y="0"><tspan
@@ -3586,7 +3586,7 @@
     <text
        xml:space="preserve"
        id="text595"
-       style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:start;white-space:pre;shape-inside:url(#rect597-9);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+       style="fill:currentColor;color:currentColor;line-height:1.15;text-align:start;white-space:pre;shape-inside:url(#rect597-9);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
        transform="translate(39.964844,-224.96559)"
        x="-15.411621"
        y="0"><tspan
@@ -3596,7 +3596,7 @@
     <text
        xml:space="preserve"
        id="text601"
-       style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:start;white-space:pre;shape-inside:url(#rect603-6);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+       style="fill:currentColor;color:currentColor;line-height:1.15;text-align:start;white-space:pre;shape-inside:url(#rect603-6);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
        transform="translate(39.964844,-184.96558)"
        x="-15.411621"
        y="0"><tspan
@@ -3608,25 +3608,25 @@
        transform="translate(9.9999998,-392.36218)"
        style="display:inline">
       <rect
-         style="color:#000000;overflow:visible;fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         style="color:currentColor;overflow:visible;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
          id="rect613"
          width="30"
          height="30"
          x="200.5"
          y="632.86218"
-         rx="5"
-         ry="5" />
+         
+          />
       <text
          xml:space="preserve"
          id="text1440"
-         style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;white-space:pre;shape-inside:url(#rect1442-2);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+         style="fill:currentColor;color:currentColor;line-height:1.15;text-align:center;white-space:pre;shape-inside:url(#rect1442-2);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
          transform="translate(140.28125,87.392688)"
          x="44.10791"
          y="0"><tspan
            x="70.550781"
            y="565.9734"
            id="tspan3454"><tspan
-             style="text-anchor:middle"
+             style="fill:currentColor;text-anchor:middle"
              id="tspan3452">1</tspan></tspan></text>
     </g>
     <g
@@ -3634,25 +3634,25 @@
        transform="translate(70.5,-411.86219)"
        style="display:inline">
       <rect
-         style="color:#000000;overflow:visible;fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         style="color:currentColor;overflow:visible;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
          id="rect1449"
          width="30"
          height="30"
          x="200"
          y="652.36218"
-         rx="5"
-         ry="5" />
+         
+          />
       <text
          xml:space="preserve"
          id="text1453"
-         style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;white-space:pre;shape-inside:url(#rect1457-7);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+         style="fill:currentColor;color:currentColor;line-height:1.15;text-align:center;white-space:pre;shape-inside:url(#rect1457-7);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
          transform="translate(139.78125,106.89269)"
          x="44.10791"
          y="0"><tspan
            x="70.550781"
            y="565.9734"
            id="tspan3458"><tspan
-             style="text-anchor:middle"
+             style="fill:currentColor;text-anchor:middle"
              id="tspan3456">0</tspan></tspan></text>
     </g>
     <g
@@ -3660,25 +3660,25 @@
        transform="translate(130.5,-411.86219)"
        style="display:inline">
       <rect
-         style="color:#000000;overflow:visible;fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         style="color:currentColor;overflow:visible;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
          id="rect1459"
          width="30"
          height="30"
          x="200"
          y="652.36218"
-         rx="5"
-         ry="5" />
+         
+          />
       <text
          xml:space="preserve"
          id="text1463"
-         style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;white-space:pre;shape-inside:url(#rect1467-8);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+         style="fill:currentColor;color:currentColor;line-height:1.15;text-align:center;white-space:pre;shape-inside:url(#rect1467-8);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
          transform="translate(139.78125,106.89269)"
          x="44.10791"
          y="0"><tspan
            x="70.550781"
            y="565.9734"
            id="tspan3462"><tspan
-             style="text-anchor:middle"
+             style="fill:currentColor;text-anchor:middle"
              id="tspan3460">0</tspan></tspan></text>
     </g>
     <g
@@ -3686,25 +3686,25 @@
        transform="translate(10.5,-371.86219)"
        style="display:inline">
       <rect
-         style="color:#000000;overflow:visible;fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         style="color:currentColor;overflow:visible;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
          id="rect1469"
          width="30"
          height="30"
          x="200"
          y="652.36218"
-         rx="5"
-         ry="5" />
+         
+          />
       <text
          xml:space="preserve"
          id="text1473"
-         style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;white-space:pre;shape-inside:url(#rect1494-5);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+         style="fill:currentColor;color:currentColor;line-height:1.15;text-align:center;white-space:pre;shape-inside:url(#rect1494-5);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
          transform="translate(139.78125,106.89269)"
          x="44.10791"
          y="0"><tspan
            x="70.550781"
            y="565.9734"
            id="tspan3466"><tspan
-             style="text-anchor:middle"
+             style="fill:currentColor;text-anchor:middle"
              id="tspan3464">0</tspan></tspan></text>
     </g>
     <g
@@ -3712,18 +3712,18 @@
        transform="translate(70.5,-371.86219)"
        style="display:inline">
       <rect
-         style="color:#000000;overflow:visible;fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         style="color:currentColor;overflow:visible;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
          id="rect1477"
          width="30"
          height="30"
          x="200"
          y="652.36218"
-         rx="5"
-         ry="5" />
+         
+          />
       <text
          xml:space="preserve"
          id="text1481"
-         style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;white-space:pre;shape-inside:url(#rect1496-7);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+         style="fill:currentColor;color:currentColor;line-height:1.15;text-align:center;white-space:pre;shape-inside:url(#rect1496-7);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
          transform="translate(139.78125,106.89269)"
          x="44.10791"
          y="0"><tspan
@@ -3736,18 +3736,18 @@
        transform="translate(130.5,-371.86219)"
        style="display:inline">
       <rect
-         style="color:#000000;overflow:visible;fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         style="color:currentColor;overflow:visible;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
          id="rect1486"
          width="30"
          height="30"
          x="200"
          y="652.36218"
-         rx="5"
-         ry="5" />
+         
+          />
       <text
          xml:space="preserve"
          id="text1490"
-         style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;white-space:pre;shape-inside:url(#rect1498-4);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+         style="fill:currentColor;color:currentColor;line-height:1.15;text-align:center;white-space:pre;shape-inside:url(#rect1498-4);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
          transform="translate(139.78125,106.89269)"
          x="44.10791"
          y="0"><tspan
@@ -3760,25 +3760,25 @@
        transform="translate(10.5,-331.86218)"
        style="display:inline">
       <rect
-         style="color:#000000;overflow:visible;fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         style="color:currentColor;overflow:visible;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
          id="rect1500"
          width="30"
          height="30"
          x="200"
          y="652.36218"
-         rx="5"
-         ry="5" />
+         
+          />
       <text
          xml:space="preserve"
          id="text1504"
-         style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;white-space:pre;shape-inside:url(#rect1524-1);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+         style="fill:currentColor;color:currentColor;line-height:1.15;text-align:center;white-space:pre;shape-inside:url(#rect1524-1);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
          transform="translate(139.78125,106.89269)"
          x="44.10791"
          y="0"><tspan
            x="70.550781"
            y="565.9734"
            id="tspan3474"><tspan
-             style="text-anchor:middle"
+             style="fill:currentColor;text-anchor:middle"
              id="tspan3472">0</tspan></tspan></text>
     </g>
     <g
@@ -3786,18 +3786,18 @@
        transform="translate(70.5,-331.86218)"
        style="display:inline">
       <rect
-         style="color:#000000;overflow:visible;fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         style="color:currentColor;overflow:visible;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
          id="rect1508"
          width="30"
          height="30"
          x="200"
          y="652.36218"
-         rx="5"
-         ry="5" />
+         
+          />
       <text
          xml:space="preserve"
          id="text1512"
-         style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;white-space:pre;shape-inside:url(#rect1526-8);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+         style="fill:currentColor;color:currentColor;line-height:1.15;text-align:center;white-space:pre;shape-inside:url(#rect1526-8);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
          transform="translate(139.78125,106.89269)"
          x="44.10791"
          y="0"><tspan
@@ -3810,18 +3810,18 @@
        transform="translate(130.5,-331.86218)"
        style="display:inline">
       <rect
-         style="color:#000000;overflow:visible;fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         style="color:currentColor;overflow:visible;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
          id="rect1516"
          width="30"
          height="30"
          x="200"
          y="652.36218"
-         rx="5"
-         ry="5" />
+         
+          />
       <text
          xml:space="preserve"
          id="text1520"
-         style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;white-space:pre;shape-inside:url(#rect1528-5);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+         style="fill:currentColor;color:currentColor;line-height:1.15;text-align:center;white-space:pre;shape-inside:url(#rect1528-5);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
          transform="translate(139.78125,106.89269)"
          x="44.10791"
          y="0"><tspan
@@ -3986,25 +3986,25 @@
        transform="translate(10.5,-291.86218)"
        style="display:inline">
       <rect
-         style="color:#000000;overflow:visible;fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         style="color:currentColor;overflow:visible;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
          id="rect1530"
          width="30"
          height="30"
          x="200"
          y="652.36218"
-         rx="5"
-         ry="5" />
+         
+          />
       <text
          xml:space="preserve"
          id="text1534"
-         style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;white-space:pre;shape-inside:url(#rect1554-8);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+         style="fill:currentColor;color:currentColor;line-height:1.15;text-align:center;white-space:pre;shape-inside:url(#rect1554-8);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
          transform="translate(139.78125,106.89269)"
          x="44.10791"
          y="0"><tspan
            x="70.550781"
            y="565.9734"
            id="tspan3482"><tspan
-             style="text-anchor:middle"
+             style="fill:currentColor;text-anchor:middle"
              id="tspan3480">1</tspan></tspan></text>
     </g>
     <g
@@ -4012,25 +4012,25 @@
        transform="translate(70.5,-291.86218)"
        style="display:inline">
       <rect
-         style="color:#000000;overflow:visible;fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         style="color:currentColor;overflow:visible;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
          id="rect1538"
          width="30"
          height="30"
          x="200"
          y="652.36218"
-         rx="5"
-         ry="5" />
+         
+          />
       <text
          xml:space="preserve"
          id="text1542"
-         style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;white-space:pre;shape-inside:url(#rect1556-8);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+         style="fill:currentColor;color:currentColor;line-height:1.15;text-align:center;white-space:pre;shape-inside:url(#rect1556-8);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
          transform="translate(139.78125,106.89269)"
          x="44.10791"
          y="0"><tspan
            x="70.550781"
            y="565.9734"
            id="tspan3486"><tspan
-             style="text-anchor:middle"
+             style="fill:currentColor;text-anchor:middle"
              id="tspan3484">0</tspan></tspan></text>
     </g>
     <g
@@ -4038,25 +4038,25 @@
        transform="translate(130.5,-291.86218)"
        style="display:inline">
       <rect
-         style="color:#000000;overflow:visible;fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         style="color:currentColor;overflow:visible;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
          id="rect1546"
          width="30"
          height="30"
          x="200"
          y="652.36218"
-         rx="5"
-         ry="5" />
+         
+          />
       <text
          xml:space="preserve"
          id="text1550"
-         style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;white-space:pre;shape-inside:url(#rect1558-9);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+         style="fill:currentColor;color:currentColor;line-height:1.15;text-align:center;white-space:pre;shape-inside:url(#rect1558-9);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
          transform="translate(139.78125,106.89269)"
          x="44.10791"
          y="0"><tspan
            x="70.550781"
            y="565.9734"
            id="tspan3490"><tspan
-             style="text-anchor:middle"
+             style="fill:currentColor;text-anchor:middle"
              id="tspan3488">0</tspan></tspan></text>
     </g>
     <g
@@ -4218,7 +4218,7 @@
       <text
          xml:space="preserve"
          id="text1598"
-         style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:start;white-space:pre;shape-inside:url(#rect1646-4);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+         style="fill:currentColor;color:currentColor;line-height:1.15;text-align:start;white-space:pre;shape-inside:url(#rect1646-4);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
          transform="translate(439.96462,156.02941)"
          x="-15.411621"
          y="0"><tspan
@@ -4228,7 +4228,7 @@
       <text
          xml:space="preserve"
          id="text1602"
-         style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:start;white-space:pre;shape-inside:url(#rect1648-3);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+         style="fill:currentColor;color:currentColor;line-height:1.15;text-align:start;white-space:pre;shape-inside:url(#rect1648-3);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
          transform="translate(439.96462,196.02941)"
          x="-15.411621"
          y="0"><tspan
@@ -4238,7 +4238,7 @@
       <text
          xml:space="preserve"
          id="text1606"
-         style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:start;white-space:pre;shape-inside:url(#rect1650-0);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+         style="fill:currentColor;color:currentColor;line-height:1.15;text-align:start;white-space:pre;shape-inside:url(#rect1650-0);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
          transform="translate(439.96462,237.39659)"
          x="-15.411621"
          y="0"><tspan
@@ -4248,7 +4248,7 @@
       <text
          xml:space="preserve"
          id="text1610"
-         style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:start;white-space:pre;shape-inside:url(#rect1652-3);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+         style="fill:currentColor;color:currentColor;line-height:1.15;text-align:start;white-space:pre;shape-inside:url(#rect1652-3);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
          transform="translate(439.96462,277.3966)"
          x="-15.411621"
          y="0"><tspan
@@ -4259,43 +4259,43 @@
          id="g1618"
          transform="translate(410.49978,50.499998)">
         <rect
-           style="color:#000000;overflow:visible;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           style="color:currentColor;overflow:visible;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
            id="rect1612"
            width="60"
            height="30"
            x="200"
            y="652.36218"
-           rx="5"
-           ry="5" />
+           
+            />
         <text
            xml:space="preserve"
            id="text1616"
-           style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;white-space:pre;shape-inside:url(#rect1654-0);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+           style="fill:currentColor;color:currentColor;line-height:1.15;text-align:center;white-space:pre;shape-inside:url(#rect1654-0);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
            transform="translate(155.50391,106.89269)"
            x="44.10791"
            y="0"><tspan
              x="60.765625"
              y="565.9734"
              id="tspan3502"><tspan
-               style="text-anchor:middle"
+               style="fill:currentColor;text-anchor:middle"
                id="tspan3500">Ann</tspan></tspan></text>
       </g>
       <g
          id="g1626"
          transform="translate(410.49978,90.499997)">
         <rect
-           style="color:#000000;overflow:visible;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           style="color:currentColor;overflow:visible;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
            id="rect1620"
            width="60"
            height="30"
            x="200"
            y="652.36218"
-           rx="5"
-           ry="5" />
+           
+            />
         <text
            xml:space="preserve"
            id="text1624"
-           style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;white-space:pre;shape-inside:url(#rect1656-9);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+           style="fill:currentColor;color:currentColor;line-height:1.15;text-align:center;white-space:pre;shape-inside:url(#rect1656-9);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
            transform="translate(154.86328,106.89269)"
            x="44.10791"
            y="0"><tspan
@@ -4307,18 +4307,18 @@
          id="g1634"
          transform="translate(410.49978,130.5)">
         <rect
-           style="color:#000000;overflow:visible;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           style="color:currentColor;overflow:visible;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
            id="rect1628"
            width="60"
            height="30"
            x="200"
            y="652.36218"
-           rx="5"
-           ry="5" />
+           
+            />
         <text
            xml:space="preserve"
            id="text1632"
-           style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;white-space:pre;shape-inside:url(#rect1658-2);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+           style="fill:currentColor;color:currentColor;line-height:1.15;text-align:center;white-space:pre;shape-inside:url(#rect1658-2);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
            transform="translate(155.12891,106.89269)"
            x="44.10791"
            y="0"><tspan
@@ -4330,25 +4330,25 @@
          id="g1642"
          transform="translate(410.49978,170.5)">
         <rect
-           style="color:#000000;overflow:visible;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           style="color:currentColor;overflow:visible;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
            id="rect1636"
            width="60"
            height="30"
            x="200"
            y="652.36218"
-           rx="5"
-           ry="5" />
+           
+            />
         <text
            xml:space="preserve"
            id="text1640"
-           style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;white-space:pre;shape-inside:url(#rect1660-5);display:inline;overflow:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+           style="fill:currentColor;color:currentColor;line-height:1.15;text-align:center;white-space:pre;shape-inside:url(#rect1660-5);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
            transform="translate(155.50391,106.89269)"
            x="44.10791"
            y="0"><tspan
              x="60.765625"
              y="565.9734"
              id="tspan3510"><tspan
-               style="text-anchor:middle"
+               style="fill:currentColor;text-anchor:middle"
                id="tspan3508">Ann</tspan></tspan></text>
       </g>
       <g
@@ -4665,31 +4665,31 @@
     <text
        xml:space="preserve"
        id="text1775"
-       style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;white-space:pre;shape-inside:url(#rect1777-1-6);display:inline;overflow:visible;fill:#ce5c00;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+       style="fill:currentColor;color:currentColor;line-height:1.15;text-align:center;white-space:pre;shape-inside:url(#rect1777-1-6);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
        transform="translate(180.50391,-305.15308)"
        x="44.10791"
        y="0"><tspan
          x="70.328125"
          y="565.9734"
          id="tspan3514"><tspan
-           style="text-anchor:middle"
+           style="fill:currentColor;text-anchor:middle"
            id="tspan3512">+</tspan></tspan></text>
     <text
        xml:space="preserve"
        id="text1819"
-       style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;white-space:pre;shape-inside:url(#rect1821-9-9);display:inline;overflow:visible;fill:#ce5c00;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+       style="fill:currentColor;color:currentColor;line-height:1.15;text-align:center;white-space:pre;shape-inside:url(#rect1821-9-9);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
        transform="translate(240.50391,-305.15308)"
        x="44.10791"
        y="0"><tspan
          x="70.328125"
          y="565.9734"
          id="tspan3518"><tspan
-           style="text-anchor:middle"
+           style="fill:currentColor;text-anchor:middle"
            id="tspan3516">+</tspan></tspan></text>
     <text
        xml:space="preserve"
        id="text1841"
-       style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:start;white-space:pre;shape-inside:url(#rect1845-7-4);display:inline;overflow:visible;fill:#ce5c00;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+       style="fill:currentColor;color:currentColor;line-height:1.15;text-align:start;white-space:pre;shape-inside:url(#rect1845-7-4);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
        transform="translate(370.83204,-305.15308)"
        x="33.54541"
        y="0"><tspan
@@ -4699,31 +4699,31 @@
     <text
        xml:space="preserve"
        id="text2005"
-       style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;white-space:pre;shape-inside:url(#rect2015-3-4);display:inline;overflow:visible;fill:#ce5c00;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+       style="fill:currentColor;color:currentColor;line-height:1.15;text-align:center;white-space:pre;shape-inside:url(#rect2015-3-4);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
        transform="translate(180.50391,-265.15259)"
        x="44.10791"
        y="0"><tspan
          x="70.328125"
          y="565.9734"
          id="tspan3524"><tspan
-           style="text-anchor:middle"
+           style="fill:currentColor;text-anchor:middle"
            id="tspan3522">+</tspan></tspan></text>
     <text
        xml:space="preserve"
        id="text2009"
-       style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;white-space:pre;shape-inside:url(#rect2017-8-2);display:inline;overflow:visible;fill:#ce5c00;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+       style="fill:currentColor;color:currentColor;line-height:1.15;text-align:center;white-space:pre;shape-inside:url(#rect2017-8-2);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
        transform="translate(240.50391,-265.15259)"
        x="44.10791"
        y="0"><tspan
          x="70.328125"
          y="565.9734"
          id="tspan3528"><tspan
-           style="text-anchor:middle"
+           style="fill:currentColor;text-anchor:middle"
            id="tspan3526">+</tspan></tspan></text>
     <text
        xml:space="preserve"
        id="text2013"
-       style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:start;white-space:pre;shape-inside:url(#rect2019-6-5);display:inline;overflow:visible;fill:#ce5c00;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+       style="fill:currentColor;color:currentColor;line-height:1.15;text-align:start;white-space:pre;shape-inside:url(#rect2019-6-5);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
        transform="translate(370.83204,-265.15259)"
        x="33.54541"
        y="0"><tspan
@@ -4733,31 +4733,31 @@
     <text
        xml:space="preserve"
        id="text2023"
-       style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;white-space:pre;shape-inside:url(#rect2033-0-9);display:inline;overflow:visible;fill:#ce5c00;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+       style="fill:currentColor;color:currentColor;line-height:1.15;text-align:center;white-space:pre;shape-inside:url(#rect2033-0-9);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
        transform="translate(180.50391,-225.15259)"
        x="44.10791"
        y="0"><tspan
          x="70.328125"
          y="565.9734"
          id="tspan3534"><tspan
-           style="text-anchor:middle"
+           style="fill:currentColor;text-anchor:middle"
            id="tspan3532">+</tspan></tspan></text>
     <text
        xml:space="preserve"
        id="text2027"
-       style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;white-space:pre;shape-inside:url(#rect2035-4-2);display:inline;overflow:visible;fill:#ce5c00;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+       style="fill:currentColor;color:currentColor;line-height:1.15;text-align:center;white-space:pre;shape-inside:url(#rect2035-4-2);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
        transform="translate(240.50391,-225.15259)"
        x="44.10791"
        y="0"><tspan
          x="70.328125"
          y="565.9734"
          id="tspan3538"><tspan
-           style="text-anchor:middle"
+           style="fill:currentColor;text-anchor:middle"
            id="tspan3536">+</tspan></tspan></text>
     <text
        xml:space="preserve"
        id="text2031"
-       style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:start;white-space:pre;shape-inside:url(#rect2037-8-7);display:inline;overflow:visible;fill:#ce5c00;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+       style="fill:currentColor;color:currentColor;line-height:1.15;text-align:start;white-space:pre;shape-inside:url(#rect2037-8-7);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
        transform="translate(370.83204,-225.15259)"
        x="33.54541"
        y="0"><tspan
@@ -4767,31 +4767,31 @@
     <text
        xml:space="preserve"
        id="text2041"
-       style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;white-space:pre;shape-inside:url(#rect2051-7-5);display:inline;overflow:visible;fill:#ce5c00;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+       style="fill:currentColor;color:currentColor;line-height:1.15;text-align:center;white-space:pre;shape-inside:url(#rect2051-7-5);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
        transform="translate(180.50391,-185.15259)"
        x="44.10791"
        y="0"><tspan
          x="70.328125"
          y="565.9734"
          id="tspan3544"><tspan
-           style="text-anchor:middle"
+           style="fill:currentColor;text-anchor:middle"
            id="tspan3542">+</tspan></tspan></text>
     <text
        xml:space="preserve"
        id="text2045"
-       style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;white-space:pre;shape-inside:url(#rect2053-7-4);display:inline;overflow:visible;fill:#ce5c00;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+       style="fill:currentColor;color:currentColor;line-height:1.15;text-align:center;white-space:pre;shape-inside:url(#rect2053-7-4);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
        transform="translate(240.50391,-185.15259)"
        x="44.10791"
        y="0"><tspan
          x="70.328125"
          y="565.9734"
          id="tspan3548"><tspan
-           style="text-anchor:middle"
+           style="fill:currentColor;text-anchor:middle"
            id="tspan3546">+</tspan></tspan></text>
     <text
        xml:space="preserve"
        id="text2049"
-       style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:start;white-space:pre;shape-inside:url(#rect2055-6-7);display:inline;overflow:visible;fill:#ce5c00;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+       style="fill:currentColor;color:currentColor;line-height:1.15;text-align:start;white-space:pre;shape-inside:url(#rect2055-6-7);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
        transform="translate(370.83204,-185.15259)"
        x="33.54541"
        y="0"><tspan
@@ -4801,20 +4801,20 @@
     <text
        xml:space="preserve"
        id="text3089"
-       style="color:#000000;font-size:16px;line-height:1.15;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;white-space:pre;shape-inside:url(#rect3091-4-0);display:inline;overflow:visible;fill:#ce5c00;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
+       style="fill:currentColor;color:currentColor;line-height:1.15;text-align:center;white-space:pre;shape-inside:url(#rect3091-4-0);display:inline;overflow:visible;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round"
        transform="translate(24.558594,-153.37965)"
        x="152.104"
        y="0"><tspan
          x="62.832031"
          y="565.9734"
          id="tspan3554"><tspan
-           style="text-anchor:middle"
+           style="fill:currentColor;text-anchor:middle"
            id="tspan3552">Housekeeping: hard constraints
 </tspan></tspan><tspan
          x="29.484375"
          y="584.37342"
          id="tspan3558"><tspan
-           style="text-anchor:middle"
+           style="fill:currentColor;text-anchor:middle"
            id="tspan3556">to enforce exactly one employee per shift</tspan></tspan></text>
   </g>
   <g
@@ -4830,7 +4830,7 @@
          transform="matrix(1.3213914,0,0,1.32,-370.41635,767.7727)"
          xml:space="preserve"
          id="flowRoot8574"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
+         style="fill:currentColor;line-height:0.01%;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
            id="flowRegion8576"
            style="stroke-width:0.757177"><rect
              id="rect8578"
@@ -4838,44 +4838,44 @@
              height="19.999992"
              x="340"
              y="150.00014"
-             style="font-size:12px;text-align:start;text-anchor:start;stroke-width:0.757177" /></flowRegion><flowPara
+             style="fill:currentColor;text-align:start;text-anchor:start;stroke-width:0.757177" /></flowRegion><flowPara
            style="font-size:12px;line-height:1.25;text-align:start;text-anchor:start;stroke-width:0.757177"
            id="flowPara8580">200</flowPara></flowRoot>
       <flowRoot
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Mono';-inkscape-font-specification:'Courier New';text-align:end;writing-mode:lr-tb;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"
+         style="fill:currentColor;line-height:0.01%;text-align:end;writing-mode:lr-tb;text-anchor:end;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"
          id="flowRoot8582"
          xml:space="preserve"
          transform="matrix(1.3213914,0,0,1.32,-335.19898,767.7727)"><flowRegion
            id="flowRegion8584"
            style="stroke-width:0.757177"><rect
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:'Liberation Mono';-inkscape-font-specification:'Courier New';text-align:end;text-anchor:end;stroke-width:0.757177"
+             style="fill:currentColor;text-align:end;text-anchor:end;stroke-width:0.757177"
              y="150.00014"
              x="340"
              height="19.999992"
              width="170"
              id="rect8586" /></flowRegion><flowPara
            id="flowPara8588"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:1.25;font-family:'Liberation Mono';-inkscape-font-specification:'Courier New';text-align:end;text-anchor:end;stroke-width:0.757177">2000</flowPara></flowRoot>
+           style="fill:currentColor;line-height:1.25;text-align:end;text-anchor:end;stroke-width:0.757177">2000</flowPara></flowRoot>
       <flowRoot
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"
+         style="fill:currentColor;line-height:0.01%;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"
          id="flowRoot8592"
          xml:space="preserve"
          transform="matrix(1.3213914,0,0,1.32,-379.23509,787.5721)"><flowRegion
            id="flowRegion8594"
            style="stroke-width:0.757177"><rect
-             style="font-size:12px;text-align:start;text-anchor:start;stroke-width:0.757177"
+             style="fill:currentColor;text-align:start;text-anchor:start;stroke-width:0.757177"
              y="150.00014"
              x="340"
              height="19.999992"
              width="150"
              id="rect8596" /></flowRegion><flowPara
            id="flowPara8598"
-           style="font-size:12px;line-height:1.25;text-align:start;text-anchor:start;stroke-width:0.757177">2000</flowPara></flowRoot>
+           style="fill:currentColor;line-height:1.25;text-align:start;text-anchor:start;stroke-width:0.757177">2000</flowPara></flowRoot>
       <flowRoot
          transform="matrix(1.3213914,0,0,1.32,-335.19898,787.5721)"
          xml:space="preserve"
          id="flowRoot8600"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Mono';-inkscape-font-specification:'Courier New';text-align:end;writing-mode:lr-tb;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
+         style="fill:currentColor;line-height:0.01%;text-align:end;writing-mode:lr-tb;text-anchor:end;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
            id="flowRegion8602"
            style="stroke-width:0.757177"><rect
              id="rect8604"
@@ -4883,29 +4883,29 @@
              height="19.999992"
              x="340"
              y="150.00014"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:'Liberation Mono';-inkscape-font-specification:'Courier New';text-align:end;text-anchor:end;stroke-width:0.757177" /></flowRegion><flowPara
+             style="fill:currentColor;text-align:end;text-anchor:end;stroke-width:0.757177" /></flowRegion><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:1.25;font-family:'Liberation Mono';-inkscape-font-specification:'Courier New';text-align:end;text-anchor:end;stroke-width:0.757177"
            id="flowPara8606">200000</flowPara></flowRoot>
       <flowRoot
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"
+         style="fill:currentColor;line-height:0.01%;text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"
          id="flowRoot8610"
          xml:space="preserve"
          transform="matrix(1.3213914,0,0,1.32,-372.27328,721.57205)"><flowRegion
            id="flowRegion8612"
            style="stroke-width:0.757177"><rect
-             style="font-size:12px;text-align:center;text-anchor:middle;stroke-width:0.757177"
+             style="fill:currentColor;text-align:center;text-anchor:middle;stroke-width:0.757177"
              y="150.0004"
              x="310"
              height="20.000004"
              width="70"
              id="rect8614" /></flowRegion><flowPara
            id="flowPara8616"
-           style="font-size:12px;line-height:1.25;text-align:center;text-anchor:middle;stroke-width:0.757177"># shifts</flowPara></flowRoot>
+           style="fill:currentColor;line-height:1.25;text-align:center;text-anchor:middle;stroke-width:0.757177"># shifts</flowPara></flowRoot>
       <flowRoot
          transform="matrix(1.3213914,0,0,1.32,-360.15186,721.57205)"
          xml:space="preserve"
          id="flowRoot8618"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
+         style="fill:currentColor;line-height:0.01%;text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
            id="flowRegion8620"
            style="stroke-width:0.757177"><rect
              id="rect8622"
@@ -4913,7 +4913,7 @@
              height="19.999979"
              x="460"
              y="150.0004"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:center;text-anchor:middle;stroke-width:0.757177" /></flowRegion><flowPara
+             style="fill:currentColor;text-align:center;text-anchor:middle;stroke-width:0.757177" /></flowRegion><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:center;text-anchor:middle;stroke-width:0.757177"
            id="flowPara8624">memory use</flowPara></flowRoot>
       <path
@@ -4921,12 +4921,12 @@
          inkscape:connector-curvature="0"
          id="path8626"
          d="M 48.004834,940.69264 H 351.92485"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+         style="color:currentColor;display:inline;overflow:visible;visibility:visible;fill:none;stroke:currentColor;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
       <flowRoot
          transform="matrix(1.3213914,0,0,1.32,-388.05384,807.3721)"
          xml:space="preserve"
          id="flowRoot8628"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
+         style="fill:currentColor;line-height:0.01%;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
            id="flowRegion8630"
            style="stroke-width:0.757177"><rect
              id="rect8632"
@@ -4934,44 +4934,44 @@
              height="19.999992"
              x="340"
              y="150.00014"
-             style="font-size:12px;text-align:start;text-anchor:start;stroke-width:0.757177" /></flowRegion><flowPara
+             style="fill:currentColor;text-align:start;text-anchor:start;stroke-width:0.757177" /></flowRegion><flowPara
            style="font-size:12px;line-height:1.25;text-align:start;text-anchor:start;stroke-width:0.757177"
            id="flowPara8634">20000</flowPara></flowRoot>
       <flowRoot
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Mono';-inkscape-font-specification:'Courier New';text-align:end;writing-mode:lr-tb;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"
+         style="fill:currentColor;line-height:0.01%;text-align:end;writing-mode:lr-tb;text-anchor:end;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"
          id="flowRoot8636"
          xml:space="preserve"
          transform="matrix(1.3213914,0,0,1.32,-335.19898,807.3721)"><flowRegion
            id="flowRegion8638"
            style="stroke-width:0.757177"><rect
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:'Liberation Mono';-inkscape-font-specification:'Courier New';text-align:end;text-anchor:end;stroke-width:0.757177"
+             style="fill:currentColor;text-align:end;text-anchor:end;stroke-width:0.757177"
              y="150.00014"
              x="340"
              height="19.999992"
              width="170"
              id="rect8640" /></flowRegion><flowPara
            id="flowPara8642"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:1.25;font-family:'Liberation Mono';-inkscape-font-specification:'Courier New';text-align:end;text-anchor:end;stroke-width:0.757177">20000000</flowPara></flowRoot>
+           style="fill:currentColor;line-height:1.25;text-align:end;text-anchor:end;stroke-width:0.757177">20000000</flowPara></flowRoot>
       <flowRoot
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"
+         style="fill:currentColor;line-height:0.01%;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"
          id="flowRoot8646"
          xml:space="preserve"
          transform="matrix(1.3213914,0,0,1.32,-352.93372,747.97205)"><flowRegion
            id="flowRegion8648"
            style="stroke-width:0.757177"><rect
-             style="font-size:12px;text-align:start;text-anchor:start;stroke-width:0.757177"
+             style="fill:currentColor;text-align:start;text-anchor:start;stroke-width:0.757177"
              y="150.00014"
              x="340"
              height="19.999992"
              width="150"
              id="rect8650" /></flowRegion><flowPara
            id="flowPara8652"
-           style="font-size:12px;line-height:1.25;text-align:start;text-anchor:start;stroke-width:0.757177">4</flowPara></flowRoot>
+           style="fill:currentColor;line-height:1.25;text-align:start;text-anchor:start;stroke-width:0.757177">4</flowPara></flowRoot>
       <flowRoot
          transform="matrix(1.3213914,0,0,1.32,-335.19898,747.97205)"
          xml:space="preserve"
          id="flowRoot8654"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Mono';-inkscape-font-specification:'Courier New';text-align:end;writing-mode:lr-tb;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
+         style="fill:currentColor;line-height:0.01%;text-align:end;writing-mode:lr-tb;text-anchor:end;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
            id="flowRegion8656"
            style="stroke-width:0.757177"><rect
              id="rect8658"
@@ -4979,14 +4979,14 @@
              height="19.999992"
              x="340"
              y="150.00014"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:'Liberation Mono';-inkscape-font-specification:'Courier New';text-align:end;text-anchor:end;stroke-width:0.757177" /></flowRegion><flowPara
+             style="fill:currentColor;text-align:end;text-anchor:end;stroke-width:0.757177" /></flowRegion><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:1.25;font-family:'Liberation Mono';-inkscape-font-specification:'Courier New';text-align:end;text-anchor:end;stroke-width:0.757177"
            id="flowPara8660">12</flowPara></flowRoot>
       <flowRoot
          transform="matrix(1.3213914,0,0,1.32,-362.60247,721.57205)"
          xml:space="preserve"
          id="flowRoot9135"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
+         style="fill:currentColor;line-height:0.01%;text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
            id="flowRegion9137"
            style="stroke-width:0.757177"><rect
              id="rect9139"
@@ -4994,29 +4994,29 @@
              height="20.000004"
              x="379.5"
              y="150.0004"
-             style="font-size:12px;text-align:center;text-anchor:middle;stroke-width:0.757177" /></flowRegion><flowPara
+             style="fill:currentColor;text-align:center;text-anchor:middle;stroke-width:0.757177" /></flowRegion><flowPara
            style="font-size:12px;line-height:1.25;text-align:center;text-anchor:middle;stroke-width:0.757177"
            id="flowPara9141"># employees</flowPara></flowRoot>
       <flowRoot
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"
+         style="fill:currentColor;line-height:0.01%;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"
          id="flowRoot9143"
          xml:space="preserve"
          transform="matrix(1.3213914,0,0,1.32,-264.70466,767.7727)"><flowRegion
            id="flowRegion9145"
            style="stroke-width:0.757177"><rect
-             style="font-size:12px;text-align:start;text-anchor:start;stroke-width:0.757177"
+             style="fill:currentColor;text-align:start;text-anchor:start;stroke-width:0.757177"
              y="150.00014"
              x="340"
              height="19.999992"
              width="150"
              id="rect9147" /></flowRegion><flowPara
            id="flowPara9149"
-           style="font-size:12px;line-height:1.25;text-align:start;text-anchor:start;stroke-width:0.757177">10</flowPara></flowRoot>
+           style="fill:currentColor;line-height:1.25;text-align:start;text-anchor:start;stroke-width:0.757177">10</flowPara></flowRoot>
       <flowRoot
          transform="matrix(1.3213914,0,0,1.32,-273.5234,787.5721)"
          xml:space="preserve"
          id="flowRoot9151"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
+         style="fill:currentColor;line-height:0.01%;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
            id="flowRegion9153"
            style="stroke-width:0.757177"><rect
              id="rect9155"
@@ -5024,29 +5024,29 @@
              height="19.999992"
              x="340"
              y="150.00014"
-             style="font-size:12px;text-align:start;text-anchor:start;stroke-width:0.757177" /></flowRegion><flowPara
+             style="fill:currentColor;text-align:start;text-anchor:start;stroke-width:0.757177" /></flowRegion><flowPara
            style="font-size:12px;line-height:1.25;text-align:start;text-anchor:start;stroke-width:0.757177"
            id="flowPara9157">100</flowPara></flowRoot>
       <flowRoot
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"
+         style="fill:currentColor;line-height:0.01%;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"
          id="flowRoot9159"
          xml:space="preserve"
          transform="matrix(1.3213914,0,0,1.32,-282.34214,807.3721)"><flowRegion
            id="flowRegion9161"
            style="stroke-width:0.757177"><rect
-             style="font-size:12px;text-align:start;text-anchor:start;stroke-width:0.757177"
+             style="fill:currentColor;text-align:start;text-anchor:start;stroke-width:0.757177"
              y="150.00014"
              x="340"
              height="19.999992"
              width="150"
              id="rect9163" /></flowRegion><flowPara
            id="flowPara9165"
-           style="font-size:12px;line-height:1.25;text-align:start;text-anchor:start;stroke-width:0.757177">1000</flowPara></flowRoot>
+           style="fill:currentColor;line-height:1.25;text-align:start;text-anchor:start;stroke-width:0.757177">1000</flowPara></flowRoot>
       <flowRoot
          transform="matrix(1.3213914,0,0,1.32,-255.80849,747.97205)"
          xml:space="preserve"
          id="flowRoot9167"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
+         style="fill:currentColor;line-height:0.01%;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
            id="flowRegion9169"
            style="stroke-width:0.757177"><rect
              id="rect9171"
@@ -5054,14 +5054,14 @@
              height="19.999992"
              x="340"
              y="150.00014"
-             style="font-size:12px;text-align:start;text-anchor:start;stroke-width:0.757177" /></flowRegion><flowPara
+             style="fill:currentColor;text-align:start;text-anchor:start;stroke-width:0.757177" /></flowRegion><flowPara
            style="font-size:12px;line-height:1.25;text-align:start;text-anchor:start;stroke-width:0.757177"
            id="flowPara9173">3</flowPara></flowRoot>
       <flowRoot
          transform="matrix(1.3213914,0,0,1.32,-351.93495,827.1721)"
          xml:space="preserve"
          id="flowRoot3489"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
+         style="fill:currentColor;line-height:0.01%;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
            id="flowRegion3485"
            style="stroke-width:0.757177"><rect
              id="rect3483"
@@ -5069,39 +5069,39 @@
              height="19.999992"
              x="340"
              y="150.00014"
-             style="font-size:12px;text-align:start;text-anchor:start;stroke-width:0.757177" /></flowRegion><flowPara
+             style="fill:currentColor;text-align:start;text-anchor:start;stroke-width:0.757177" /></flowRegion><flowPara
            style="font-size:12px;line-height:1.25;text-align:start;text-anchor:start;stroke-width:0.757177"
            id="flowPara3487">s</flowPara></flowRoot>
       <flowRoot
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Mono';-inkscape-font-specification:'Courier New';text-align:end;writing-mode:lr-tb;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"
+         style="fill:currentColor;line-height:0.01%;text-align:end;writing-mode:lr-tb;text-anchor:end;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"
          id="flowRoot3497"
          xml:space="preserve"
          transform="matrix(1.3213914,0,0,1.32,-335.19898,827.1721)"><flowRegion
            id="flowRegion3493"
            style="stroke-width:0.757177"><rect
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:'Liberation Mono';-inkscape-font-specification:'Courier New';text-align:end;text-anchor:end;stroke-width:0.757177"
+             style="fill:currentColor;text-align:end;text-anchor:end;stroke-width:0.757177"
              y="150.00014"
              x="340"
              height="19.999992"
              width="170"
              id="rect3491" /></flowRegion><flowPara
            id="flowPara3495"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:1.25;font-family:'Liberation Mono';-inkscape-font-specification:'Courier New';text-align:end;text-anchor:end;stroke-width:0.757177">s*e</flowPara></flowRoot>
+           style="fill:currentColor;line-height:1.25;text-align:end;text-anchor:end;stroke-width:0.757177">s*e</flowPara></flowRoot>
       <flowRoot
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"
+         style="fill:currentColor;line-height:0.01%;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"
          id="flowRoot3513"
          xml:space="preserve"
          transform="matrix(1.3213914,0,0,1.32,-255.80075,827.1721)"><flowRegion
            id="flowRegion3509"
            style="stroke-width:0.757177"><rect
-             style="font-size:12px;text-align:start;text-anchor:start;stroke-width:0.757177"
+             style="fill:currentColor;text-align:start;text-anchor:start;stroke-width:0.757177"
              y="150.00014"
              x="340"
              height="19.999992"
              width="150"
              id="rect3507" /></flowRegion><flowPara
            id="flowPara3511"
-           style="font-size:12px;line-height:1.25;text-align:start;text-anchor:start;stroke-width:0.757177">e</flowPara></flowRoot>
+           style="fill:currentColor;line-height:1.25;text-align:start;text-anchor:start;stroke-width:0.757177">e</flowPara></flowRoot>
     </g>
     <g
        id="g3770"
@@ -5111,7 +5111,7 @@
          transform="matrix(1.3213914,0,0,1.32,-370.41635,767.7727)"
          xml:space="preserve"
          id="flowRoot3630"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
+         style="fill:currentColor;line-height:0.01%;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
            id="flowRegion3626"
            style="stroke-width:0.757177"><rect
              id="rect3624"
@@ -5119,44 +5119,44 @@
              height="19.999992"
              x="340"
              y="150.00014"
-             style="font-size:12px;text-align:start;text-anchor:start;stroke-width:0.757177" /></flowRegion><flowPara
+             style="fill:currentColor;text-align:start;text-anchor:start;stroke-width:0.757177" /></flowRegion><flowPara
            style="font-size:12px;line-height:1.25;text-align:start;text-anchor:start;stroke-width:0.757177"
            id="flowPara3628">200</flowPara></flowRoot>
       <flowRoot
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Mono';-inkscape-font-specification:'Courier New';text-align:end;writing-mode:lr-tb;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"
+         style="fill:currentColor;line-height:0.01%;text-align:end;writing-mode:lr-tb;text-anchor:end;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"
          id="flowRoot3638"
          xml:space="preserve"
          transform="matrix(1.3213914,0,0,1.32,-335.19898,767.7727)"><flowRegion
            id="flowRegion3634"
            style="stroke-width:0.757177"><rect
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:'Liberation Mono';-inkscape-font-specification:'Courier New';text-align:end;text-anchor:end;stroke-width:0.757177"
+             style="fill:currentColor;text-align:end;text-anchor:end;stroke-width:0.757177"
              y="150.00014"
              x="340"
              height="19.999992"
              width="170"
              id="rect3632" /></flowRegion><flowPara
            id="flowPara3636"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:1.25;font-family:'Liberation Mono';-inkscape-font-specification:'Courier New';text-align:end;text-anchor:end;stroke-width:0.757177">200</flowPara></flowRoot>
+           style="fill:currentColor;line-height:1.25;text-align:end;text-anchor:end;stroke-width:0.757177">200</flowPara></flowRoot>
       <flowRoot
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"
+         style="fill:currentColor;line-height:0.01%;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"
          id="flowRoot3646"
          xml:space="preserve"
          transform="matrix(1.3213914,0,0,1.32,-379.23509,787.5721)"><flowRegion
            id="flowRegion3642"
            style="stroke-width:0.757177"><rect
-             style="font-size:12px;text-align:start;text-anchor:start;stroke-width:0.757177"
+             style="fill:currentColor;text-align:start;text-anchor:start;stroke-width:0.757177"
              y="150.00014"
              x="340"
              height="19.999992"
              width="150"
              id="rect3640" /></flowRegion><flowPara
            id="flowPara3644"
-           style="font-size:12px;line-height:1.25;text-align:start;text-anchor:start;stroke-width:0.757177">2000</flowPara></flowRoot>
+           style="fill:currentColor;line-height:1.25;text-align:start;text-anchor:start;stroke-width:0.757177">2000</flowPara></flowRoot>
       <flowRoot
          transform="matrix(1.3213914,0,0,1.32,-335.19898,787.5721)"
          xml:space="preserve"
          id="flowRoot3654"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Mono';-inkscape-font-specification:'Courier New';text-align:end;writing-mode:lr-tb;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
+         style="fill:currentColor;line-height:0.01%;text-align:end;writing-mode:lr-tb;text-anchor:end;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
            id="flowRegion3650"
            style="stroke-width:0.757177"><rect
              id="rect3648"
@@ -5164,29 +5164,29 @@
              height="19.999992"
              x="340"
              y="150.00014"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:'Liberation Mono';-inkscape-font-specification:'Courier New';text-align:end;text-anchor:end;stroke-width:0.757177" /></flowRegion><flowPara
+             style="fill:currentColor;text-align:end;text-anchor:end;stroke-width:0.757177" /></flowRegion><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:1.25;font-family:'Liberation Mono';-inkscape-font-specification:'Courier New';text-align:end;text-anchor:end;stroke-width:0.757177"
            id="flowPara3652">2000</flowPara></flowRoot>
       <flowRoot
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"
+         style="fill:currentColor;line-height:0.01%;text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"
          id="flowRoot3662"
          xml:space="preserve"
          transform="matrix(1.3213914,0,0,1.32,-372.27328,721.57205)"><flowRegion
            id="flowRegion3658"
            style="stroke-width:0.757177"><rect
-             style="font-size:12px;text-align:center;text-anchor:middle;stroke-width:0.757177"
+             style="fill:currentColor;text-align:center;text-anchor:middle;stroke-width:0.757177"
              y="150.0004"
              x="310"
              height="20.000004"
              width="70"
              id="rect3656" /></flowRegion><flowPara
            id="flowPara3660"
-           style="font-size:12px;line-height:1.25;text-align:center;text-anchor:middle;stroke-width:0.757177"># shifts</flowPara></flowRoot>
+           style="fill:currentColor;line-height:1.25;text-align:center;text-anchor:middle;stroke-width:0.757177"># shifts</flowPara></flowRoot>
       <flowRoot
          transform="matrix(1.3213914,0,0,1.32,-360.15186,721.57205)"
          xml:space="preserve"
          id="flowRoot3670"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
+         style="fill:currentColor;line-height:0.01%;text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
            id="flowRegion3666"
            style="stroke-width:0.757177"><rect
              id="rect3664"
@@ -5194,7 +5194,7 @@
              height="19.999979"
              x="460"
              y="150.0004"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:center;text-anchor:middle;stroke-width:0.757177" /></flowRegion><flowPara
+             style="fill:currentColor;text-align:center;text-anchor:middle;stroke-width:0.757177" /></flowRegion><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:center;text-anchor:middle;stroke-width:0.757177"
            id="flowPara3668">memory use</flowPara></flowRoot>
       <path
@@ -5202,12 +5202,12 @@
          inkscape:connector-curvature="0"
          id="path3672"
          d="M 48.004834,940.69264 H 351.92485"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+         style="color:currentColor;display:inline;overflow:visible;visibility:visible;fill:none;stroke:currentColor;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
       <flowRoot
          transform="matrix(1.3213914,0,0,1.32,-388.05384,807.3721)"
          xml:space="preserve"
          id="flowRoot3680"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
+         style="fill:currentColor;line-height:0.01%;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
            id="flowRegion3676"
            style="stroke-width:0.757177"><rect
              id="rect3674"
@@ -5215,44 +5215,44 @@
              height="19.999992"
              x="340"
              y="150.00014"
-             style="font-size:12px;text-align:start;text-anchor:start;stroke-width:0.757177" /></flowRegion><flowPara
+             style="fill:currentColor;text-align:start;text-anchor:start;stroke-width:0.757177" /></flowRegion><flowPara
            style="font-size:12px;line-height:1.25;text-align:start;text-anchor:start;stroke-width:0.757177"
            id="flowPara3678">20000</flowPara></flowRoot>
       <flowRoot
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Mono';-inkscape-font-specification:'Courier New';text-align:end;writing-mode:lr-tb;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"
+         style="fill:currentColor;line-height:0.01%;text-align:end;writing-mode:lr-tb;text-anchor:end;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"
          id="flowRoot3688"
          xml:space="preserve"
          transform="matrix(1.3213914,0,0,1.32,-335.19898,807.3721)"><flowRegion
            id="flowRegion3684"
            style="stroke-width:0.757177"><rect
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:'Liberation Mono';-inkscape-font-specification:'Courier New';text-align:end;text-anchor:end;stroke-width:0.757177"
+             style="fill:currentColor;text-align:end;text-anchor:end;stroke-width:0.757177"
              y="150.00014"
              x="340"
              height="19.999992"
              width="170"
              id="rect3682" /></flowRegion><flowPara
            id="flowPara3686"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:1.25;font-family:'Liberation Mono';-inkscape-font-specification:'Courier New';text-align:end;text-anchor:end;stroke-width:0.757177">20000</flowPara></flowRoot>
+           style="fill:currentColor;line-height:1.25;text-align:end;text-anchor:end;stroke-width:0.757177">20000</flowPara></flowRoot>
       <flowRoot
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"
+         style="fill:currentColor;line-height:0.01%;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"
          id="flowRoot3696"
          xml:space="preserve"
          transform="matrix(1.3213914,0,0,1.32,-352.93372,747.97205)"><flowRegion
            id="flowRegion3692"
            style="stroke-width:0.757177"><rect
-             style="font-size:12px;text-align:start;text-anchor:start;stroke-width:0.757177"
+             style="fill:currentColor;text-align:start;text-anchor:start;stroke-width:0.757177"
              y="150.00014"
              x="340"
              height="19.999992"
              width="150"
              id="rect3690" /></flowRegion><flowPara
            id="flowPara3694"
-           style="font-size:12px;line-height:1.25;text-align:start;text-anchor:start;stroke-width:0.757177">4</flowPara></flowRoot>
+           style="fill:currentColor;line-height:1.25;text-align:start;text-anchor:start;stroke-width:0.757177">4</flowPara></flowRoot>
       <flowRoot
          transform="matrix(1.3213914,0,0,1.32,-335.19898,747.97205)"
          xml:space="preserve"
          id="flowRoot3704"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Mono';-inkscape-font-specification:'Courier New';text-align:end;writing-mode:lr-tb;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
+         style="fill:currentColor;line-height:0.01%;text-align:end;writing-mode:lr-tb;text-anchor:end;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
            id="flowRegion3700"
            style="stroke-width:0.757177"><rect
              id="rect3698"
@@ -5260,14 +5260,14 @@
              height="19.999992"
              x="340"
              y="150.00014"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:'Liberation Mono';-inkscape-font-specification:'Courier New';text-align:end;text-anchor:end;stroke-width:0.757177" /></flowRegion><flowPara
+             style="fill:currentColor;text-align:end;text-anchor:end;stroke-width:0.757177" /></flowRegion><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:1.25;font-family:'Liberation Mono';-inkscape-font-specification:'Courier New';text-align:end;text-anchor:end;stroke-width:0.757177"
            id="flowPara3702">4</flowPara></flowRoot>
       <flowRoot
          transform="matrix(1.3213914,0,0,1.32,-362.60247,721.57205)"
          xml:space="preserve"
          id="flowRoot3712"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
+         style="fill:currentColor;line-height:0.01%;text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
            id="flowRegion3708"
            style="stroke-width:0.757177"><rect
              id="rect3706"
@@ -5275,29 +5275,29 @@
              height="20.000004"
              x="379.5"
              y="150.0004"
-             style="font-size:12px;text-align:center;text-anchor:middle;stroke-width:0.757177" /></flowRegion><flowPara
+             style="fill:currentColor;text-align:center;text-anchor:middle;stroke-width:0.757177" /></flowRegion><flowPara
            style="font-size:12px;line-height:1.25;text-align:center;text-anchor:middle;stroke-width:0.757177"
            id="flowPara3710"># employees</flowPara></flowRoot>
       <flowRoot
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"
+         style="fill:currentColor;line-height:0.01%;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"
          id="flowRoot3720"
          xml:space="preserve"
          transform="matrix(1.3213914,0,0,1.32,-264.70466,767.7727)"><flowRegion
            id="flowRegion3716"
            style="stroke-width:0.757177"><rect
-             style="font-size:12px;text-align:start;text-anchor:start;stroke-width:0.757177"
+             style="fill:currentColor;text-align:start;text-anchor:start;stroke-width:0.757177"
              y="150.00014"
              x="340"
              height="19.999992"
              width="150"
              id="rect3714" /></flowRegion><flowPara
            id="flowPara3718"
-           style="font-size:12px;line-height:1.25;text-align:start;text-anchor:start;stroke-width:0.757177">10</flowPara></flowRoot>
+           style="fill:currentColor;line-height:1.25;text-align:start;text-anchor:start;stroke-width:0.757177">10</flowPara></flowRoot>
       <flowRoot
          transform="matrix(1.3213914,0,0,1.32,-273.5234,787.5721)"
          xml:space="preserve"
          id="flowRoot3728"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
+         style="fill:currentColor;line-height:0.01%;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
            id="flowRegion3724"
            style="stroke-width:0.757177"><rect
              id="rect3722"
@@ -5305,29 +5305,29 @@
              height="19.999992"
              x="340"
              y="150.00014"
-             style="font-size:12px;text-align:start;text-anchor:start;stroke-width:0.757177" /></flowRegion><flowPara
+             style="fill:currentColor;text-align:start;text-anchor:start;stroke-width:0.757177" /></flowRegion><flowPara
            style="font-size:12px;line-height:1.25;text-align:start;text-anchor:start;stroke-width:0.757177"
            id="flowPara3726">100</flowPara></flowRoot>
       <flowRoot
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"
+         style="fill:currentColor;line-height:0.01%;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"
          id="flowRoot3736"
          xml:space="preserve"
          transform="matrix(1.3213914,0,0,1.32,-282.34214,807.3721)"><flowRegion
            id="flowRegion3732"
            style="stroke-width:0.757177"><rect
-             style="font-size:12px;text-align:start;text-anchor:start;stroke-width:0.757177"
+             style="fill:currentColor;text-align:start;text-anchor:start;stroke-width:0.757177"
              y="150.00014"
              x="340"
              height="19.999992"
              width="150"
              id="rect3730" /></flowRegion><flowPara
            id="flowPara3734"
-           style="font-size:12px;line-height:1.25;text-align:start;text-anchor:start;stroke-width:0.757177">1000</flowPara></flowRoot>
+           style="fill:currentColor;line-height:1.25;text-align:start;text-anchor:start;stroke-width:0.757177">1000</flowPara></flowRoot>
       <flowRoot
          transform="matrix(1.3213914,0,0,1.32,-255.80849,747.97205)"
          xml:space="preserve"
          id="flowRoot3744"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
+         style="fill:currentColor;line-height:0.01%;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
            id="flowRegion3740"
            style="stroke-width:0.757177"><rect
              id="rect3738"
@@ -5335,14 +5335,14 @@
              height="19.999992"
              x="340"
              y="150.00014"
-             style="font-size:12px;text-align:start;text-anchor:start;stroke-width:0.757177" /></flowRegion><flowPara
+             style="fill:currentColor;text-align:start;text-anchor:start;stroke-width:0.757177" /></flowRegion><flowPara
            style="font-size:12px;line-height:1.25;text-align:start;text-anchor:start;stroke-width:0.757177"
            id="flowPara3742">3</flowPara></flowRoot>
       <flowRoot
          transform="matrix(1.3213914,0,0,1.32,-351.93495,827.1721)"
          xml:space="preserve"
          id="flowRoot3752"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
+         style="fill:currentColor;line-height:0.01%;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"><flowRegion
            id="flowRegion3748"
            style="stroke-width:0.757177"><rect
              id="rect3746"
@@ -5350,39 +5350,39 @@
              height="19.999992"
              x="340"
              y="150.00014"
-             style="font-size:12px;text-align:start;text-anchor:start;stroke-width:0.757177" /></flowRegion><flowPara
+             style="fill:currentColor;text-align:start;text-anchor:start;stroke-width:0.757177" /></flowRegion><flowPara
            style="font-size:12px;line-height:1.25;text-align:start;text-anchor:start;stroke-width:0.757177"
            id="flowPara3750">s</flowPara></flowRoot>
       <flowRoot
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Mono';-inkscape-font-specification:'Courier New';text-align:end;writing-mode:lr-tb;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"
+         style="fill:currentColor;line-height:0.01%;text-align:end;writing-mode:lr-tb;text-anchor:end;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"
          id="flowRoot3760"
          xml:space="preserve"
          transform="matrix(1.3213914,0,0,1.32,-335.19898,827.1721)"><flowRegion
            id="flowRegion3756"
            style="stroke-width:0.757177"><rect
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:'Liberation Mono';-inkscape-font-specification:'Courier New';text-align:end;text-anchor:end;stroke-width:0.757177"
+             style="fill:currentColor;text-align:end;text-anchor:end;stroke-width:0.757177"
              y="150.00014"
              x="340"
              height="19.999992"
              width="170"
              id="rect3754" /></flowRegion><flowPara
            id="flowPara3758"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:1.25;font-family:'Liberation Mono';-inkscape-font-specification:'Courier New';text-align:end;text-anchor:end;stroke-width:0.757177">s</flowPara></flowRoot>
+           style="fill:currentColor;line-height:1.25;text-align:end;text-anchor:end;stroke-width:0.757177">s</flowPara></flowRoot>
       <flowRoot
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.757177"
+         style="fill:currentColor;line-height:0.01%;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill-opacity:1;stroke:none;stroke-width:0.757177"
          id="flowRoot3768"
          xml:space="preserve"
          transform="matrix(1.3213914,0,0,1.32,-255.80075,827.1721)"><flowRegion
            id="flowRegion3764"
            style="stroke-width:0.757177"><rect
-             style="font-size:12px;text-align:start;text-anchor:start;stroke-width:0.757177"
+             style="fill:currentColor;text-align:start;text-anchor:start;stroke-width:0.757177"
              y="150.00014"
              x="340"
              height="19.999992"
              width="150"
              id="rect3762" /></flowRegion><flowPara
            id="flowPara3766"
-           style="font-size:12px;line-height:1.25;text-align:start;text-anchor:start;stroke-width:0.757177">e</flowPara></flowRoot>
+           style="fill:currentColor;line-height:1.25;text-align:start;text-anchor:start;stroke-width:0.757177">e</flowPara></flowRoot>
     </g>
   </g>
 </svg>

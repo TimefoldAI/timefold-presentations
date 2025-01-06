@@ -17,7 +17,7 @@
      id="defs357" />
   <sodipodi:namedview
      id="namedview357"
-     pagecolor="#ffffff"
+     pagecolor="#ffffff" rx="5" ry="5"
      bordercolor="#666666"
      borderopacity="1.0"
      inkscape:showpageshadow="2"
@@ -28,7 +28,7 @@
      inkscape:cx="799.72715"
      inkscape:cy="600"
      inkscape:current-layer="svg357"
-     inkscape:export-bgcolor="#ffffffff" />
+     inkscape:export-bgcolor="#ffffffff" /> rx="5" ry="5"
   <clipPath
      id="a">
     <circle
@@ -815,7 +815,7 @@
   <rect
      fill="none"
      height="33.19"
-     rx="16.6"
+     
      stroke="#000"
      stroke-miterlimit="10"
      stroke-width="2"
@@ -838,15 +838,15 @@
   <rect
      fill="none"
      height="33.189999"
-     rx="16.6"
-     stroke="#000000"
+     
+     stroke="currentColor"
      stroke-miterlimit="10"
      stroke-width="2"
      width="62.759998"
      x="854.26001"
      y="484.72"
      id="rect281"
-     ry="16.6" />
+      />
   <path
      d="m1058.57 505.39v2.29h-8.66c.09-.87.38-1.69.84-2.46s1.39-1.81 2.78-3.09c1.11-1.04 1.8-1.74 2.05-2.11.34-.51.51-1.01.51-1.51 0-.55-.15-.97-.44-1.27s-.7-.44-1.23-.44-.93.16-1.23.47-.48.83-.53 1.55l-2.46-.25c.15-1.36.61-2.33 1.38-2.93s1.74-.89 2.9-.89c1.27 0 2.27.34 3 1.03s1.09 1.54 1.09 2.56c0 .58-.1 1.13-.31 1.66s-.54 1.07-.99 1.65c-.3.38-.84.93-1.62 1.64s-1.27 1.19-1.48 1.42-.38.46-.5.69h4.9z"
      id="path282" />
@@ -862,7 +862,7 @@
   <rect
      fill="none"
      height="33.19"
-     rx="16.6"
+     
      stroke="#000"
      stroke-miterlimit="10"
      stroke-width="2"
@@ -885,7 +885,7 @@
   <rect
      fill="none"
      height="33.19"
-     rx="16.6"
+     
      stroke="#000"
      stroke-miterlimit="10"
      stroke-width="2"
@@ -919,7 +919,7 @@
   <path
      d="m 885.64,627.91 v -110"
      fill="none"
-     stroke="#000000"
+     stroke="currentColor"
      stroke-miterlimit="10"
      stroke-width="2"
      id="path292" />
@@ -955,7 +955,7 @@
     <rect
        fill="none"
        height="33.19"
-       rx="16.6"
+       
        stroke-miterlimit="10"
        stroke-width="2"
        width="62.82"
@@ -1020,7 +1020,7 @@
   </g>
   <text
      xml:space="preserve"
-     style="font-size:20px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;white-space:pre;shape-inside:url(#rect2949);display:inline;fill:#000000;stroke:none;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+     style="fill:currentColor;line-height:1.25;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-color:currentColor;white-space:pre;shape-inside:url(#rect2949);display:inline;stroke:none;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;-inkscape-stroke:none;stop-color:currentColor"
      x="315.767"
      y="410.09171"
      id="text357"
@@ -1028,108 +1028,108 @@
        x="0"
        y="0"
        id="tspan2"><tspan
-         style="font-weight:bold"
+         style="fill:currentColor;font-weight:bold"
          id="tspan1">Geoffrey&#10;</tspan></tspan><tspan
        x="0"
        y="25"
        id="tspan4"><tspan
-         style="font-weight:bold"
+         style="fill:currentColor;font-weight:bold"
          id="tspan3">starts&#10;</tspan></tspan><tspan
        x="0"
        y="50"
        id="tspan6"><tspan
-         style="font-weight:bold"
+         style="fill:currentColor;font-weight:bold"
          id="tspan5">project</tspan></tspan></text>
   <text
      xml:space="preserve"
-     style="font-size:20px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;text-anchor:start;white-space:pre;fill:#000000;stroke:none;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+     style="fill:currentColor;line-height:1.25;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-color:currentColor;text-anchor:start;white-space:pre;stroke:none;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;-inkscape-stroke:none;stop-color:currentColor"
      x="556.12189"
      y="543.32532"
      id="text358"><tspan
        sodipodi:role="line"
        id="tspan358"
-       style="font-weight:bold;font-size:20px;text-align:start;text-anchor:start;stroke:none">Red Hat&#10;sells support</tspan></text>
+       style="fill:currentColor;text-align:start;text-anchor:start;stroke:none">Red Hat&#10;sells support</tspan></text>
   <text
      xml:space="preserve"
-     style="font-size:20px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:end;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;text-anchor:end;white-space:pre;fill:#000000;stroke:none;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+     style="fill:currentColor;line-height:1.25;text-align:end;text-decoration:none;text-decoration-line:none;text-decoration-color:currentColor;text-anchor:end;white-space:pre;stroke:none;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;-inkscape-stroke:none;stop-color:currentColor"
      x="874.60901"
      y="542.46008"
      id="text359"><tspan
        sodipodi:role="line"
        id="tspan359"
-       style="font-weight:bold;font-size:20px;text-align:end;text-anchor:end;stroke:none"
+       style="fill:currentColor;text-align:end;text-anchor:end;stroke:none"
        x="874.60901"
        y="542.46008">IBM</tspan><tspan
        sodipodi:role="line"
-       style="font-weight:bold;font-size:20px;text-align:end;text-anchor:end;stroke:none"
+       style="fill:currentColor;text-align:end;text-anchor:end;stroke:none"
        x="874.60901"
        y="592.46008"
        id="tspan360">acquires&#10;Red Hat</tspan></text>
   <text
      xml:space="preserve"
-     style="font-size:20px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:end;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;text-anchor:end;white-space:pre;fill:#000000;stroke:none;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+     style="fill:currentColor;line-height:1.25;text-align:end;text-decoration:none;text-decoration-line:none;text-decoration-color:currentColor;text-anchor:end;white-space:pre;stroke:none;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;-inkscape-stroke:none;stop-color:currentColor"
      x="1059.469"
      y="542.75006"
      id="text362"><tspan
        sodipodi:role="line"
        id="tspan361"
-       style="font-weight:bold;font-size:20px;text-align:end;text-anchor:end;stroke:none"
+       style="fill:currentColor;text-align:end;text-anchor:end;stroke:none"
        x="1059.469"
        y="542.75006">Red Hat</tspan><tspan
        sodipodi:role="line"
-       style="font-weight:bold;font-size:20px;text-align:end;text-anchor:end;stroke:none"
+       style="fill:currentColor;text-align:end;text-anchor:end;stroke:none"
        x="1059.469"
        y="592.75006"
        id="tspan362">stops selling&#10;support</tspan></text>
   <text
      xml:space="preserve"
-     style="font-size:20px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;text-anchor:start;white-space:pre;fill:#000000;stroke:none;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+     style="fill:currentColor;line-height:1.25;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-color:currentColor;text-anchor:start;white-space:pre;stroke:none;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;-inkscape-stroke:none;stop-color:currentColor"
      x="1129.4448"
      y="443.07532"
      id="text363"><tspan
        sodipodi:role="line"
        id="tspan363"
-       style="font-weight:bold;font-size:20px;text-align:start;text-anchor:start;stroke:none"
+       style="fill:currentColor;text-align:start;text-anchor:start;stroke:none"
        x="1129.4448"
        y="468.07532">Timefold forks&#10;OptaPlanner</tspan></text>
   <path
      d="m 1189.41,627.91 v -110"
      fill="none"
-     stroke="#000000"
+     stroke="currentColor"
      stroke-miterlimit="10"
      stroke-width="2"
      id="path363" />
   <text
      xml:space="preserve"
-     style="font-size:20px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;text-anchor:start;white-space:pre;fill:#000000;stroke:none;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+     style="fill:currentColor;line-height:1.25;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-color:currentColor;text-anchor:start;white-space:pre;stroke:none;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;-inkscape-stroke:none;stop-color:currentColor"
      x="1200.1218"
      y="543.32532"
      id="text367"><tspan
        sodipodi:role="line"
        id="tspan367"
-       style="font-weight:bold;font-size:20px;text-align:start;text-anchor:start;stroke:none"
+       style="fill:currentColor;text-align:start;text-anchor:start;stroke:none"
        x="1200.1218"
        y="568.32532">Red Hat&#10;OptaPlanner</tspan><tspan
        sodipodi:role="line"
-       style="font-weight:bold;font-size:20px;text-align:start;text-anchor:start;stroke:none"
+       style="fill:currentColor;text-align:start;text-anchor:start;stroke:none"
        x="1200.1218"
        y="593.32532"
        id="tspan371">End of Life</tspan></text>
   <rect
      fill="none"
      height="33.189999"
-     rx="16.6"
-     stroke="#000000"
+     
+     stroke="currentColor"
      stroke-miterlimit="10"
      stroke-width="2"
      width="62.689999"
      x="1158.0649"
      y="484.72"
      id="rect367"
-     ry="16.6" />
+      />
   <text
      xml:space="preserve"
-     style="font-size:18px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:end;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;white-space:pre;shape-inside:url(#rect2949);display:inline;fill:#000000;stroke:none;stroke-width:1.12658px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+     style="fill:currentColor;line-height:1.25;text-align:end;text-decoration:none;text-decoration-line:none;text-decoration-color:currentColor;white-space:pre;shape-inside:url(#rect2949);display:inline;stroke:none;stroke-width:1.12658px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;-inkscape-stroke:none;stop-color:currentColor"
      x="1306.7611"
      y="499.47729"
      id="text368"
@@ -1137,7 +1137,7 @@
        x="-12.524414"
        y="0"
        id="tspan8"><tspan
-         style="font-weight:bold"
+         style="fill:currentColor;font-weight:bold"
          id="tspan7">4</tspan></tspan></text>
   <path
      d="m 1178.7249,505.39 v 2.29 h -8.66 c 0.09,-0.87 0.38,-1.69 0.84,-2.46 0.46,-0.77 1.39,-1.81 2.78,-3.09 1.11,-1.04 1.8,-1.74 2.05,-2.11 0.34,-0.51 0.51,-1.01 0.51,-1.51 0,-0.55 -0.15,-0.97 -0.44,-1.27 -0.29,-0.3 -0.7,-0.44 -1.23,-0.44 -0.53,0 -0.93,0.16 -1.23,0.47 -0.3,0.31 -0.48,0.83 -0.53,1.55 l -2.46,-0.25 c 0.15,-1.36 0.61,-2.33 1.38,-2.93 0.77,-0.6 1.74,-0.89 2.9,-0.89 1.27,0 2.27,0.34 3,1.03 0.73,0.69 1.09,1.54 1.09,2.56 0,0.58 -0.1,1.13 -0.31,1.66 -0.21,0.53 -0.54,1.07 -0.99,1.65 -0.3,0.38 -0.84,0.93 -1.62,1.64 -0.78,0.71 -1.27,1.19 -1.48,1.42 -0.21,0.23 -0.38,0.46 -0.5,0.69 h 4.9 z"
@@ -1150,11 +1150,11 @@
      id="path370" />
   <text
      xml:space="preserve"
-     style="font-size:36px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;text-anchor:start;white-space:pre;display:inline;fill:#000000;stroke:none;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+     style="fill:currentColor;line-height:1.25;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-color:currentColor;text-anchor:start;white-space:pre;display:inline;stroke:none;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;-inkscape-stroke:none;stop-color:currentColor"
      x="471.20117"
      y="236.90157"
      id="text372"><tspan
        sodipodi:role="line"
        id="tspan372"
-       style="font-weight:bold;font-size:36px;text-align:start;text-anchor:start;stroke:none">History of OptaPlanner/Timefold</tspan></text>
+       style="fill:currentColor;text-align:start;text-anchor:start;stroke:none">History of OptaPlanner/Timefold</tspan></text>
 </svg>
