@@ -256,6 +256,76 @@
         <section data-background-color="#3e00ff">
             <h2>TODO</h2>
         </section>
+
+        <section>
+            <h2><i>Software engineers<br/>spend 10x more time<br/>reading production code<br/>than writing it.</i></h2>
+        </section>
+        <section>
+            <h2>Code should be<br/>easy to read</h2>
+        </section>
+
+        <section>
+            <img src="../src/content/static/operations-research/operations-research-math-incantation_0.png" class="fullImage">
+            <img src="../src/content/static/operations-research/operations-research-math-incantation_1.png" class="fullImage fragment">
+            <img src="../src/content/static/operations-research/operations-research-math-incantation_2.png" class="fullImage fragment">
+            <img src="../src/content/static/operations-research/operations-research-math-incantation_3.png" class="fullImage fragment">
+            <img src="../src/content/static/operations-research/operations-research-math-incantation_4.png" class="fullImage fragment">
+            <img src="../src/content/static/operations-research/operations-research-math-incantation_5.png" class="fullImage fragment">
+        </section>
+        <section>
+            <h3>OR code (traditional)</h3>
+            <pre xml:space="preserve"><span class="codeLabel">python</span><code class="python">for i in range(num_employees):
+    for j in range(num_shifts):
+        for k in range(j + 1, num_shifts):
+            (model.Add(s[i][j] + d[j] + r[i] <= s[i][k])
+             .OnlyEnforceIf([x[i][j], x[i][k]]))
+</code></pre>
+            <pre xml:space="preserve"><span class="codeLabel">java</span><code class="java">for (int i = 0; i < numEmployees; i++) {
+  for (int j = 0; j < numShifts; j++) {
+    for (int k = j + 1; k < numShifts; k++) {
+      model.addConstraint(
+          LinearExpr.sum(new IntVar[]{s[i][j], d[j], r[i]})
+          .leq(s[i][k])
+      ).onlyEnforceIf(new IntVar[]{x[i][j], x[i][k]});
+    }
+  }
+}
+</code></pre>
+        </section>
+        <section>
+            <img src="../src/content/static/operations-research/operations-research-timefold-incantation_0.png" class="fullImage">
+            <img src="../src/content/static/operations-research/operations-research-timefold-incantation_1.png" class="fullImage fragment">
+            <img src="../src/content/static/operations-research/operations-research-timefold-incantation_2.png" class="fullImage fragment">
+            <img src="../src/content/static/operations-research/operations-research-timefold-incantation_3.png" class="fullImage fragment">
+        </section>
+        <section>
+            <h3>Timefold Solver code</h3>
+            <pre xml:space="preserve"><span class="codeLabel">python</span><code class="python">(f.for_each(Shift)
+ .join(Shift, equal(lambda shift: shift.employee.id),
+       less_than_or_equal(lambda shift1: shift1.end,
+                          lambda shift2: shift2.start))
+ .filter(lambda shift1, shift2:
+         ((shift2.start - shift1.end)
+          < shift1.employee.rest_duration))
+ .penalize(ONE_HARD)
+ .as_constraint("Enough rest between shifts"))
+</code></pre>
+            <pre xml:space="preserve"><span class="codeLabel">java</span><code class="java">f.forEach(Shift.class)
+  .join(Shift.class, equal(Shift::employee),
+      lessThanOrEqual(Shift::end, Shift::start))
+  .filter((shift1, shift2) ->
+      Duration.between(shift1.end, shift2.start)
+          .compareTo(shift1.employee.restDuration) < 0)
+  .penalize(ONE_HARD)
+  .asConstraint("Enough rest between shifts");
+</code></pre>
+        </section>
+        <section>
+            <h2>If it isn't tested,<br/>it doesn't work.</h2>
+            <br/>
+            <h2 class="fragment">If it isn't documented,<br/>it isn't used.</h2>
+        </section>
+
     </section>
     <section>
         <h3>Q &amp; A</h3>
