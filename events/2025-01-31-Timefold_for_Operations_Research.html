@@ -244,9 +244,6 @@
                 Give them an overview of what we do: "Come for the knowledge, stay for the platform"
             </aside>
         </section>
-        <section data-background-color="#3e00ff">
-            <h2>Free the world of wasteful scheduling</h2>
-        </section>
     </section>
 
     <!-- TEMPORARY: Above is Tom's piece, below is Geof's piece -->
@@ -257,7 +254,11 @@
             <p>Open source</p>
         </section>
         <section>
-            <img src="../src/content/static/operations-research/operations-research-ugly-duckling.png" class="fullImage">
+            <img src="../src/content/static/operations-research/operations-research-ugly-duckling_0.png" class="fullImage">
+            <img src="../src/content/static/operations-research/operations-research-ugly-duckling_1.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/static/operations-research/operations-research-swan-focus_0.png" class="fullImage">
         </section>
 
         <section>
@@ -283,7 +284,7 @@
             (model.Add(s[i][j] + d[j] + r[i] <= s[i][k])
              .OnlyEnforceIf([x[i][j], x[i][k]]))
 </code></pre>
-            <pre xml:space="preserve"><span class="codeLabel">java</span><code class="java">for (int i = 0; i < numEmployees; i++) {
+            <pre class="fragment" xml:space="preserve"><span class="codeLabel">java</span><code class="java">for (int i = 0; i < numEmployees; i++) {
   for (int j = 0; j < numShifts; j++) {
     for (int k = j + 1; k < numShifts; k++) {
       model.addConstraint(
@@ -313,7 +314,7 @@
  .penalize(ONE_HARD)
  .as_constraint("Enough rest between shifts"))
 </code></pre>
-            <pre xml:space="preserve"><span class="codeLabel">java</span><code class="java">f.forEach(Shift.class)
+            <pre class="fragment" xml:space="preserve"><span class="codeLabel">java</span><code class="java">f.forEach(Shift.class)
   .join(Shift.class, equal(Shift::employee),
       lessThanOrEqual(Shift::end, Shift::start))
   .filter((shift1, shift2) ->
@@ -357,6 +358,21 @@
             <p class="fragment">1 constraint</p>
             <p class="fragment">Only 250k tuples <br/>in memory</p>
             <p class="fragment positive">Lazy, incremental and indexed</p>
+        </section>
+        <section>
+            <h3>How many solutions per second?</h3>
+            <div class="fragment">
+                <p>Check the Timefold log:</p>
+                <pre xml:space="preserve"><span class="codeLabel">log</span><code>08:27:00.867  INFO Solving started: ...
+08:27:02.528  INFO Construction Heuristic ended: ...
+                       move evaluation speed (39580/sec) ...
+08:27:21.313  INFO Local Search ended: ...
+                       move evaluation speed (101701/sec) ...
+08:27:21.317  INFO Solving ended: ...
+                       move evaluation speed (101461/sec) ...
+</code></pre>
+            </div>
+            <p class="fragment">It looks at 100 000 solutions per second</p>
         </section>
         <section>
             <h2>Incremental calculation</h2>
@@ -454,6 +470,7 @@
             <h2>PlanningAI</h2>
         </section>
         <section>
+            <!-- TODO enterprise scale + throw it over the wall -->
             <img src="../src/content/static/ai/planningAI-time-to-market_0.png" class="fullImage">
             <img src="../src/content/static/ai/planningAI-time-to-market_1.png" class="fullImage fragment">
             <img src="../src/content/static/ai/planningAI-time-to-market_2.png" class="fullImage fragment">
@@ -467,6 +484,33 @@
         </section>
     </section>
 
+    <section data-background-color="#3e00ff">
+        <h2>Free the world of wasteful scheduling</h2>
+        <p>Join the PlanningAI evolution</p>
+    </section>
+    <section>
+        <h3>Build your own model<br/>on open source</h3>
+        <ol>
+            <li>Go to <a href="https://docs.timefold.ai">docs.timefold.ai</a></li>
+            <li>Click <a href="https://github.com/TimefoldAI/timefold-quickstarts"><i>Show me the code</i></a></li>
+            <li>Pick a quickstart from the README.</li>
+            <li>Run it:</li>
+        </ol>
+        <pre xml:space="preserve"><code class="bash">$ git clone https://github.com/TimefoldAI/timefold-quickstarts.git
+...
+$ cd timefold-quickstarts/java/vehicle-routing
+$ mvn quarkus:dev
+...</code></pre>
+    </section>
+    <section>
+        <h3>Try our REST APIs</h3>
+        <ol>
+            <li>Go to <a href="https://app.timefold.ai">app.timefold.ai</a></li>
+            <li>Get a free trial</li>
+            <li>Solve your dataset</li>
+        </ol>
+        <p>Contact us for assistance, self-hosting or questions.</p>
+    </section>
     <section>
         <h3>Q &amp; A</h3>
         <table class="links">
