@@ -232,7 +232,6 @@
 <!--            <div class="fragment" style="rotate: 30deg">These sound like a magical incantation 🪄</div>-->
 <!--        </section>-->
         <section>
-            <!-- TODO remove title-->
             <img src="../src/content/static/operations-research/operations-research-ugly-duckling_0.png" class="fullImage">
         </section>
 
@@ -378,32 +377,39 @@
         <section>
             <h2>If it isn't tested,<br/>it doesn't work.</h2>
         </section>
-        <!-- TODO unit testing -->
         <section>
-            <h2>If it isn't tested,<br/>it doesn't work.</h2>
-            <br/>
-            <h2 class="fragment">If it isn't documented,<br/>it isn't used.</h2>
+            <h3>Unit testing</h3>
+            <ul>
+                <li>Given:
+                    <ul>
+                        <li>Ann at least 10 hours rest</li>
+                        <li>Shift Monday 14:00-22:00 = Ann</li>
+                        <li>Shift Tuesday 06:00-14:00 = Ann</li>
+                    </ul>
+                </li>
+                <li class="fragment">Expected: penalty</li>
+            </ul>
+            <pre class="fragment" xml:space="preserve"><span class="codeLabel">python</span><code class="python">ann =  Employee(name="Ann", ...)
+
+(v.verify_that(employee_minimal_rest)
+ .given(ann,
+        Shift(start=..., end=..., employee=ann),
+        Shift(start=..., end=..., employee=ann))
+ .penalizes())
+</code></pre>
+            <p class="fragment positive">Isolated per constraint</p>
+        </section>
+        <section>
+            <h2>If it isn't documented,<br/>it isn't used.</h2>
         </section>
         <section>
             <h2>DEMO</h2>
             <p>docs.timefold.ai</p>
         </section>
-    </section>
-
-    <section>
-        <section data-background-color="#3e00ff">
-            <h2>Field Service Routing</h2>
-        </section>
         <section>
             <h3>🖊 Model domain</h3>
             <h3 class="fragment">⚖️ Define constraints</h3>
             <h3 class="fragment"><span class="highlight">🚀 Run!</span></h3>
-        </section>
-        <section>
-            <h1>Ready to <span class="highlight">Optimize!</span></h1>
-            <h3 class="fragment" style="text-decoration: line-through">🖊 Model domain</h3>
-            <h3 class="fragment">⚖️ <span style="text-decoration: line-through">Define</span> tune constraints</h3>
-            <h3 class="fragment"><span class="highlight"> 🚀 Run!</span></h3>
         </section>
     </section>
 
@@ -476,6 +482,13 @@
         <section data-background-color="#3e00ff">
             <p>We call it ...</p>
             <h2>PlanningAI</h2>
+        </section>
+        <section>
+            <h1>Deliver faster</h1>
+            <h3 class="fragment" style="text-decoration: line-through">🖊 Model domain</h3>
+            <h3 class="fragment">⚖️ <span style="text-decoration: line-through">Define</span> tune constraints</h3>
+            <h3 class="fragment"><span class="highlight">🚀 Run!</span></h3>
+            <!--<h3 class="fragment">add constraints (optional)</h3>-->
         </section>
         <section>
             <!-- TODO enterprise scale + throw it over the wall -->
