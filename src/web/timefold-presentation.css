@@ -99,6 +99,10 @@ footer {
     color: #3e00ff;
 }
 
+.highlight-b {
+    color: #f5b200;
+}
+
 /******************************************************************************
 * Images
 ******************************************************************************/
@@ -120,6 +124,10 @@ footer {
     left: 0;
     width: 100%;
     height: auto;
+}
+
+.reveal figcaption {
+    font-size: medium;
 }
 
 .reveal .vrpPresumptionTopPara {
