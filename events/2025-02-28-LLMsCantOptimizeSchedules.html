@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Timefold for Operations Research</title>
+    <title>LLM's can't optimize schedules, but AI can</title>
     <meta name="description" content="LLM's can't optimize schedules, but AI can">
     <!--    <link href="https://github.com/TimefoldAI/timefold-presentations" rel="canonical">-->
 
@@ -45,49 +45,247 @@
 
     <section>
         <section data-background-color="#3e00ff">
-            <h2>GOOSE</h2>
-            <aside class="notes">
-                Hint at the complexity, then say: "maybe it's because of things like this: move to next slide"
-            </aside>
+            <h2>We have seen</h2>
+            <span class="fragment">Llama</span>
+            <span class="fragment">Goose</span>
+            <span class="fragment">Cat</span>
+        </section>
+        <section>
+            <h2>Goose</h2>
+            <aside class="notes">This is my Cat Goose</aside>
+        </section>
+        <section data-background-image="../src/content/static/llms-cant/crown-kitty-pexels.webp"
+                 data-background-size="stretch">
+            <aside class="notes">I am happy that cats are the de-facto topic of happyness on the internet.</aside>
+        </section>
+        <section>
+            "A cat sitting on a crocodile while playing the banjo"
+            <img class="fragment" src="../src/content/static/llms-cant/banjo-kitty-genai-chatgpt.webp"/>
+        </section>
+        <section>
+            "A cat in a tiny top hat hosting a stand-up comedy show for a crowd of impressed goldfish"
+            <img class="fragment" src="../src/content/static/llms-cant/comedy-kitty-genai-chatgpt.webp"/>
         </section>
         <section data-background-color="#3e00ff">
-            <h2>GenAI Is Awesome</h2>
+            <h2>GenAI Is Awesome 🚀</h2>
             <aside class="notes">
+                LLMs have proven themselves to be very valuable tools that help us brainstorm, proof-read e-mails or even help us rewrite texts for specific audiences.
             </aside>
         </section>
-        <section data-background-color="#3e00ff">
-            <h2>PICTURES OF GENAI KITTY CATS</h2>
+        <section>
+            <h2>Solution for <span class="highlight">EVERYTHING 🤯</span></h2>
             <aside class="notes">
+                The progress in the past few months has been mind-blowing, which might suggest they're the answer to everything. At least, if you believe the hype machine.
             </aside>
         </section>
-        <section data-background-color="#3e00ff">
-            <h2>GREAT FUN!</h2>
+        <section>
+            <h2>or is it? 🤔</h2>
             <aside class="notes">
+                We get 2 reactions when starting this statement
             </aside>
         </section>
-        <section data-background-color="#3e00ff">
-            <h2>How does it solve real problems?</h2>
-            My neighbour
+        <section>
+            <h2>a lot of buts</h2>
+            <ul>
+                <li class="fragment">BUT RAG!</li>
+                <li class="fragment">BUT IT ONLY WILL GET BETTER!</li>
+                <li class="fragment">BUT ${YOUR_IDEA_HERE}</li>
+            </ul>
+        </section>
+        <section>
+            // TOM AT THE SCREECH by Munch
+            <aside class="notes">
+                How does he dare question or robotic overlords?
+            </aside>
+        </section>
+        <section>
+            Let's venture down this dangerous path anyway.
             <aside class="notes">
             </aside>
         </section>
     </section>
-    <section data-background-color="#3e00ff">
-        // problems LLMs are not equiped to handle and why
+    <section>
+        <section data-background-color="#3e00ff">
+            <h1>LLM's can't...</h1>
+        </section>
+        <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.webp"
+                 data-background-size="stretch">
+            <aside class="notes">
+                Neighbor - scheduling problem
+            </aside>
+        </section>
+        <section  data-background-image="../src/content/static/llms-cant/doctor-time-pexels.webp"
+                  data-background-size="stretch"
+                  data-background-opacity="0.2"
+                  data-background-color="black">
+            <h2>How does it solve <br/><span class="highlight-b">my problem?</span></h2>
+            <aside class="notes">
+                Neighbor - scheduling problem
+            </aside>
+        </section>
+        <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.webp"
+                 data-background-size="stretch"
+                 data-background-opacity="0.2"
+                 data-background-color="black">
+            <h2>LLMs 🚶‍♂️🌳 ☀️ ?</h2>
+            <aside class="notes">
+                Walk in the park
+            </aside>
+        </section>
+        <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.webp"
+                 data-background-size="stretch"
+                 data-background-opacity="0.2"
+                 data-background-color="black">
+            <h2>So we put it to the test...</h2>
+            <aside class="notes">
+                Walk in the park
+            </aside>
+        </section>
+        <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.webp"
+                 data-background-size="stretch"
+                 data-background-opacity="0.2"
+                 data-background-color="black">
+            <h2>We provided the data</h2>
+            <ul>
+                <li>Employees (Anonymized), availabilities, skills, etc.</li>
+                <li>Shifts, required skills, etc.</li>
+            </ul>
+        </section>
+        <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.webp"
+                 data-background-size="stretch"
+                 data-background-opacity="0.2"
+                 data-background-color="black">
+            <h2>The results were very disappointing</h2>
+            TODO MORE EXAPLE DATA FROM DIFFERENT LLMs
+        </section>
+        <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.webp"
+                 data-background-size="stretch"
+                 data-background-opacity="0.2"
+                 data-background-color="black">
+            <h2>We tried:</h2>
+            <ul>
+                <li class="fragment">Flattening the data in arrays</li>
+                <li class="fragment">Categorical IDs (role: manager => role_id: 1)</li>
+                <li class="fragment">Chunking the data (per logical group)</li>
+                <li class="fragment">...</li>
+            </ul>
+        </section>
+        <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.webp"
+                 data-background-size="stretch"
+                 data-background-opacity="0.2"
+                 data-background-color="black">
+            <h2>How they fail: 2 ways</h2>
+        </section>
+        <section>
+            Context Window! (Short term, will get better)
+            <aside class="notes">
+                But research is also showing larger context window is not that good
+                https://datasciencedojo.com/blog/the-llm-context-window-paradox/
+                https://github.com/NVIDIA/RULER
+            </aside>
+        </section>
+        <section>
+            Problem Space
+            <aside class="notes">
+                10^63 combinations (7 days, 3 shifts per day, on average 3 employees per shift)
+            </aside>
+        </section>
+        <section>
+            By their very nature, LLMs just predict the next token and “the next token” isn’t what we are looking for when trying to solve planning problems.
+            <aside class="notes">
+                Surprised it works as well as it does, but there are still limits.
+            </aside>
+        </section>
+        <section>
+            Reasoning models are ok for small sets :)
+        </section>
+        <section data-background-color="#3e00ff">
+            LLM's can't...
+        </section>
     </section>
-    <section data-background-color="#3e00ff">
-        // other forms of AI
+    <section>
+        <section data-background-color="#3e00ff">
+            ... but AI can!
+        </section>
+        <section>
+            Diagram
+        </section>
+        <section>
+            Machine Learning
+            - Simple example: recognizing words
+
+            Risks:
+            - Drifting (Concept, or Data)
+            - Hard to Explain
+
+            Applicability
+            - No large amounts of high quality data available
+        </section>
+        <section>
+            Mathematical Optimization, Metaheuristics, Constrained based Programming #PlanningAI
+            Manually programmed, Explainable, etc.
+        </section>
+        <section>
+            Demo
+        </section>
+        <section>
+            Mathematical Optimization, Metaheuristics, Constrained based Programming #PlanningAI
+            Manually programmed, Explainable, etc.
+        </section>
+        <section>
+            Wait, that's just math? Always has been
+        </section>
+
+        <section data-background-color="#3e00ff">
+            LLM's can't...but AI can!
+        </section>
     </section>
-    <section data-background-color="#3e00ff">
-        // fusion
+    <section>
+        <section data-background-color="#3e00ff">
+            Not one or the other, but together <3
+        </section>
+        <section>
+            What Classic AI can do
+            - ML: Predict what is needed, analysis
+            - LLMs: Leverage Custom GPT's and LLMs to help domain experts. Explain constraints to end users
+        </section>
+        <section>
+            Extend LLMs
+            - Tool Calling
+            - MCP hook
+             - ML
+             - Classic AI.
+        </section>
+        <section data-background-color="#3e00ff">
+            Not one or the other, but together <3
+        </section>
     </section>
 
-    <section data-background-color="#3e00ff"
-             data-background-image="../src/content/timefold-solver-docs/shared/timefold-logo.png"
-             data-background-size="20%"
-             data-background-position="top left">
-        <h2>Free the world of wasteful scheduling</h2>
+    <section id="conclusion">
+        <section data-background-color="#3e00ff">
+            <h2>GenAI Is Awesome ROCKET</h2>
+            <aside class="notes">
+                LLMs have proven themselves to be very valuable tools that help us brainstorm, proof-read e-mails or even help us rewrite texts for specific audiences.
+            </aside>
+        </section>
+        <section data-background-color="#3e00ff">
+            LLM's can't...
+        </section>
+        <section data-background-color="#3e00ff">
+            but AI can!
+        </section>
+        <section>
+            Diagram
+        </section>
+        <section data-background-color="#3e00ff"
+                 data-background-image="../src/content/timefold-solver-docs/shared/timefold-logo.png"
+                 data-background-size="20%"
+                 data-background-position="top left">
+            <h2>Free the world of wasteful scheduling</h2>
+        </section>
+
     </section>
+
     <section>
         <h3>Join the <span class="highlight">#PlanningAI</span> Evolution</h3>
         <table class="links">
