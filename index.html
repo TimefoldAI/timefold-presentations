@@ -1,25 +1,92 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Timefold presentations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timefold Presentations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .talks li {
+            background: #4900f8;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .talks li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            display: block;
+        }
+        .talks > li:hover {
+            background: #4f62f5;
+        }
+        .left, p {
+            text-align: left;
+            padding-left: 20px;
+        }
+    </style>
 </head>
 <body>
-<h1>Timefold presentations</h1>
-<ul>
-    <li><a href="events/Field_Service_Routing.html">Field Service Routing</a></li>
-    <li><a href="events/Timefold_for_Operations_Research.html">Timefold for Operations Research</a></li>
-    <li><a href="events/2024-11-05-BYOM_score_calculation.html">Build your own model: writing constraint</a></li>
-    <li><a href="events/2023-10-02-Devoxx_BE.html">Devoxx Belgium - Optimize the world for fun and profit</a></li>
-    <li><a href="events/2023-12-05-Maintenance_scheduling_and_school_timetabling.html">BeJUG - Fold time and space for maintenance scheduling and school timetabling</a></li>
-</ul>
-<p>Press space to go the next slide.</p>
-<p>Most slides are 2-dimensional. Press escape to understand how that works. Press left/right/up/down to navigate through them.</p>
-<h2>PDF of a presentation</h2>
-<ol>
-    <li>Open a presentation</li>
-    <li>Add <code>?print-pdf</code> to the url</li>
-    <li>In Google Chrome, print it to a PDF.</li>
-</ol>
+<div class="container">
+    <img width="400px" src="src/content/timefold-solver-docs/shared/timefold-logo.png"/>
+    <h1>Timefold Presentations</h1>
+    <ul class="talks">
+        <li><a href="events/Field_Service_Routing.html">Field Service Routing</a></li>
+        <li><a href="events/Timefold_for_Operations_Research.html">Timefold for Operations Research</a></li>
+        <li><a href="events/2024-11-05-BYOM_score_calculation.html">Build Your Own Model: Writing Constraint</a></li>
+        <li><a href="events/2023-10-02-Devoxx_BE.html">Devoxx Belgium - Optimize the World for Fun and Profit</a></li>
+        <li><a href="events/2023-12-05-Maintenance_scheduling_and_school_timetabling.html">BeJUG - Fold Time and Space for Maintenance Scheduling and School Timetabling</a></li>
+    </ul>
+
+    <h2>Navigation Instructions</h2>
+    <p>Most of these slide decks are 2-dimensional, where different chapters/subjects are different columns.
+    Since this is different than most slide software, here are some basic instructions.</p>
+
+    <ul class="left">
+        <li>Press <strong>space</strong> to go to the next slide.</li>
+        <li>Press <strong>left/right/up/down</strong> to navigate through the deck on your own.</li>
+        <li>Press <strong>escape</strong> to go to the slide overview.</li>
+        <li>Some decks have presenter notes. Press <strong>s</strong> to show presenter view.</li>
+    </ul>
+
+    <h2>PDF of a Presentation</h2>
+    <ul>
+        <li>Open a presentation.</li>
+        <li>Add <code>?print-pdf</code> to the URL.</li>
+        <li>In Google Chrome, print it to a PDF.</li>
+    </ul>
+
+    <h2>Reuse</h2>
+
+    <p>You are free to reuse these slides to promote Timefold (but not to demote it),
+    including for conference talks, user groups, YouTube videos, internal events, etc
+    without prior approval.</p>
+
+    <blockquote>These slides are created with <a href="https://revealjs.com/">Reveal.js</a>.</blockquote>
+
+</div>
 </body>
 </html>
