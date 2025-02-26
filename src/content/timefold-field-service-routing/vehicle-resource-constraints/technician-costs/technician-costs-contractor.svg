@@ -2047,9 +2047,9 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1.15125"
      inkscape:cx="393.05103"
-     inkscape:cy="305.3203"
+     inkscape:cy="304.88599"
      inkscape:document-units="px"
-     inkscape:current-layer="g139"
+     inkscape:current-layer="layer2"
      showgrid="true"
      width="800px"
      borderlayer="true"
@@ -2360,7 +2360,7 @@
          style="font-size:16px;line-height:1.25;text-align:center;text-anchor:middle;fill:#204a87"
          id="flowPara46">duration: 8h</flowPara><flowPara
          style="font-size:16px;line-height:1.25;text-align:center;text-anchor:middle;fill:#204a87"
-         id="flowPara47">costPerUnit: 20</flowPara><flowPara
+         id="flowPara47">costPerUnit: 200</flowPara><flowPara
          style="font-size:16px;line-height:1.25;text-align:center;text-anchor:middle;fill:#204a87"
          id="flowPara48">unit: hour</flowPara><flowPara
          style="font-size:16px;line-height:1.25;text-align:center;text-anchor:middle;fill:#204a87"
@@ -2416,7 +2416,7 @@
          style="font-size:16px;line-height:1.25;text-align:center;text-anchor:middle;fill:#204a87"
          id="flowPara57">duration: 4h</flowPara><flowPara
          style="font-size:16px;line-height:1.25;text-align:center;text-anchor:middle;fill:#204a87"
-         id="flowPara59">activationCost: 80</flowPara><flowPara
+         id="flowPara59">activationCost: 800</flowPara><flowPara
          style="font-size:16px;line-height:1.25;text-align:center;text-anchor:middle;fill:#204a87"
          id="flowPara60" /></flowRoot>
     <g
@@ -2581,7 +2581,7 @@
      inkscape:label="Solution 1 cost"
      style="display:inline">
     <flowRoot
-       transform="translate(270.43115,228.45441)"
+       transform="translate(288.78418,228.45441)"
        xml:space="preserve"
        id="flowRoot67"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22px;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
@@ -2761,7 +2761,7 @@
      inkscape:label="Solution 2 cost"
      style="display:inline">
     <flowRoot
-       transform="translate(270.43115,308.45392)"
+       transform="translate(276.54883,308.45392)"
        xml:space="preserve"
        id="flowRoot75"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22px;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
@@ -2774,7 +2774,7 @@
            y="34.603558"
            style="font-size:22px;text-align:center;text-anchor:middle" /></flowRegion><flowPara
          style="font-weight:bold;font-size:22px;line-height:1.25;text-align:center;text-anchor:middle;fill:#000000"
-         id="flowPara75">$ 80</flowPara></flowRoot>
+         id="flowPara75">$ 800</flowPara></flowRoot>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -3010,7 +3010,7 @@
            y="34.603558"
            style="font-size:22px;text-align:center;text-anchor:middle" /></flowRegion><flowPara
          style="font-weight:bold;font-size:22px;line-height:1.25;text-align:center;text-anchor:middle;fill:#000000"
-         id="flowPara99">$ 100</flowPara></flowRoot>
+         id="flowPara99">$ 1000</flowPara></flowRoot>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -3302,6 +3302,6 @@
            y="34.603558"
            style="font-size:22px;text-align:center;text-anchor:middle" /></flowRegion><flowPara
          style="font-weight:bold;font-size:22px;line-height:1.25;text-align:center;text-anchor:middle;fill:#000000"
-         id="flowPara121">$ 240</flowPara></flowRoot>
+         id="flowPara121">$ 2400</flowPara></flowRoot>
   </g>
 </svg>
