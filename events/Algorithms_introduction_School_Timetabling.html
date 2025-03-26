@@ -157,7 +157,7 @@
         </section>
         <section>
             <h3>Calculate score</h3>
-            <pre xml:space="preserve"><code class="java">public long calculateScore(TimeTable timeTable) {
+            <pre xml:space="preserve"><span class="codeLabel">java</span><code class="java">public long calculateScore(TimeTable timeTable) {
     long hardScore = 0;
     for (Lesson lesson1 : timeTable.lessons) {
         for (Lesson lesson2 : timeTable.lessons) {
@@ -178,6 +178,23 @@
     return hardScore;
 }</code></pre>
         </section>
+        <section>
+            <h3>Calculate score</h3>
+            <pre xml:space="preserve"><span class="codeLabel">python</span><code class="python">def calculate_score(time_table):
+    hard_score = 0
+    for lesson1 in time_table.lessons:
+        for lesson2 in time_table.lessons:
+            if (lesson1.room == lesson2.room and
+                and lesson1.timeslot == lesson2.timeslot):
+                hard_score -= 1
+            if (lesson1.teacher == lesson2.teacher
+                and lesson1.timeslot == lesson2.timeslot):
+                hard_score -= 1
+            if (lesson1.student_group == lesson2.student_group
+                and lesson1.timeslot == lesson2.timeslot):
+                hard_score -= 1
+    return hard_score</code></pre>
+        </section>
         <section data-background-color="#b6adfd">
             <h2>Greedy algorithm</h2>
         </section>
@@ -194,7 +211,7 @@
         </section>
         <section>
             <h3>Greedy code</h3>
-            <pre xml:space="preserve"><code class="java">for (Lesson lesson : timeTable.lessons) {
+            <pre xml:space="preserve"><span class="codeLabel">java</span><code class="java">for (Lesson lesson : timeTable.lessons) {
     long bestScore = Long.MIN_VALUE;
     Room bestRoom = null;
     Timeslot bestTimeslot = null;
@@ -213,6 +230,26 @@
     lesson.setTimeslot(bestTimeslot);
     lesson.setRoom(bestRoom);
 }</code></pre>
+        </section>
+        <section>
+            <h3>Greedy code</h3>
+            <pre xml:space="preserve"><span class="codeLabel">python</span><code class="python">for lesson in time_table.lessons:
+    best_score = float('-inf')
+    best_room = None
+    best_timeslot = None
+
+    for timeslot in time_table.timeslots:
+        lesson.timeslot = timeslot
+        for room in time_table.rooms:
+            lesson.room = room
+            score = calculate_score(time_table)
+            if score > best_score:
+                best_score = score
+                best_room = room
+                best_timeslot = timeslot
+
+    lesson.timeslot = best_timeslot
+    lesson.room = best_room</code></pre>
         </section>
         <section>
             <h3>DEMO</h3>
@@ -259,7 +296,7 @@
         </section>
         <section>
             <h3>Brute force code</h3>
-            <pre xml:space="preserve"><code class="java">long bestScore = Long.MIN_VALUE;
+            <pre xml:space="preserve"><span class="codeLabel">java</span><code class="java">long bestScore = Long.MIN_VALUE;
 for (Timeslot timeslotLesson1 : timeslots) {
     lesson1.setTimeslot(timeslotLesson1);
     for (Room roomLesson1 : rooms) {
@@ -277,6 +314,28 @@ for (Timeslot timeslotLesson1 : timeslots) {
                         lessonN.setRoom(roomLessonN);
                         int score = calculateScore(timeTable);
                         if (score > bestScore)
+                            ...</code></pre>
+        </section>
+        <section>
+            <h3>Brute force code</h3>
+            <pre xml:space="preserve"><span class="codeLabel">python</span><code class="python">best_score = float('-inf')
+for timeslot_lesson_1 in timeslots:
+    lesson1.timeslot = timeslot_lesson_1
+    for room_lesson_1 in rooms:
+        lesson1.room = room_lesson_1
+
+        for timeslot_lesson_2 in timeslots:
+            lesson_2.timeslot = timeslot_lesson_2
+            for room_lesson_2 in rooms:
+                lesson_2.room = room_lesson_2
+                ...
+
+                for timeslot_lesson_n in timeslots:
+                    lesson_n.timeslot = timeslot_lesson_n
+                    for room_lesson_n in rooms:
+                        lesson_n.room = room_lesson_n
+                        score = calculate_score(time_table)
+                        if score > best_score:
                             ...</code></pre>
         </section>
         <section>
@@ -399,7 +458,7 @@ for (Timeslot timeslotLesson1 : timeslots) {
         </section>
         <section>
             <h3>Easy score calculator</h3>
-            <pre xml:space="preserve"><code class="java">public HardSoftScore calculateScore(TimeTable timeTable) {
+            <pre xml:space="preserve"><span class="codeLabel">java</span><code class="java">public HardSoftScore calculateScore(TimeTable timeTable) {
     long hardScore = 0;
     for (Lesson lesson1 : timeTable.lessons) {
         for (Lesson lesson2 : timeTable.lessons) {
@@ -419,6 +478,23 @@ for (Timeslot timeslotLesson1 : timeslots) {
     }
     return HardSoftScore.of(hardScore, 0);
 }</code></pre>
+        </section>
+        <section>
+            <h3>Easy score calculator</h3>
+            <pre xml:space="preserve"><span class="codeLabel">python</span><code class="python">def calculate_score(time_table) -> HardSoftScore:
+    hard_score = 0
+    for lesson1 in time_table.lessons:
+        for lesson2 in time_table.lessons:
+            if (lesson1.room == lesson2.room and
+                and lesson1.timeslot == lesson2.timeslot):
+                hard_score -= 1
+            if (lesson1.teacher == lesson2.teacher
+                and lesson1.timeslot == lesson2.timeslot):
+                hard_score -= 1
+            if (lesson1.student_group == lesson2.student_group
+                and lesson1.timeslot == lesson2.timeslot):
+                hard_score -= 1
+    return HardSoftScore.of(hard_score, 0)</code></pre>
         </section>
         <section>
             <h3>DEMO</h3>
@@ -449,42 +525,6 @@ for (Timeslot timeslotLesson1 : timeslots) {
                     <td><span class="negative">Far from optimal</span></td>
                     <td><span class="positive">Optimal</span></td>
                     <td class="fragment"><span class="positive">(Near) Optimal</span></td>
-                </tr>
-                </tbody>
-            </table>
-        </section>
-        <section>
-            <h3>How good are humans?</h3>
-        </section>
-        <section>
-            <h3>Result comparison</h3>
-            <table style="margin-top: 100px; table-layout:fixed">
-                <thead>
-                <tr>
-                    <th>Humans</th>
-                    <th>Greedy</th>
-                    <th>Brute Force</th>
-                    <th>Meta heuristics</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td class="fragment"><span class="negative">Slow</span></td>
-                    <td><span class="positive">Fast</span></td>
-                    <td><span class="negative">Slow</span></td>
-                    <td><span class="positive">Fast</span></td>
-                </tr>
-                <tr>
-                    <td class="fragment"><span class="positive">Scalable</span></td>
-                    <td><span class="positive">Scalable</span></td>
-                    <td><span class="negative">Not scalable</span></td>
-                    <td><span class="positive">Scalable</span></td>
-                </tr>
-                <tr>
-                    <td class="fragment"><span class="negative">Far from optimal</span></td>
-                    <td><span class="negative">Far from optimal</span></td>
-                    <td><span class="positive">Optimal</span></td>
-                    <td><span class="positive">(Near) Optimal</span></td>
                 </tr>
                 </tbody>
             </table>
