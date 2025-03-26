@@ -184,7 +184,7 @@
     hard_score = 0
     for lesson1 in time_table.lessons:
         for lesson2 in time_table.lessons:
-            if (lesson1.room == lesson2.room and
+            if (lesson1.room == lesson2.room
                 and lesson1.timeslot == lesson2.timeslot):
                 hard_score -= 1
             if (lesson1.teacher == lesson2.teacher
@@ -485,7 +485,7 @@ for timeslot_lesson_1 in timeslots:
     hard_score = 0
     for lesson1 in time_table.lessons:
         for lesson2 in time_table.lessons:
-            if (lesson1.room == lesson2.room and
+            if (lesson1.room == lesson2.room
                 and lesson1.timeslot == lesson2.timeslot):
                 hard_score -= 1
             if (lesson1.teacher == lesson2.teacher
