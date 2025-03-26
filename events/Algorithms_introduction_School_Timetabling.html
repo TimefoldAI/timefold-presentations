@@ -3,8 +3,8 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>KotlinConf</title>
-    <meta name="description" content="This slide deck explains Timefold: an open source constraint satisfaction solver in Kotlin">
+    <title>Timefold Solver introduction School Timetabling</title>
+    <meta name="description" content="This slide deck explains Timefold: an open source constraint satisfaction solver in Java, Python and Kotlin">
     <!--    <link href="https://github.com/TimefoldAI/timefold-presentations" rel="canonical">-->
 
     <link rel="stylesheet" href="../src/web/bootstrap/css/bootstrap.min.css">
@@ -33,13 +33,13 @@
 <div class="slides">
     <section>
         <h1>
-            Free the world<br/>
-            from wasteful scheduling<br/>
-            with Timefold AI
+            Complex scheduling<br/>
+            and routing optimization<br/>
+            made easy
         </h1>
         <div style="margin-top: 80px;">
             <p>
-                <span style="font-size: smaller">by</span> Geoffrey De Smet<br/>
+                <span style="font-size: smaller">by</span> Geoffrey De Smet
             </p>
         </div>
     </section>
@@ -101,7 +101,8 @@
             <h2>Few are <b>optimized</b></h2>
         </section>
         <section>
-            <h2>Optimize them<br/>with Kotlin and AI</h2>
+            <h2>Optimize them<br/>
+                with PlanningAI</h2>
         </section>
         <section>
             <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/vehicleRoutingValueProposition_0.png" class="fullImage">
@@ -114,7 +115,7 @@
             <p class="fragment">⇒ -10 million kg CO² emission per year</p>
             <p class="fragment">⇒ -100 million $ cost per year</p>
         </section>
-    </section>
+        </section>
 
 
     <section>
@@ -156,25 +157,25 @@
         </section>
         <section>
             <h3>Calculate score</h3>
-            <pre xml:space="preserve"><code class="kotlin">fun calculateScore(timeTable: TimeTable): Long {
-    var hardScore: Long = 0
-    for (lesson1 in timeTable.lessons) {
-        for (lesson2 in timeTable.lessons) {
+            <pre xml:space="preserve"><code class="java">public long calculateScore(TimeTable timeTable) {
+    long hardScore = 0;
+    for (Lesson lesson1 : timeTable.lessons) {
+        for (Lesson lesson2 : timeTable.lessons) {
             if (lesson1.room == lesson2.room
                     && lesson1.timeslot == lesson2.timeslot) {
-                hardScore--
+                hardScore--;
             }
             if (lesson1.teacher == lesson2.teacher
                     && lesson1.timeslot == lesson2.timeslot) {
-                hardScore--
+                hardScore--;
             }
             if (lesson1.studentGroup == lesson2.studentGroup
                     && lesson1.timeslot == lesson2.timeslot) {
-                hardScore--
+                hardScore--;
             }
         }
     }
-    return hardScore
+    return hardScore;
 }</code></pre>
         </section>
         <section data-background-color="#b6adfd">
@@ -193,24 +194,24 @@
         </section>
         <section>
             <h3>Greedy code</h3>
-            <pre xml:space="preserve"><code class="kotlin">for (lesson in timeTable.lessons) {
-    var bestScore = Long.MIN_VALUE
-    var bestRoom: Room? = null
-    var bestTimeslot: Timeslot? = null
-    for (timeslot in timeTable.timeslots) {
-        lesson.timeslot = timeslot
-        for (room in timeTable.rooms) {
-            lesson.room = room
-            val score = calculateScore(timeTable)
+            <pre xml:space="preserve"><code class="java">for (Lesson lesson : timeTable.lessons) {
+    long bestScore = Long.MIN_VALUE;
+    Room bestRoom = null;
+    Timeslot bestTimeslot = null;
+    for (Timeslot timeslot : timeTable.timeslots) {
+        lesson.setTimeslot(timeslot);
+        for (Room room : timeTable.rooms) {
+            lesson.setRoom(room);
+            long score = calculateScore(timeTable);
             if (score > bestScore) {
-                bestScore = score
-                bestRoom = room
-                bestTimeslot = timeslot
+                bestScore = score;
+                bestRoom = room;
+                bestTimeslot = timeslot;
             }
         }
     }
-    lesson.timeslot = bestTimeslot
-    lesson.room = bestRoom
+    lesson.setTimeslot(bestTimeslot);
+    lesson.setRoom(bestRoom);
 }</code></pre>
         </section>
         <section>
@@ -258,30 +259,30 @@
         </section>
         <section>
             <h3>Brute force code</h3>
-            <pre xml:space="preserve"><code class="kotlin">var bestScore = Long.MIN_VALUE
-for (timeslotLesson1 in timeTable.timeslots) {
-    lesson1.timeslot = timeslotLesson1
-    for (roomLesson1 in timeTable.rooms) {
-        lesson1.room = roomLesson1
+            <pre xml:space="preserve"><code class="java">long bestScore = Long.MIN_VALUE;
+for (Timeslot timeslotLesson1 : timeslots) {
+    lesson1.setTimeslot(timeslotLesson1);
+    for (Room roomLesson1 : rooms) {
+        lesson1.setRoom(roomLesson1);
 
-        for (timeslotLesson2 in timeTable.timeslots) {
-            lesson2.timeslot = timeslotLesson2
-            for (roomLesson2 in timeTable.rooms) {
-                lesson2.room = roomLesson2
+        for (Timeslot timeslotLesson2 : timeslots) {
+            lesson2.setTimeslot(timeslotLesson2);
+            for (Room roomLesson2 : rooms) {
+                lesson2.setRoom(roomLesson2);
                 ...
 
-                for (timeslotLessonN in timeTable.timeslots) {
-                    lessonN.timeslot = timeslotLessonN
-                    for (roomLessonN in timeTable.rooms) {
-                        lessonN.room = roomLessonN
-                        val score = calculateScore(timeTable)
-                        if (score > bestScore) {
+                for (Timeslot timeslotLessonN : timeslots) {
+                    lessonN.setTimeslot(timeslotLessonN);
+                    for (Room roomLessonN : rooms) {
+                        lessonN.setRoom(roomLessonN);
+                        int score = calculateScore(timeTable);
+                        if (score > bestScore)
                             ...</code></pre>
         </section>
-<!--        <section>-->
-<!--            <h3>DEMO</h3>-->
-<!--            <p>Brute Force</p>-->
-<!--        </section>-->
+        <section>
+            <h3>DEMO</h3>
+            <p>Brute Force</p>
+        </section>
         <section>
             <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingSearchSpace_4.png" class="fullImage">
             <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingSearchSpace_5.png" class="fullImage fragment">
@@ -398,25 +399,25 @@ for (timeslotLesson1 in timeTable.timeslots) {
         </section>
         <section>
             <h3>Easy score calculator</h3>
-            <pre xml:space="preserve"><code class="kotlin">fun calculateScore(timeTable: TimeTable): HardSoftScore {
-    var hardScore: Long = 0
-    for (lesson1 in timeTable.lessons) {
-        for (lesson2 in timeTable.lessons) {
-            if (lesson1.room === lesson2.room
-                && lesson1.timeslot === lesson2.timeslot) {
-                hardScore--
+            <pre xml:space="preserve"><code class="java">public HardSoftScore calculateScore(TimeTable timeTable) {
+    long hardScore = 0;
+    for (Lesson lesson1 : timeTable.lessons) {
+        for (Lesson lesson2 : timeTable.lessons) {
+            if (lesson1.room == lesson2.room
+                    && lesson1.timeslot == lesson2.timeslot) {
+                hardScore--;
             }
-            if (lesson1.teacher === lesson2.teacher
-                && lesson1.timeslot === lesson2.timeslot) {
-                hardScore--
+            if (lesson1.teacher == lesson2.teacher
+                    && lesson1.timeslot == lesson2.timeslot) {
+                hardScore--;
             }
-            if (lesson1.studentGroup === lesson2.studentGroup
-                && lesson1.timeslot === lesson2.timeslot) {
-                hardScore--
+            if (lesson1.studentGroup == lesson2.studentGroup
+                    && lesson1.timeslot == lesson2.timeslot) {
+                hardScore--;
             }
         }
     }
-    return HardSoftScore.of(hardScore, 0)
+    return HardSoftScore.of(hardScore, 0);
 }</code></pre>
         </section>
         <section>
@@ -488,46 +489,6 @@ for (timeslotLesson1 in timeTable.timeslots) {
                 </tbody>
             </table>
         </section>
-        <section>
-            <h3>How good is Generative AI?</h3>
-        </section>
-        <section>
-            <h3>Result comparison</h3>
-            <table style="margin-top: 100px; table-layout:fixed">
-                <thead>
-                <tr>
-                    <th>Humans</th>
-                    <th class="small">Generative AI</th>
-                    <th>Greedy</th>
-                    <th>Brute Force</th>
-                    <th>Meta heuristics</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td><span class="negative">Slow</span></td>
-                    <td class="fragment"><span class="positive">Fast</span></td>
-                    <td><span class="positive">Fast</span></td>
-                    <td><span class="negative">Slow</span></td>
-                    <td><span class="positive">Fast</span></td>
-                </tr>
-                <tr>
-                    <td><span class="positive">Scalable</span></td>
-                    <td class="fragment"><span class="positive">Scalable?</span></td>
-                    <td><span class="positive">Scalable</span></td>
-                    <td><span class="negative">Not scalable</span></td>
-                    <td><span class="positive">Scalable</span></td>
-                </tr>
-                <tr>
-                    <td><span class="negative">Far from optimal</span></td>
-                    <td class="fragment"><span class="negative">Far from optimal</span></td>
-                    <td><span class="negative">Far from optimal</span></td>
-                    <td><span class="positive">Optimal</span></td>
-                    <td><span class="positive">(Near) Optimal</span></td>
-                </tr>
-                </tbody>
-            </table>
-        </section>
     </section>
 
     <section>
@@ -540,7 +501,8 @@ for (timeslotLesson1 in timeTable.timeslots) {
         </section>
         <section>
             <h3>DEMO</h3>
-            <p>Vehicle Routing</p>
+            <p>Field Service Routing</p>
+            <p>app.timefold.ai</p>
         </section>
     </section>
 
@@ -549,37 +511,30 @@ for (timeslotLesson1 in timeTable.timeslots) {
     </section>
     <section>
         <h3>Start coding today</h3>
-        <pre xml:space="preserve"><code class="bash">$ git clone<br/>  https://github.com/TimefoldAI/timefold-notebooks.git
-...
-$ cd timefold-notebooks/kotlin
-# Open in IntelliJ with Kotlin Notebook plugin</code></pre>
-        <pre xml:space="preserve"><code class="bash">$ git clone<br/>  https://github.com/TimefoldAI/timefold-quickstarts.git
-...
-$ cd timefold-quickstarts/kotlin/school-timetabling
-$ mvn quarkus:dev
-...</code></pre>
+        <pre xml:space="preserve"><span class="codeLabel">java</span><code class="bash">$ git clone
+      https://github.com/TimefoldAI/timefold-quickstarts.git
+$ cd timefold-quickstarts/java/school-timetabling
+$ mvn quarkus:dev</code></pre>
+        <pre xml:space="preserve"><span class="codeLabel">python</span><code class="bash">$ git clone
+      https://github.com/TimefoldAI/timefold-quickstarts.git
+$ cd timefold-quickstarts/python/school-timetabling
+$ pip install -e .
+$ run-app</code></pre>
+        <pre xml:space="preserve"><span class="codeLabel">python</span><code class="bash">$ git clone
+      https://github.com/TimefoldAI/timefold-notebooks.git
+$ cd timefold-notebooks/python</code></pre>
     </section>
     <section>
         <h3>Q &amp; A</h3>
         <table class="links">
             <tr>
                 <th>Learn more</th>
-                <td><a href="https://timefold.ai">timefold.ai</a></td>
-            </tr>
-            <tr>
-                <th>Repo</th>
-                <td><a href="https://github.com/TimefoldAI/timefold-notebooks">github.com/TimefoldAI/<br/>timefold-notebooks</a></td>
-            </tr>
-            <tr>
-                <th></th>
-                <td>
-                    <img src="../src/content/static/cta/timefold-notebooks-QR-code.png"/>
-                </td>
+                <td><a href="https://docs.timefold.ai">docs.timefold.ai</a></td>
             </tr>
             <tr>
                 <th>Feedback</th>
                 <td>
-                    <img src="../src/web/social/linkedin-logo.png"/> <img src="../src/web/social/bluesky-logo.png"/> <a href="https://bsky.app/profile/geoffreydesmet.bsky.social">GeoffreyDeSmet</a><br/>
+                    <img src="../src/web/social/linkedin-logo.png"/> <img src="../src/web/social/bluesky-logo.png"/> <a href="https://bsky.app/profile/geoffreydesmet.bsky.social">GeoffreyDeSmet</a>
                 </td>
             </tr>
         </table>
