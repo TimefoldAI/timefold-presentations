@@ -81,15 +81,12 @@
         </section>
         <section>
             <h2>Really?</h2>
-            <aside class="notes">
-                We get 2 reactions when starting this statement
-            </aside>
         </section>
         <section>
-            <h2>Too much time on Social Media?</h2>
+            <h2>Too much time on <span class="highlight">Social Media?</span></h2>
         </section>
         <section>
-            <h2>Hype machine got to you?</h2>
+            <h2><span class="highlight">Hype machine</span> got to you?</h2>
         </section>
         <section>
             <img src="../src/content/static/llms-cant/canva-rag.png" style="margin-left: -50px; width: 400px">
@@ -121,7 +118,7 @@
                   data-background-size="stretch"
                   data-background-opacity="0.1"
                   data-background-color="black">
-            <h2>How does it solve <br/><span class="highlight-b">my planning problem?</span></h2>
+            <h2>How do LLMs solve <br/><span class="highlight-b">my planning problem?</span></h2>
             <aside class="notes">
                 Neighbor - scheduling problem
             </aside>
@@ -145,13 +142,13 @@
                  data-background-size="stretch"
                  data-background-opacity="0.1"
                  data-background-color="black">
-            <h2>Get to work with reasoning models</h2>
+            <h2>At least for the <br/><span class="highlight-b">reasoning models</span></h2>
         </section>
         <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
                  data-background-size="stretch"
                  data-background-opacity="0.1"
                  data-background-color="black">
-            <h2>EXPLAINER ON REASONING MODELS</h2>
+            <h2>EXPLAINER ON REGULAR LLMs vs REASONING MODELS</h2>
         </section>
         <section data-background-image="../src/content/static/llms-cant/chatgpt-research-shortly.png"
                  data-background-size="contain"
@@ -197,33 +194,24 @@
                  data-background-size="stretch"
                  data-background-opacity="0.1"
                  data-background-color="black">
-            <h2>Can Reasoning Models optimize a schedule? SHOW!</h2>
-            <p class="fragment">Can find a feasible solution on<span class="highlight-b"> small datasets</span></p>
-            <p class="fragment">Automate, yes, optimize, no</p>
-            <p class="fragment">Changes go blurgh</p>
-
-            <p class="fragment">"Thinks like a human, fails like a human"</p>
+            <h2>Toy example</h2>
         </section>
-
+        <section data-background-image="../src/content/static/llms-cant/small-vs-large-datasets.png"
+                 data-background-size="contain"
+                 data-background-opacity="1"
+                 data-background-color="black">
+        </section>
+        <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
+                 data-background-size="stretch"
+                 data-background-opacity="0.1"
+                 data-background-color="black">
+            <h2>Can reasoning models optimize a realistic schedule?</h2>
+        </section>
         <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
                  data-background-size="stretch"
                  data-background-opacity="0.1"
                  data-background-color="black">
             TOM toont non-toy dataset failure.
-        </section>
-
-        <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
-                 data-background-size="stretch"
-                 data-background-opacity="0.1"
-                 data-background-color="black">
-            GEOFF toont NP-HARD probleem
-        </section>
-
-        <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
-                 data-background-size="stretch"
-                 data-background-opacity="0.1"
-                 data-background-color="black">
-            TOM geeft voorbeelden van changes go blurgh? and time duration.
         </section>
 
         <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
@@ -244,41 +232,64 @@
                  data-background-size="stretch"
                  data-background-opacity="0.1"
                  data-background-color="black">
-            <p class="fragment">We have <span class="highlight-b">14 employees</span> , each with their own skills, availability, preferences, etc.</p>
-            <p class="fragment">We schedule <span class="highlight-b">7 days</span>, there are <span class="highlight-b">3 shifts per day</span> and we need on average <span class="highlight-b">3 employees per shift</span>, potentially with different skills.</p>
+            <p class="fragment">We have <span class="highlight-b">30 employees</span> , each with their own skills, availability, preferences, etc.</p>
+            <p class="fragment">We schedule <span class="highlight-b">7 days</span>, there are <span class="highlight-b">3 shifts per day</span> and we need on average slightly more than <span class="highlight-b">7 employees per shift</span>, potentially with different skills.</p>
             <p class="fragment highlight-b">How many different solution can we create?</p>
             <aside class="notes">
-                10^126 combinations (14 days, 3 shifts per day, on average 3 employees per shift)
+                30^150 combinations (7 days, 3 shifts per day, 7 employees per shift)
             </aside>
         </section>
         <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
                  data-background-size="stretch"
                  data-background-opacity="0.1"
                  data-background-color="black">
-            <p>14 * 3 * 3 = 126</p>
-            <p class="fragment">10 employees => <span class="highlight-b">10^126</span></p>
+            <p>7 * 3 * 7 = 147 ~ 150</p>
+            <p class="fragment">30 employees => <span class="highlight-b">30^150</span></p>
+            <p class="fragment">Or put differently</p>
+            <p class="fragment">3.699884850351 × <span class="highlight-b">10^221</span></p>
         </section>
         <section data-background-image="../src/content/static/llms-cant/pexels-sky-space-dark-galaxy.jpg"
                  data-background-size="stretch"
                  data-background-opacity="0.4"
                  data-background-color="black">
             <p class="fragment">10^80: atoms in the observable universe</p>
-            <p class="fragment">10^126: <span class="highlight-b">46 more zeroes</span></p>
-            <aside class="notes">
-                10^126 combinations (14 days, 3 shifts per day, on average 3 employees per shift)
-                Now a lot of those solutions will be junk, but still!
-            </aside>
+            <p class="fragment">10^221: <span class="highlight-b">140 more zeroes</span></p>
         </section>
+
+
+        <section data-background-color="black">
+            8x8 cube = 10^217
+            <figure>
+                <img src="../src/content/static/llms-cant/genai-chatgpt-cube.png" width="60%"/>
+                <figcaption class="fragment">ChatGPT: which refused to generate a 8x8 😦</figcaption>
+            </figure>
+
+        </section>
+
         <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
                  data-background-size="stretch"
                  data-background-opacity="0.1"
                  data-background-color="black">
-            <h3>You can't optimize for such a search space by <br /><span class="highlight-b">"predicting the next token"</span></h3>
-
+            <h3>You can't optimize for such a search space by <br /><br /><span class="highlight-b">predicting the next token</span><br /> nor by <span class="highlight-b">reasoning like a human.</span></h3>
             <aside class="notes">
                 Surprised it works as well as it does, but there are still limits.
             </aside>
         </section>
+
+        <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
+                 data-background-size="stretch"
+                 data-background-opacity="0.1"
+                 data-background-color="black">
+            Creating a schedule is one thing but how do LLMs fare with changing a schedule?
+        </section>
+
+        <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
+                 data-background-size="stretch"
+                 data-background-opacity="0.1"
+                 data-background-color="black">
+            TOM geeft voorbeelden van changes go blurgh? and time duration.
+        </section>
+
         <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
                  data-background-size="stretch"
                  data-background-opacity="0.1"
@@ -286,6 +297,7 @@
             <h2>Why do LLMs fail here?</h2>
             <p class="fragment highlight-b">Problem Size</p>
         </section>
+
         <section data-background-color="#3e00ff">
             <h1>LLMs can't optimize schedules</h1>
         </section>
@@ -336,11 +348,6 @@
                 <li class="fragment">"Learn from data": Lack of high quality data</li>
                 <li class="fragment">"Make decisions": MANY INTERLINKED decisions</li>
             </ul>
-        </section>
-        <section data-background-color="black"
-                 data-background-image="../src/content/static/llms-cant/genai-chatgpt-cube.png"
-                 data-background-size="80%"
-                 data-background-position="bottom">
         </section>
         <section data-background-color="black"
                  data-background-image="../src/content/static/llms-cant/AI-space.png"
