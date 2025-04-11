@@ -100,7 +100,7 @@
     </section>
     <section>
         <section data-background-color="#3e00ff">
-            <h1>LLMs can't...</h1>
+            <h1>Can LLMs solve <span class="highlight-b">planning problems</span>?</h1>
         </section>
         <section data-background-image="../src/content/static/llms-cant/delivery-pexels.png"
                  data-background-size="stretch">
@@ -114,6 +114,13 @@
                 Neighbor - scheduling problem
             </aside>
         </section>
+        <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
+                 data-background-size="stretch"
+                 data-background-opacity="0.1"
+                 data-background-color="black">
+            <p class="fragment">We have <span class="highlight-b">30 employees</span> , each with their own skills, availability, preferences, etc.</p>
+            <p class="fragment">We schedule <span class="highlight-b">7 days</span>, there are <span class="highlight-b">3 shifts per day</span> and we need on average slightly more than <span class="highlight-b">7 employees per shift</span>, potentially with different skills.</p>
+        </section>
         <section  data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
                   data-background-size="stretch"
                   data-background-opacity="0.1"
@@ -122,18 +129,6 @@
             <aside class="notes">
                 Neighbor - scheduling problem
             </aside>
-        </section>
-        <section  data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
-                  data-background-size="stretch"
-                  data-background-opacity="0.1"
-                  data-background-color="black">
-            <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
-                     data-background-size="stretch"
-                     data-background-opacity="0.1"
-                     data-background-color="black">
-                <p class="fragment">We have <span class="highlight-b">30 employees</span> , each with their own skills, availability, preferences, etc.</p>
-                <p class="fragment">We schedule <span class="highlight-b">7 days</span>, there are <span class="highlight-b">3 shifts per day</span> and we need on average slightly more than <span class="highlight-b">7 employees per shift</span>, potentially with different skills.</p>
-            </section>
         </section>
         <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
                  data-background-size="stretch"
@@ -144,13 +139,13 @@
                 Walk in the park
             </aside>
         </section>
-        <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
+        <!--<section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
                  data-background-size="stretch"
                  data-background-opacity="0.1"
                  data-background-color="black">
             <h2>Not just any LLMs, we got proof of that.</h2>
             <p>TODO: add references to papers and the bet Geoff made with Stephan</p>
-        </section>
+        </section>-->
         <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
                  data-background-size="stretch"
                  data-background-opacity="0.1"
@@ -206,24 +201,16 @@
         <section data-background-image="../src/content/static/llms-cant/chatgpt-reasoning/schedule-success.png"
                  data-background-size="contain"
                  data-background-color="black">
+            <h2 class="fragment">Toy example</h2>
         </section>
+
         <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
                  data-background-size="stretch"
                  data-background-opacity="0.1"
                  data-background-color="black">
-            <h2>Toy example</h2>
+            <h2>Can reasoning models optimize a <span class="highlight-b">realistic schedule</span>?</h2>
         </section>
-        <section data-background-image="../src/content/static/llms-cant/small-vs-large-datasets.png"
-                 data-background-size="contain"
-                 data-background-opacity="1"
-                 data-background-color="black">
-        </section>
-        <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
-                 data-background-size="stretch"
-                 data-background-opacity="0.1"
-                 data-background-color="black">
-            <h2>Can reasoning models optimize a realistic schedule?</h2>
-        </section>
+
         <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
                  data-background-size="stretch"
                  data-background-opacity="0.1"
@@ -232,9 +219,21 @@
             <ul>
                 <li class="fragment">Stops generating</li>
                 <li class="fragment">Pretends to succeed</li>
-                <li class="fragment">Decides to go greedy</li>
             </ul>
         </section>
+
+        <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
+                 data-background-size="stretch"
+                 data-background-opacity="0.1"
+                 data-background-color="black">
+        </section>
+        <section data-background-image="../src/content/static/llms-cant/small-vs-large-datasets.png"
+                 data-background-size="contain"
+                 data-background-opacity="1"
+                 data-background-color="black">
+            SIMPLER
+        </section>
+
 
         <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
                  data-background-size="stretch"
@@ -290,7 +289,7 @@
                  data-background-size="stretch"
                  data-background-opacity="0.1"
                  data-background-color="black">
-            <h3>You can't optimize for such a search space by <br /><br /><span class="highlight-b">predicting the next token</span><br /> nor by <span class="highlight-b">reasoning like a human.</span></h3>
+            <h3>You can't optimize for such a search space by <br /><br /><span class="highlight-b">predicting the next token</span><br /> nor by <span class="highlight-b">reasoning like a human</span>.</h3>
             <aside class="notes">
                 Surprised it works as well as it does, but there are still limits.
             </aside>
@@ -310,7 +309,7 @@
                  data-background-opacity="0.1"
                  data-background-color="black">
             TOM geeft voorbeelden van changes go blurgh? and time duration.
-        </section>-->
+        </section>
 
         <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
                  data-background-size="stretch"
@@ -318,7 +317,7 @@
                  data-background-color="black">
             <h2>Why do LLMs fail here?</h2>
             <p class="fragment highlight-b">Problem Size</p>
-        </section>
+        </section>-->
 
         <section data-background-color="#3e00ff">
             <h1>LLMs can't optimize schedules</h1>
@@ -397,7 +396,7 @@
         </section>
 
         <section data-background-image="../src/content/static/llms-cant/scared-pexels.png"
-                 data-background-size="stretch"><h1 class="fragment" style="color: #000000; float: right; margin-top: -300px">MATH</h1></section>
+                 data-background-size="stretch"><h1 class="fragment" style="color: #000000; float: right; margin-top: -300px">WISKUNDIGE FORMULE</h1></section>
 
         <section data-transition="fade-out">
             <figure>
@@ -409,15 +408,7 @@
                 <li class="fragment">Optimization algorithms in domain code</li>
                 <li class="fragment">Open Source Solver (Apache license)</li>
                 <li class="fragment">Java / Kotlin / Python</li>
-                <li class="fragment">10+ Years Experience</li>
             </ul>
-        </section>
-        <section>
-            <h3>Metaheuristics</h3>
-            <ol>
-                <li class="fragment">Make a fast initial solution</li>
-                <li class="fragment">Exploring alternatives by moving thing around</li>
-            </ol>
         </section>
         <section data-background-color="#3e00ff">
             <h1>Demo</h1>
@@ -532,14 +523,10 @@
                     <td><a href="https://solver.timefold.ai">solver.timefold.ai</a></td>
                 </tr>
                 <tr>
-                    <th>Documentation</th>
-                    <td><a href="https://docs.timefold.ai">docs.timefold.ai</a></td>
+                    QR-code
                 </tr>
-                <tr>
-                    <th>Quickstarts</th>
-                    <td><a href="https://github.com/TimefoldAI/timefold-quickstarts">github.com/TimefoldAI/timefold-quickstarts</a></td>
-                </tr>
-                <tr><th>&nbsp;</th><td>&nbsp;</td></tr>
+                <tr><th>Social links - Geoff</th><td>&nbsp;</td></tr>
+                <tr><th>Social links - Tom</th><td>&nbsp;</td></tr>
             </table>
         </section>
     </section>
