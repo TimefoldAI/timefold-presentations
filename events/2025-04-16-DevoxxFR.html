@@ -139,13 +139,6 @@
                 Walk in the park
             </aside>
         </section>
-        <!--<section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
-                 data-background-size="stretch"
-                 data-background-opacity="0.1"
-                 data-background-color="black">
-            <h2>Not just any LLMs, we got proof of that.</h2>
-            <p>TODO: add references to papers and the bet Geoff made with Stephan</p>
-        </section>-->
         <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
                  data-background-size="stretch"
                  data-background-opacity="0.1"
@@ -157,14 +150,6 @@
                  data-background-opacity="0.1"
                  data-background-color="black">
             <h2>EXPLAINER ON REGULAR LLMs vs REASONING MODELS</h2>
-        </section>
-        <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
-                 data-background-size="stretch"
-                 data-background-opacity="0.1"
-                 data-background-color="black">
-            <p>Regular LLM: Impulse social media poster</p>
-            <p>Reasoning LLM: Blogger</p>
-            <p>TODO: Use Images</p>
         </section>
         <section data-background-image="../src/content/static/llms-cant/chatgpt-research-shortly.png"
                  data-background-size="contain"
@@ -215,31 +200,31 @@
                  data-background-size="stretch"
                  data-background-opacity="0.1"
                  data-background-color="black">
-            TOM toont non-toy dataset failure.
-            <ul>
-                <li class="fragment">Stops generating</li>
-                <li class="fragment">Pretends to succeed</li>
-            </ul>
+            <img src="../src/content/static/llms-cant/chatgpt-reasoning/didnotfinish.png" class="fullImage">
+            <img src="../src/content/static/llms-cant/chatgpt-reasoning/error.png" class="fragment">
+            <img src="../src/content/static/llms-cant/chatgpt-reasoning/trustmebro.png" class="fragment" style="margin-top: 50px">
+            <img src="../src/content/static/llms-cant/chatgpt-reasoning/lying.png" class="fragment">
         </section>
 
-        <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
-                 data-background-size="stretch"
-                 data-background-opacity="0.1"
-                 data-background-color="black">
-        </section>
         <section data-background-image="../src/content/static/llms-cant/small-vs-large-datasets.png"
                  data-background-size="contain"
                  data-background-opacity="1"
                  data-background-color="black">
-            SIMPLER
         </section>
-
 
         <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
                  data-background-size="stretch"
                  data-background-opacity="0.1"
                  data-background-color="black">
             <h2>Why do LLMs fail here?</h2>
+        </section>
+
+        <section>
+            <img src="../src/content/static/ai/planning-is-not-a-sequence-of-decisions-cutout_0.png" class="fullImage">
+            <img src="../src/content/static/ai/planning-is-not-a-sequence-of-decisions-cutout_1.png" class="fullImage fragment">
+            <img src="../src/content/static/ai/planning-is-not-a-sequence-of-decisions-cutout_2.png" class="fullImage fragment">
+            <img src="../src/content/static/ai/planning-is-not-a-sequence-of-decisions-cutout_3.png" class="fullImage fragment">
+            <img src="../src/content/static/ai/planning-is-not-a-sequence-of-decisions-cutout_4.png" class="fullImage fragment">
         </section>
 
         <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
@@ -277,14 +262,6 @@
             <p class="fragment">10^221: <span class="highlight-b">141 more zeroes</span></p>
         </section>
 
-        <section data-background-color="black">
-            8x8 cube = 10^217
-            <figure>
-                <img src="../src/content/static/llms-cant/genai-chatgpt-cube.png" width="60%"/>
-                <figcaption class="fragment">ChatGPT: which refused to generate a 8x8 😦</figcaption>
-            </figure>
-        </section>
-
         <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
                  data-background-size="stretch"
                  data-background-opacity="0.1"
@@ -294,30 +271,6 @@
                 Surprised it works as well as it does, but there are still limits.
             </aside>
         </section>
-
-        <!--
-        Doesn't add enough value I think.
-        <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
-                 data-background-size="stretch"
-                 data-background-opacity="0.1"
-                 data-background-color="black">
-            Creating a schedule is one thing but how do LLMs fare with changing a schedule?
-        </section>
-
-        <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
-                 data-background-size="stretch"
-                 data-background-opacity="0.1"
-                 data-background-color="black">
-            TOM geeft voorbeelden van changes go blurgh? and time duration.
-        </section>
-
-        <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
-                 data-background-size="stretch"
-                 data-background-opacity="0.1"
-                 data-background-color="black">
-            <h2>Why do LLMs fail here?</h2>
-            <p class="fragment highlight-b">Problem Size</p>
-        </section>-->
 
         <section data-background-color="#3e00ff">
             <h1>LLMs can't optimize schedules</h1>
@@ -396,7 +349,13 @@
         </section>
 
         <section data-background-image="../src/content/static/llms-cant/scared-pexels.png"
-                 data-background-size="stretch"><h1 class="fragment" style="color: #000000; float: right; margin-top: -300px">WISKUNDIGE FORMULE</h1></section>
+                 data-background-size="stretch"><div style="color: #000000; float: right; margin-top: -300px; font-size: smaller">
+            $\begin{aligned}
+
+            & \quad \sum_{s \in S} \sum_{e \in E} \mathrm{pref}(s,e) \, x_{s,e} \\
+            \end{aligned}
+            $
+        </div></section>
 
         <section data-transition="fade-out">
             <figure>
@@ -537,6 +496,7 @@
 <script src="../src/web/reveal/js/reveal.js"></script>
 <script src="../src/web/reveal/plugin/highlight/highlight.js"></script>
 <script src="../src/web/reveal/plugin/notes/notes.js"></script>
+<script src="../src/web/reveal/plugin/math/math.js"></script>
 
 <script>
   const showControls = false;
@@ -553,7 +513,7 @@
     margin: 0.05,
     minScale: 0.2,
     maxScale: 100.0,
-    plugins: [ RevealHighlight, RevealNotes ],
+    plugins: [ RevealHighlight, RevealNotes, RevealMath.KaTeX ],
   });
 </script>
 </body>
