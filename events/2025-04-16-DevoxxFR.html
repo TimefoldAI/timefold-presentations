@@ -83,10 +83,10 @@
             <h2>Really?</h2>
         </section>
         <section>
-            <h2>Too much time on <span class="highlight">Social Media?</span></h2>
+            <h2>LinkedIn</h2>
         </section>
         <section>
-            <h2><span class="highlight">Hype machine</span> got to you?</h2>
+            <h2>Hype</h2>
         </section>
         <section>
             <img src="../src/content/static/llms-cant/canva-rag.png" style="margin-left: -50px; width: 400px">
@@ -100,7 +100,7 @@
     </section>
     <section>
         <section data-background-color="#3e00ff">
-            <h1>Can LLMs solve <span class="highlight-b">planning problems</span>?</h1>
+            <h1>Can LLMs solve <span style="font-weight: bold">planning problems</span>?</h1>
         </section>
         <section data-background-image="../src/content/static/llms-cant/delivery-pexels.png"
                  data-background-size="stretch">
@@ -114,12 +114,18 @@
                 Neighbor - scheduling problem
             </aside>
         </section>
+        <section>
+            <img src="../src/content/static/ai/planning-is-not-a-sequence-of-decisions-cutout_0.png" class="fullImage">
+
+        </section>
         <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
                  data-background-size="stretch"
                  data-background-opacity="0.1"
                  data-background-color="black">
-            <p class="fragment">We have <span class="highlight-b">30 employees</span> , each with their own skills, availability, preferences, etc.</p>
-            <p class="fragment">We schedule <span class="highlight-b">7 days</span>, there are <span class="highlight-b">3 shifts per day</span> and we need on average slightly more than <span class="highlight-b">7 employees per shift</span>, potentially with different skills.</p>
+            <p class="fragment">7 days</p>
+            <p class="fragment">5 shifts per employee</p>
+            <p class="fragment"> <span class="highlight-b">30 employees</span></p>
+            <p class="fragment"> <span class="highlight-b">150 shift assignments</span></p>
         </section>
         <section  data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
                   data-background-size="stretch"
@@ -200,17 +206,12 @@
                  data-background-size="stretch"
                  data-background-opacity="0.1"
                  data-background-color="black">
-            <img src="../src/content/static/llms-cant/chatgpt-reasoning/didnotfinish.png" class="fullImage">
             <img src="../src/content/static/llms-cant/chatgpt-reasoning/error.png" class="fragment">
             <img src="../src/content/static/llms-cant/chatgpt-reasoning/trustmebro.png" class="fragment" style="margin-top: 50px">
             <img src="../src/content/static/llms-cant/chatgpt-reasoning/lying.png" class="fragment">
+            TODO viz + separate slides, + viz score of failures
         </section>
 
-        <section data-background-image="../src/content/static/llms-cant/small-vs-large-datasets.png"
-                 data-background-size="contain"
-                 data-background-opacity="1"
-                 data-background-color="black">
-        </section>
 
         <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
                  data-background-size="stretch"
@@ -219,6 +220,12 @@
             <h2>Why do LLMs fail here?</h2>
         </section>
 
+        <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
+                 data-background-size="stretch"
+                 data-background-opacity="0.1"
+                 data-background-color="black">
+            <h2>Scheduling is not a sequence of decisions</h2>
+        </section>
         <section>
             <img src="../src/content/static/ai/planning-is-not-a-sequence-of-decisions-cutout_0.png" class="fullImage">
             <img src="../src/content/static/ai/planning-is-not-a-sequence-of-decisions-cutout_1.png" class="fullImage fragment">
@@ -227,36 +234,30 @@
             <img src="../src/content/static/ai/planning-is-not-a-sequence-of-decisions-cutout_4.png" class="fullImage fragment">
         </section>
 
+
         <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
                  data-background-size="stretch"
                  data-background-opacity="0.1"
                  data-background-color="black">
-            <h2>Challenge: <br/><span class="highlight-b">Problem Size</span></h2>
-            <blockquote>The set of all possible solutions crafted from a given input</blockquote>
+            <p><span>30 employees</span></p>
+            <p><span>150 shift assignments</span></p>
+            <hr />
+            <p class="fragment">1 shift: 30 options</p>
+            <p class="fragment">2 shifts: 30*30 options</p>
+            <p class="fragment">3 shifts: 30^3 options</p>
+            <p class="fragment">150 shifts: 30^150 options</p>
         </section>
+
         <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
                  data-background-size="stretch"
                  data-background-opacity="0.1"
                  data-background-color="black">
-            <p class="fragment">We have <span class="highlight-b">30 employees</span> , each with their own skills, availability, preferences, etc.</p>
-            <p class="fragment">We schedule <span class="highlight-b">7 days</span>, there are <span class="highlight-b">3 shifts per day</span> and we need on average slightly more than <span class="highlight-b">7 employees per shift</span>, potentially with different skills.</p>
-            <p class="fragment highlight-b">How many different solution can we create?</p>
-            <aside class="notes">
-                30^150 combinations (7 days, 3 shifts per day, 7 employees per shift)
-            </aside>
-        </section>
-        <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
-                 data-background-size="stretch"
-                 data-background-opacity="0.1"
-                 data-background-color="black">
-            <p>7 * 3 * 7 = 147 ~ 150</p>
-            <p class="fragment">30 employees => <span class="highlight-b">30^150</span></p>
-            <p class="fragment">Or put differently</p>
-            <p class="fragment">3.699884850351 × <span class="highlight-b">10^221</span></p>
+            <p>150 shifts: 30^150</p>
+            <p class="fragment">3.69 × <span class="highlight-b">10^221</span></p>
         </section>
         <section data-background-image="../src/content/static/llms-cant/pexels-sky-space-dark-galaxy.jpg"
                  data-background-size="stretch"
-                 data-background-opacity="0.4"
+                 data-background-opacity="0."
                  data-background-color="black">
             <p class="fragment">10^80: atoms in the observable universe</p>
             <p class="fragment">10^221: <span class="highlight-b">141 more zeroes</span></p>
@@ -352,10 +353,14 @@
                  data-background-size="stretch"><div style="color: #000000; float: right; margin-top: -300px; font-size: smaller">
             $\begin{aligned}
 
-            & \quad \sum_{s \in S} \sum_{e \in E} \mathrm{pref}(s,e) \, x_{s,e} \\
+            & \quad \sum_{s \in S} \sum_{e \in E} \mathrm{pref}(s,e) \, a_{s,e} \\
             \end{aligned}
             $
         </div></section>
+
+        <section data-background-color="#3e00ff">
+            <h1>PlanningAI</h1>
+        </section>
 
         <section data-transition="fade-out">
             <figure>
@@ -449,22 +454,23 @@
         </section>
         <section data-background-color="black"
                  data-background-size="contain">
+            In de context van dit soort problemen
             <table>
                 <tr>
                     <th>Technique</th>
                     <th>Strength</th>
                 </tr>
                 <tr class="fragment">
-                    <td>Mathematical Optimization</td>
-                    <td>Precision</td>
+                    <td>GenAI</td>
+                    <td>Data extraction</td>
                 </tr>
                 <tr class="fragment">
                     <td>Machine Learning</td>
                     <td>Prediction</td>
                 </tr>
                 <tr class="fragment">
-                    <td>GenAI</td>
-                    <td>Creativity</td>
+                    <td>PlanningAI</td>
+                    <td>Scheduling</td>
                 </tr>
             </table>
         </section>
