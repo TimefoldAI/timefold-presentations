@@ -185,6 +185,7 @@
 
 
 
+
     inkscape:perspective
        sodipodi:type=&quot;inkscape:persp3d&quot;
        inkscape:vp_x=&quot;0 : 526.18109 : 1&quot;
@@ -846,10 +847,10 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="1.3275"
-     inkscape:cx="419.58569"
+     inkscape:cx="419.20904"
      inkscape:cy="292.27872"
      inkscape:document-units="px"
-     inkscape:current-layer="layer6"
+     inkscape:current-layer="svg2"
      showgrid="true"
      width="800px"
      borderlayer="true"
@@ -3705,6 +3706,36 @@
   </g>
   <g
      inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="Time window"
+     style="display:inline">
+    <path
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#a40000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1, 2;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+       d="m 363.66682,312.0001 c 0,48 -14.81111,58 -64.81111,58"
+       id="path10455"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <flowRoot
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#a40000;fill-opacity:1;stroke:none"
+       id="flowRoot10479"
+       xml:space="preserve"
+       transform="translate(26.902297,462.08172)"><flowRegion
+         id="flowRegion10481"><rect
+           style="font-size:15px;text-align:center;text-anchor:middle;fill:#a40000"
+           y="-117.50765"
+           x="147.66626"
+           height="89.540039"
+           width="150.28716"
+           id="rect10483" /></flowRegion><flowPara
+         id="flowPara10485"
+         style="font-size:15px;line-height:1.25;text-align:center;text-anchor:middle;fill:#a40000">Time window</flowPara><flowPara
+         style="font-size:12.5px;line-height:1.25;text-align:center;text-anchor:middle;fill:#a40000"
+         id="flowPara10491">Deliver between</flowPara><flowPara
+         id="flowPara10487"
+         style="font-size:12.5px;line-height:1.25;text-align:center;text-anchor:middle;fill:#a40000">8:00 AM and 12:00 AM</flowPara></flowRoot>
+  </g>
+  <g
+     inkscape:groupmode="layer"
      id="layer4"
      inkscape:label="Expensive delivery"
      style="display:inline">
@@ -3748,36 +3779,6 @@
            id="rect10538" /></flowRegion><flowPara
          id="flowPara10540"
          style="font-size:12.5px;line-height:1.25;text-align:end;text-anchor:end;fill:#a40000">Expensive delivery</flowPara></flowRoot>
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer5"
-     inkscape:label="Time window"
-     style="display:inline">
-    <path
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#a40000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1, 2;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
-       d="m 363.66682,312.0001 c 0,48 -14.81111,58 -64.81111,58"
-       id="path10455"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
-    <flowRoot
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#a40000;fill-opacity:1;stroke:none"
-       id="flowRoot10479"
-       xml:space="preserve"
-       transform="translate(26.902297,462.08172)"><flowRegion
-         id="flowRegion10481"><rect
-           style="font-size:15px;text-align:center;text-anchor:middle;fill:#a40000"
-           y="-117.50765"
-           x="147.66626"
-           height="89.540039"
-           width="150.28716"
-           id="rect10483" /></flowRegion><flowPara
-         id="flowPara10485"
-         style="font-size:15px;line-height:1.25;text-align:center;text-anchor:middle;fill:#a40000">Time window</flowPara><flowPara
-         style="font-size:12.5px;line-height:1.25;text-align:center;text-anchor:middle;fill:#a40000"
-         id="flowPara10491">Deliver between</flowPara><flowPara
-         id="flowPara10487"
-         style="font-size:12.5px;line-height:1.25;text-align:center;text-anchor:middle;fill:#a40000">8:00 AM and 12:00 AM</flowPara></flowRoot>
   </g>
   <g
      inkscape:groupmode="layer"
