@@ -119,6 +119,9 @@
             <h2>Competitive advantage</h2>
         </section>
         <section>
+            <h2>They don't want to talk about it</h2>
+        </section>
+        <section>
             <figure>
                 <img src="../src/content/static/ai/schedule-with-ai-button.png"/>
             </figure>
@@ -175,6 +178,9 @@
             <h2>2000 visits =<br/> 10<sup>5735</sup> possibilities</h2>
         </section>
         <section>
+            <h2>Better algorithms</h2>
+        </section>
+        <section>
             <img src="../src/content/timefold-solver-docs/enterprise-edition/mapReduceIsTerribleForTsp_0.png" class="fullImage">
             <img src="../src/content/timefold-solver-docs/enterprise-edition/mapReduceIsTerribleForTsp_1.png" class="fullImage fragment">
             <img src="../src/content/timefold-solver-docs/enterprise-edition/mapReduceIsTerribleForTsp_2.png" class="fullImage fragment">
@@ -192,7 +198,10 @@
             <h2>How hard can it be?</h2>
         </section>
         <section>
-            <h2>Very hard</h2>
+            <h2>Pretty hard</h2>
+        </section>
+        <section>
+            <h2>60 years of research</h2>
         </section>
         <section>
             <h2>1959 - Dantzig et al</h2>
@@ -222,13 +231,10 @@
             <img src="../src/content/static/vehicle-routing/vehicleRoutingProblem_4.png" class="fullImage fragment">
         </section>
         <section>
-            <h2>60 years of research</h2>
-        </section>
-        <section>
             <h2>Still active today</h2>
         </section>
         <section>
-            <img src="../src/content/static/vehicle-routing/research-papers-2025-vrp.png" class="fullImage">
+            <img src="../src/content/static/vehicle-routing/academic/research-papers-2025-vrp.png" class="fullImage">
         </section>
         <section>
             <h2>Solved problem?</h2>
@@ -237,24 +243,138 @@
 
     <section>
         <section data-background-color="#3e00ff">
-            <h2>What is the<br/>Vehicle Routing Problem?</h2>
+            <h2>When research<br/>datasets<br/> meet reality</h2>
         </section>
         <section>
-            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/vehicleRoutingValueProposition_0.png" class="fullImage">
+            <h3>CVRP dataset</h3>
+            <pre xml:space="preserve">NAME : X-n101-k25
+...
+EDGE_WEIGHT_TYPE : EUC_2D
+...
+NODE_COORD_SECTION
+1	365	689 <span class="fragment highlight"> // Euclidean coordinates</span>
+2	146	180
+3	792	5
+4	658	510
+5	461	270
+6	299	531
+7	812	228
+8	643	90
+...</pre>
+            <p class="fragment highlight">No latitude and longitude?</p>
         </section>
-        <!-- TODO -->
         <section>
-            <h2>Is it worth optimizing?</h2>
+            <h2>Euclidean = flat surface</h2>
         </section>
         <section>
-            <h3>Vehicle routing case study</h3>
-            <p>Expected: -1% driving time</p>
-            <p class="fragment">Result: -25% driving time</p>
-            <p class="fragment">50k+ vehicles</p>
-            <p class="fragment">⇒ -10 million kg CO² emission per year</p>
-            <p class="fragment">⇒ <span class="highlight">-100 million $</span> cost per year</p>
+            <img src="../src/content/static/vehicle-routing/academic/flat_earth.png" class="">
+        </section>
+        <section>
+            <h2>Haversine = sphere</h2>
+            <p class="fragment">as the crow flies...</p>
+        </section>
+        <section>
+            <h2>Maps integration</h2>
+        </section>
+        <section>
+            <img src="../src/content/static/vehicle-routing/screenshots/distance-types-screenshots.png" class="">
         </section>
     </section>
+
+    <section>
+        <section data-background-color="#3e00ff">
+            <h2>When research<br/>time calculation<br/> meets reality</h2>
+        </section>
+        <section>
+            <h2>VRP with Time Windows</h2>
+        </section>
+        <section>
+            <img src="../src/content/timefold-field-service-routing/visit-service-constraints/visit-time-windows/visit-time-windows_0.png" class="fullImage">
+            <img src="../src/content/timefold-field-service-routing/visit-service-constraints/visit-time-windows/visit-time-windows_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-field-service-routing/visit-service-constraints/visit-time-windows/visit-time-windows_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-field-service-routing/visit-service-constraints/visit-time-windows/visit-time-windows_3.png" class="fullImage fragment">
+            <img src="../src/content/timefold-field-service-routing/visit-service-constraints/visit-time-windows/visit-time-windows_4.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-field-service-routing/visit-service-constraints/visit-time-windows/visit-time-windows-too-late_0.png" class="fullImage">
+            <img src="../src/content/timefold-field-service-routing/visit-service-constraints/visit-time-windows/visit-time-windows-too-late_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-field-service-routing/visit-service-constraints/visit-time-windows/visit-time-windows-too-late_2.png" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-field-service-routing/visit-service-constraints/visit-time-windows/visit-time-windows-too-early_0.png" class="fullImage">
+            <img src="../src/content/timefold-field-service-routing/visit-service-constraints/visit-time-windows/visit-time-windows-too-early_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-field-service-routing/visit-service-constraints/visit-time-windows/visit-time-windows-too-early_2.png" class="fullImage fragment">
+        </section>
+        <!--<section>
+            <img src="../src/content/timefold-field-service-routing/visit-service-constraints/visit-time-windows/visit-time-windows-the-wait-time-paradox_0.png" class="fullImage">
+            <img src="../src/content/timefold-field-service-routing/visit-service-constraints/visit-time-windows/visit-time-windows-the-wait-time-paradox_1.png" class="fullImage fragment">
+            <img src="../src/content/timefold-field-service-routing/visit-service-constraints/visit-time-windows/visit-time-windows-the-wait-time-paradox_2.png" class="fullImage fragment">
+            <img src="../src/content/timefold-field-service-routing/visit-service-constraints/visit-time-windows/visit-time-windows-the-wait-time-paradox_3.png" class="fullImage fragment">
+        </section>-->
+        <section>
+            <h2>In reality</h2>
+        </section>
+        <section>
+            <h2>Multi-day planning</h2>
+        </section>
+        <section>
+            <img src="../src/content/timefold-field-service-routing/visit-service-constraints/visit-time-windows/visit-multiple-time-windows_0.png" class="fullImage">
+            <img src="../src/content/timefold-field-service-routing/visit-service-constraints/visit-time-windows/visit-multiple-time-windows_1.png" class="fullImage fragment">
+        </section>
+        <section>
+            <h3>VRPTW dataset</h3>
+            <pre xml:space="preserve">C101
+
+VEHICLE
+NUMBER     CAPACITY
+  25         200
+
+CUSTOMER
+CUST NO.  ... READY TIME  DUE DATE   SERVICE   TIME
+
+    0      ...     0       1236          0
+    1      ...   912        967         90 <span class="fragment highlight">// Are these time?</span>
+    2      ...   825        870         90
+    3      ...    65        146         90
+    4      ...   727        782         90
+...</pre>
+            <p class="fragment highlight">No hours and minutes?</p>
+        </section>
+        <section>
+            <h3>Time calculation is hard</h3>
+            <ul>
+                <li class="fragment">Timezones</li>
+                <li class="fragment">Daylight Saving Time</li>
+                <li class="fragment">...</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Reality dataset</h3>
+            <pre xml:space="preserve">vehicles: [
+  {
+    id: "Vehicle 1",
+    minStart: "2025-06-02T<span class="highlight">09:00</span>:00+02:00",
+    maxEnd: "2025-06-02T<span class="highlight">17:00</span>:00+02:00",
+    ...
+  },
+  {
+    id: "Vehicle 2",
+    minStart: "2025-06-02T09:00:00+02:00",
+    maxEnd: "2025-06-02T17:00:00+02:00",
+    ...
+  },
+  ...
+],
+visits: [
+  {id:"Visit 1", ... serviceDuration: "PT<span class="highlight">5M</span>"}, <span class="fragment highlight">// 5 minutes</span>
+  {id:"Visit 2", ..., serviceDuration: "PT7M"},
+  ...
+]</pre></section>
+
+
+    </section>
+
+
     <section>
         <img src="../src/content/static/vehicle-routing/vehicle-routing-models.png" class="fullImage">
     </section>
@@ -271,56 +391,9 @@
         <img src="../src/content/static/platform/pick-up-delivery-routing-diagram.png">
     </section>
 
-
-<!-- TODO TSP, partitioning slide, ... -->
-
     <section>
         <section data-background-color="#3e00ff">
             <h2>Constraints in research</h2>
-        </section>
-        <section>
-            <h2>TSP</h2>
-        </section>
-        <section>
-            <h2>Traveling Salesman Problem</h2>
-        </section>
-        <section>
-            <h2>One Vehicle Routing Problem</h2>
-        </section>
-        <section>
-            <h2>1959</h2>
-        </section>
-        <section>
-            <h2>Dantzig and Ramser</h2>
-        </section>
-        <section>
-            <h2>CVRP</h2>
-        </section>
-        <section>
-            <h2>Capacitated Vehicle Routing Problem</h2>
-        </section>
-        <section>
-            <h2>1984</h2>
-        </section>
-        <section>
-            <h2>Solomon</h2>
-        </section>
-        <section>
-            <h2>VRPTW</h2>
-        </section>
-        <section>
-            <h2>Vehicle Routing Problem with Time Windows</h2>
-        </section>
-        <section>
-            <h2>thousands of scientific papers</h2>
-        </section>
-        <section>
-            <h2>solved problem?</h2>
-        </section>
-        <section>
-            <figure>
-                <img src="../src/content/static/ai/schedule-with-ai-button.png"/>
-            </figure>
         </section>
         <section>
             <img src="../src/content/timefold-field-service-routing/visit-service-constraints/visit-time-windows/visit-time-windows_0.png" class="fullImage">
