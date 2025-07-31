@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <title>J-Fall 2024</title>
-    <meta name="description" content="This slide deck talks about how we can Optimize Santa's travels using Timefold.ai">
+    <meta name="description"
+          content="This slide deck talks about how we can Optimize Santa's travels using Timefold.ai">
     <!--    <link href="https://github.com/TimefoldAI/timefold-presentations" rel="canonical">-->
 
     <link rel="stylesheet" href="../src/web/bootstrap/css/bootstrap.min.css">
@@ -19,7 +20,7 @@
         .endingcard {
             text-align: center;
             padding: 20px;
-            background: linear-gradient(to right, rgba(255,77,77,0.95), rgba(0,107,60,0.95)), url("../src/content/static/santa/route-genai-chatgpt.webp");
+            background: linear-gradient(to right, rgba(255, 77, 77, 0.95), rgba(0, 107, 60, 0.95)), url("../src/content/static/santa/route-genai-chatgpt.webp");
             background-size: cover;
             color: white;
             border-radius: 10px;
@@ -34,8 +35,8 @@
     <link rel="stylesheet" href="../src/web/reveal/plugin/highlight/a11y-light.css">
     <link rel="stylesheet" href="../src/web/timefold-presentation.css">
 
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
 
@@ -43,8 +44,8 @@
 <div class="reveal">
     <div class="watermark watermark-left">
         <p>
-            <img src="../src/web/social/bluesky-logo.png"/> @tomcools.be
-            <img src="../src/web/social/timefold-logo.png"/> timefold.ai
+            <img src="../src/web/social/bluesky-logo.svg"/> @tomcools.be
+            <img src="../src/web/social/timefold-logo.svg"/> timefold.ai
         </p>
     </div>
     <div class="slides">
@@ -61,18 +62,23 @@
         <section>
             <section>Halloween is behind us</section>
             <section>Days are getting darker and colder</section>
-            <section><christmas-countdown></christmas-countdown></section>
-            <section data-background-image="../src/content/static/santa/productionline-genai-chatgpt.png" data-background-size="cover">
+            <section>
+                <christmas-countdown></christmas-countdown>
+            </section>
+            <section data-background-image="../src/content/static/santa/productionline-genai-chatgpt.png"
+                     data-background-size="cover">
                 <aside class="notes">
                     Packages need to be created
                 </aside>
             </section>
-            <section data-background-image="../src/content/static/santa/schedule-genai-chatgpt.webp" data-background-size="cover">
+            <section data-background-image="../src/content/static/santa/schedule-genai-chatgpt.webp"
+                     data-background-size="cover">
                 <aside class="notes">
                     Elves need to be assigned shifts
                 </aside>
             </section>
-            <section data-background-image="../src/content/static/santa/route-genai-chatgpt.webp" data-background-size="cover">
+            <section data-background-image="../src/content/static/santa/route-genai-chatgpt.webp"
+                     data-background-size="cover">
                 <aside class="notes">
                     Santa needs to figure out the route to all children
                 </aside>
@@ -80,9 +86,11 @@
             <section>
                 <h2>These are all </br> <span class="highlight">planning problems</span></h2>
                 <aside class="notes">PROMISE by the end of this session, you'll get a better grasp</aside>
-                <p class="fragment"> <span class="highlight">Optimize goals</span> with <span class="highlight">limited resources</span> under <span class="highlight">constraints</span></p>
+                <p class="fragment"><span class="highlight">Optimize goals</span> with <span class="highlight">limited resources</span>
+                    under <span class="highlight">constraints</span></p>
             </section>
-            <section data-background-image="../src/content/static/santa/route-genai-chatgpt.webp" data-background-size="cover">
+            <section data-background-image="../src/content/static/santa/route-genai-chatgpt.webp"
+                     data-background-size="cover">
                 <aside class="notes">
                     Our focus for today
                 </aside>
@@ -100,7 +108,8 @@
                 <h2>Greedy Algorithms</h2>
             </section>
             <section>
-                <h3><span class="highlight">Greedy algorithms</span> make <span class="highlight">locally optimal choices</span> at each step, but do not consider effects on follow up steps.</h3>
+                <h3><span class="highlight">Greedy algorithms</span> make <span class="highlight">locally optimal choices</span>
+                    at each step, but do not consider effects on follow up steps.</h3>
             </section>
             <section>
                 <h3>Greedy code</h3>
@@ -143,7 +152,8 @@ for (int i = 0; i < remainingSize-1; i++) {
             </section>
             <section>
                 <aside class="notes">
-                    <h3>Santa is somewhat disappointed, he expected the <b>Optimal</b> solution, not just a <b>Feasible</b> solution</h3>
+                    <h3>Santa is somewhat disappointed, he expected the <b>Optimal</b> solution, not just a
+                        <b>Feasible</b> solution</h3>
 
                     Mention "THE" optimal solution is a tricky question.
                 </aside>
@@ -176,7 +186,7 @@ for (int i = 0; i < remainingSize-1; i++) {
                 </table>
             </section>
             <section>
-                <h2>Let's try everything! <br /><span class="highlight">Brute Force</span> 💪 </h2>
+                <h2>Let's try everything! <br/><span class="highlight">Brute Force</span> 💪 </h2>
             </section>
             <section>
                 <h3>Brute Force Code</h3>
@@ -196,7 +206,8 @@ for (int i = 0; i < remainingSize-1; i++) {
                 <p class="fragment">Search space for 1000 🎁: 10<sup>2567</sup></p>
                 <figure class="fragment">
                     <p>Atoms in observable universe: 10<sup>80</sup></p>
-                    <img src="../src/content/static/optimization-algorithms/universe.png" style="width: 200px; height: 200px;"/>
+                    <img src="../src/content/static/optimization-algorithms/universe.png"
+                         style="width: 200px; height: 200px;"/>
                 </figure>
             </section>
             <section>
@@ -213,7 +224,9 @@ for (int i = 0; i < remainingSize-1; i++) {
                 <img src="../src/content/static/benchmarks/bruteForceHitsTheWall-TSP_10.png" class="fullImage fragment">
             </section>
             <section>
-                <div><christmas-countdown></christmas-countdown></div>
+                <div>
+                    <christmas-countdown></christmas-countdown>
+                </div>
                 <div class="fragment">😱</div>
             </section>
             <section>
@@ -263,18 +276,22 @@ for (int i = 0; i < remainingSize-1; i++) {
                 </ul>
             </section>
             <section>
-                <img src="../src/content/timefold-solver-docs/optimization-algorithms/koptMove_0.png" class="fullImage">
-                <img src="../src/content/timefold-solver-docs/optimization-algorithms/koptMove_1.png" class="fullImage fragment">
-                <img src="../src/content/timefold-solver-docs/optimization-algorithms/koptMove_2.png" class="fullImage fragment">
-                <img src="../src/content/timefold-solver-docs/optimization-algorithms/koptMove_3.png" class="fullImage fragment">
-                <img src="../src/content/timefold-solver-docs/optimization-algorithms/koptMove_4.png" class="fullImage fragment">
+                <img src="../src/content/timefold-solver-docs/optimization-algorithms/koptMove_0.svg" class="fullImage">
+                <img src="../src/content/timefold-solver-docs/optimization-algorithms/koptMove_1.png"
+                     class="fullImage fragment">
+                <img src="../src/content/timefold-solver-docs/optimization-algorithms/koptMove_2.png"
+                     class="fullImage fragment">
+                <img src="../src/content/timefold-solver-docs/optimization-algorithms/koptMove_3.png"
+                     class="fullImage fragment">
+                <img src="../src/content/timefold-solver-docs/optimization-algorithms/koptMove_4.png"
+                     class="fullImage fragment">
             </section>
             <section>
                 <h2>Implement yourself?</h2>
             </section>
             <section data-transition="fade-out">
                 <figure>
-                    <img src="../src/content/timefold-solver-docs/shared/timefold-logo.png"/>
+                    <img src="../src/web/social/timefold-logo.svg"/>
                     <p><i>Planning optimization made easy</i></p>
                 </figure>
                 <ul style="margin-top: 10px;">
@@ -285,21 +302,27 @@ for (int i = 0; i < remainingSize-1; i++) {
                 </ul>
             </section>
             <section>
-                <img src="../src/content/timefold-solver-docs/introduction/compatibility_0.png" class="fullImage">
-                <img src="../src/content/timefold-solver-docs/introduction/compatibility_1.png" class="fullImage fragment">
-                <img src="../src/content/timefold-solver-docs/introduction/compatibility_2.png" class="fullImage fragment">
-                <img src="../src/content/timefold-solver-docs/introduction/compatibility_3.png" class="fullImage fragment">
-                <img src="../src/content/timefold-solver-docs/introduction/compatibility_4.png" class="fullImage fragment">
+                <img src="../src/content/timefold-solver-docs/introduction/compatibility_0.svg" class="fullImage">
+                <img src="../src/content/timefold-solver-docs/introduction/compatibility_1.svg"
+                     class="fullImage fragment">
+                <img src="../src/content/timefold-solver-docs/introduction/compatibility_2.svg"
+                     class="fullImage fragment">
+                <img src="../src/content/timefold-solver-docs/introduction/compatibility_3.svg"
+                     class="fullImage fragment">
+                <img src="../src/content/timefold-solver-docs/introduction/compatibility_4.svg"
+                     class="fullImage fragment">
             </section>
             <section>
 
                 <img src="../src/content/static/santa/vehicleRoutingClassDiagram-simplified_0.png" class="fullImage">
-                <img src="../src/content/static/santa/vehicleRoutingClassDiagram-simplified_1.png" class="fullImage fragment">
-                <img src="../src/content/static/santa/vehicleRoutingClassDiagram-simplified_2.png" class="fullImage fragment">
+                <img src="../src/content/static/santa/vehicleRoutingClassDiagram-simplified_1.png"
+                     class="fullImage fragment">
+                <img src="../src/content/static/santa/vehicleRoutingClassDiagram-simplified_2.png"
+                     class="fullImage fragment">
             </section>
             <section>
-                    <h3>Easy score calculator</h3>
-                    <pre xml:space="preserve"><code class="java">public HardSoftLongScore calculateScore(VehicleRoutePlan plan) {
+                <h3>Easy score calculator</h3>
+                <pre xml:space="preserve"><code class="java">public HardSoftLongScore calculateScore(VehicleRoutePlan plan) {
     long totalDrivingTime = 0;
 
     for(Vehicle v : plan.getVehicles()) {
@@ -416,7 +439,7 @@ for (int i = 0; i < remainingSize-1; i++) {
             </section>
         </section>
         <section>
-            <section>We still have a challenge! <img src="../src/content/static/santa/fireplace.png" /></section>
+            <section>We still have a challenge! <img src="../src/content/static/santa/fireplace.png"/></section>
             <section>
                 Current score calculation is not scalable.
                 <aside class="notes">
@@ -474,39 +497,44 @@ Constraint vehicleCapacity(ConstraintFactory factory) {
             </section>
             <section>
                 <h3>Incremental Score Calculation</h3>
-                Ex. Adding a new package: <img width="30px" style="filter: drop-shadow(0px 0px 10px red) hue-rotate(180deg) contrast(160%) " src="../src/content/static/santa/gift-marker.png" />
+                Ex. Adding a new package: <img width="30px"
+                                               style="filter: drop-shadow(0px 0px 10px red) hue-rotate(180deg) contrast(160%) "
+                                               src="../src/content/static/santa/gift-marker.png"/>
                 <br/>
                 <br/>
                 <span class="fragment">
                     Before:
-                <img width="30px"  src="../src/content/static/santa/gift-marker.png" />
-                <img width="30px"  src="../src/content/static/santa/gift-marker.png" />
-                <img width="30px"  src="../src/content/static/santa/gift-marker.png" />
-                <img width="30px"  src="../src/content/static/santa/gift-marker.png" />
-                <img width="30px"  src="../src/content/static/santa/gift-marker.png" />
-                <img width="30px"  src="../src/content/static/santa/gift-marker.png" />
-                <img width="30px"  src="../src/content/static/santa/gift-marker.png" />
-                <img width="30px"  src="../src/content/static/santa/gift-marker.png" />
+                <img width="30px" src="../src/content/static/santa/gift-marker.png"/>
+                <img width="30px" src="../src/content/static/santa/gift-marker.png"/>
+                <img width="30px" src="../src/content/static/santa/gift-marker.png"/>
+                <img width="30px" src="../src/content/static/santa/gift-marker.png"/>
+                <img width="30px" src="../src/content/static/santa/gift-marker.png"/>
+                <img width="30px" src="../src/content/static/santa/gift-marker.png"/>
+                <img width="30px" src="../src/content/static/santa/gift-marker.png"/>
+                <img width="30px" src="../src/content/static/santa/gift-marker.png"/>
                 </span>
-                <br />
+                <br/>
                 <span class="fragment">
                 After:
-                <img width="30px"  src="../src/content/static/santa/gift-marker.png" />
-                <img width="30px"  src="../src/content/static/santa/gift-marker.png" />
-                <img width="30px"  src="../src/content/static/santa/gift-marker.png" />
-                <img width="30px" style="filter: hue-rotate(180deg)"  src="../src/content/static/santa/gift-marker.png" />
-                <img width="30px" style="filter: drop-shadow(0px 0px 10px red) hue-rotate(180deg) contrast(160%) " src="../src/content/static/santa/gift-marker.png" />
-                <img width="30px" style="filter: hue-rotate(180deg)"  src="../src/content/static/santa/gift-marker.png" />
-                <img width="30px" src="../src/content/static/santa/gift-marker.png" />
-                <img width="30px" src="../src/content/static/santa/gift-marker.png" />
-                <img width="30px" src="../src/content/static/santa/gift-marker.png" />
+                <img width="30px" src="../src/content/static/santa/gift-marker.png"/>
+                <img width="30px" src="../src/content/static/santa/gift-marker.png"/>
+                <img width="30px" src="../src/content/static/santa/gift-marker.png"/>
+                <img width="30px" style="filter: hue-rotate(180deg)" src="../src/content/static/santa/gift-marker.png"/>
+                <img width="30px" style="filter: drop-shadow(0px 0px 10px red) hue-rotate(180deg) contrast(160%) "
+                     src="../src/content/static/santa/gift-marker.png"/>
+                <img width="30px" style="filter: hue-rotate(180deg)" src="../src/content/static/santa/gift-marker.png"/>
+                <img width="30px" src="../src/content/static/santa/gift-marker.png"/>
+                <img width="30px" src="../src/content/static/santa/gift-marker.png"/>
+                <img width="30px" src="../src/content/static/santa/gift-marker.png"/>
                 </span>
-                <br />
-                <br />
-                <br />
+                <br/>
+                <br/>
+                <br/>
 
                 <span class="fragment">
-                    Only Azure <img width="30px" style="filter: drop-shadow(0px 0px 10px red) hue-rotate(180deg) contrast(160%) " src="../src/content/static/santa/gift-marker.png" /> gifts are recalculated
+                    Only Azure <img width="30px"
+                                    style="filter: drop-shadow(0px 0px 10px red) hue-rotate(180deg) contrast(160%) "
+                                    src="../src/content/static/santa/gift-marker.png"/> gifts are recalculated
                 </span>
             </section>
         </section>
@@ -519,54 +547,64 @@ Constraint vehicleCapacity(ConstraintFactory factory) {
             </section>
             <section>
                 <h2>These are all </br> <span class="highlight">planning problems</span></h2>
-                <p class="fragment"> <span class="highlight">Optimize goals</span> with <span class="highlight">limited resources</span> under <span class="highlight">constraints</span></p>
+                <p class="fragment"><span class="highlight">Optimize goals</span> with <span class="highlight">limited resources</span>
+                    under <span class="highlight">constraints</span></p>
             </section>
             <section>
                 <h3>🖊 Model domain</h3>
                 <h3 class="fragment">⚖️ Define constraints</h3>
                 <h3 class="fragment"><span class="highlight"> 🚀 Run!</span></h3>
             </section>
-        <section>
-            <h3>Start coding today</h3>
-            <ol>
-                <li>Go to <a href="https://timefold.ai/open-source-solver">https://timefold.ai/open-source-solver</a></li>
-                <li>Click <a href="https://github.com/TimefoldAI/timefold-quickstarts"><i>Run a Quickstart</i></a>.</li>
-                <li>Pick a quickstart from the README.</li>
-                <li>Run it: 🚀</li>
-            </ol>
-        </section>
-            <section data-background-image="../src/content/static/santa/productionline-genai-chatgpt.png" data-background-size="cover">
+            <section>
+                <h3>Start coding today</h3>
+                <ol>
+                    <li>Go to <a
+                            href="https://timefold.ai/open-source-solver">https://timefold.ai/open-source-solver</a>
+                    </li>
+                    <li>Click <a href="https://github.com/TimefoldAI/timefold-quickstarts"><i>Run a Quickstart</i></a>.
+                    </li>
+                    <li>Pick a quickstart from the README.</li>
+                    <li>Run it: 🚀</li>
+                </ol>
+            </section>
+            <section data-background-image="../src/content/static/santa/productionline-genai-chatgpt.png"
+                     data-background-size="cover">
                 <div class="endingcard fragment">Quickstart: Food Packaging</div>
             </section>
-            <section data-background-image="../src/content/static/santa/schedule-genai-chatgpt.webp" data-background-size="cover">
+            <section data-background-image="../src/content/static/santa/schedule-genai-chatgpt.webp"
+                     data-background-size="cover">
                 <div class="endingcard fragment">Quickstart: Employee Scheduling</div>
             </section>
-            <section data-background-image="../src/content/static/santa/route-genai-chatgpt.webp" data-background-size="cover">
+            <section data-background-image="../src/content/static/santa/route-genai-chatgpt.webp"
+                     data-background-size="cover">
                 <div class="endingcard fragment">Quickstart: Vehicle Routing</div>
             </section>
-            <section data-background-image="../src/content/static/santa/route-genai-chatgpt.webp" data-background-size="cover">
+            <section data-background-image="../src/content/static/santa/route-genai-chatgpt.webp"
+                     data-background-size="cover">
                 <div class="endingcard fragment">Timefold Platform => app.timefold.ai</div>
             </section>
-        <section>
-            <h3> <span class="highlight"> 🎁 Merry Christmas! 🎁</span></h3>
-            <table class="links">
-                <tr>
-                    <th>Learn more</th>
-                    <td><a href="https://timefold.ai">timefold.ai</a></td>
-                </tr>
-                <tr>
-                    <th>Feedback</th>
-                    <td>
-                        <img src="../src/web/social/bluesky-logo.png"/> <a href="https://bsky.app/profile/tomcools.be">@tomcools.be</a><br/>
-                    </td>
-                </tr>
-                <tr>
-                    <th>Get started</th>
-                    <td>
-                        <img src="../src/content/static/cta/docs-HelloWorld-QR-code.png"/>
-                    </td>
-                </tr>
-            </table>
+            <section>
+                <h3><span class="highlight"> 🎁 Merry Christmas! 🎁</span></h3>
+                <table class="links">
+                    <tr>
+                        <th>Learn more</th>
+                        <td><a href="https://timefold.ai">timefold.ai</a></td>
+                    </tr>
+                    <tr>
+                        <th>Feedback</th>
+                        <td>
+                            <img src="../src/web/social/bluesky-logo.svg"/> <a
+                                href="https://bsky.app/profile/tomcools.be">@tomcools.be</a><br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Get started</th>
+                        <td>
+                            <img src="../src/content/static/cta/docs-HelloWorld-QR-code.png"/>
+                        </td>
+                    </tr>
+                </table>
+            </section>
         </section>
     </div>
 </div>
@@ -590,7 +628,7 @@ Constraint vehicleCapacity(ConstraintFactory factory) {
             37: 'prev',
             39: 'next',
         },
-        plugins: [ RevealHighlight, RevealNotes ],
+        plugins: [RevealHighlight, RevealNotes],
         margin: 0.05,
         minScale: 0.2,
         maxScale: 100.0

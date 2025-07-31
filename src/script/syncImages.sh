@@ -6,11 +6,11 @@ cd "$(dirname $0)" || exit
 
 cd ../.. || exit
 
-timefoldSolverDir=../../solver/timefold-solver
-timefoldQuickstartsDir=../../solver/timefold-quickstarts
-timefoldPlatformDir=../../platform/timefold-orbit
-timefoldModelsSdkDir=../../platform/timefold-models-sdk
-timefoldModelsDir=../../platform
+timefoldSolverDir=../timefold-solver
+timefoldQuickstartsDir=../timefold-quickstarts
+timefoldPlatformDir=../timefold-orbit
+timefoldModelsSdkDir=../timefold-models-sdk
+timefoldModelsDir=../
 modelNames=("timefold-field-service-routing" "timefold-employee-scheduling")
 
 timefoldPresentationsDir=`pwd`
@@ -38,13 +38,16 @@ done
 
 
 function processImages() {
-  if [ $# -ne 2 ]; then
+  if [ $# -ne 4 ]; then
     echo "ERROR processImages: invalid number of arguments ($#)"
     exit
   fi
 
   inputDir=$1
   outputDir=${timefoldPresentationsDir}/src/content/$2
+  mainFileExtension=$3
+  layerFileExtension=$4
+
   echo "********************"
   echo " processImages ${inputDir}"
   echo "********************"
@@ -52,38 +55,40 @@ function processImages() {
   git rm $outputDir/**/*.png
   git rm $outputDir/**/*.svg
 
-  pngInputFileList=`find ${inputDir} -type f -name "*.png" | sort`
+  pngInputFileList=`find ${inputDir} -type f -name ${mainFileExtension} | sort`
   for pngInputFile in ${pngInputFileList[@]}; do
     relativeFilePath=`echo "${pngInputFile}" | sed "s|${inputDir}||g"`
-    relativeParentDirPath=`echo ${relativeFilePath} | sed "s|/[^/]*\.png||g"`
+    relativeParentDirPath=`echo ${relativeFilePath} | sed "s|/[^/]*\.${mainFileExtension}||g"`
     pngOutputFile=${outputDir}${relativeFilePath}
     echo "Copy ${pngOutputFile}"
     mkdir -p ${outputDir}${relativeParentDirPath}
     cp ${pngInputFile} ${pngOutputFile}
   done
 
-  svgInputFileList=`find ${inputDir} -type f -name "*.svg" | sort`
+  svgInputFileList=`find ${inputDir} -type f -name "*.${layerFileExtension}" | sort`
   for svgInputFile in ${svgInputFileList[@]}; do
     relativeFilePath=`echo ${svgInputFile} | sed "s|${inputDir}||g"`
-    relativeParentDirPath=`echo ${relativeFilePath} | sed "s|/[^/]*\.svg||g"`
+    relativeParentDirPath=`echo ${relativeFilePath} | sed "s|/[^/]*\.${layerFileExtension}||g"`
     svgOutputFile=`echo "${outputDir}${relativeFilePath}" | sed "s|${timefoldPresentationsDir}/||g"`
 
     echo "Copy and extract ${svgOutputFile}"
     mkdir -p ${outputDir}${relativeParentDirPath}
     cp ${svgInputFile} ${svgOutputFile}
-    extractLayers ${svgOutputFile}
+    extractLayers ${svgOutputFile} ${layerFileExtension}
   done
   git add -A ${outputDir}
 }
 
 function extractLayers() {
-  if [ $# -ne 1 ]; then
+  if [ $# -ne 2 ]; then
     echo "ERROR extractLayers: invalid number of arguments ($#)"
     exit
   fi
 
   svgFile=$1
-  noExtensionFile=`echo ${svgFile} | sed "s|\.svg||g"`
+  layerFileExtension=$2
+
+  noExtensionFile=`echo ${svgFile} | sed "s|\.${layerFileExtension}||g"`
   # Do not sort the layerIds. Deliberately keep them from the bottom to top layer.
   layerIdList=($(inkscape --query-all ${svgFile} | grep layer | sed "s|,.*||g"))
 
@@ -91,12 +96,12 @@ function extractLayers() {
   for index in "${!layerIdList[@]}";
   do
     select=`echo "${layerIdList[@]:($index + 1)}" | sed "s| |,|g"`
-    inkscape ${svgFile} --select="${select}" --actions="delete" -j -C --export-type=png --export-filename=${noExtensionFile}_${index}.png > /dev/null || exit
+    inkscape ${svgFile} --select="${select}" --actions="delete" -j -C --vacuum-defs --export-text-to-path --export-plain-svg=${noExtensionFile}_${index}.svg > /dev/null || exit
 
     if [ $index -eq 0 ]; then
-      echo "        <img src=\"../${noExtensionFile}_${index}.png\" class=\"fullImage\">" >> slidedecks/inventory.html
+      echo "        <img loading=\"lazy\" src=\"../${noExtensionFile}_${index}.svg\" class=\"fullImage\">" >> slidedecks/inventory.html
     else
-      echo "        <img src=\"../${noExtensionFile}_${index}.png\" class=\"fullImage fragment\">" >> slidedecks/inventory.html
+      echo "        <img loading=\"lazy\" src=\"../${noExtensionFile}_${index}.svg\" class=\"fullImage fragment\">" >> slidedecks/inventory.html
     fi
   done
   echo "    </section>" >> slidedecks/inventory.html
@@ -105,18 +110,18 @@ function extractLayers() {
 cat src/script/templates/slidedeck-header.html > slidedecks/inventory.html
 
 # Upstream images
-processImages "${timefoldSolverDir}/docs/src/modules/ROOT/images" "timefold-solver-docs"
-processImages "${timefoldQuickstartsDir}" "timefold-quickstarts"
+processImages "${timefoldSolverDir}/docs/src/modules/ROOT/images" "timefold-solver-docs" "png" "svg"
+processImages "${timefoldQuickstartsDir}" "timefold-quickstarts" "png" "svg"
 for modelName in "${modelNames[@]}"; do
-  processImages "${timefoldModelsDir}/${modelName}/docs/modules/ROOT/images" "${modelName}"
+  processImages "${timefoldModelsDir}/${modelName}/docs/modules/ROOT/images" "${modelName}" "svg" "inkscape.svg"
 done
 
 # A selection of static images
-extractLayers src/content/static/benchmarks/bruteForceHitsTheWall.svg
-extractLayers src/content/static/benchmarks/bruteForceHitsTheWall-TSP.svg
-extractLayers src/content/static/santa/tree-of-greed.svg
-extractLayers src/content/static/santa/tree-of-greed2.svg
-extractLayers src/content/static/santa/vehicleRoutingClassDiagram-simplified.svg
+extractLayers src/content/static/benchmarks/bruteForceHitsTheWall.svg "svg"
+extractLayers src/content/static/benchmarks/bruteForceHitsTheWall-TSP.svg "svg"
+extractLayers src/content/static/santa/tree-of-greed.svg "svg"
+extractLayers src/content/static/santa/tree-of-greed2.svg "svg"
+extractLayers src/content/static/santa/vehicleRoutingClassDiagram-simplified.svg "svg"
 
 cat src/script/templates/slidedeck-footer.html >> slidedecks/inventory.html
 git add slidedecks/inventory.html
