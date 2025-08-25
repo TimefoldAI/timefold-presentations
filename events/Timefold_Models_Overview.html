@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Timefold for Operations Research</title>
-    <meta name="description" content="This slide deck explains Operations Research with Timefold">
+    <meta name="description" content="This slide deck explains the Timefold models">
     <!--    <link href="https://github.com/TimefoldAI/timefold-presentations" rel="canonical">-->
 
     <link rel="stylesheet" href="../src/web/bootstrap/css/bootstrap.min.css">
@@ -33,7 +33,7 @@
 <div class="slides">
     <section>
         <h1>
-            Complex<br/>scheduling and routing optimization<br/>made easy
+            Automate complex<br/> scheduling and routing
         </h1>
         <img src="../src/web/social/timefold-logo.svg" height="80px"/>
         <div>
@@ -183,16 +183,16 @@
                 <img src="../src/web/social/timefold-logo.svg" height="100px"/>
             </figure>
             <ul style="margin-top: 30px;">
-                <li class="fragment">Solver
-                    <ul><li>Open Source (Apache license)</li></ul>
-                </li>
                 <li class="fragment">REST APIs for
                     <ul>
-                        <li>Field Service Routing</li>
-                        <li class="fragment">Employee Shift Scheduling</li>
-                        <li class="fragment">Job Scheduling</li>
+                        <li>Employee Shift Scheduling</li>
+                        <li class="fragment">Field Service Routing</li>
                         <li class="fragment">Pickup and Delivery Routing</li>
+                        <li class="fragment">Job Scheduling</li>
                     </ul>
+                </li>
+                <li class="fragment">Built on
+                    <ul><li>Timefold Solver (open source)</li></ul>
                 </li>
             </ul>
         </section>
@@ -200,188 +200,14 @@
 
     <section>
         <section data-background-color="#3e00ff">
-            <h2>Timefold Solver</h2>
-            <p>Open source</p>
+            <h2>Employee<br/> Shift Scheduling</h2>
+            <p>REST API</p>
         </section>
         <section>
-            <img src="../src/content/static/operations-research/operations-research-ugly-duckling_0.png" class="fullImage">
-        </section>
-
-        <section>
-            <img src="../src/content/static/operations-research/operations-research-math-incantation_0.png" class="fullImage">
-            <img src="../src/content/static/operations-research/operations-research-math-incantation_1.png" class="fullImage fragment">
-            <img src="../src/content/static/operations-research/operations-research-math-incantation_2.png" class="fullImage fragment">
-            <img src="../src/content/static/operations-research/operations-research-math-incantation_3.png" class="fullImage fragment">
-            <img src="../src/content/static/operations-research/operations-research-math-incantation_4.png" class="fullImage fragment">
-            <img src="../src/content/static/operations-research/operations-research-math-incantation_5.png" class="fullImage fragment">
-        </section>
-        <section>
-            <h3>OR code (traditional)</h3>
-            <pre xml:space="preserve"><span class="codeLabel">python</span><code class="python">for i in range(num_employees):
-    for j in range(num_shifts):
-        for k in range(j + 1, num_shifts):
-            (model.Add(s[i][j] + d[j] + r[i] <= s[i][k])
-             .OnlyEnforceIf([x[i][j], x[i][k]]))
-</code></pre>
-            <pre class="fragment" xml:space="preserve"><span class="codeLabel">java</span><code class="java">for (int i = 0; i < numEmployees; i++) {
-  for (int j = 0; j < numShifts; j++) {
-    for (int k = j + 1; k < numShifts; k++) {
-      model.addConstraint(
-          LinearExpr.sum(new IntVar[]{s[i][j], d[j], r[i]})
-          .leq(s[i][k])
-      ).onlyEnforceIf(new IntVar[]{x[i][j], x[i][k]});
-    }
-  }
-}
-</code></pre>
-        </section>
-        <section>
-            <img src="../src/content/static/operations-research/operations-research-ugly-duckling_0.png" class="fullImage">
-            <img src="../src/content/static/operations-research/operations-research-ugly-duckling_1.png" class="fullImage fragment">
-        </section>
-        <section>
-            <img src="../src/content/static/operations-research/operations-research-swan-focus_0.png" class="fullImage">
-        </section>
-        <section>
-            <h2>Why Ease of Use?</h2>
-        </section>
-        <section>
-            <h2><i>"We spend<br/> 10x more time reading<br/> production code<br/>than writing it."</i></h2>
-        </section>
-        <section>
-            <h2>Code should be<br/>easy to read</h2>
-        </section>
-        <section>
-            <img src="../src/content/static/operations-research/operations-research-timefold-incantation_0.png" class="fullImage">
-            <img src="../src/content/static/operations-research/operations-research-timefold-incantation_1.png" class="fullImage fragment">
-            <img src="../src/content/static/operations-research/operations-research-timefold-incantation_2.png" class="fullImage fragment">
-            <img src="../src/content/static/operations-research/operations-research-timefold-incantation_3.png" class="fullImage fragment">
-        </section>
-        <section>
-            <h3>Timefold Solver code</h3>
-            <pre xml:space="preserve"><span class="codeLabel">python</span><code class="python">(f.for_each(Shift)
- .join(Shift, equal(lambda shift: shift.employee.id),
-       less_than_or_equal(lambda shift1: shift1.end,
-                          lambda shift2: shift2.start))
- .filter(lambda shift1, shift2:
-         ((shift2.start - shift1.end)
-          < shift1.employee.rest_duration))
- .penalize(ONE_HARD)
- .as_constraint("Enough rest between shifts"))
-</code></pre>
-            <pre class="fragment" xml:space="preserve"><span class="codeLabel">java</span><code class="java">f.forEach(Shift.class)
-  .join(Shift.class, equal(Shift::employee),
-      lessThanOrEqual(Shift::end, Shift::start))
-  .filter((shift1, shift2) ->
-      Duration.between(shift1.end, shift2.start)
-          .compareTo(shift1.employee.restDuration) < 0)
-  .penalize(ONE_HARD)
-  .asConstraint("Enough rest between shifts");
-</code></pre>
-        </section>
-        <section>
-            <h2>How many constraints?</h2>
-            <p>A scaling problem</p>
-        </section>
-        <section>
-            <h3>A real-word dataset (traditional)</h3>
-            <ul>
-                <li>10k employees</li>
-                <li>50k shifts</li>
-            </ul>
-            <pre class="fragment" xml:space="preserve"><span class="codeLabel">python</span><code class="python">for i in range(num_employees): # 10k loop
-    for j in range(num_shifts): # 50k loops
-        for k in range(j + 1, num_shifts): # 25k loops
-            model.Add(...).OnlyEnforceIf(...)
-</code></pre>
-            <p class="fragment">2 500 000 000 000 CPU loops</p>
-            <p class="fragment">2 500 000 000 000 constraints<br/>in memory</p>
-            <p class="fragment negative">Out of memory error</p>
-        </section>
-        <section>
-            <h3>A real-word dataset (Timefold)</h3>
-            <ul>
-                <li>10k employees</li>
-                <li>50k shifts</li>
-            </ul>
-            <pre xml:space="preserve"><span class="codeLabel">python</span><code class="python">(f.for_each(Shift) # 50k
- .join(Shift, equal(shift.employee), ...) # ~250k tuples
- .filter(...) # 0-10 tuples
- .penalize(...)
- .as_constraint("Enough rest between shifts"))
-</code></pre>
-            <p class="fragment">1 constraint</p>
-            <p class="fragment">Only 250k tuples <br/>in memory</p>
-            <p class="fragment positive">Lazy, incremental and indexed</p>
-        </section>
-<!--        <section>-->
-<!--            <h2>Academical 🏎️ vs Business solutions 🚙</h2>-->
-<!--        </section>-->
-        <section>
-            <h3>How many solutions per second?</h3>
-            <div class="fragment">
-                <p>Check the Timefold log:</p>
-                <pre xml:space="preserve"><span class="codeLabel">log</span><code>08:27:00.867  INFO Solving started: ...
-08:27:02.528  INFO Construction Heuristic ended: ...
-                       move evaluation speed (39580/sec) ...
-08:27:21.313  INFO Local Search ended: ...
-                       move evaluation speed (101701/sec) ...
-08:27:21.317  INFO Solving ended: ...
-                       move evaluation speed (101461/sec) ...
-</code></pre>
-            </div>
-            <p class="fragment">It looks at 100 000 solutions per second</p>
-        </section>
-        <section>
-            <h2>Incremental calculation</h2>
-            <p>Why not plain python/java code?</p>
-        </section>
-        <section>
-            <img src="../src/content/timefold-solver-docs/constraints-and-score/performance/incrementalScoreCalculationEmployeeRostering_0.png" class="fullImage">
-            <img src="../src/content/timefold-solver-docs/constraints-and-score/performance/incrementalScoreCalculationEmployeeRostering_1.png" class="fullImage fragment">
-            <img src="../src/content/timefold-solver-docs/constraints-and-score/performance/incrementalScoreCalculationEmployeeRostering_2.png" class="fullImage fragment">
-            <img src="../src/content/timefold-solver-docs/constraints-and-score/performance/incrementalScoreCalculationEmployeeRostering_3.png" class="fullImage fragment">
-            <img src="../src/content/timefold-solver-docs/constraints-and-score/performance/incrementalScoreCalculationEmployeeRostering_4.png" class="fullImage fragment">
-            <img src="../src/content/timefold-solver-docs/constraints-and-score/performance/incrementalScoreCalculationEmployeeRostering_5.png" class="fullImage fragment">
-            <img src="../src/content/timefold-solver-docs/constraints-and-score/performance/incrementalScoreCalculationEmployeeRostering_6.png" class="fullImage fragment">
-            <img src="../src/content/timefold-solver-docs/constraints-and-score/performance/incrementalScoreCalculationEmployeeRostering_7.png" class="fullImage fragment">
-        </section>
-        <section>
-            <h2>If it isn't tested,<br/>it doesn't work.</h2>
-        </section>
-        <section>
-            <h3>Unit testing</h3>
-            <ul>
-                <li>Given:
-                    <ul>
-                        <li>Ann at least 10 hours rest</li>
-                        <li>Shift Monday 14:00-22:00 = Ann</li>
-                        <li>Shift Tuesday 06:00-14:00 = Ann</li>
-                    </ul>
-                </li>
-                <li class="fragment">Expected: penalty</li>
-            </ul>
-            <pre class="fragment" xml:space="preserve"><span class="codeLabel">python</span><code class="python">ann =  Employee(name="Ann", ...)
-
-(v.verify_that(employee_minimal_rest)
- .given(ann,
-        Shift(start=..., end=..., employee=ann),
-        Shift(start=..., end=..., employee=ann))
- .penalizes())
-</code></pre>
-            <p class="fragment positive">Isolated per constraint</p>
-        </section>
-        <section>
-            <h2>If it isn't documented,<br/>it isn't used.</h2>
+            <img src="../src/content/static/platform/employee-shift-scheduling-diagram.png" class="fullImage">
         </section>
         <section>
             <h2>DEMO</h2>
-            <p>docs.timefold.ai</p>
-        </section>
-        <section>
-            <h3>🖊 Model domain</h3>
-            <h3 class="fragment">⚖️ Define constraints</h3>
-            <h3 class="fragment"><span class="highlight">🚀 Run!</span></h3>
         </section>
     </section>
 
@@ -441,11 +267,20 @@
 
     <section>
         <section data-background-color="#3e00ff">
-            <h2>Employee<br/> Shift Scheduling</h2>
+            <h2>Pickup and Delivery Routing</h2>
             <p>REST API</p>
         </section>
         <section>
-            <img src="../src/content/static/platform/employee-shift-scheduling-diagram.png" class="fullImage">
+            <img src="../src/content/static/platform/pick-up-delivery-routing-diagram.png" class="fullImage">
+        </section>
+    </section>
+    <section>
+        <section data-background-color="#3e00ff">
+            <h2>Job Scheduling</h2>
+            <p>REST API</p>
+        </section>
+        <section>
+            <img src="../src/content/static/platform/job-scheduling-diagram.png" class="fullImage">
         </section>
     </section>
 
@@ -480,16 +315,7 @@
         <h2>Free the world of wasteful scheduling</h2>
         <p class="fragment">Join the PlanningAI revolution</p>
     </section>
-    <section>
-        <h3><span class="highlight">Build your own</span> model<br/>on open source</h3>
-        <ol>
-            <li>Go to <a href="https://docs.timefold.ai">docs.timefold.ai</a></li>
-            <li>Click <a href="https://github.com/TimefoldAI/timefold-quickstarts"><i>Show me the code</i> button</a></li>
-            <li>Pick a quickstart in the README</li>
-            <li>Run it 🚀</li>
-        </ol>
-    </section>
-    <section>
+    <!--<section>
         <h3>Try our <span class="highlight">REST APIs</span></h3>
         <ol>
             <li>Go to <a href="https://app.timefold.ai">app.timefold.ai</a></li>
@@ -497,7 +323,7 @@
             <li>Solve your dataset</li>
         </ol>
         <p><b>Contact us</b> for assistance,<br/>questions or self-hosting.</p>
-    </section>
+    </section>-->
     <section>
         <h3>Q &amp; A</h3>
         <table class="links">
@@ -508,10 +334,6 @@
             <tr>
                 <th>Documentation</th>
                 <td><a href="https://docs.timefold.ai">docs.timefold.ai</a></td>
-            </tr>
-            <tr>
-                <th>Quickstarts</th>
-                <td><a href="https://github.com/TimefoldAI/timefold-quickstarts">github.com/TimefoldAI/timefold-quickstarts</a></td>
             </tr>
             <tr>
                 <th>REST APIs</th>
