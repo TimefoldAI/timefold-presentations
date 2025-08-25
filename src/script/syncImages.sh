@@ -79,6 +79,26 @@ function processImages() {
   git add -A ${outputDir}
 }
 
+function copyModelImages() {
+  if [ $# -ne 2 ]; then
+    echo "ERROR processImages: invalid number of arguments ($#)"
+    exit
+  fi
+
+  inputDir=$1
+  outputDir=${timefoldPresentationsDir}/src/content/$2
+
+  pngInputFileList=`find ${inputDir} -type f -name "*.png" | sort`
+  for pngInputFile in ${pngInputFileList[@]}; do
+    relativeFilePath=`echo "${pngInputFile}" | sed "s|${inputDir}||g"`
+    relativeParentDirPath=`echo ${relativeFilePath} | sed "s|/[^/]*\.${mainFileExtension}||g"`
+    pngOutputFile=${outputDir}${relativeFilePath}
+    echo "Copy ${pngOutputFile}"
+    mkdir -p ${outputDir}${relativeParentDirPath}
+    cp ${pngInputFile} ${pngOutputFile}
+  done
+}
+
 function extractLayers() {
   if [ $# -ne 2 ]; then
     echo "ERROR extractLayers: invalid number of arguments ($#)"
@@ -114,6 +134,8 @@ processImages "${timefoldSolverDir}/docs/src/modules/ROOT/images" "timefold-solv
 processImages "${timefoldQuickstartsDir}" "timefold-quickstarts" "png" "svg"
 for modelName in "${modelNames[@]}"; do
   processImages "${timefoldModelsDir}/${modelName}/docs/modules/ROOT/images" "${modelName}" "svg" "inkscape.svg"
+  # also copy all the pngs from the model docs (screenshots etc.)
+  copyModelImages "${timefoldModelsDir}/${modelName}/docs/modules/ROOT/images" "${modelName}"
 done
 
 # A selection of static images
