@@ -116,7 +116,7 @@ function extractLayers() {
   for index in "${!layerIdList[@]}";
   do
     select=`echo "${layerIdList[@]:($index + 1)}" | sed "s| |,|g"`
-    inkscape ${svgFile} --select="${select}" --actions="delete" -j -C --vacuum-defs --export-text-to-path --export-plain-svg=${noExtensionFile}_${index}.svg > /dev/null || exit
+    inkscape ${svgFile} --select="${select}" --actions="delete" -j -C --vacuum-defs --export-text-to-path --export-plain-svg=${noExtensionFile}_${index}.svg &> /dev/null || exit
 
     if [ $index -eq 0 ]; then
       echo "        <img loading=\"lazy\" src=\"../${noExtensionFile}_${index}.svg\" class=\"fullImage\">" >> slidedecks/inventory.html
