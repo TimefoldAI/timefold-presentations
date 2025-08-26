@@ -1960,10 +1960,10 @@
        y2="224.99963" />
     <marker
        style="overflow:visible"
-       id="Triangle-02"
+       id="Triangle-02_reversed"
        refX="0"
        refY="0"
-       orient="auto-start-reverse"
+       orient="auto"
        inkscape:stockid="Triangle arrow"
        markerWidth="2"
        markerHeight="2"
@@ -1971,11 +1971,15 @@
        inkscape:isstock="true"
        inkscape:collect="always"
        preserveAspectRatio="xMidYMid">
-      <path
-         transform="scale(0.5)"
-         style="fill:#000000;fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
-         d="M 5.77,0 -2.88,5 V -5 Z"
-         id="path135-4" />
+      <g
+         transform="rotate(180,0,0)"
+         id="g1">
+        <path
+           transform="scale(0.5)"
+           style="fill:#000000;fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+           d="M 5.77,0 -2.88,5 V -5 Z"
+           id="path1" />
+      </g>
     </marker>
     <rect
        x="75.618078"
@@ -1991,10 +1995,10 @@
        id="rect2-4" />
     <marker
        style="overflow:visible"
-       id="Triangle-02-6"
+       id="Triangle-02-6_reversed"
        refX="0"
        refY="0"
-       orient="auto-start-reverse"
+       orient="auto"
        inkscape:stockid="Triangle arrow"
        markerWidth="2"
        markerHeight="2"
@@ -2002,18 +2006,22 @@
        inkscape:isstock="true"
        inkscape:collect="always"
        preserveAspectRatio="xMidYMid">
-      <path
-         transform="scale(0.5)"
-         style="fill:#000000;fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
-         d="M 5.77,0 -2.88,5 V -5 Z"
-         id="path135-4-8" />
+      <g
+         transform="rotate(180,0,0)"
+         id="g2">
+        <path
+           transform="scale(0.5)"
+           style="fill:#000000;fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+           d="M 5.77,0 -2.88,5 V -5 Z"
+           id="path2" />
+      </g>
     </marker>
     <marker
        style="overflow:visible"
-       id="Triangle-02-6-2"
+       id="Triangle-02-6-2_reversed"
        refX="0"
        refY="0"
-       orient="auto-start-reverse"
+       orient="auto"
        inkscape:stockid="Triangle arrow"
        markerWidth="2"
        markerHeight="2"
@@ -2021,11 +2029,15 @@
        inkscape:isstock="true"
        inkscape:collect="always"
        preserveAspectRatio="xMidYMid">
-      <path
-         transform="scale(0.5)"
-         style="fill:#000000;fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
-         d="M 5.77,0 -2.88,5 V -5 Z"
-         id="path135-4-8-8" />
+      <g
+         transform="rotate(180,0,0)"
+         id="g3">
+        <path
+           transform="scale(0.5)"
+           style="fill:#000000;fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+           d="M 5.77,0 -2.88,5 V -5 Z"
+           id="path3" />
+      </g>
     </marker>
   </defs>
   <sodipodi:namedview
@@ -2035,19 +2047,19 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.1997645"
-     inkscape:cx="362.57115"
-     inkscape:cy="307.56036"
+     inkscape:zoom="1.9421394"
+     inkscape:cx="321.55261"
+     inkscape:cy="249.98206"
      inkscape:document-units="px"
-     inkscape:current-layer="svg2"
+     inkscape:current-layer="g23-5"
      showgrid="true"
      width="800px"
      borderlayer="true"
      gridtolerance="10"
-     inkscape:window-width="1912"
-     inkscape:window-height="1011"
-     inkscape:window-x="8"
-     inkscape:window-y="0"
+     inkscape:window-width="1512"
+     inkscape:window-height="922"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
      inkscape:window-maximized="0"
      inkscape:snap-grids="true"
      inkscape:snap-bbox="false"
@@ -2578,7 +2590,7 @@
          inkscape:label="Shift-box" />
       <text
          xml:space="preserve"
-         style="fill:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.998px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';display:inline;fill-opacity:1;stroke:none;stroke-width:1.03106;stroke-dasharray:none;stroke-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.998px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.03106;stroke-dasharray:none;stroke-opacity:1"
          x="225.85251"
          y="695.23163"
          id="text14-3"
@@ -2586,11 +2598,11 @@
          inkscape:label="Shift-text"><tspan
            sodipodi:role="line"
            id="tspan14-4"
-           style="fill:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.998px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;stroke-width:1.03106;stroke-dasharray:none;fill-opacity:1"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.998px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:1.03106;stroke-dasharray:none"
            x="225.85251"
-           y="695.23163">Mon </tspan><tspan
+           y="695.23163"> Mon </tspan><tspan
            sodipodi:role="line"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.998px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:1.03106;stroke-dasharray:none;fill-opacity:1"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.998px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:1.03106;stroke-dasharray:none"
            x="225.85251"
            y="708.97913"
            id="tspan2">Evening</tspan></text>
@@ -2637,22 +2649,22 @@
          inkscape:label="Shift-box" />
       <text
          xml:space="preserve"
-         style="fill:white;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.998px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;text-anchor:middle;display:inline;fill-opacity:1;stroke:none;stroke-width:1.03106;stroke-dasharray:none;stroke-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.998px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.03106;stroke-dasharray:none;stroke-opacity:1"
          x="227.10912"
          y="695.23163"
          id="text14"
          transform="scale(1.0330121,0.96804287)"
          inkscape:label="Shift-text"><tspan
            sodipodi:role="line"
-           id="tspan14"
-           style="fill:white;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.998px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;stroke-width:1.03106;stroke-dasharray:none"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.998px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:1.03106;stroke-dasharray:none"
            x="227.10912"
-           y="695.23163">Mon </tspan><tspan
+           y="695.23163"
+           id="tspan4">Mon</tspan><tspan
            sodipodi:role="line"
            style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.998px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:1.03106;stroke-dasharray:none"
            x="227.10912"
            y="708.97913"
-           id="tspan4">Day</tspan></text>
+           id="tspan1">Day</tspan></text>
       <g
          id="g22"
          transform="translate(-12.736859,26.58541)"
@@ -2728,19 +2740,19 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:1.00083;stroke-dasharray:none"
          id="flowPara340">Tue 2 Feb</flowPara></flowRoot>
     <path
-       style="display:inline;opacity:1;mix-blend-mode:normal;fill:none;stroke:#000000;stroke-width:0.939055;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Triangle-02)"
+       style="display:inline;opacity:1;mix-blend-mode:normal;fill:none;stroke:#000000;stroke-width:0.939055;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Triangle-02_reversed)"
        d="M 260.11023,339.16556 H -132.75093"
        id="path341"
        sodipodi:nodetypes="cc"
        inkscape:label="path17-0" />
     <path
-       style="display:inline;opacity:1;mix-blend-mode:normal;fill:none;stroke:#000000;stroke-width:0.939037;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Triangle-02-6)"
+       style="display:inline;opacity:1;mix-blend-mode:normal;fill:none;stroke:#000000;stroke-width:0.939037;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Triangle-02-6_reversed)"
        d="M 260.10544,390.60706 H -132.75064"
        id="path342"
        sodipodi:nodetypes="cc"
        inkscape:label="path17-0" />
     <path
-       style="display:inline;opacity:1;mix-blend-mode:normal;fill:none;stroke:#000000;stroke-width:0.939037;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Triangle-02-6-2)"
+       style="display:inline;opacity:1;mix-blend-mode:normal;fill:none;stroke:#000000;stroke-width:0.939037;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Triangle-02-6-2_reversed)"
        d="M 260.10544,442.0487 H -132.75064"
        id="path343"
        sodipodi:nodetypes="cc"
