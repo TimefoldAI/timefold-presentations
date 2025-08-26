@@ -88,6 +88,8 @@ function copyModelImages() {
   inputDir=$1
   outputDir=${timefoldPresentationsDir}/src/content/$2
 
+  echo "Copying ${inputDir}/*.png to ${outputDir}"
+
   pngInputFileList=`find ${inputDir} -type f -name "*.png" | sort`
   for pngInputFile in ${pngInputFileList[@]}; do
     relativeFilePath=`echo "${pngInputFile}" | sed "s|${inputDir}||g"`
@@ -107,6 +109,8 @@ function extractLayers() {
 
   svgFile=$1
   layerFileExtension=$2
+
+  echo "|-> extracting ${svgFile} layers"
 
   noExtensionFile=`echo ${svgFile} | sed "s|\.${layerFileExtension}||g"`
   # Do not sort the layerIds. Deliberately keep them from the bottom to top layer.
