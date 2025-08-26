@@ -53,15 +53,15 @@
         <section>
             <img src="../src/content/static/airport-story/airport-arrival.png" class="fullImage">
         </section>
-        <section>
-            <img src="../src/content/static/airport-story/escalator_0.png" class="fullImage">
-            <img src="../src/content/static/airport-story/escalator_1.png" class="fullImage fragment">
-        </section>
-        <section>
-            <img src="../src/content/static/airport-story/check-in-counters_0.png" class="fullImage">
-            <img src="../src/content/static/airport-story/check-in-counters_1.png" class="fullImage fragment">
-            <img src="../src/content/static/airport-story/check-in-counters_2.png" class="fullImage fragment">
-        </section>
+<!--        <section>-->
+<!--            <img src="../src/content/static/airport-story/escalator_0.png" class="fullImage">-->
+<!--            <img src="../src/content/static/airport-story/escalator_1.png" class="fullImage fragment">-->
+<!--        </section>-->
+<!--        <section>-->
+<!--            <img src="../src/content/static/airport-story/check-in-counters_0.png" class="fullImage">-->
+<!--            <img src="../src/content/static/airport-story/check-in-counters_1.png" class="fullImage fragment">-->
+<!--            <img src="../src/content/static/airport-story/check-in-counters_2.png" class="fullImage fragment">-->
+<!--        </section>-->
         <section>
             <img src="../src/content/static/airport-story/departures_0.png" class="fullImage">
             <img src="../src/content/static/airport-story/departures_1.png" class="fullImage fragment">
@@ -70,15 +70,15 @@
             <img src="../src/content/static/airport-story/security_0.png" class="fullImage">
             <img src="../src/content/static/airport-story/security_1.png" class="fullImage fragment">
         </section>
-        <section>
-            <img src="../src/content/static/airport-story/departure-gate_0.png" class="fullImage">
-            <img src="../src/content/static/airport-story/departure-gate_1.png" class="fullImage fragment">
-        </section>
+<!--        <section>-->
+<!--            <img src="../src/content/static/airport-story/departure-gate_0.png" class="fullImage">-->
+<!--            <img src="../src/content/static/airport-story/departure-gate_1.png" class="fullImage fragment">-->
+<!--        </section>-->
         <section>
             <img src="../src/content/static/airport-story/airplanes-at-gates_0.png" class="fullImage">
             <img src="../src/content/static/airport-story/airplanes-at-gates_1.png" class="fullImage fragment">
-            <img src="../src/content/static/airport-story/airplanes-at-gates_2.png" class="fullImage fragment">
-            <img src="../src/content/static/airport-story/airplanes-at-gates_3.png" class="fullImage fragment">
+<!--            <img src="../src/content/static/airport-story/airplanes-at-gates_2.png" class="fullImage fragment">
+            <img src="../src/content/static/airport-story/airplanes-at-gates_3.png" class="fullImage fragment">-->
         </section>
         <section>
             <img src="../src/content/static/airport-story/pilots_0.png" class="fullImage">
@@ -112,7 +112,7 @@
             </figure>
         </section>
         <section>
-            <h2>Technology?</h2>
+            <h2>Technology problem?</h2>
         </section>
         <section>
             <h2>Operations Research</h2>
@@ -122,7 +122,7 @@
             <p class="fragment">CPLEX 1.0 in 1988</p>
         </section>
         <section>
-            <h2>ROI?</h2>
+            <h2>ROI problem?</h2>
         </section>
         <section>
             <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/vehicleRoutingValueProposition_0.png" class="fullImage">
@@ -135,7 +135,7 @@
             <p class="fragment">⇒ <span class="highlight">-100 million $</span> cost per year</p>
         </section>
         <section>
-            <h2>Reputation?</h2>
+            <h2>Reputation problem?</h2>
         </section>
         <section>
             <h2>Too difficult</h2>
@@ -176,7 +176,7 @@
             <img src="../src/content/static/operations-research/operations-research-project-lifecycle_19.png" class="fullImage fragment">
         </section>
         <section>
-            <h2>Succeed more<br/><span class="fragment"><span class="fragment">❤️</span><br/>Fail faster</span></h2>
+            <h2>Succeed more<br/><span class="fragment"><span class="fragment">❤️</span><br/>Deliver faster</span></h2>
         </section>
         <section>
             <figure>
@@ -217,12 +217,6 @@
         </section>
         <section>
             <h3>OR code (traditional)</h3>
-            <pre xml:space="preserve"><span class="codeLabel">python</span><code class="python">for i in range(num_employees):
-    for j in range(num_shifts):
-        for k in range(j + 1, num_shifts):
-            (model.Add(s[i][j] + d[j] + r[i] <= s[i][k])
-             .OnlyEnforceIf([x[i][j], x[i][k]]))
-</code></pre>
             <pre class="fragment" xml:space="preserve"><span class="codeLabel">java</span><code class="java">for (int i = 0; i < numEmployees; i++) {
   for (int j = 0; j < numShifts; j++) {
     for (int k = j + 1; k < numShifts; k++) {
@@ -259,16 +253,6 @@
         </section>
         <section>
             <h3>Timefold Solver code</h3>
-            <pre xml:space="preserve"><span class="codeLabel">python</span><code class="python">(f.for_each(Shift)
- .join(Shift, equal(lambda shift: shift.employee.id),
-       less_than_or_equal(lambda shift1: shift1.end,
-                          lambda shift2: shift2.start))
- .filter(lambda shift1, shift2:
-         ((shift2.start - shift1.end)
-          < shift1.employee.rest_duration))
- .penalize(ONE_HARD)
- .as_constraint("Enough rest between shifts"))
-</code></pre>
             <pre class="fragment" xml:space="preserve"><span class="codeLabel">java</span><code class="java">f.forEach(Shift.class)
   .join(Shift.class, equal(Shift::employee),
       lessThanOrEqual(Shift::end, Shift::start))
@@ -289,13 +273,16 @@
                 <li>10k employees</li>
                 <li>50k shifts</li>
             </ul>
-            <pre class="fragment" xml:space="preserve"><span class="codeLabel">python</span><code class="python">for i in range(num_employees): # 10k loop
-    for j in range(num_shifts): # 50k loops
-        for k in range(j + 1, num_shifts): # 25k loops
-            model.Add(...).OnlyEnforceIf(...)
+            <pre class="fragment" xml:space="preserve"><span class="codeLabel">java</span><code class="java">for (int i = 0; i < numEmployees; i++) { // 10k loop
+  for (int j = 0; j < numShifts; j++) { // 50k loop
+    for (int k = j + 1; k < numShifts; k++) { // 25k loop
+      model.addConstraint(...).onlyEnforceIf(...);
+    }
+  }
+}
 </code></pre>
             <p class="fragment">2 500 000 000 000 CPU loops</p>
-            <p class="fragment">2 500 000 000 000 constraints<br/>in memory</p>
+            <p class="fragment">2 500 000 000 000 constraints in memory</p>
             <p class="fragment negative">Out of memory error</p>
         </section>
         <section>
@@ -304,14 +291,14 @@
                 <li>10k employees</li>
                 <li>50k shifts</li>
             </ul>
-            <pre xml:space="preserve"><span class="codeLabel">python</span><code class="python">(f.for_each(Shift) # 50k
- .join(Shift, equal(shift.employee), ...) # ~250k tuples
- .filter(...) # 0-10 tuples
- .penalize(...)
- .as_constraint("Enough rest between shifts"))
+            <pre class="fragment" xml:space="preserve"><span class="codeLabel">java</span><code class="java">f.forEach(Shift.class)
+  .join(Shift.class, equal(Shift::employee)) // ~250k tuples
+  .filter() // 0-10 tuples
+  .penalize(ONE_HARD)
+  .asConstraint("Enough rest between shifts");
 </code></pre>
             <p class="fragment">1 constraint</p>
-            <p class="fragment">Only 250k tuples <br/>in memory</p>
+            <p class="fragment">Only 250k tuples in memory</p>
             <p class="fragment positive">Lazy, incremental and indexed</p>
         </section>
 <!--        <section>-->
@@ -334,7 +321,7 @@
         </section>
         <section>
             <h2>Incremental calculation</h2>
-            <p>Why not plain python/java code?</p>
+            <p>Why not plain java code?</p>
         </section>
         <section>
             <img src="../src/content/timefold-solver-docs/constraints-and-score/performance/incrementalScoreCalculationEmployeeRostering_0.png" class="fullImage">
@@ -361,13 +348,13 @@
                 </li>
                 <li class="fragment">Expected: penalty</li>
             </ul>
-            <pre class="fragment" xml:space="preserve"><span class="codeLabel">python</span><code class="python">ann =  Employee(name="Ann", ...)
+            <pre class="fragment" xml:space="preserve"><span class="codeLabel">java</span><code class="java">var ann = new Employee("Ann", ...);
 
-(v.verify_that(employee_minimal_rest)
+verifier.verifyThat(employeeMinimalRest)
  .given(ann,
-        Shift(start=..., end=..., employee=ann),
-        Shift(start=..., end=..., employee=ann))
- .penalizes())
+        new Shift(mon1400, mon2200, ann),
+        new Shift(tue0600, tue1400, ann))
+ .penalizes());
 </code></pre>
             <p class="fragment positive">Isolated per constraint</p>
         </section>
@@ -408,11 +395,11 @@
             <p class="fragment">One example...</p>
         </section>
         <section>
-            <img src="../src/content/timefold-field-service-routing/vehicle-resource-constraints/lunch-breaks/vehicle-floating-break-lunch_0.png" class="fullImage">
-            <img src="../src/content/timefold-field-service-routing/vehicle-resource-constraints/lunch-breaks/vehicle-floating-break-lunch_1.png" class="fullImage fragment">
-            <img src="../src/content/timefold-field-service-routing/vehicle-resource-constraints/lunch-breaks/vehicle-floating-break-lunch_2.png" class="fullImage fragment">
-            <img src="../src/content/timefold-field-service-routing/vehicle-resource-constraints/lunch-breaks/vehicle-floating-break-lunch_3.png" class="fullImage fragment">
-            <img src="../src/content/timefold-field-service-routing/vehicle-resource-constraints/lunch-breaks/vehicle-floating-break-lunch_4.png" class="fullImage fragment">
+            <img src="../src/content/timefold-field-service-routing/vehicle-resource-constraints/lunch-breaks/vehicle-floating-break-lunch_0.svg" class="fullImage">
+            <img src="../src/content/timefold-field-service-routing/vehicle-resource-constraints/lunch-breaks/vehicle-floating-break-lunch_1.svg" class="fullImage fragment">
+            <img src="../src/content/timefold-field-service-routing/vehicle-resource-constraints/lunch-breaks/vehicle-floating-break-lunch_2.svg" class="fullImage fragment">
+            <img src="../src/content/timefold-field-service-routing/vehicle-resource-constraints/lunch-breaks/vehicle-floating-break-lunch_3.svg" class="fullImage fragment">
+            <img src="../src/content/timefold-field-service-routing/vehicle-resource-constraints/lunch-breaks/vehicle-floating-break-lunch_4.svg" class="fullImage fragment">
         </section>
         <section>
             <h2>Maps integration</h2>
@@ -446,6 +433,24 @@
         </section>
         <section>
             <img src="../src/content/static/platform/employee-shift-scheduling-diagram.png" class="fullImage">
+        </section>
+    </section>
+    <section>
+        <section data-background-color="#3e00ff">
+            <h2>Pickup and Delivery Routing</h2>
+            <p>REST API</p>
+        </section>
+        <section>
+            <img src="../src/content/static/platform/pick-up-delivery-routing-diagram.png" class="fullImage">
+        </section>
+    </section>
+    <section>
+        <section data-background-color="#3e00ff">
+            <h2>Job Scheduling</h2>
+            <p>REST API</p>
+        </section>
+        <section>
+            <img src="../src/content/static/platform/job-scheduling-diagram.png" class="fullImage">
         </section>
     </section>
 
