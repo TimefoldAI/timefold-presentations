@@ -91,7 +91,7 @@ function copyModelImages() {
   pngInputFileList=`find ${inputDir} -type f -name "*.png" | sort`
   for pngInputFile in ${pngInputFileList[@]}; do
     relativeFilePath=`echo "${pngInputFile}" | sed "s|${inputDir}||g"`
-    relativeParentDirPath=`echo ${relativeFilePath} | sed "s|/[^/]*\.${mainFileExtension}||g"`
+    relativeParentDirPath=`echo ${relativeFilePath} | sed "s|/[^/]*\.png||g"`
     pngOutputFile=${outputDir}${relativeFilePath}
     echo "Copy ${pngOutputFile}"
     mkdir -p ${outputDir}${relativeParentDirPath}
