@@ -27,14 +27,15 @@
 <div class="reveal">
 <div class="watermark watermark-left">
     <p>
-        solver.timefold.ai ➡ Try quickstarts
+        solver.timefold.ai ➡ Run a quickstart ➡ See java/school-timetabling README
     </p>
 </div>
 <div class="slides">
+    <!-- Preparation: comment out all constraints in TimetableConstraintProvider. -->
     <section>
         <img src="../src/web/social/timefold-logo.svg" height="80px"/>
         <h1>
-             open source<br/>solver<br/><span style="font-size: smaller">for Java</span>
+             The open source<br/>solver for Java</span>
         </h1>
         <div style="margin-top: 80px;">
             <p>
@@ -46,42 +47,27 @@
     <section>
         <h2>Workshop preparation</h2>
         <ol>
-            <li>Clone https://github.com/TimefoldAI/timefold-quickstarts</li>
-            <li>Run java/school-timetabling</li>
+            <li class="fragment">Go to solver.timefold.ai</li>
+            <li class="fragment">Click <i>Run a quickstart</i></li>
+            <li class="fragment">Open <code>java/school-timetabling</code> README</li>
+            <li class="fragment">Follow the instructions to run the webapp</li>
         </ol>
 
-        <p>Checks:</p>
-        <ul>
-            <li>✅ you should see the UI</li>
-            <li>✅ should be able to click the "solve" button.</li>
-        </ul>
-
+        <div style="margin-top: 80px;">
+            <p class="fragment">No license key needed</p>
+            <p class="fragment">Free for commercial use</p>
+        </div>
     </section>
-
     <section>
         <section data-background-color="#3e00ff">
-            <h1>The world is full of planning problems</h1>
-        </section>
-        <section>
-            <img src="../src/content/timefold-solver-docs/introduction/whatIsAPlanningProblem_0.svg" class="fullImage">
-            <img src="../src/content/timefold-solver-docs/introduction/whatIsAPlanningProblem_1.svg" class="fullImage fragment">
-            <img src="../src/content/timefold-solver-docs/introduction/whatIsAPlanningProblem_2.svg" class="fullImage fragment">
-            <img src="../src/content/timefold-solver-docs/introduction/whatIsAPlanningProblem_3.svg" class="fullImage fragment">
+            <h2>The world is full<br/>
+                of scheduling problems</h2>
         </section>
         <section>
             <h2>For example</h2>
         </section>
         <section>
             <img src="../src/content/static/airport-story/airport-arrival.png" class="fullImage">
-        </section>
-        <section>
-            <img src="../src/content/static/airport-story/escalator_0.png" class="fullImage">
-            <img src="../src/content/static/airport-story/escalator_1.png" class="fullImage fragment">
-        </section>
-        <section>
-            <img src="../src/content/static/airport-story/check-in-counters_0.png" class="fullImage">
-            <img src="../src/content/static/airport-story/check-in-counters_1.png" class="fullImage fragment">
-            <img src="../src/content/static/airport-story/check-in-counters_2.png" class="fullImage fragment">
         </section>
         <section>
             <img src="../src/content/static/airport-story/departures_0.png" class="fullImage">
@@ -92,57 +78,214 @@
             <img src="../src/content/static/airport-story/security_1.png" class="fullImage fragment">
         </section>
         <section>
-            <img src="../src/content/static/airport-story/departure-gate_0.png" class="fullImage">
-            <img src="../src/content/static/airport-story/departure-gate_1.png" class="fullImage fragment">
-        </section>
-        <section>
             <img src="../src/content/static/airport-story/airplanes-at-gates_0.png" class="fullImage">
             <img src="../src/content/static/airport-story/airplanes-at-gates_1.png" class="fullImage fragment">
-            <img src="../src/content/static/airport-story/airplanes-at-gates_2.png" class="fullImage fragment">
-            <img src="../src/content/static/airport-story/airplanes-at-gates_3.png" class="fullImage fragment">
         </section>
         <section>
             <img src="../src/content/static/airport-story/pilots_0.png" class="fullImage">
             <img src="../src/content/static/airport-story/pilots_1.png" class="fullImage fragment">
         </section>
         <section>
-            <img src="../src/content/static/airport-story/stewards_0.png" class="fullImage">
-            <img src="../src/content/static/airport-story/stewards_1.png" class="fullImage fragment">
-        </section>
-        <section>
-            <h2>The world is full of </br> <span class="highlight">scheduling problems</span></h2>
-            <p class="fragment"> <span class="highlight">Optimize goals</span> with <span class="highlight">limited resources</span> under <span class="highlight">constraints</span></p>
+            <h2>The world is full<br/>
+                of scheduling problems</h2>
         </section>
         <section>
             <h2>Some are automated</h2>
         </section>
         <section>
-            <h2>Few are <b class="highlight">optimized</b></h2>
+            <h2>Few are <span class="highlight">optimized</span></h2>
         </section>
         <section>
-            <h2>Let's <span class="highlight">optimize</span> them<br/>with <span class="highlight">Java and AI</span></h2>
-        </section>
-        <section data-background-color="#3e00ff">
-            <h2>Is optimization worth it?</h2>
+            <h2>They use...</h2>
         </section>
         <section>
-            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/vehicleRoutingValueProposition_0.svg" class="fullImage">
+            <h2>Excel</h2>
         </section>
         <section>
-            <h3>Vehicle routing case study</h3>
+            <h2><span class="fragment">Drag and drop</span><br/>
+                Scheduling UI</h2>
+        </section>
+        <section>
+            <h2>They want...</h2>
+        </section>
+        <section>
+            <figure>
+                <img src="../src/content/static/ai/schedule-with-ai-button.png"/>
+            </figure>
+        </section>
+        <section>
+            <figure>
+                <img src="../src/content/static/operations-research/schedule-with-operations-research-button.png"/>
+            </figure>
+        </section>
+        <section>
+            <h2>Why are so few <span class="highlight">optimized</span>?</h2>
+            <p class="fragment">Less than 5%</p>
+        </section>
+        <section>
+            <h2><i>Technology problem?</i></h2>
+        </section>
+        <section>
+            <h2>30+ years</h2>
+            <p class="fragment">CPLEX 1.0 in 1988</p>
+        </section>
+        <section>
+            <h2><i>ROI problem?</i></h2>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/vehicleRoutingValueProposition_0.png" class="fullImage">
+        </section>
+        <section>
+            <h2>Gain:<br/>$2,000 to $4,000<br/> per year<br/><span class="fragment highlight"> per vehicle</span></h2>
+        </section>
+        <section>
+            <h3>Case in production</h3>
             <p>Expected: -1% driving time</p>
             <p class="fragment">Result: -25% driving time</p>
+            <p class="fragment">50k vehicles</p>
+            <p class="fragment">⇒ <span class="highlight">-$100 million</span> per year</p>
             <p class="fragment">⇒ -10 million kg CO² emission per year</p>
-            <p class="fragment">⇒ -100 million $ cost per year</p>
         </section>
+        <section>
+            <h2><i>Reputation problem?</i></h2>
+        </section>
+        <section>
+            <h2>Yes</h2>
+        </section>
+        <section>
+            <h2>We see the value of OR</h2>
+        </section>
+        <section>
+            <img src="../src/content/static/operations-research/operations-research-project-lifecycle_0.png" class="fullImage">
+            <img src="../src/content/static/operations-research/operations-research-project-lifecycle_1.png" class="fullImage fragment">
+            <img src="../src/content/static/operations-research/operations-research-project-lifecycle_2.png" class="fullImage fragment">
+            <img src="../src/content/static/operations-research/operations-research-project-lifecycle_3.png" class="fullImage fragment">
+            <img src="../src/content/static/operations-research/operations-research-project-lifecycle_4.png" class="fullImage fragment">
+            <img src="../src/content/static/operations-research/operations-research-project-lifecycle_5.png" class="fullImage fragment">
+            <img src="../src/content/static/operations-research/operations-research-project-lifecycle_6.png" class="fullImage fragment">
+            <img src="../src/content/static/operations-research/operations-research-project-lifecycle_7.png" class="fullImage fragment">
+            <img src="../src/content/static/operations-research/operations-research-project-lifecycle_8.png" class="fullImage fragment">
+            <img src="../src/content/static/operations-research/operations-research-project-lifecycle_9.png" class="fullImage fragment">
+            <img src="../src/content/static/operations-research/operations-research-project-lifecycle_10.png" class="fullImage fragment">
+        </section>
+        <section>
+            <h2>But management sees</h2>
+        </section>
+        <section>
+            <img src="../src/content/static/operations-research/operations-research-project-lifecycle_10.png" class="fullImage">
+            <img src="../src/content/static/operations-research/operations-research-project-lifecycle_11.png" class="fullImage fragment">
+            <img src="../src/content/static/operations-research/operations-research-project-lifecycle_12.png" class="fullImage fragment">
+            <img src="../src/content/static/operations-research/operations-research-project-lifecycle_13.png" class="fullImage fragment">
+            <img src="../src/content/static/operations-research/operations-research-project-lifecycle_14.png" class="fullImage fragment">
+            <img src="../src/content/static/operations-research/operations-research-project-lifecycle_15.png" class="fullImage fragment">
+            <img src="../src/content/static/operations-research/operations-research-project-lifecycle_16.png" class="fullImage fragment">
+            <img src="../src/content/static/operations-research/operations-research-project-lifecycle_17.png" class="fullImage fragment">
+            <img src="../src/content/static/operations-research/operations-research-project-lifecycle_18.png" class="fullImage fragment">
+            <img src="../src/content/static/operations-research/operations-research-project-lifecycle_19.png" class="fullImage fragment">
+        </section>
+        <section>
+            <h2>OR projects are<br/><span class="highlight">big</span> investments<br/><span class="fragment">that often <span class="highlight">fail</span></span></h2>
+        </section>
+        <section>
+            <h2>∀ manager<br/><br/>big investment + fail = ?</h2>
+        </section>
+        <section>
+            <h2>Minus one manager</h2>
+        </section>
+        <section>
+            <h2>Too difficult</h2>
+        </section>
+        <section>
+            <h2>Most solvers<br/>require<br/>too much ...</h2>
+        </section>
+        <section data-background-image="../src/content/static/llms-cant/scared-pexels.png"
+                 data-background-size="stretch"><h1 class="fragment" style="color: #000000; float: right; margin-top: -300px">MATH</h1></section>
+        <section>
+            <h2>Maintenance problem</h2>
+        </section>
+        <section>
+            <h2>Can we make it easier?</h2>
+        </section>
+        <section>
+            <h2>Easy to read</h2>
+        </section>
+        <section>
+            <h2>Easy to understand</h2>
+        </section>
+        <section>
+            <h2>Easy to write</h2>
+        </section>
+        <section>
+            <h2>Easy to <span class="highlight">maintain</span></h2>
+        </section>
+        <section>
+            <figure>
+                <img src="../src/web/social/timefold-logo.svg" height="100px"/>
+            </figure>
+            <ul style="margin-top: 30px;">
+                <li class="fragment">Solver
+                    <ul><li>Open Source (Apache license)</li></ul>
+                </li>
+                <li class="fragment">REST APIs for
+                    <ul>
+                        <li>Field Service Routing</li>
+                        <li class="fragment">Employee Shift Scheduling</li>
+                        <li class="fragment">Pickup and Delivery Routing</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <!-- TODO position as metaheuristics solver -->
+        <!-- TODO logos -->
+        <section>
+            <p class="fragment highlight">Our mission</p>
+            <h2>Free the world of wasteful scheduling</h2>
+        </section>
+    </section>
+
+    <section>
+        <h2>Quickstarts</h2>
+        <table style="font-size: 24px">
+            <tbody>
+            <tr>
+                <td>🚚 <a href="#-vehicle-routing">Vehicle Routing</a></td>
+                <td>🧑‍💼 <a href="#-employee-scheduling">Employee Scheduling</a></td>
+            </tr>
+            <tr>
+                <td>🛠️ <a href="#-maintenance-scheduling">Maintenance Scheduling</a></td>
+                <td>📦 <a href="#-food-packaging">Food Packaging</a></td>
+            </tr>
+            <tr>
+                <td>🛒 <a href="#-order-picking">Order Picking</a></td>
+                <td>🏫 <a href="#-school-timetabling">School Timetabling</a></td>
+            </tr>
+            <tr>
+                <td>🏭 <a href="#-facility-location-problem">Facility Location Problem</a></td>
+                <td>🎤 <a href="#-conference-scheduling">Conference Scheduling</a></td>
+            </tr>
+            <tr>
+                <td>🛏️ <a href="#-bed-allocation-scheduling">Bed Allocation Scheduling</a></td>
+                <td>🛫 <a href="#-flight-crew-scheduling">Flight Crew Scheduling</a></td>
+            </tr>
+            <tr>
+                <td>👥 <a href="#-meeting-scheduling">Meeting Scheduling</a></td>
+                <td>✅ <a href="#-task-assigning">Task Assigning</a></td>
+            </tr>
+            <tr>
+                <td>📆 <a href="#-project-job-scheduling">Project Job Scheduling</a></td>
+                <td>🏆 <a href="#-sports-league-scheduling">Sports League Scheduling</a></td>
+            </tr>
+            <tr>
+                <td>🏅 <a href="#-tournament-scheduling">Tournament Scheduling</a></td>
+                <td>...and many more</td>
+            </tr>
+            </tbody>
+        </table>
     </section>
 
     <section>
         <section data-background-color="#3e00ff">
             <h2>School timetabling</h2>
-        </section>
-        <section data-background-color="#3e00ff">
-            <h3>Schools often have multiple full-time employees to create the timetables. 😱</h3>
         </section>
         <section>
             <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingInputOutput_0.svg" class="fullImage">
@@ -162,10 +305,14 @@
             <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingHardConstraints_9.svg" class="fullImage fragment">
         </section>
         <section>
-            <h3>The web UI</h3>
+            <h3>The webapp</h3>
             <figure>
                 <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingScreenshot.png"/>
             </figure>
+        </section>
+        <section>
+            <h3>DEMO</h3>
+            <p>mvn quarkus:dev</p>
         </section>
         <section>
             <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureQuarkus_0.svg" class="fullImage">
@@ -178,28 +325,6 @@
             <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingClassDiagram_1.svg" class="fullImage fragment">
         </section>
         <section>
-            <h2>Implement yourself?</h2>
-        </section>
-        <section>
-            <figure>
-                <img src="../src/web/social/timefold-logo.svg"/>
-                <p><i>Planning optimization made easy</i></p>
-            </figure>
-            <ul style="margin-top: 100px;">
-                <li class="fragment">Library of optimization algorithms</li>
-                <li class="fragment">AI, not ML</li>
-                <li class="fragment">Open Source (Apache license)</li>
-                <li class="fragment">Actively developed by our Open Core company</li>
-            </ul>
-        </section>
-        <section>
-            <img src="../src/content/timefold-solver-docs/introduction/compatibility_0.svg" class="fullImage">
-            <img src="../src/content/timefold-solver-docs/introduction/compatibility_1.svg" class="fullImage fragment">
-            <img src="../src/content/timefold-solver-docs/introduction/compatibility_2.svg" class="fullImage fragment">
-            <img src="../src/content/timefold-solver-docs/introduction/compatibility_3.svg" class="fullImage fragment">
-            <img src="../src/content/timefold-solver-docs/introduction/compatibility_4.svg" class="fullImage fragment">
-        </section>
-        <section>
             <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureQuarkus_3.svg" class="fullImage">
             <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureQuarkus_4.svg" class="fullImage fragment">
         </section>
@@ -208,125 +333,313 @@
             <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingClassDiagram_2.svg" class="fullImage fragment">
         </section>
         <section>
-            <h3>DEMO</h3>
-        </section>
-    </section>
-    <section>
-        <section data-background-color="#3e00ff">
-            <h2>School timetabling - Exercise</h2>
+            <h2>OOP</h2>
+            <p class="fragment">Object Orientated Programming</p>
+            <!-- Timefold supports Object Orientated Programming because -->
         </section>
         <section>
-            <h3>💻 Adapt the code 💻</h3>
+            <h2><i>Timefold has class</i></h2>
+        </section>
+        <section>
+            <h3>DEMO</h3>
+            <p>Solve</p>
+            <!-- No constraints => bad schedule => write all 3 hard constraints -->
+        </section>
+        <section>
+            <h2 style="text-decoration: line-through">Constraints as math</h2>
+            <h2 class="fragment">Constraints as code</h2>
+        </section>
+        <section>
+            <h2>Unit testing</h2>
+        </section>
+        <section>
+            <h2><i>If it isn't tested,<br/>it doesn't work.</i></h2>
+        </section>
+        <section><!-- TODO fix to school timetabling -->
+            <h3>Unit testing</h3>
+            <ul>
+                <li>Given:
+                    <ul>
+                        <li>Ann at least 10 hours rest</li>
+                        <li>Shift Monday 14:00-22:00 = Ann</li>
+                        <li>Shift Tuesday 06:00-14:00 = Ann</li>
+                    </ul>
+                </li>
+                <li class="fragment">Expected: penalty</li>
+            </ul>
+            <pre class="fragment" xml:space="preserve"><span class="codeLabel">java</span><code class="java">var ann = new Employee("Ann", ...);
 
-            <p class="fragment" style="font-size: smaller">Code in repository: <span class="highlight">java/school-timetabling</span></p>
-
+verifier.verifyThat(employeeMinimalRest)
+ .given(ann,
+        new Shift(mon1400, mon2200, ann),
+        new Shift(tue0600, tue1400, ann))
+ .penalizes());
+</code></pre>
+            <p class="fragment positive">Isolated per constraint</p>
+        </section>
+        <section>
+            <h2>Docs</h2>
+        </section>
+        <section>
+            <h2><i>If it isn't documented,<br/>it isn't used.</i></h2>
+        </section>
+        <section>
+            <h2>DEMO</h2>
+            <p>docs.timefold.ai</p>
+        </section>
+        <section>
+            <h2>Let's make it interesting</h2>
+        </section>
+        <section>
+            <p>🚨 Danger zone 🚨</p>
+            <h2>Any constraint suggestion?</h2>
+        </section>
+        <section>
+            <h2>Your turn</h2>
+        </section>
+        <!-- TODO fairness or datetime -->
+        <!-- TODO only two -->
+        <section>
+            <h3>💻 Your mission 💻</h3>
             <ol>
                 <li class="fragment">Marie Curie doesn't like to teach in the afternoon<br/><br/></li>
                 <li class="fragment">Don't teach History and Spanish at the same time<br/><br/></li>
                 <li class="fragment">Make the teachers come to school every day<br/><br/></li>
                 <li class="fragment">Give the teachers the most terrible schedule gaps</li>
             </ol>
-
             <p class="fragment" style="font-size: smaller; margin-top: 50px">Note: Remember to also <span class="highlight">test your constraints</span> 😉</p>
         </section>
     </section>
 
+
+<!--    <section>-->
+<!--        <section data-background-color="#3e00ff">-->
+<!--            <h2>Timefold is different</h2>-->
+<!--        </section>-->
+<!--        <section>-->
+<!--            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_0.svg"-->
+<!--                 class="fullImage">-->
+<!--            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_1.svg"-->
+<!--                 class="fullImage fragment">-->
+<!--            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_2.svg"-->
+<!--                 class="fullImage fragment">-->
+<!--            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_3.svg"-->
+<!--                 class="fullImage fragment">-->
+<!--            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_4.svg"-->
+<!--                 class="fullImage fragment">-->
+<!--            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_5.svg"-->
+<!--                 class="fullImage fragment">-->
+<!--            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_6.svg"-->
+<!--                 class="fullImage fragment">-->
+<!--            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_7.svg"-->
+<!--                 class="fullImage fragment">-->
+<!--            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_8.svg"-->
+<!--                 class="fullImage fragment">-->
+<!--        </section>-->
+<!--        <section>-->
+<!--            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/scoreWeighting_0.svg"-->
+<!--                 class="fullImage">-->
+<!--            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/scoreWeighting_1.svg"-->
+<!--                 class="fullImage fragment">-->
+<!--            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/scoreWeighting_2.svg"-->
+<!--                 class="fullImage fragment">-->
+<!--        </section>-->
+<!--        <section>-->
+<!--            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/scoreLevels_0.svg"-->
+<!--                 class="fullImage">-->
+<!--            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/scoreLevels_1.svg"-->
+<!--                 class="fullImage fragment">-->
+<!--            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/scoreLevels_2.svg"-->
+<!--                 class="fullImage fragment">-->
+<!--        </section>-->
+<!--        <section>-->
+<!--            <h2>Timefold is different</h2>-->
+<!--        </section>-->
+<!--        <section>-->
+<!--            <h2>1) Higher is better</h2>-->
+<!--        </section>-->
+<!--        <section>-->
+<!--            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_8.svg"-->
+<!--                 class="fullImage">-->
+<!--        </section>-->
+<!--        <section>-->
+<!--            <h2>The objective function always maximizes.</h2>-->
+<!--        </section>-->
+<!--        <section>-->
+<!--            <h2>2) Always answer</h2>-->
+<!--        </section>-->
+<!--        <section>-->
+<!--            <h2><i>No feasible solution</i><br/>is <b>not</b> an answer</h2>-->
+<!--        </section>-->
+<!--        <section>-->
+<!--            <h2><i>No feasible solution</i><br/>is a bug</h2>-->
+<!--        </section>-->
+<!--        <section>-->
+<!--            <h2>All constraints are weighted</h2>-->
+<!--        </section>-->
+<!--        <section>-->
+<!--            <h2>Return least unfeasible solution</h2>-->
+<!--        </section>-->
+<!--        <section>-->
+<!--            <h2>3) Hard and soft constraints are not enough</h2>-->
+<!--        </section>-->
+<!--    </section>-->
+
     <section>
         <section data-background-color="#3e00ff">
-            <h2>Maintenance Scheduling</h2>
+            <h2>Shift scheduling</h2>
         </section>
+
         <section>
-            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/maintenance-scheduling/maintenanceSchedulingInputOutput_0.svg" class="fullImage">
-            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/maintenance-scheduling/maintenanceSchedulingInputOutput_1.svg" class="fullImage fragment">
-            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/maintenance-scheduling/maintenanceSchedulingInputOutput_2.svg" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/nurse-rostering/employeeRosteringValueProposition_0.svg"
+                 class="fullImage">
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/nurse-rostering/employeeRosteringValueProposition_1.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/nurse-rostering/employeeRosteringValueProposition_2.svg"
+                 class="fullImage fragment">
         </section>
-        <section>
-            <h3>The web UI</h3>
-            <figure>
-                <img src="../src/content/timefold-quickstarts/java/maintenance-scheduling/maintenance-scheduling-screenshot.png"/>
-            </figure>
-        </section>
-        <section>
-            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/maintenance-scheduling/maintenanceSchedulingClassDiagram_0.svg" class="fullImage">
-            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/maintenance-scheduling/maintenanceSchedulingClassDiagram_1.svg" class="fullImage fragment">
-            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/maintenance-scheduling/maintenanceSchedulingClassDiagram_2.svg" class="fullImage fragment">
-        </section>
+
+
         <section>
             <h3>DEMO</h3>
-        </section>
-    </section>
-    <section>
-        <section data-background-color="#3e00ff">
-            <h2>Machine Scheduling - Exercise</h2>
+            <p>Employee Shift Scheduling</p>
         </section>
         <section>
-            <h3>💻 Adapt the code 💻</h3>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_0.svg"
+                 class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_1.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_2.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_3.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_4.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_5.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_6.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_7.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_8.svg"
+                 class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/performance/incrementalScoreCalculationEmployeeRostering_0.svg"
+                 class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/performance/incrementalScoreCalculationEmployeeRostering_1.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/performance/incrementalScoreCalculationEmployeeRostering_2.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/performance/incrementalScoreCalculationEmployeeRostering_3.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/performance/incrementalScoreCalculationEmployeeRostering_4.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/performance/incrementalScoreCalculationEmployeeRostering_5.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/performance/incrementalScoreCalculationEmployeeRostering_6.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/performance/incrementalScoreCalculationEmployeeRostering_7.svg"
+                 class="fullImage fragment">
+        </section>
+        <section>
+            <h3>Constraint Streams</h3>
+            <p>Get incremental score calculation<br/>
+                without writing incremental score calculation.</p>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamFilter_0.svg"
+                 class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamFilter_1.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamFilter_2.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamFilter_3.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamFilter_4.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamFilter_5.svg"
+                 class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamJoinWithoutJoiners_0.svg"
+                 class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamJoinWithoutJoiners_1.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamJoinWithoutJoiners_2.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamJoinWithoutJoiners_3.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamJoinWithoutJoiners_4.svg"
+                 class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamJoinWithJoiners_0.svg"
+                 class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamJoinWithJoiners_1.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamJoinWithJoiners_2.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamJoinWithJoiners_3.svg"
+                 class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamGroupBy_0.svg"
+                 class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamGroupBy_1.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamGroupBy_2.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamGroupBy_3.svg"
+                 class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamIfExists_0.svg"
+                 class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamIfExists_1.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamIfExists_2.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/score-calculation/constraintStreamIfExists_3.svg"
+                 class="fullImage fragment">
+        </section>
+        <section>
+            <h3>Hard, medium and soft constraints as code</h3>
+        </section>
+    </section>
 
-            <p style="font-size: smaller">Code in repository: <span class="highlight">java/maintenance-scheduling</span></p>
-
-            <ol>
-                <li class="fragment">Execute all jobs as early as possible (front load)<br/><br/></li>
-                <li class="fragment">Make half of the jobs JIT=true. Do all JIT jobs as late as possible.<br/><br/></li>
-                <li class="fragment">Spread jobs fairly across the teams<br/><br/></li>
-            </ol>
-            <p class="fragment" style="font-size: smaller; margin-top: 50px">Note: Remember to also <span class="highlight">test your constraints</span>😉</p>
-        </section>
-    </section>
-    <section>
-        <section data-background-color="#3e00ff">
-            <h2>Conclusion</h2>
-        </section>
-        <section>
-            <h2>The world is full of </br> <span class="highlight">scheduling problems</span></h2>
-            <p class="fragment"> <span class="highlight">Optimize goals</span> with <span class="highlight">limited resources</span> under <span class="highlight">constraints</span></p>
-        </section>
-        <section>
-            <h2>Using Timefold</h2>
-            <br/>
-            <h3>🖊 Model domain</h3>
-            <h3 class="fragment">⚖️ Define constraints</h3>
-            <h3 class="fragment"><span class="highlight"> 🚀 Run!</span></h3>
-        </section>
-    </section>
 
 
     <section data-background-color="#3e00ff">
-        <h2>Continue learning</h2>
+        <h2>Conclusion</h2>
+    </section>
+
+    <section>
+        <h2>Free the world of wasteful scheduling</h2>
     </section>
     <section>
-        <h3>Experiment with other quickstarts</h3>
+        <h3>Try our open source solver</h3>
         <ol>
-            <li>Go to <a href="https://timefold.ai">timefold.ai</a></li>
-            <li>Click the <a href="https://github.com/TimefoldAI/timefold-quickstarts"><i>Quickstarts repo</i></a> button.</li>
-            <li>Pick a quickstart from the README.</li>
-            <li>Run it:</li>
+            <li class="fragment">Pick a quickstart</li>
+            <li class="fragment">Code your business requirements</li>
+            <li class="fragment">Ship it 🚀</li>
         </ol>
-        <pre xml:space="preserve"><code class="bash">$ git clone https://github.com/TimefoldAI/timefold-quickstarts.git
-...
-$ cd timefold-quickstarts/java/maintenance-scheduling
-$ mvn quarkus:dev
-...</code></pre>
     </section>
     <section>
-        <h3>Q &amp; A</h3>
-        <table class="links">
-            <tr>
-                <th>Learn more</th>
-                <td><a href="https://timefold.ai">timefold.ai</a></td>
-            </tr>
-            <tr>
-                <th>Feedback</th>
-                <td>
-                    <img src="../src/web/social/bluesky-logo.svg"/> <a href="https://bsky.app/profile/tomcools.be">@tomcools.be</a><br/>
-                </td>
-            </tr>
-            <tr>
-                <th>Get started</th>
-                <td>
-                    <img src="../src/content/static/cta/docs-HelloWorld-QR-code.png"/>
-                </td>
-            </tr>
-        </table>
+
+        <figure>
+            <img src="../src/web/social/timefold-logo.svg" height="100px"/>
+        </figure>
+        <figure>
+            <img src="../src/content/static/links/qr-solver.svg" width="250px" />
+            <figcaption style="font-size: 2.4rem;">solver.timefold.ai</figcaption>
+        </figure>
+        <br/>
+        <div style="font-size: 2.4rem; border-top: 1px solid #ccc; padding-top: 1rem; margin-bottom: 1.5rem;">
+            <img src="../src/web/social/linkedin-logo.svg"/> Geoffrey De Smet<br/>
+            <img src="../src/web/social/linkedin-logo.svg"/> Jeroen Colin
+        </div>
+
     </section>
 
 </div></div>
