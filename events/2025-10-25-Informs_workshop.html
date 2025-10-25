@@ -355,27 +355,68 @@
         <section>
             <h2><i>If it isn't tested,<br/>it doesn't work.</i></h2>
         </section>
-        <section><!-- TODO fix to school timetabling -->
-            <h3>Unit testing</h3>
+        <section>
+            <h2>False positives</h2>
+            <ul>
+                <li class="fragment">Hard score: Is the solution feasible?</li>
+                <li class="fragment">Soft score: Is the solution accurate?</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Test for false positives</h3>
             <ul>
                 <li>Given:
                     <ul>
-                        <li>Ann at least 10 hours rest</li>
-                        <li>Shift Monday 14:00-22:00 = Ann</li>
-                        <li>Shift Tuesday 06:00-14:00 = Ann</li>
+                        <li>English @ Monday 09:00-10:00 in room 1</li>
+                        <li>Spanish @ Monday 09:00-10:00 in room 1</li>
                     </ul>
                 </li>
-                <li class="fragment">Expected: penalty</li>
+                <li class="fragment">Expected: <span class="negative">NOT OK</span></li>
             </ul>
-            <pre class="fragment" xml:space="preserve"><span class="codeLabel">java</span><code class="java">var ann = new Employee("Ann", ...);
+            <pre class="fragment" xml:space="preserve"><span class="codeLabel">java</span><code class="java">var timeslot1 = new Timeslot("Monday 9:00-10:00", ...);
+var room1 = new Room("Room 1", ...);
 
-verifier.verifyThat(employeeMinimalRest)
- .given(ann,
-        new Shift(mon1400, mon2200, ann),
-        new Shift(tue0600, tue1400, ann))
- .penalizes());
+verifier.verifyThat(MyConstraints::roomConflict)
+  .given(
+    new Lesson("English", ..., timeslot1, room1),
+    new Lesson("Spanish", ..., timeslot1, room1))
+  .penalizes(1);
 </code></pre>
-            <p class="fragment positive">Isolated per constraint</p>
+        </section>
+        <section>
+            <h2>Tested in isolation</h2>
+        </section>
+        <section>
+            <h2>False positives</h2>
+            <ul>
+                <li class="fragment">Was the solver too restrictive?</li>
+                <li class="fragment">Is the solution efficient?</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Test for false negatives</h3>
+            <ul>
+                <li>Given:
+                    <ul>
+                        <li>English @ Monday 09:00-10:00 in room 1</li>
+                        <li>Math @ Monday 09:00-10:00 in room 2</li>
+                    </ul>
+                </li>
+                <li class="fragment">Expected: <span class="positive">OK</span></li>
+            </ul>
+            <pre class="fragment" xml:space="preserve"><span class="codeLabel">java</span><code class="java">var timeslot1 = new Timeslot("Monday 9:00-10:00", ...);
+var room1 = new Room("Room 1", ...);
+var room2 = new Room("Room 2", ...);
+
+verifier.verifyThat(MyConstraints::roomConflict)
+  .given(
+    new Lesson("English", ..., timeslot1, room1),
+    new Lesson("Math", ..., timeslot1, room2))
+  .penalizes(0);
+</code></pre>
+        </section>
+        <section>
+            <h2>Test for corner cases</h2>
         </section>
         <section>
             <h2>Docs</h2>
@@ -395,19 +436,19 @@ verifier.verifyThat(employeeMinimalRest)
             <h2>Any constraint suggestion?</h2>
         </section>
         <section>
+            <h2>TDD</h2>
+        </section>
+        <section>
             <h2>Your turn</h2>
         </section>
-        <!-- TODO fairness or datetime -->
-        <!-- TODO only two -->
         <section>
             <h3>💻 Your mission 💻</h3>
+            <br/>
             <ol>
                 <li class="fragment">Marie Curie doesn't like to teach in the afternoon<br/><br/></li>
-                <li class="fragment">Don't teach History and Spanish at the same time<br/><br/></li>
                 <li class="fragment">Make the teachers come to school every day<br/><br/></li>
-                <li class="fragment">Give the teachers the most terrible schedule gaps</li>
             </ol>
-            <p class="fragment" style="font-size: smaller; margin-top: 50px">Note: Remember to also <span class="highlight">test your constraints</span> 😉</p>
+            <p class="fragment" style="font-size: smaller; margin-top: 50px">Remember to also <span class="highlight">test your constraints</span> 😉</p>
         </section>
     </section>
 
@@ -497,12 +538,6 @@ verifier.verifyThat(employeeMinimalRest)
                  class="fullImage fragment">
             <img src="../src/content/timefold-solver-docs/use-cases-and-examples/nurse-rostering/employeeRosteringValueProposition_2.svg"
                  class="fullImage fragment">
-        </section>
-
-
-        <section>
-            <h3>DEMO</h3>
-            <p>Employee Shift Scheduling</p>
         </section>
         <section>
             <img src="../src/content/timefold-solver-docs/constraints-and-score/scoreComparisonEmployeeRostering_0.svg"
@@ -604,7 +639,7 @@ verifier.verifyThat(employeeMinimalRest)
                  class="fullImage fragment">
         </section>
         <section>
-            <h3>Hard, medium and soft constraints as code</h3>
+            <h3>Constraints as code</h3>
         </section>
     </section>
 
