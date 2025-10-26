@@ -355,6 +355,7 @@
         <section>
             <h2><i>If it isn't tested,<br/>it doesn't work.</i></h2>
         </section>
+        <!-- TODO visualize false positives and negatives -->
         <section>
             <h2>False positives</h2>
             <ul>
@@ -387,7 +388,7 @@ verifier.verifyThat(MyConstraints::roomConflict)
             <h2>Tested in isolation</h2>
         </section>
         <section>
-            <h2>False positives</h2>
+            <h2>False negatives</h2>
             <ul>
                 <li class="fragment">Was the solver too restrictive?</li>
                 <li class="fragment">Is the solution efficient?</li>
@@ -451,80 +452,6 @@ verifier.verifyThat(MyConstraints::roomConflict)
             <p class="fragment" style="font-size: smaller; margin-top: 50px">Remember to also <span class="highlight">test your constraints</span> 😉</p>
         </section>
     </section>
-
-
-<!--    <section>-->
-<!--        <section data-background-color="#3e00ff">-->
-<!--            <h2>Timefold is different</h2>-->
-<!--        </section>-->
-<!--        <section>-->
-<!--            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_0.svg"-->
-<!--                 class="fullImage">-->
-<!--            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_1.svg"-->
-<!--                 class="fullImage fragment">-->
-<!--            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_2.svg"-->
-<!--                 class="fullImage fragment">-->
-<!--            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_3.svg"-->
-<!--                 class="fullImage fragment">-->
-<!--            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_4.svg"-->
-<!--                 class="fullImage fragment">-->
-<!--            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_5.svg"-->
-<!--                 class="fullImage fragment">-->
-<!--            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_6.svg"-->
-<!--                 class="fullImage fragment">-->
-<!--            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_7.svg"-->
-<!--                 class="fullImage fragment">-->
-<!--            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_8.svg"-->
-<!--                 class="fullImage fragment">-->
-<!--        </section>-->
-<!--        <section>-->
-<!--            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/scoreWeighting_0.svg"-->
-<!--                 class="fullImage">-->
-<!--            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/scoreWeighting_1.svg"-->
-<!--                 class="fullImage fragment">-->
-<!--            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/scoreWeighting_2.svg"-->
-<!--                 class="fullImage fragment">-->
-<!--        </section>-->
-<!--        <section>-->
-<!--            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/scoreLevels_0.svg"-->
-<!--                 class="fullImage">-->
-<!--            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/scoreLevels_1.svg"-->
-<!--                 class="fullImage fragment">-->
-<!--            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/scoreLevels_2.svg"-->
-<!--                 class="fullImage fragment">-->
-<!--        </section>-->
-<!--        <section>-->
-<!--            <h2>Timefold is different</h2>-->
-<!--        </section>-->
-<!--        <section>-->
-<!--            <h2>1) Higher is better</h2>-->
-<!--        </section>-->
-<!--        <section>-->
-<!--            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_8.svg"-->
-<!--                 class="fullImage">-->
-<!--        </section>-->
-<!--        <section>-->
-<!--            <h2>The objective function always maximizes.</h2>-->
-<!--        </section>-->
-<!--        <section>-->
-<!--            <h2>2) Always answer</h2>-->
-<!--        </section>-->
-<!--        <section>-->
-<!--            <h2><i>No feasible solution</i><br/>is <b>not</b> an answer</h2>-->
-<!--        </section>-->
-<!--        <section>-->
-<!--            <h2><i>No feasible solution</i><br/>is a bug</h2>-->
-<!--        </section>-->
-<!--        <section>-->
-<!--            <h2>All constraints are weighted</h2>-->
-<!--        </section>-->
-<!--        <section>-->
-<!--            <h2>Return least unfeasible solution</h2>-->
-<!--        </section>-->
-<!--        <section>-->
-<!--            <h2>3) Hard and soft constraints are not enough</h2>-->
-<!--        </section>-->
-<!--    </section>-->
 
     <section>
         <section data-background-color="#3e00ff">
@@ -640,6 +567,79 @@ verifier.verifyThat(MyConstraints::roomConflict)
         </section>
         <section>
             <h3>Constraints as code</h3>
+        </section>
+        <section data-background-color="#3e00ff">
+            <h2>Timefold is different</h2>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_0.svg"
+                 class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_1.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_2.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_3.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_4.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_5.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_6.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_7.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_8.svg"
+                 class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/scoreWeighting_0.svg"
+                 class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/scoreWeighting_1.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/scoreWeighting_2.svg"
+                 class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/scoreLevels_0.svg"
+                 class="fullImage">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/scoreLevels_1.svg"
+                 class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/scoreLevels_2.svg"
+                 class="fullImage fragment">
+        </section>
+        <section>
+            <h2>Timefold is different</h2>
+        </section>
+        <section>
+            <h2>1) Higher is better</h2>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/constraints-and-score/overview/positiveAndNegativeConstraints_8.svg"
+                 class="fullImage">
+        </section>
+        <section>
+            <h2>The objective function always maximizes.</h2>
+        </section>
+        <section>
+            <h2>2) Always answer</h2>
+        </section>
+        <section>
+            <h2><i>No feasible solution</i><br/>is <b>not</b> an answer</h2>
+        </section>
+        <section>
+            <h2><i>No feasible solution</i><br/>is a bug</h2>
+        </section>
+        <section>
+            <h2>All constraints are weighted</h2>
+        </section>
+        <section>
+            <h2>Return least unfeasible solution</h2>
+        </section>
+        <section>
+            <h2>3) Hard and soft constraints are not enough</h2>
+        </section>
+        <section>
+            <h2>DEMO</h2>
         </section>
     </section>
 
