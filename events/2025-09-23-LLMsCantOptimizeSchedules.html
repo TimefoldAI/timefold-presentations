@@ -1,0 +1,555 @@
+<!doctype html>
+<!--suppress HtmlRequiredAltAttribute -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>LLMs can't optimize schedules, but AI can</title>
+    <meta name="description" content="LLMs can't optimize schedules, but AI can">
+    <!--    <link href="https://github.com/TimefoldAI/timefold-presentations" rel="canonical">-->
+
+    <link rel="stylesheet" href="../src/web/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../src/web/reveal/css/reveal.css">
+    <link rel="stylesheet" href="../src/web/reveal/css/theme/simple.css" id="theme">
+    <script>
+      if (window.location.search.match(/print-pdf/gi)) {
+        document.write('<link rel="stylesheet" href="../src/web/reveal/css/print/pdf.css">');
+      }
+    </script>
+    <link rel="stylesheet" href="../src/web/highlight/highlight.css">
+    <link rel="stylesheet" href="../src/web/timefold-presentation.css">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <style>
+        blockquote {
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="reveal">
+<div class="watermark watermark-left">
+    <p>
+        <img src="../src/web/social/timefold-logo.png"/> timefold.ai</span> @tomcools.be
+    </p>
+</div>
+<div class="slides">
+    <section>
+        <h1>
+            <span class="highlight">LLMs can't optimize</span> schedules... <br/>but <span class="highlight">AI can</span>.
+        </h1>
+        <div>
+            <p>
+                <span style="font-size: smaller">by</span> Tom Cools<br/>
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <section data-background-image="../src/content/static/llms-cant/cat-tom.jpg"
+                 data-background-size="stretch">
+        </section>
+        <section>
+            <figure>
+                <img class="fragment" src="../src/content/static/llms-cant/banjo-kitty-genai-chatgpt.png" width="60%"/>
+                <figcaption>ChatGPT: "A cat sitting on a crocodile while playing the banjo"</figcaption>
+            </figure>
+        </section>
+        <section>
+            <figure>
+                <img class="fragment" src="../src/content/static/llms-cant/comedy-kitty-genai-chatgpt.png" width="60%"/>
+                <figcaption>ChatGPT: "A cat in a tiny top hat hosting a stand-up comedy show for a crowd of impressed goldfish"</figcaption>
+            </figure>
+        </section>
+        <section data-background-video="../src/content/static/llms-cant/video.mp4">
+        </section>
+        <section data-background-color="#3e00ff">
+            <h2>GenAI Is Awesome 🚀</h2>
+            <aside class="notes">
+                LLMs have proven themselves to be very valuable tools that help us brainstorm, proof-read e-mails or even help us rewrite texts for specific audiences.
+            </aside>
+        </section>
+        <section>
+            <h2>Solution for <span class="highlight">EVERYTHING 🤯</span></h2>
+            <aside class="notes">
+                The progress in the past few months has been mind-blowing, which might suggest they're the answer to everything. At least, if you believe the hype machine.
+            </aside>
+        </section>
+        <section>
+            <h2>or is it? 🤔</h2>
+            <aside class="notes">
+                We get 2 reactions when starting this statement
+            </aside>
+        </section>
+        <section>
+            <img src="../src/content/static/llms-cant/canva-rag.png" style="margin-left: -50px; width: 400px">
+            <img src="../src/content/static/llms-cant/canva-finetuning.png" class="fragment" style="width: 400px">
+            <img src="../src/content/static/llms-cant/canva-agents.png" class="fragment" style="margin-left: -50px; width: 400px">
+            <img src="../src/content/static/llms-cant/canva-only-get-better.gif" class="fragment" style="width: 400px">
+        </section>
+        <section>
+            <h2>What is something <br/><span class="highlight">LLMs can't do</span>?</h2>
+        </section>
+    </section>
+    <section>
+        <section data-background-color="#3e00ff">
+            <h1>Can LLMs solve <span style="font-weight: bold">planning problems</span>?</h1>
+        </section>
+        <section data-background-image="../src/content/static/llms-cant/delivery-pexels.png"
+                 data-background-size="stretch">
+        </section>
+        <section data-background-image="../src/content/static/llms-cant/airplanes-pexels.png"
+                 data-background-size="stretch">
+        </section>
+        <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
+                 data-background-size="stretch">
+            <aside class="notes">
+                Neighbor - scheduling problem
+            </aside>
+        </section>
+        <section>
+            <img src="../src/content/static/ai/planning-is-not-a-sequence-of-decisions-simplified-A_0.png" class="fullImage">
+        </section>
+        <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
+                 data-background-size="stretch"
+                 data-background-opacity="0.1"
+                 data-background-color="black">
+            <p class="fragment">7 days</p>
+            <p class="fragment">5 shifts per employee</p>
+            <p class="fragment"> <span class="highlight-b">30 employees</span></p>
+            <p class="fragment"> <span class="highlight-b">150 shift assignments</span></p>
+            <p class="fragment"> <span class="highlight-b">5 constraints</span> (skills, time between shifts, etc.)</p>
+        </section>
+        <section  data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
+                  data-background-size="stretch"
+                  data-background-opacity="0.1"
+                  data-background-color="black">
+            <h2>How do LLMs solve <br/><span class="highlight-b">my planning problem?</span></h2>
+            <aside class="notes">
+                Neighbor - scheduling problem
+            </aside>
+        </section>
+        <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
+                 data-background-size="stretch"
+                 data-background-opacity="0.1"
+                 data-background-color="black">
+            <h2>LLMs 🚶‍♂️🌳 ☀️</h2>
+            <aside class="notes">
+                Walk in the park
+            </aside>
+        </section>
+        <section data-background-image="../src/content/static/llms-cant/chatgpt-research-shortly.png"
+                 data-background-size="contain"
+                 data-background-color="black">
+        </section>
+        <section data-background-image="../src/content/static/llms-cant/chatgpt-reasoning/analyzed-with-python-joke.png"
+                 data-background-size="contain"
+                 data-background-color="black">
+        </section>
+        <section data-background-image="../src/content/static/llms-cant/chatgpt-reasoning/shifts.png"
+                 data-background-size="contain"
+                 data-background-color="black">
+        </section>
+        <section data-background-image="../src/content/static/llms-cant/chatgpt-reasoning/orlando2.png"
+                 data-background-size="contain"
+                 data-background-color="black">
+        </section>
+        <section data-background-image="../src/content/static/llms-cant/chatgpt-reasoning/rule6.png"
+                 data-background-size="contain"
+                 data-background-color="black">
+        </section>
+        <section data-background-image="../src/content/static/llms-cant/chatgpt-reasoning/schedule-success.png"
+                 data-background-size="contain"
+                 data-background-color="black">
+        </section>
+
+        <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
+                 data-background-size="stretch"
+                 data-background-opacity="0.1"
+                 data-background-color="black">
+            <h2>Can reasoning models optimize a <span class="highlight-b">realistic schedule</span>?</h2>
+        </section>
+
+
+        <section data-background-image="../src/content/static/llms-cant/chatgpt-reasoning/error.png"
+                 data-background-size="contain"
+                 data-background-color="black">
+        </section>
+
+        <section data-background-image="../src/content/static/llms-cant/chatgpt-reasoning/trustmebro.png"
+                 data-background-size="contain"
+                 data-background-color="black">
+        </section>
+
+        <section data-background-image="../src/content/static/llms-cant/chatgpt-reasoning/lying.png"
+                 data-background-size="contain"
+                 data-background-color="black">
+        </section>
+
+        <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
+                 data-background-size="stretch"
+                 data-background-opacity="0.1"
+                 data-background-color="black">
+            <h3>That is "slightly" over-optimistic</h3>
+            <figure class="fragment">
+                <img src="../src/content/static/llms-cant/chatgpt-reasoning/result.png">
+                <figcaption>Visualization of "completed" schedule</figcaption>
+            </figure>
+        </section>
+
+        <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
+                 data-background-size="stretch"
+                 data-background-opacity="0.1"
+                 data-background-color="black">
+            <h2>Why do LLMs fail here?</h2>
+        </section>
+
+        <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
+                 data-background-size="stretch"
+                 data-background-opacity="0.1"
+                 data-background-color="black">
+            <h2>Scheduling is not a sequence of decisions</h2>
+        </section>
+        <section>
+            <img src="../src/content/static/ai/planning-is-not-a-sequence-of-decisions-simplified-A_0.png" class="fullImage">
+            <img src="../src/content/static/ai/planning-is-not-a-sequence-of-decisions-simplified-A_1.png" class="fullImage fragment">
+            <img src="../src/content/static/ai/planning-is-not-a-sequence-of-decisions-simplified-A_2.png" class="fullImage fragment">
+            <img src="../src/content/static/ai/planning-is-not-a-sequence-of-decisions-simplified-A_3.png" class="fullImage fragment">
+            <img src="../src/content/static/ai/planning-is-not-a-sequence-of-decisions-simplified-A_4.png" class="fullImage fragment">
+            <img src="../src/content/static/ai/planning-is-not-a-sequence-of-decisions-simplified-B_0.png" class="fullImage fragment">
+            <img src="../src/content/static/ai/planning-is-not-a-sequence-of-decisions-simplified-B_1.png" class="fullImage fragment">
+            <img src="../src/content/static/ai/planning-is-not-a-sequence-of-decisions-simplified-B_2.png" class="fullImage fragment">
+            <img src="../src/content/static/ai/planning-is-not-a-sequence-of-decisions-simplified-B_3.png" class="fullImage fragment">
+            <img src="../src/content/static/ai/planning-is-not-a-sequence-of-decisions-simplified-C.png" class="fullImage fragment">
+        </section>
+
+        <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
+                 data-background-size="stretch"
+                 data-background-opacity="0.1"
+                 data-background-color="black">
+            <p><span>30 employees</span></p>
+            <p><span>150 shift assignments</span></p>
+            <p><span class="highlight-b">How many different solutions?</span></p>
+            <hr />
+            <p class="fragment">1 shift: 30 options</p>
+            <p class="fragment">2 shifts: 30*30 options</p>
+            <p class="fragment">3 shifts: 30^3 options</p>
+            <p class="fragment">150 shifts: 30^150 options</p>
+        </section>
+
+        <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
+                 data-background-size="stretch"
+                 data-background-opacity="0.1"
+                 data-background-color="black">
+            <p>150 shifts: 30^150</p>
+            <p class="fragment">3.69 × <span class="highlight-b">10^221</span></p>
+        </section>
+        <section data-background-image="../src/content/static/llms-cant/pexels-sky-space-dark-galaxy.jpg"
+                 data-background-size="stretch"
+                 data-background-opacity="0.35"
+                 data-background-color="black">
+            <p class="fragment">Atoms in the observable universe: <span class="fragment">10^80</span></p>
+            <p class="fragment">10^221: <span class="highlight-b">141 more zeroes</span></p>
+        </section>
+
+        <section data-background-image="../src/content/static/llms-cant/doctor-time-pexels.png"
+                 data-background-size="stretch"
+                 data-background-opacity="0.1"
+                 data-background-color="black">
+            <h3>You can't optimize for such a search space <br /><br />by <span class="highlight-b">predicting the next token</span><br /> nor by <span class="highlight-b">reasoning like a human</span>.</h3>
+            <aside class="notes">
+                Surprised it works as well as it does, but there are still limits.
+            </aside>
+        </section>
+
+        <section data-background-color="#3e00ff">
+            <h1>LLMs can't optimize schedules</h1>
+        </section>
+    </section>
+    <section>
+        <section data-background-color="#3e00ff">
+            <h1>... but AI can!</h1>
+            <aside class="notes">
+                There are other forms of AI which can!
+            </aside>
+        </section>
+        <section data-background-color="black"
+                 data-background-image="../src/content/static/llms-cant/AI-space.png"
+                 data-background-size="120%"
+                 data-background-position="bottom">
+        </section>
+        <section data-background-color="black"
+                 data-background-image="../src/content/static/llms-cant/AI-space.png"
+                 data-background-size="80%"
+                 data-background-position="bottom">
+        </section>
+        <section data-background-image="../src/content/static/llms-cant/machine-learning-pexels.webp"
+                        data-background-size="stretch"
+                        data-background-opacity="0.2"
+                        data-background-color="black">
+            <h1>Machine Learning</h1>
+            <blockquote>Machine learning is a branch of AI where systems learn patterns from data to make predictions or decisions without being explicitly programmed.</blockquote>
+        </section>
+        <section data-background-image="../src/content/static/llms-cant/machine-learning-pexels.webp"
+                 data-background-size="stretch"
+                 data-background-opacity="0.2"
+                 data-background-color="black">
+            <h2>Machine Learning is Awesome 🚀</h2>
+        </section>
+        <section data-background-image="../src/content/static/llms-cant/signing-kaggle-public-domain.png"
+                 data-background-size="stretch">
+            <aside class="notes">
+                - Simple example: recognizing words
+            </aside>
+        </section>
+        <section data-background-image="../src/content/static/llms-cant/machine-learning-pexels.png"
+                 data-background-size="stretch"
+                 data-background-opacity="0.2"
+                 data-background-color="black">
+            <h3>Can Machine Learning be used <br /> to optimize schedules?</h3>
+        </section>
+        <section data-background-image="../src/content/static/llms-cant/machine-learning-pexels.png"
+                 data-background-size="stretch"
+                 data-background-opacity="0.5"
+                 data-background-color="black">
+            <p>Learn from data...</p>
+            <p class="fragment">but what data?</p>
+        </section>
+        <section data-background-image="../src/content/static/llms-cant/genai-chatgpt-cube.png"
+                 data-background-size="stretch"
+                 data-background-opacity="0.8"
+                 data-background-color="black">
+            Interlinked Decisions
+        </section>
+        <section data-background-color="black"
+                 data-background-image="../src/content/static/llms-cant/AI-space.png"
+                 data-background-size="80%"
+                 data-background-position="bottom">
+        </section>
+        <section data-background-color="black"
+                 data-background-image="../src/content/static/llms-cant/AI-space.png"
+                 data-background-size="contain">
+        </section>
+        <section data-background-image="../src/content/static/llms-cant/scared-pexels.png"
+                 data-background-size="stretch"
+                 data-background-opacity="0.1"
+                 data-background-color="black">
+            <h2>Mathematical Optimization</h2>
+            <blockquote>Group of techniques to find the ideal inputs from a set <br/>in order to maximize or minimize a real function.</blockquote>
+        </section>
+
+        <section data-background-image="../src/content/static/llms-cant/scared-pexels.png"
+                 data-background-size="stretch"><div class="fragment" style="color: #000000; float: right; margin-top: -300px; font-size: smaller">
+            $\begin{aligned}
+
+            & \quad \sum_{s \in S} \sum_{e \in E} \mathrm{pref}(s,e) \, a_{s,e} \\
+            \end{aligned}
+            $
+        </div></section>
+        <section data-transition="fade-out">
+            <figure>
+                <img src="../src/content/static/company/solver-logo.png"/>
+                <p><i>Planning optimization made easy</i></p>
+            </figure>
+            <br/>
+            <ul style="margin-top: 5px;">
+                <li class="fragment">Optimization algorithms in domain code</li>
+                <li class="fragment">Open Source (Apache license)</li>
+                <li class="fragment">JVM based!</li>
+            </ul>
+        </section>
+        <section data-background-color="#3e00ff">
+            <h1>Demo</h1>
+        </section>
+        <section>
+            <h3>🖊 Model domain</h3>
+            <h3 class="fragment">⚖️ Define constraints</h3>
+            <h3 class="fragment"><span class="highlight"> 🚀 Run!</span></h3>
+        </section>
+        <section>
+            <h2>Example Usecases</h2>
+            <table style="font-size: 24px">
+                <tbody>
+                <tr>
+                    <td>🚚 <a href="#-vehicle-routing">Vehicle Routing</a></td>
+                    <td>🧑‍💼 <a href="#-employee-scheduling">Employee Scheduling</a></td>
+                </tr>
+                <tr>
+                    <td>🛠️ <a href="#-maintenance-scheduling">Maintenance Scheduling</a></td>
+                    <td>📦 <a href="#-food-packaging">Food Packaging</a></td>
+                </tr>
+                <tr>
+                    <td>🛒 <a href="#-order-picking">Order Picking</a></td>
+                    <td>🏫 <a href="#-school-timetabling">School Timetabling</a></td>
+                </tr>
+                <tr>
+                    <td>🏭 <a href="#-facility-location-problem">Facility Location Problem</a></td>
+                    <td>🎤 <a href="#-conference-scheduling">Conference Scheduling</a></td>
+                </tr>
+                <tr>
+                    <td>🛏️ <a href="#-bed-allocation-scheduling">Bed Allocation Scheduling</a></td>
+                    <td>🛫 <a href="#-flight-crew-scheduling">Flight Crew Scheduling</a></td>
+                </tr>
+                <tr>
+                    <td>👥 <a href="#-meeting-scheduling">Meeting Scheduling</a></td>
+                    <td>✅ <a href="#-task-assigning">Task Assigning</a></td>
+                </tr>
+                <tr>
+                    <td>📆 <a href="#-project-job-scheduling">Project Job Scheduling</a></td>
+                    <td>🏆 <a href="#-sports-league-scheduling">Sports League Scheduling</a></td>
+                </tr>
+                <tr>
+                    <td>🏅 <a href="#-tournament-scheduling">Tournament Scheduling</a></td>
+                    <td>...and many more</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+        <section data-background-image="../src/content/static/santa/youtube.png"
+                 data-background-size="stretch"
+                 data-background-color="black">
+        </section>
+        <section data-background-image="../src/content/static/llms-cant/pexels-sky-space-dark-galaxy.jpg"
+                 data-background-size="stretch"
+                 data-background-opacity="0.35"
+                 data-background-color="black">
+            <h3>Does Optimization Matter?</h3>
+        </section>
+        <section data-background-image="../src/content/static/llms-cant/delivery-pexels.png"
+                 data-background-size="stretch"
+        data-background-color="black"
+        data-background-opacity="0.3">
+            <h3>Vehicle Routing Case</h3>
+            <p class="fragment">Expected: -1% driving time</p>
+            <p class="fragment">Result: -25% driving time</p>
+            <p class="fragment">⇒ -10 million kg CO² emission per year</p>
+            <p class="fragment">⇒ -100 million $ cost per year</p>
+        </section>
+        <section data-background-color="#3e00ff">
+            <h3>LLMs can't optimize schedules<br/>but AI can!</h3>
+        </section>
+    </section>
+    <section>
+        <section data-background-color="#3e00ff">
+            <h1>Future of AI?</h1>
+            <aside class="notes">
+                How do we see this moving forward?
+            </aside>
+        </section>
+        <section data-background-color="black"
+                 data-background-image="../src/content/static/llms-cant/AI-spaceTF.png"
+                 data-background-size="contain">
+        </section>
+        <section data-background-color="black"
+                 data-background-size="contain">
+            <h2>Let LLMs write <br />the code</h2>
+        </section>
+        <section data-background-color="black"
+                 data-background-image="../src/content/static/llms-cant/timefoldgpt.png"
+                 data-background-size="contain">
+        </section>
+        <section data-background-color="black"
+                 data-background-image="../src/content/static/llms-cant/future/paper-cc-by-openreview.net-0K1OaL6XuK.png"
+                 data-background-size="contain">
+        </section>
+        <section data-background-color="black"
+                 data-background-image="../src/content/static/llms-cant/future/agentic.png"
+                 data-background-size="contain">
+        </section>
+        <section data-background-color="black"
+                 data-background-size="contain">
+            <h2>Integrate with <br />Model Context Protocol (MCP)</h2>
+        </section>
+
+
+        <section data-background-color="black"
+                 data-background-image="../src/content/static/llms-cant/AI-spaceTF.png"
+                 data-background-size="contain">
+        </section>
+        <section data-background-color="black">
+            <table>
+                <tr class="highlight-b">
+                    <th>Technique</th>
+                    <th>Strengths</th>
+                </tr>
+                <tr class="fragment">
+                    <td>GenAI</td>
+                    <td>Data extraction</td>
+                </tr>
+                <tr class="fragment">
+                    <td>Machine Learning</td>
+                    <td>Prediction</td>
+                </tr>
+                <tr class="fragment">
+                    <td>PlanningAI</td>
+                    <td>Scheduling</td>
+                </tr>
+            </table>
+            <p class="fragment" style="margin-top: 70px">We can do all of this in Java!</p>
+        </section>
+    </section>
+
+    <section id="conclusion">
+        <section data-background-color="#3e00ff">
+            <h2>To Conclude</h2>
+        </section>
+        <section data-background-color="#3e00ff">
+            <h2>GenAI Is Awesome 🚀</h2>
+            <aside class="notes">
+                LLMs have proven themselves to be very valuable tools that help us brainstorm, proof-read e-mails or even help us rewrite texts for specific audiences.
+            </aside>
+        </section>
+        <section data-background-color="#3e00ff">
+            <h2>...but it can't do everything...</h2>
+        </section>
+        <section data-background-color="black"
+                 data-background-image="../src/content/static/llms-cant/AI-spaceTF.png"
+                 data-background-size="contain">
+        </section>
+        <section>
+            <figure>
+                <img src="../src/content/static/links/discord.png" width="500px" />
+            </figure>
+            <figure>
+                <img src="../src/content/static/links/qr-solver.svg" width="250px" />
+                <figcaption style="font-size: 2.4rem;">solver.timefold.ai</figcaption>
+            </figure>
+            <br/>
+
+            <div style="font-size: 2.4rem; border-top: 1px solid #ccc; padding-top: 1rem; margin-bottom: 1.5rem;">
+                <p>Add me on socials! 🙏 Tom Cools: (@tomcools.be)</p>
+            </div>
+        </section>
+    </section>
+
+</div></div>
+
+<script src="../src/web/jquery/jquery.min.js"></script>
+<script src="../src/web/reveal/js/reveal.js"></script>
+<script src="../src/web/reveal/plugin/highlight/highlight.js"></script>
+<script src="../src/web/reveal/plugin/notes/notes.js"></script>
+<script src="../src/web/reveal/plugin/math/math.js"></script>
+
+<script>
+  const showControls = false;
+  Reveal.initialize({
+      // This fixes Logitech Spotlight
+  keyboard: {
+      37: 'prev',
+      39: 'next',
+  },
+    controls: showControls,
+    progress: true,
+    history: true,
+    center: true,
+    margin: 0.05,
+    minScale: 0.2,
+    maxScale: 100.0,
+    plugins: [ RevealHighlight, RevealNotes, RevealMath.KaTeX ],
+  });
+</script>
+</body>
+</html>
