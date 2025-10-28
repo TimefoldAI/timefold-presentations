@@ -31,27 +31,36 @@
     </p>
 </div>
 <div class="slides">
-    <section data-background-image="../src/content/static/webinar/vrpinproduction.png"
-             data-background-size="95%">
-    </section>
-    <section data-background-image="../src/content/static/llms-cant/delivery-pexels.png"
-             data-background-size="stretch"
-             data-background-opacity="0.1"
-             data-background-color="black">
-        <h2>Ask us anything</h2>
-        <p>(somewhat 🚚 VRP related)</p>
+    <section>
+        <h1>
+            VRP:<br/>when research<br/>meets reality
+        </h1>
+        <div style="margin-top: 80px;">
+            <p>
+                <span style="font-size: smaller">by</span> Geoffrey De Smet
+            </p>
+        </div>
     </section>
 
     <section>
         <section data-background-color="#3e00ff">
-            <h2>Your software</h2>
+            <h2>Status quo</h2>
         </section>
         <section>
             <img src="../src/content/static/vehicle-routing/vehicleRoutingProblem-no-title_0.png" class="fullImage">
             <img src="../src/content/static/vehicle-routing/vehicleRoutingProblem-no-title_1.png" class="fullImage fragment">
         </section>
         <section>
-            <h2>The Scheduling UI</h2>
+            <h2>Most companies<br/>use ...</h2>
+        </section>
+        <section>
+            <figure>
+                <img src="../src/content/static/technology/excel-logo.svg" height="200px">
+            </figure>
+        </section>
+        <section>
+            <h2><span class="fragment">Drag and drop</span><br/>
+                Scheduling UI</h2>
         </section>
         <section>
             <img src="../src/content/static/vehicle-routing/field-service-routing-schedule-without-ai_0.png" class="fullImage">
@@ -66,13 +75,12 @@
             <img src="../src/content/static/vehicle-routing/field-service-routing-schedule-without-ai_5.png" class="fullImage fragment">
         </section>
         <section>
-            <h2>Automatic verification</h2>
-        </section>
-        <section>
-            <h2>Manual scheduling</h2>
-        </section>
-        <section>
-            <h2>The feature request</h2>
+            <h2>Typical company</h2>
+            <ul style="list-style-type: none;">
+                <li class="fragment"><span class="fragment">✅</span> Digital schedule</li>
+                <li class="fragment"><span class="fragment" style="opacity: 0.3;">✅</span> Automatic verification</li>
+                <li class="fragment"><span class="fragment">❌</span> Automatic scheduling <span class="fragment commented">// Operations Research</span></li>
+            </ul>
         </section>
         <section>
             <figure>
@@ -95,41 +103,32 @@
                 <img src="../src/content/static/ai/schedule-with-ai-button.png"/>
             </figure>
         </section>
+        <section data-transition="fade-out">
+            <figure>
+                <img src="../src/content/static/operations-research/schedule-with-operations-research-button.png"/>
+            </figure>
+        </section>
+        <section data-transition="fade-out">
+            <figure>
+                <img src="../src/content/static/ai/schedule-with-ai-button.png"/>
+            </figure>
+        </section>
         <section>
             <img src="../src/content/static/vehicle-routing/field-service-routing-schedule-with-ai_1.png" class="fullImage">
             <img src="../src/content/static/vehicle-routing/field-service-routing-schedule-with-ai_2.png" class="fullImage fragment">
             <img src="../src/content/static/vehicle-routing/field-service-routing-schedule-with-ai_3.png" class="fullImage fragment">
         </section>
         <section>
-            <h2>ROI?</h2>
+            <h2>ROI of OR<br/><span class="fragment">-$4,000<br/> per year<br/><span class="fragment highlight"> per vehicle</span></span></h2>
         </section>
         <section>
-            <h2>Gain:<br/>- $2,000 to $4,000<br/> per year<br/><span class="fragment highlight"> per vehicle</span></h2>
+            <h2>❌ Automatic scheduling</h2>
         </section>
         <section>
-            <h3>Case in production</h3>
-            <p>Expected: -1% driving time</p>
-            <p class="fragment">Result: -25% driving time</p>
-            <p class="fragment">50k vehicles</p>
-            <p class="fragment">⇒ <span class="highlight">-$100 million</span> per year</p>
-            <p class="fragment">⇒ -10 million kg CO² emission per year</p>
+            <h2>What holding them back?</h2>
         </section>
         <section>
-            <h2>Competitive advantage</h2>
-        </section>
-        <section>
-            <h2>They don't want to talk about it</h2>
-        </section>
-        <section>
-            <figure>
-                <img src="../src/content/static/ai/schedule-with-ai-button.png"/>
-            </figure>
-        </section>
-        <section>
-            <h2>Just a button</h2>
-        </section>
-        <section>
-            <h2>How hard can it be?</h2>
+            <h2>Why don't they use Operations Research?</h2>
         </section>
     </section>
     <section>
@@ -137,47 +136,17 @@
             <h2>Research</h2>
         </section>
         <section>
-            <h2>It has a name</h2>
-        </section>
-        <section>
-            <h2>Vehicle Routing Problem</h2>
-        </section>
-        <section>
-            <h2>VRP</h2>
-        </section>
-        <section>
-            <h2>University</h2>
-        </section>
-        <section>
-            <h2>Traveling Salesman Problem</h2>
+            <h2>1832 Hamilton</h2>
         </section>
         <section>
             <h2>TSP</h2>
         </section>
         <section>
-            <h2>One Vehicle Routing Problem</h2>
+            <h2>Traveling Salesman Problem</h2>
         </section>
         <section>
             <img src="../src/content/static/tsp/travelingSalesmanProblem_0.png" class="fullImage">
             <img src="../src/content/static/tsp/travelingSalesmanProblem_1.png" class="fullImage fragment">
-        </section>
-        <section>
-            <h2>1832 Hamilton</h2>
-        </section>
-        <section>
-            <h2>1954 Dantzig et al</h2>
-        </section>
-        <section>
-            <h2>Brute force fails</h2>
-        </section>
-        <section>
-            <h2>n! possibilities</h2>
-        </section>
-        <section>
-            <h2>2000 visits =<br/> 10<sup>5735</sup> possibilities</h2>
-        </section>
-        <section>
-            <h2>Better algorithms</h2>
         </section>
         <section>
             <img src="../src/content/timefold-solver-docs/enterprise-edition/mapReduceIsTerribleForTsp_0.svg" class="fullImage">
@@ -186,21 +155,6 @@
             <img src="../src/content/timefold-solver-docs/enterprise-edition/mapReduceIsTerribleForTsp_3.svg" class="fullImage fragment">
             <img src="../src/content/timefold-solver-docs/enterprise-edition/mapReduceIsTerribleForTsp_4.svg" class="fullImage fragment">
             <img src="../src/content/timefold-solver-docs/enterprise-edition/mapReduceIsTerribleForTsp_5.svg" class="fullImage fragment">
-        </section>
-        <section>
-            <h2>1972 Karp</h2>
-        </section>
-        <section>
-            <h2>"NP-Hard"</h2>
-        </section>
-        <section>
-            <h2>How hard can it be?</h2>
-        </section>
-        <section>
-            <h2>Pretty hard</h2>
-        </section>
-        <section>
-            <h2>60 years of research</h2>
         </section>
         <section>
             <h2>1959 - Dantzig et al</h2>
@@ -230,53 +184,16 @@
             <img src="../src/content/static/vehicle-routing/vehicleRoutingProblem_4.png" class="fullImage fragment">
         </section>
         <section>
-            <h2>Still active today</h2>
+            <h2>60+ years of research</h2>
+        </section>
+        <section>
+            <h2>Still very active today</h2>
         </section>
         <section>
             <img src="../src/content/static/vehicle-routing/academic/research-papers-2025-vrp.png" class="fullImage">
         </section>
         <section>
             <h2>Solved problem?</h2>
-        </section>
-    </section>
-
-    <section>
-        <section data-background-color="#3e00ff">
-            <h2>Our solution</h2>
-        </section>
-        <section>
-            <img src="../src/content/static/vehicle-routing/vehicle-routing-models.png" class="fullImage">
-        </section>
-        <section>
-            <h2>REST APIs</h2>
-        </section>
-        <section>
-            <h3>Field Service Routing</h3>
-            <img src="../src/content/static/platform/field-service-routing-diagram.png">
-        </section>
-        <section>
-            <p>Timefold Field Service Routing</p>
-            <h2>VRPTW meets reality</h2>
-        </section>
-        <section>
-            <h3>Last Mile Routing</h3>
-            <img src="../src/content/static/platform/last-mile-delivery-diagram.png">
-        </section>
-        <section>
-            <p>Timefold Last Mile Routing</p>
-            <h2>CVRP meets reality</h2>
-        </section>
-        <section>
-            <h3>Pick-up and Delivery Routing</h3>
-            <img src="../src/content/static/platform/pick-up-delivery-routing-diagram.png">
-        </section>
-        <section>
-            <p>Timefold Pick-up and Delivery Routing</p>
-            <h2>VRPPD meets reality</h2>
-        </section>
-        <section>
-            <h3>Built on our<br/><span class="highlight">Open Source Solver</span></h3>
-            <p>solver.timefold.ai</p>
         </section>
     </section>
 
@@ -313,6 +230,10 @@ NODE_COORD_SECTION
             <p class="fragment">as the crow flies...</p>
         </section>
         <section>
+            <img src="../src/content/static/vehicle-routing/academic/euclidean-versus-haversine.png" class="fullImage">
+        </section>
+
+        <section>
             <h2>Maps integration</h2>
         </section>
         <section>
@@ -344,12 +265,12 @@ NODE_COORD_SECTION
             <img src="../src/content/timefold-field-service-routing/visit-service-constraints/visit-time-windows/visit-time-windows-too-early_1.svg" class="fullImage fragment">
             <img src="../src/content/timefold-field-service-routing/visit-service-constraints/visit-time-windows/visit-time-windows-too-early_2.svg" class="fullImage fragment">
         </section>
-        <!--<section>
-            <img src="../src/content/timefold-field-service-routing/visit-service-constraints/visit-time-windows/visit-time-windows-the-wait-time-paradox_0.png" class="fullImage">
-            <img src="../src/content/timefold-field-service-routing/visit-service-constraints/visit-time-windows/visit-time-windows-the-wait-time-paradox_1.png" class="fullImage fragment">
-            <img src="../src/content/timefold-field-service-routing/visit-service-constraints/visit-time-windows/visit-time-windows-the-wait-time-paradox_2.png" class="fullImage fragment">
-            <img src="../src/content/timefold-field-service-routing/visit-service-constraints/visit-time-windows/visit-time-windows-the-wait-time-paradox_3.png" class="fullImage fragment">
-        </section>-->
+        <section>
+            <img src="../src/content/timefold-field-service-routing/visit-service-constraints/visit-time-windows/visit-time-windows-the-wait-time-paradox_0.svg" class="fullImage">
+            <img src="../src/content/timefold-field-service-routing/visit-service-constraints/visit-time-windows/visit-time-windows-the-wait-time-paradox_1.svg" class="fullImage fragment">
+            <img src="../src/content/timefold-field-service-routing/visit-service-constraints/visit-time-windows/visit-time-windows-the-wait-time-paradox_2.svg" class="fullImage fragment">
+            <img src="../src/content/timefold-field-service-routing/visit-service-constraints/visit-time-windows/visit-time-windows-the-wait-time-paradox_3.svg" class="fullImage fragment">
+        </section>
         <section>
             <h2>In reality</h2>
         </section>
@@ -409,9 +330,6 @@ visits: [
   {id:"Visit 2", ..., serviceDuration: "PT7M"},
   ...
 ]</pre></section>
-        <section>
-            <h2>Demo</h2>
-        </section>
     </section>
 
     <section>
@@ -454,12 +372,6 @@ visits: [
             <img src="../src/content/timefold-field-service-routing/visit-service-constraints/skills/skill-multiplier_2.svg" class="fullImage fragment">
             <img src="../src/content/timefold-field-service-routing/visit-service-constraints/skills/skill-multiplier_3.svg" class="fullImage fragment">
         </section>
-        <section>
-            <h2>Documentation</h2>
-        </section>
-        <section>
-            <h2>Demo</h2>
-        </section>
     </section>
     <section>
         <section data-background-color="#3e00ff">
@@ -471,21 +383,15 @@ visits: [
         <section>
             <h2>Real challenge is<br/> scaling out</h2>
         </section>
-        <section>
-            <h2>Demo</h2>
-        </section>
     </section>
-    <section>
-        <section data-background-color="#3e00ff">
-            <h2>Multi-objective optimization</h2>
-        </section>
-        <section>
-            <h2>Explainable AI</h2>
-        </section>
-        <section>
-            <h2>Demo</h2>
-        </section>
-    </section>
+<!--    <section>-->
+<!--        <section data-background-color="#3e00ff">-->
+<!--            <h2>Multi-objective optimization</h2>-->
+<!--        </section>-->
+<!--        <section>-->
+<!--            <h2>Explainable AI</h2>-->
+<!--        </section>-->
+<!--    </section>-->
     <section>
         <section data-background-color="#3e00ff">
             <h2>Real-time planning</h2>
@@ -504,14 +410,23 @@ visits: [
     </section>
 
     <section data-background-color="#3e00ff">
-        <h2>Research ≠ reality</h2>
+        <h2>Research ≠ Reality</h2>
     </section>
     <section>
-        <h2>Free the world of wasteful scheduling</h2>
+        <h2>Reality is too complex</h2>
+        <p class="fragment">Especially for VRP</p>
+    </section>
+    <section>
+        <h2>Research<br/>disconnected from<br/>reality<br/>is academic <span class="highlight">vanity</span></h2>
+    </section>
+    <section data-transition="none">
+        <h2>Research<br/><br/><br/><br/><br/>Reality</h2>
+    </section>
+    <section data-transition="none">
+        <h2><br/><br/><br/>Research<br/><br/>Reality</h2>
     </section>
     <section>
         <h2>Q &amp; A</h2>
-        <p><a href="https://timefold.ai">timefold.ai</a></p>
     </section>
 
 </div></div>

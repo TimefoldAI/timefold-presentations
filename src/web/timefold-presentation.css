@@ -95,8 +95,12 @@ footer {
     color: #A40000;
 }
 
+.commented {
+    color: #89898b;
+}
+
 .highlight {
-    color: #3e00ff;
+    color: #4900f8;
 }
 
 .highlight-b {
