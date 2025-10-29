@@ -227,20 +227,65 @@ NODE_COORD_SECTION
 7	812	228
 8	643	90
 ...</pre>
-            <p class="fragment highlight">No latitude and longitude?</p>
+            <p class="fragment">Where is <code>365, 689</code>?</p>
         </section>
         <section>
-            <h2>Euclidean = flat surface</h2>
+            <h3>Where is <code>365, 689</code>?</h3>
+            <figure>
+                <img src="../src/content/static/vehicle-routing/academic/latitude-80-longitude-170.png">
+                <p class="fragment">Just keep going north</p>
+            </figure>
+        </section>
+        <section>
+            <h2>Not real</h2>
+        </section>
+        <section>
+            <h2>No latitude and longitude</h2>
+        </section>
+        <section>
+            <h2>Flat surface</h2>
+        </section>
+        <section>
+            <img src="../src/content/static/vehicle-routing/academic/euclidean-versus-haversine_0.png" class="fullImage">
+            <img src="../src/content/static/vehicle-routing/academic/euclidean-versus-haversine_1.png" class="fullImage fragment">
+        </section>
+        <section>
+            <h2>Why?</h2>
         </section>
         <section>
             <img src="../src/content/static/vehicle-routing/academic/flat_earth.png" class="">
         </section>
         <section>
-            <h2>Haversine = sphere</h2>
+            <img src="../src/content/static/vehicle-routing/academic/euclidean-versus-haversine_1.png" class="fullImage">
+            <img src="../src/content/static/vehicle-routing/academic/euclidean-versus-haversine_2.png" class="fullImage fragment">
+            <img src="../src/content/static/vehicle-routing/academic/euclidean-versus-haversine_3.png" class="fullImage fragment">
+        </section>
+        <section>
+            <h3>Reality dataset</h3>
+            <pre xml:space="preserve">vehicles: [
+  {
+    id: "Vehicle 1",
+    startLocation: [<span class="highlight">50.8427501</span>, <span class="highlight">4.3515499</span>],
+    ...
+  },
+  {
+    id: "Vehicle 2",
+    startLocation: [50.8427501, 4.3515499],
+    ...
+  },
+  ...
+],
+visits: [
+  {id:"Visit 1", location: [<span class="highlight">49.6096472</span>, <span class="highlight">5.8560275</span>], ...},
+  {id:"Visit 2", location: [50.4812987, 5.5198048], ...},
+  ...
+]</pre></section>
+        <section>
+            <h2>Haversine</h2>
             <p class="fragment">as the crow flies...</p>
         </section>
         <section>
-            <img src="../src/content/static/vehicle-routing/academic/euclidean-versus-haversine.png" class="fullImage">
+            <h2>Vehicles don't fly</h2>
         </section>
 
         <section>
@@ -284,15 +329,18 @@ NODE_COORD_SECTION
             <img src="../src/content/timefold-field-service-routing/visit-service-constraints/visit-time-windows/visit-time-windows-the-wait-time-paradox_3.svg" class="fullImage fragment">
         </section>
         <section>
-            <h2>In reality</h2>
-        </section>
-        <section>
             <h2>Multi-day planning</h2>
         </section>
         <section>
-            <img src="../src/content/timefold-field-service-routing/visit-service-constraints/visit-time-windows/visit-multiple-time-windows_0.svg" class="fullImage">
-            <img src="../src/content/timefold-field-service-routing/visit-service-constraints/visit-time-windows/visit-multiple-time-windows_1.svg" class="fullImage fragment">
+            <img src="../src/content/timefold-field-service-routing/introduction/field-service-routing-time-view_0.svg" class="fullImage">
+            <img src="../src/content/timefold-field-service-routing/introduction/field-service-routing-time-view_1.svg" class="fullImage fragment">
+            <img src="../src/content/timefold-field-service-routing/introduction/field-service-routing-time-view_2.svg" class="fullImage fragment">
         </section>
+        <!-- TODO FIXME -->
+<!--        <section>-->
+<!--            <img src="../src/content/timefold-field-service-routing/visit-service-constraints/visit-time-windows/visit-multiple-time-windows_0.svg" class="fullImage">-->
+<!--            <img src="../src/content/timefold-field-service-routing/visit-service-constraints/visit-time-windows/visit-multiple-time-windows_1.svg" class="fullImage fragment">-->
+<!--        </section>-->
         <section>
             <h3>VRPTW dataset</h3>
             <pre xml:space="preserve">C101
@@ -358,7 +406,7 @@ CUST NO.  ... READY TIME  DUE DATE   SERVICE   TIME
   ...
 ],
 visits: [
-  {id:"Visit 1", ... serviceDuration: "PT<span class="highlight">5M</span>"}, <span class="fragment highlight">// 5 minutes</span>
+  {id:"Visit 1", ..., serviceDuration: "PT<span class="highlight">5M</span>"}, <span class="fragment highlight">// 5 minutes</span>
   {id:"Visit 2", ..., serviceDuration: "PT7M"},
   ...
 ]</pre></section>
