@@ -1,0 +1,367 @@
+<!d octype html>
+<!--suppress HtmlRequiredAltAttribute -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Guest Lecture</title>
+    <meta name="description" content="This slide deck explains Timefold: an open source constraint satisfaction solver in Java">
+    <!--    <link href="https://github.com/TimefoldAI/timefold-presentations" rel="canonical">-->
+
+    <link rel="stylesheet" href="../src/web/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../src/web/reveal/css/reveal.css">
+    <link rel="stylesheet" href="../src/web/reveal/css/theme/simple.css" id="theme">
+    <script>
+      if (window.location.search.match(/print-pdf/gi)) {
+        document.write('<link rel="stylesheet" href="../src/web/reveal/css/print/pdf.css">');
+      }
+    </script>
+    <link rel="stylesheet" href="../src/web/reveal/plugin/highlight/a11y-light.css">
+    <link rel="stylesheet" href="../src/web/timefold-presentation.css">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+
+<body>
+<div class="reveal">
+<div class="watermark watermark-left">
+    <p>
+        Repo: https://github.com/TimefoldAI/timefold-quickstarts
+    </p>
+</div>
+<div class="slides">
+    <section>
+        <h1>
+            Introduction to Timefold
+        </h1>
+        <div style="margin-top: 80px;">
+            <p>
+                <span style="font-size: smaller">by</span> Tom Cools and Lukas Downes<br/>
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Workshop preparation</h2>
+        <ol>
+            <li>Clone https://github.com/TimefoldAI/timefold-quickstarts</li>
+            <li>Run java/school-timetabling</li>
+        </ol>
+
+        <p>Checks:</p>
+        <ul>
+            <li>✅ you should see the UI</li>
+            <li>✅ should be able to click the "solve" button.</li>
+        </ul>
+
+    </section>
+
+    <section>
+        <section data-background-color="#3e00ff">
+            <h1>The world is full of planning problems</h1>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/introduction/whatIsAPlanningProblem_0.svg" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/introduction/whatIsAPlanningProblem_1.svg" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/introduction/whatIsAPlanningProblem_2.svg" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/introduction/whatIsAPlanningProblem_3.svg" class="fullImage fragment">
+        </section>
+        <section>
+            <h2>For example</h2>
+        </section>
+        <section>
+            <img src="../src/content/static/airport-story/zaventem1.svg" class="fullImage">
+            <img src="../src/content/static/airport-story/zaventem2.svg" class="fullImage fragment">
+            <img src="../src/content/static/airport-story/zaventem3.svg" class="fullImage fragment">
+            <img src="../src/content/static/airport-story/zaventem4.svg" class="fullImage fragment">
+            <img src="../src/content/static/airport-story/zaventem5.svg" class="fullImage fragment">
+            <img src="../src/content/static/airport-story/zaventem6.svg" class="fullImage fragment">
+            <img src="../src/content/static/airport-story/zaventem7.svg" class="fullImage fragment">
+            <img src="../src/content/static/airport-story/zaventem8.svg" class="fullImage fragment">
+            <img src="../src/content/static/airport-story/zaventem9.svg" class="fullImage fragment">
+            <img src="../src/content/static/airport-story/zaventem10.svg" class="fullImage fragment">
+            <img src="../src/content/static/airport-story/zaventem11.svg" class="fullImage fragment">
+            <img src="../src/content/static/airport-story/zaventem12.svg" class="fullImage fragment">
+            <img src="../src/content/static/airport-story/zaventem13.svg" class="fullImage fragment">
+            <img src="../src/content/static/airport-story/zaventem14.svg" class="fullImage fragment">
+            <img src="../src/content/static/airport-story/zaventem15.svg" class="fullImage fragment">
+            <img src="../src/content/static/airport-story/zaventem16.svg" class="fullImage fragment">
+            <img src="../src/content/static/airport-story/zaventem17.svg" class="fullImage fragment">
+            <img src="../src/content/static/airport-story/zaventem18.svg" class="fullImage fragment">
+        </section>
+        <section>
+            <h2>The world is full of <br/> <span class="highlight">scheduling problems</span></h2>
+            <p class="fragment"> <span class="highlight">Optimize goals</span> with <span class="highlight">limited resources</span> under <span class="highlight">constraints</span></p>
+        </section>
+        <section>
+            <h2>Some are automated</h2>
+        </section>
+        <section>
+            <h2>Few are <b class="highlight">optimized</b></h2>
+        </section>
+        <section>
+            <h2>Let's <span class="highlight">optimize</span> them<br/>with <span class="highlight">Java and metaheuristics</span></h2>
+        </section>
+        <section data-background-color="#3e00ff">
+            <h2>Is optimization worth it?</h2>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/use-cases-and-examples/vehicle-routing/vehicleRoutingValueProposition_0.svg" class="fullImage">
+        </section>
+        <section>
+            <h3>Vehicle routing case study</h3>
+            <p>Expected: -1% driving time</p>
+            <p class="fragment">Result: -25% driving time</p>
+            <p class="fragment">⇒ -10 million kg CO² emission per year</p>
+            <p class="fragment">⇒ -$100 million cost per year</p>
+        </section>
+          <section>
+            <h2>Example Usecases</h2>
+            <table style="font-size: 24px">
+                <tbody>
+                <tr>
+                    <td>🚚 <a href="#-vehicle-routing">Vehicle Routing</a></td>
+                    <td>🧑‍💼 <a href="#-employee-scheduling">Employee Scheduling</a></td>
+                </tr>
+                <tr>
+                    <td>🛠️ <a href="#-maintenance-scheduling">Maintenance Scheduling</a></td>
+                    <td>📦 <a href="#-food-packaging">Food Packaging</a></td>
+                </tr>
+                <tr>
+                    <td>🛒 <a href="#-order-picking">Order Picking</a></td>
+                    <td>🏫 <a href="#-school-timetabling">School Timetabling</a></td>
+                </tr>
+                <tr>
+                    <td>🏭 <a href="#-facility-location-problem">Facility Location Problem</a></td>
+                    <td>🎤 <a href="#-conference-scheduling">Conference Scheduling</a></td>
+                </tr>
+                <tr>
+                    <td>🛏️ <a href="#-bed-allocation-scheduling">Bed Allocation Scheduling</a></td>
+                    <td>🛫 <a href="#-flight-crew-scheduling">Flight Crew Scheduling</a></td>
+                </tr>
+                <tr>
+                    <td>👥 <a href="#-meeting-scheduling">Meeting Scheduling</a></td>
+                    <td>✅ <a href="#-task-assigning">Task Assigning</a></td>
+                </tr>
+                <tr>
+                    <td>📆 <a href="#-project-job-scheduling">Project Job Scheduling</a></td>
+                    <td>🏆 <a href="#-sports-league-scheduling">Sports League Scheduling</a></td>
+                </tr>
+                <tr>
+                    <td>🏅 <a href="#-tournament-scheduling">Tournament Scheduling</a></td>
+                    <td>...and many more</td>
+                </tr>
+                </tbody>
+            </table>
+          </section>
+    </section>
+
+    <section>
+        <section data-background-color="#3e00ff">
+            <h2>School timetabling</h2>
+        </section>
+        <section data-background-color="#3e00ff">
+            <h3>Schools often have multiple full-time employees to create the timetables.</h3>
+        </section>
+        <section>
+            <h3>Odisee Hogeschool? <br> 👀</h3>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingInputOutput_0.svg" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingInputOutput_1.svg" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingInputOutput_2.svg" class="fullImage fragment">
+        </section>
+        <section>
+            <h3>To optimize you need to evaluate.</h3>
+        </section>
+        <section>
+            <h3>Penalty/Reward Function</h3>
+            <p class="fragment">Constraints = rules that penalize/reward</p>
+            <p class="fragment">Goal: minimize penalties / maximize rewards</p>
+        </section>
+        <section>
+            <h3>Hard or Soft constraints?</h3>
+            <table style="width: 60%;margin: auto;font-size: 40px;">
+              <tbody>
+                <tr><td style="border: none;text-align: right;">Hard =</td><td style="border: none;"><span class="fragment">things set in stone</span></td><tr>
+                <tr><td style="border: none;text-align: right;">Soft =</td><td style="border: none;"><span class="fragment">nice-to-haves</span></td><tr>
+              </tbody>
+            </table>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingHardConstraints_0.svg" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingHardConstraints_1.svg" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingHardConstraints_2.svg" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingHardConstraints_3.svg" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingHardConstraints_4.svg" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingHardConstraints_5.svg" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingHardConstraints_6.svg" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingHardConstraints_7.svg" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingHardConstraints_8.svg" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingHardConstraints_9.svg" class="fullImage fragment">
+        </section>
+        <section>
+            <h3>The web UI</h3>
+            <figure>
+                <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingScreenshot.webp"/>
+            </figure>
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureQuarkus_0.svg" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureQuarkus_1.svg" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureQuarkus_2.svg" class="fullImage fragment">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureQuarkus_3.svg" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingClassDiagram_0.svg" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingClassDiagram_1.svg" class="fullImage fragment">
+        </section>
+        <section>
+            <h2>Implement yourself?</h2>
+        </section>
+        <section>
+            <figure>
+                <img src="../src/web/social/timefold-logo.svg"/>
+                <p><i>Planning optimization made easy</i></p>
+            </figure>
+            <ul style="margin-top: 100px;">
+                <li class="fragment">Library of optimization algorithms</li>
+                <li class="fragment">AI, not ML</li>
+                <li class="fragment">Open Source (Apache license)</li>
+                <li class="fragment">Actively developed by our Open Core company</li>
+            </ul>
+        </section>
+        <section>
+            <img src="../src/content/static/company/compatibility_0.svg" class="fullImage">
+            <img src="../src/content/static/company/compatibility_1.svg" class="fullImage fragment">
+            <img src="../src/content/static/company/compatibility_2.svg" class="fullImage fragment">
+            <img src="../src/content/static/company/compatibility_3.svg" class="fullImage fragment">
+            <img src="../src/content/static/company/compatibility_4.svg" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureQuarkus_3.svg" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingArchitectureQuarkus_4.svg" class="fullImage fragment">
+        </section>
+        <section>
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingClassDiagram_1.svg" class="fullImage">
+            <img src="../src/content/timefold-solver-docs/quickstart/school-timetabling/schoolTimetablingClassDiagram_2.svg" class="fullImage fragment">
+        </section>
+        <section>
+            <h3>DEMO</h3>
+        </section>
+    </section>
+    <section>
+        <section data-background-color="#3e00ff">
+            <h2>School timetabling - Exercise</h2>
+        </section>
+        <section>
+            <h3>💻 Adapt the code 💻</h3>
+
+            <p class="fragment" style="font-size: smaller">Code in repository: <span class="highlight">java/school-timetabling</span></p>
+
+            <ol>
+                <li class="fragment" style="margin-bottom: 1rem;">Marie Curie doesn't like to teach in the afternoon</li>
+                <li class="fragment" style="margin-bottom: 1rem;">Don't teach History and Spanish at the same time</li>
+                <li class="fragment" style="margin-bottom: 1rem;">Make the teachers come to school every day</li>
+                <li class="fragment" style="margin-bottom: 1rem;">Give the teachers the most terrible schedule gaps</li>
+                <li class="fragment">Teachers may only work 2 consecutive lessons</li>
+                <style>
+                  li:nth-child(5):before {
+                    content: "HARD";
+                    font-size: 1.5rem;
+                    color: darkred;
+                    padding: 2px 4px;
+                    border-radius: 5px;
+                    background: lightpink;
+                    position: relative;
+                    bottom: .75rem;
+                    right: .5rem;
+                  }
+                </style> 
+            </ol>
+
+            <p class="fragment" style="font-size: smaller; margin-top: 50px">Note: Remember to also <span class="highlight">test your constraints</span> 😉</p>
+        </section>
+    </section>
+    <section>
+        <section data-background-color="#3e00ff">
+            <h2>Conclusion</h2>
+        </section>
+        <section>
+            <h2>The world is full of <br/> <span class="highlight">scheduling problems</span></h2>
+            <p class="fragment"> <span class="highlight">Optimize goals</span> with <span class="highlight">limited resources</span> under <span class="highlight">constraints</span></p>
+        </section>
+        <section>
+            <h2>Using Timefold</h2>
+            <br/>
+            <h3>🖊 Model domain</h3>
+            <h3 class="fragment">⚖️ Define constraints</h3>
+            <h3 class="fragment"><span class="highlight"> 🚀 Run!</span></h3>
+        </section>
+        
+    </section>
+
+
+    <section data-background-color="#3e00ff">
+        <h2>Continue learning</h2>
+    </section>
+    <section>
+        <h3>Experiment with other quickstarts</h3>
+        <ol>
+            <li>Go to <a href="https://timefold.ai">timefold.ai</a></li>
+            <li>Click the <a href="https://github.com/TimefoldAI/timefold-quickstarts"><i>Quickstarts repo</i></a> button.</li>
+            <li>Pick a quickstart from the README.</li>
+            <li>Run it:</li>
+        </ol>
+        <pre xml:space="preserve"><code class="bash">$ git clone https://github.com/TimefoldAI/timefold-quickstarts.git
+...
+$ cd timefold-quickstarts/java/maintenance-scheduling
+$ mvn quarkus:dev
+...</code></pre>
+    </section>
+    <section>
+        <h3>Q &amp; A</h3>
+        <table class="links">
+            <tr>
+                <th>Learn more</th>
+                <td><a href="https://timefold.ai">timefold.ai</a></td>
+            </tr>
+            <tr>
+                <th>Feedback</th>
+                <td>
+                    <img style="height: 3rem;" src="../src/web/social/bluesky-logo.svg"/> <a href="https://bsky.app/profile/tomcools.be">@tomcools.be</a><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Get started</th>
+                <td>
+                    <img src="../src/content/static/cta/docs-HelloWorld-QR-code.png"/>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+</div></div>
+
+<script src="../src/web/jquery/jquery.min.js"></script>
+<script src="../src/web/reveal/js/reveal.js"></script>
+<script src="../src/web/reveal/plugin/highlight/highlight.js"></script>
+<script src="../src/web/reveal/plugin/notes/notes.js"></script>
+
+<script>
+  const showControls = false;
+  Reveal.initialize({
+    controls: showControls,
+    progress: true,
+    history: true,
+    center: true,
+    plugins: [ RevealHighlight, RevealNotes ],
+    margin: 0.05,
+    minScale: 0.2,
+    maxScale: 100.0
+  });
+</script>
+
+</body>
+</html>
