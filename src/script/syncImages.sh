@@ -145,9 +145,6 @@ done
 # A selection of static images
 extractLayers src/content/static/benchmarks/bruteForceHitsTheWall.svg "svg"
 extractLayers src/content/static/benchmarks/bruteForceHitsTheWall-TSP.svg "svg"
-extractLayers src/content/static/santa/tree-of-greed.svg "svg"
-extractLayers src/content/static/santa/tree-of-greed2.svg "svg"
-extractLayers src/content/static/santa/vehicleRoutingClassDiagram-simplified.svg "svg"
 
 cat src/script/templates/slidedeck-footer.html >> slidedecks/inventory.html
 git add slidedecks/inventory.html
