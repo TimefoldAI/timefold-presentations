@@ -1,4 +1,5 @@
 // Vibe coded with Claude Code
+// This is used to demonstrate solving a simple optimization problem with Greedy or Brute Force approaches.
 class GreedyTreeCanvas extends HTMLElement {
   constructor() {
     super();
