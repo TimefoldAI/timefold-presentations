@@ -271,6 +271,119 @@
 
             <p class="fragment" style="font-size: smaller; margin-top: 50px">Note: Remember to also <span class="highlight">test your constraints</span> 😉</p>
         </section>
+        <section>
+            <pre><code class="language-java" style="font-size: smaller;">
+    Constraint marieCurieDoesntWantToWorkAfternoons(
+                  ConstraintFactory constraintFactory) {
+        return constraintFactory
+                .forEach(Lesson.class)
+                .filter(lesson -> lesson.getTeacher().equals("M. Curie")
+                        && lesson.getTimeslot().getEndTime()
+                            .isAfter(LocalTime.NOON))
+                .penalize(HardSoftScore.ONE_SOFT)
+                .asConstraint(
+                    "M. Curie doens't like working in the afternoon.");
+    }
+            </code></pre>
+        </section>
+        <section>
+            <pre><code class="language-java" style="font-size: smaller;">
+Constraint dontTeachSpanishAndHistoryAtTheSameTime(
+    ConstraintFactory constraintFactory) {
+  return constraintFactory
+      .forEachUniquePair(
+          Lesson.class,
+          Joiners.equal(Lesson::getTimeslot))
+      .filter((lesson1, lesson2) -> {
+          String subject1 = lesson1.getSubject();
+          String subject2 = lesson2.getSubject();
+
+          return (subject1.equals("Spanish")
+                  && subject2.equals("History"))
+                  || (subject2.equals("Spanish")
+                          && subject1.equals("History"));
+      })
+      .penalize(HardSoftScore.ONE_SOFT)
+      .asConstraint(
+              "Don't give Spanish and history at the same time.");
+}
+
+            </code></pre>
+        </section>
+        <section>
+            <pre><code class="language-java" style="font-size: smaller;">
+
+Constraint teachersMustComeToSchoolEveryDay(
+    ConstraintFactory constraintFactory) {
+  return constraintFactory
+    .forEach(Lesson.class)
+// we groeperen alle leerkrachten met een set van dagen waarop ze werken
+    .groupBy((lesson) -> lesson.getTeacher(),
+            ConstraintCollectors.toSet(
+                    lesson -> lesson.getTimeslot().getDayOfWeek()))
+// met deze demodata plannen we voor 5 dagen
+// dus het aantal dagen dat er niet gewerkt wordt 
+// = 5 - (aantal dagen dat er gewerkt wordt)
+    .map((teacher, dayOfWeekList) -> teacher,
+            (teacher, dayOfWeekList) -> 5 - dayOfWeekList.size())
+    .penalize(HardSoftScore.ONE_SOFT, 
+        (teacher, unassignedDayOfWeekCount) -> unassignedDayOfWeekCount)
+    .asConstraint("Teachers must work everyday");
+}
+
+</code></pre>
+        </section>
+        <section>
+<pre><code class="language-java" style="font-size: 14px;">
+Constraint teachersMustHaveScheduleGaps(ConstraintFactory constraintFactory) {
+  return constraintFactory
+    .forEach(Lesson.class)
+// groepeer de leerkrachten per dag van de week
+    .groupBy((lesson) -> lesson.getTeacher(),
+      lesson -> lesson.getTimeslot().getDayOfWeek(),
+      ConstraintCollectors.toConnectedTemporalRanges(
+          lesson -> lesson.getTimeslot().getStartTime(),
+          lesson -> lesson.getTimeslot().getEndTime()))
+// het doel is om zo groot mogelijke schedule gaps te hebben
+// => we rewarden de grootste schedule gaps
+    .reward(HardSoftScore.ONE_SOFT, (teacher, dayOfWeek, connectedRange) -> {
+        int max = 0;
+        for (var gap : connectedRange.getGaps()) {
+            max = Math.max(max, (int) gap.getLength().toMinutes());
+        }
+        return max;
+    })
+    .asConstraint("So many sweet schedule gaps.");
+}
+</code>
+            </pre>
+        <a style="font-size: smaller;" href="https://docs.timefold.ai/timefold-solver/latest/constraints-and-score/score-calculation#collectorsConnectedRanges">check out our docs</a>
+        </section>
+        <section>
+<pre ><code class="language-java" style="font-size: 12px;">
+                                                                                                                                                    
+Constraint teacherShouldntHaveMoreThan2ConsecutiveShift(ConstraintFactory constraintFactory) {
+    return constraintFactory
+            .forEach(Lesson.class)
+// door connectedTemporalRanges te gebruiken houden we geen rekening met
+// de middagpauze, de middagpauze onderbreekt de opeenvolging van lessen waardoor meer dan 2 lessen 
+// elkaar kunnen opvolgen zolang er een middagpauze tussen zit. Dit kan zowel een feature als een bug zijn
+            .groupBy((lesson) -> lesson.getTeacher(),
+                    lesson -> lesson.getTimeslot().getDayOfWeek(),
+                    ConstraintCollectors.toConnectedTemporalRanges(lesson -> lesson.getTimeslot().getStartTime(),
+                            lesson -> lesson.getTimeslot().getEndTime()))
+// https://docs.timefold.ai/timefold-solver/latest/constraints-and-score/score-calculation#constraintStreamsFlattening
+            .flattenLast(connectedRanges -> connectedRanges.getConnectedRanges())
+// we penalizeren wanneer een connected range langer is dan 2 x de duratie van een time slot (60min)
+            .filter((teacher, lesson, connectedRange) -> connectedRange.getLength().toMinutes() > 2 * 60L)
+// de grootte van onze penalty is 1 per lesuur
+            .penalize(HardSoftScore.ONE_SOFT,
+                    (teacher, dayOfWeek, connectedRange) -> (int) (connectedRange.getLength().toMinutes() - 2 * 60) / 60)
+            .asConstraint("So few consecutive lessons.");
+}
+</code>
+</pre>
+        </section>
     </section>
     <section>
         <section data-background-color="#3e00ff">
@@ -336,7 +449,6 @@ $ mvn quarkus:dev
 <script src="../src/web/reveal/js/reveal.js"></script>
 <script src="../src/web/reveal/plugin/highlight/highlight.js"></script>
 <script src="../src/web/reveal/plugin/notes/notes.js"></script>
-
 <script>
   const showControls = false;
   Reveal.initialize({
