@@ -347,7 +347,7 @@ for (int i = 0; i < remainingSize-1; i++) {
         <section>
             <section data-background-color="#3e00ff">
                 <h2>Christmas Magic</h2>
-                or math.. probably math.
+                <p class="fragment">or math.. probably math.</p>
             </section>
             <section data-background-image="../src/content/static/llms-cant/scared-pexels.png"
                      data-background-size="stretch"
@@ -493,9 +493,9 @@ Constraint vehicleCapacity(ConstraintFactory factory) {
     return factory.forEach(Visit.class)
         .filter(visit -> visit.getVehicle() != null)
         .groupBy(Visit::getVehicle, sum(Visit::giftAmount))
-        .filter((v, sum) -> sum > vehicle.getCapacity())
+        .filter((v, sum) -> sum > v.getCapacity())
         .penalizeLong(HardSoftLongScore.ONE_HARD,
-                (v, sum) -> sum - vehicle.getCapacity())
+                (v, sum) -> sum - v.getCapacity())
         .asConstraint("Vehicle Capacity");
 }
                 </code>
@@ -553,59 +553,10 @@ Constraint vehicleCapacity(ConstraintFactory factory) {
         </section>
 
         <section>
-            <section data-background-color="#3e00ff">
-                <h2>Next steps</h2>
-            </section>
-            <section>
-                <h2>These are all <br/> <span class="highlight">planning problems</span></h2>
-                <p class="fragment"><span class="highlight">Optimize goals</span> with <span class="highlight">limited resources</span>
-                    under <span class="highlight">constraints</span></p>
-            </section>
             <section>
                 <h3>🖊 Model domain</h3>
                 <h3 class="fragment">⚖️ Define constraints</h3>
                 <h3 class="fragment"><span class="highlight"> 🚀 Run!</span></h3>
-            </section>
-            <section>
-                <h3>Start coding today</h3>
-                <ol>
-                    <li>Go to <a
-                            href="https://timefold.ai/open-source-solver">https://timefold.ai/open-source-solver</a>
-                    </li>
-                    <li>Click <a href="https://github.com/TimefoldAI/timefold-quickstarts"><i>Run a Quickstart</i></a>.
-                    </li>
-                    <li>Pick a quickstart from the README.</li>
-                    <li>Run it: 🚀</li>
-                </ol>
-            </section>
-            <section data-background-image="../src/content/static/santa/production-line-genai-gemini.png"
-                     data-background-size="cover">
-                <div class="floating-banner">
-                    Toys need to be created
-                    <p class="fragment">Quickstart: Food Packaging</p>
-                </div>
-            </section>
-            <section data-background-image="../src/content/static/santa/schedule-genai-gemini.png"
-                     data-background-size="cover">
-                <div class="floating-banner">
-                    Workers need to be assigned shifts
-                    <p class="fragment">Quickstart: Employee Scheduling</p>
-                </div>
-            </section>
-            <section data-background-image="../src/content/static/santa/route-genai-gemini.png"
-                     data-background-size="cover">
-                <div class="floating-banner">
-                    Santa needs to figure out the route to all children
-                    <p class="fragment">Quickstart: Vehicle Routing</p>
-                </div>
-            </section>
-        </section>
-        <section>
-            <section data-background-color="#3e00ff">
-                <h2>In Conclusion</h2>
-            </section>
-            <section>
-                Solving these sorts of planning problems is hard!
             </section>
             <section>
                 <h3>Algorithm comparison</h3>
@@ -641,9 +592,63 @@ Constraint vehicleCapacity(ConstraintFactory factory) {
                 <p class="fragment"><span class="highlight">Can't solve</span> these kinds of problems</p>
                 <p class="fragment">but <span class="highlight">can be used</span> to write Timefold code.</p>
             </section>
-            <section>Needs a stronger ending here.</section>
+
             <section>
-                <h3><span class="highlight"> Give the 🎁 of optimization!</span></h3>
+                <h3>Start coding today</h3>
+                <ol>
+                    <li>Go to <a
+                            href="https://timefold.ai/open-source-solver">https://timefold.ai/open-source-solver</a>
+                    </li>
+                    <li>Click <a href="https://github.com/TimefoldAI/timefold-quickstarts"><i>Run a Quickstart</i></a>.
+                    </li>
+                    <li>Pick a quickstart from the README.</li>
+                    <li>Run it: 🚀</li>
+                </ol>
+            </section>
+            <section data-background-image="../src/content/static/santa/production-line-genai-gemini.png"
+                     data-background-size="cover">
+                <div class="floating-banner">
+                    Toys need to be created
+                    <p class="fragment">Quickstart: Food Packaging</p>
+                </div>
+            </section>
+            <section data-background-image="../src/content/static/santa/schedule-genai-gemini.png"
+                     data-background-size="cover">
+                <div class="floating-banner">
+                    Workers need to be assigned shifts
+                    <p class="fragment">Quickstart: Employee Scheduling</p>
+                </div>
+            </section>
+            <section data-background-image="../src/content/static/santa/route-genai-gemini.png"
+                     data-background-size="cover">
+                <div class="floating-banner">
+                    Santa needs to figure out the route to all children
+                    <p class="fragment">Quickstart: Vehicle Routing</p>
+                </div>
+            </section>
+            <section>
+                <christmas-countdown></christmas-countdown>
+            </section>
+        </section>
+        <section>
+            <section data-background-color="#3e00ff">
+                <h2>In Conclusion</h2>
+            </section>
+            <section>
+                Solving these sorts of planning problems is hard!
+            </section>
+            <section>
+                <h2>
+                    Planning problems are <span class="highlight">about people</span>.<br/>
+                </h2>
+            </section>
+            <section>
+                <h2>
+                    <span class="highlight">Optimization helps you take care of them.</span> 🎁
+                </h2>
+            </section>
+            <section>
+                <h3><span class="highlight">Give the 🎁 of optimization!</span></h3>
                 <table class="links">
                     <tr>
                         <th>Learn more</th>
