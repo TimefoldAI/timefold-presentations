@@ -27,11 +27,14 @@
             list-style-type: none;
             padding: 0;
         }
+        .talks {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 12px;
+        }
         .talks li {
             background: #4900f8;
-            margin: 10px 0;
-            padding: 10px;
-            border-radius: 5px;
+            border-radius: 8px;
             transition: 0.3s;
         }
         .talks li a {
@@ -39,6 +42,9 @@
             color: white;
             font-weight: bold;
             display: block;
+            padding: 20px 14px;
+            height: 100%;
+            box-sizing: border-box;
         }
         .talks > li:hover {
             background: #4f62f5;
@@ -53,11 +59,16 @@
 <div class="container">
     <img width="400px" src="src/web/social/timefold-logo.svg"/>
     <h1>Timefold Presentations</h1>
+    <p>These presentations have been presented at diverse conferences and events.
+        They are not strictly maintained and mostly kept as a historic archive
+        and might contain information which is no longer correct.
+    </p>
     <ul class="talks">
+        <li><a href="events/2026-01-27-JChampions-Santa.html">Optimizing Santa's Travels 🎄</a></li>
+        <li><a href="events/2025-12-18-LLMsCantOptimizeSchedules.html">LLMs can't optimize schedules, but AI can!</a></li>
         <li><a href="events/Field_Service_Routing.html">Field Service Routing</a></li>
         <li><a href="events/Algorithms_introduction_School_Timetabling.html">Algorithms introduction (School Timetabling)</a></li>
         <li><a href="events/Timefold_for_Operations_Research.html">Timefold for Operations Research</a></li>
-        <li><a href="events/2025-04-23-VJUG.html">VJUG - LLMs can't optimize schedules</a></li>
         <li><a href="events/2024-11-05-BYOM_score_calculation.html">Build Your Own Model: Writing Constraint</a></li>
         <li><a href="events/2023-10-02-Devoxx_BE.html">Devoxx Belgium - Optimize the World for Fun and Profit</a></li>
         <li><a href="events/2023-12-05-Maintenance_scheduling_and_school_timetabling.html">BeJUG - Fold Time and Space for Maintenance Scheduling and School Timetabling</a></li>
