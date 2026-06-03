@@ -44,7 +44,8 @@ class GreedyTreeCanvas extends HTMLElement {
       Reveal.on('slidechanged', () => this.resizeCanvas());
     }
 
-    // Initial resize with slight delay for layout
+    this._ro = new ResizeObserver(() => this.resizeCanvas());
+    this._ro.observe(this.canvas);
     requestAnimationFrame(() => this.resizeCanvas());
   }
 
@@ -139,8 +140,10 @@ class GreedyTreeCanvas extends HTMLElement {
   resizeCanvas() {
     const rect = this.canvas.getBoundingClientRect();
     if (rect.width > 0 && rect.height > 0) {
-      this.canvas.width = rect.width;
-      this.canvas.height = rect.height;
+      const dpr = window.devicePixelRatio || 1;
+      this.canvas.width  = rect.width  * dpr;
+      this.canvas.height = rect.height * dpr;
+      this.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       this.redraw();
     }
   }
@@ -382,7 +385,10 @@ class GreedyTreeCanvas extends HTMLElement {
     if (!this.ctx) return;
 
     const ctx = this.ctx;
-    ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    const dpr = window.devicePixelRatio || 1;
+    const W   = this.canvas.width  / dpr;
+    const H   = this.canvas.height / dpr;
+    ctx.clearRect(0, 0, W, H);
 
     // Draw current brute force attempt (gray)
     if (this.bruteForceRunning && this.currentRoute) {

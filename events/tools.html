@@ -1,0 +1,96 @@
+<!doctype html>
+<!--suppress HtmlRequiredAltAttribute -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Presentation Tools</title>
+    <meta name="description" content="Tools">
+    <!--    <link href="https://github.com/TimefoldAI/timefold-presentations" rel="canonical">-->
+
+    <link rel="stylesheet" href="../src/web/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../src/web/reveal/css/reveal.css">
+    <link rel="stylesheet" href="../src/web/reveal/css/theme/simple.css" id="theme">
+    <script>
+      if (window.location.search.match(/print-pdf/gi)) {
+        document.write('<link rel="stylesheet" href="../src/web/reveal/css/print/pdf.css">');
+      }
+    </script>
+    <link rel="stylesheet" href="../src/web/highlight/highlight.css">
+    <link rel="stylesheet" href="../src/web/timefold-presentation.css">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <style>
+        blockquote {
+            font-size: 25px;
+        }
+        /* Make tool slides fill the full slide area */
+        .reveal .slides section.tool-slide {
+            padding: 0;
+            margin: 0;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+        }
+        .reveal .slides section.tool-slide > * {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+<div class="reveal">
+<div class="watermark watermark-left">
+    <p>
+        <img src="../src/web/social/timefold-logo.png"/> timefold.ai</span>
+    </p>
+</div>
+    <div class="slides">
+        <section>
+            <p>This slidedeck contains tools for use during presentations.</p>
+        </section>
+        <section class="tool-slide" data-background-color="black">
+            <shift-scheduling-canvas algorithm="both"></shift-scheduling-canvas>
+        </section>
+        <section class="tool-slide">
+            <greedy-tree-canvas algorithm="both"></greedy-tree-canvas>
+        </section>
+    </div>
+
+<!-- Tool imports -->
+<script src="../src/content/elements/shift-scheduling-canvas.js"></script>
+<script src="../src/content/elements/greedy-tree-canvas.js"></script>
+
+<script src="../src/web/jquery/jquery.min.js"></script>
+<script src="../src/web/reveal/js/reveal.js"></script>
+<script src="../src/web/reveal/plugin/highlight/highlight.js"></script>
+<script src="../src/web/reveal/plugin/notes/notes.js"></script>
+<script src="../src/web/reveal/plugin/math/math.js"></script>
+
+<script>
+  const showControls = false;
+  Reveal.initialize({
+      // This fixes Logitech Spotlight
+  keyboard: {
+      37: 'prev',
+      39: 'next',
+  },
+    controls: showControls,
+    progress: true,
+    history: true,
+    center: false,
+    margin: 0,
+    minScale: 0.2,
+    maxScale: 100.0,
+    plugins: [ RevealHighlight, RevealNotes, RevealMath.KaTeX ],
+  });
+</script>
+</body>
+</html>
