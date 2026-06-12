@@ -215,8 +215,8 @@
                     <ul>
                         <li>Field Service Routing</li>
                         <li class="fragment">Employee Shift Scheduling</li>
-                        <li class="fragment">Job Scheduling</li>
                         <li class="fragment">Pickup and Delivery Routing</li>
+                        <li class="fragment">Task Scheduling</li>
                     </ul>
                 </li>
             </ul>
@@ -266,6 +266,7 @@
                 </tr>
                 </tbody>
             </table>
+            <p>solver.timefold.ai</p>
         </section>
         <section>
             <img src="../src/content/static/operations-research/operations-research-ugly-duckling_0.png" class="fullImage">
@@ -305,6 +306,11 @@
         </section>
         <section>
             <h2><i>"We spend<br/> 10x more time reading<br/> production code<br/>then writing it."</i></h2>
+            <p class="fragment"><i>- before Claude Code</i></p>
+        </section>
+        <section>
+            <h2><i>"We spend<br/> 1000x more time reading<br/> production code<br/>then writing it."</i></h2>
+            <p><i>- after Claude Code</i></p>
         </section>
         <section>
             <h2>Code should be<br/>easy to read</h2>
@@ -326,6 +332,10 @@
   .penalize(ONE_HARD)
   .asConstraint("Enough rest between shifts");
 </code></pre>
+        </section>
+        <section>
+            <h2>DEMO</h2>
+            <p>Quickstarts</p>
         </section>
         <section>
             <h2>How many constraints?</h2>
@@ -454,7 +464,7 @@ verifier.verifyThat(employeeMinimalRest)
             <p>app.timefold.ai</p>
         </section>
         <section>
-            <h2>30+ constraints</h2>
+            <h2>50+ constraints</h2>
             <p>Much more than<br/> VRP with Time Windows</p>
             <p class="fragment">One example...</p>
         </section>
