@@ -16,3 +16,15 @@ License: BSD - this is compatible with ASL 2.0: http://www.apache.org/legal/reso
 reveal.js version: 3.9.2
 Downloaded from: https://github.com/hakimel/reveal.js
 License: MIT - this is compatible with ASL 2.0: http://www.apache.org/legal/resolved.html#category-a
+
+three.js version: 0.170.0 (bundled into tf-deck/dist/tf-deck.js)
+Downloaded from: https://www.npmjs.com/package/three
+License: MIT - this is compatible with ASL 2.0: http://www.apache.org/legal/resolved.html#category-a
+
+highlight.js version: 11.11.1 (bundled into tf-deck/dist/tf-deck.js)
+Downloaded from: https://www.npmjs.com/package/highlight.js
+License: BSD-3-Clause - this is compatible with ASL 2.0: http://www.apache.org/legal/resolved.html#category-a
+
+Inter Tight and JetBrains Mono fonts (tf-deck/fonts)
+Downloaded from: https://fontsource.org
+License: SIL Open Font License 1.1

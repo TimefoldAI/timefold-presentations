@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Hack for Humanity London</title>
+    <meta name="description" content="Participant guide for Hack for Humanity London: build the planning tools your community needs, with Timefold.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/web/tf-deck/tf-deck.css">
+    <style>
+        .tf-slide.hfh-final { justify-content: center; gap: 80px; }
+        .tf-slide.hfh-final .top { display: flex; align-items: center; justify-content: space-between; gap: 64px; }
+        .tf-slide.hfh-final h1 { margin: 0; }
+        .tf-slide.hfh-final .cards { grid-template-columns: repeat(4, 1fr); }
+        .tf-slide.hfh-final .card { font-size: 32px; padding: 40px; }
+        .tf-slide.hfh-final .card .small { margin: 16px 0 0; font-size: 24px; }
+        .tf-slide .countdown { margin: 0; text-align: center; }
+        .tf-slide .countdown .label { font-size: 28px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--tf-muted); }
+        .tf-slide .countdown .time { font-family: var(--tf-mono); font-size: 150px; font-weight: 600; line-height: 1.1; color: var(--tf-purple); font-variant-numeric: tabular-nums; }
+        .tf-slide.hfh-title { position: relative; }
+        .tf-slide.hfh-title h1 { font-size: 150px; max-width: 1000px; }
+        .tf-slide.hfh-title .hosts {
+            position: absolute;
+            right: 170px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 56px;
+        }
+        .tf-slide.hfh-title .hosts .label {
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--tf-muted);
+        }
+        .tf-slide.hfh-title .hosts img { width: 420px; height: auto; }
+        .tf-nav-hint {
+            position: absolute;
+            left: 50%;
+            bottom: clamp(12px, 2.2vh, 28px);
+            transform: translateX(-50%);
+            font-size: clamp(11px, 1.25vh, 16px);
+            white-space: nowrap;
+        }
+        .tf-nav-hint kbd { font-family: var(--tf-mono); }
+        .tf-overview .tf-nav-hint { opacity: 0; }
+        @media print { .tf-nav-hint { display: none; } }
+    </style>
+</head>
+
+<body>
+<div class="tf-deck" data-footer="Corgi Cafe, London · Thursday, October 29, 2026 · With The AI Collective">
+    <!-- Not class="title": that adds the 3D logomark, which the host logos replace here -->
+    <section class="hfh-title">
+        <div class="kicker">Hackathon guide</div>
+        <h1>Hack for Humanity London</h1>
+        <p class="byline">Build the planning tools <strong>your community</strong> needs</p>
+        <div class="hosts">
+            <div class="label">Hosted by</div>
+            <img src="../src/content/static/partners/ai-collective-wordmark.png" alt="The AI Collective">
+            <img src="../src/web/social/timefold-logo.svg" alt="Timefold">
+        </div>
+    </section>
+
+    <section data-chapter="The day">
+        <section class="divider">
+            <h1>Six hours, one working solution</h1>
+        </section>
+        <section>
+            <h2>Pick a real problem. <span class="highlight">Plan it with Timefold.</span></h2>
+            <p class="fragment">Ready-made model, or build your own with an AI agent</p>
+            <p class="fragment">Ship an app people can use</p>
+            <p class="fragment">One day, teams of <span class="highlight">two to five</span></p>
+        </section>
+        <section>
+            <h2>The day</h2>
+            <ul class="plain">
+                <li><strong>09:00</strong> Briefing: problems, both build options, teams form</li>
+                <li><strong>09:15</strong> Hack: five hours to build your model and your app</li>
+                <li><strong>13:15</strong> Lunch is served, hacking continues</li>
+                <li><strong>14:15</strong> Demos and judging: five minutes per team, live</li>
+                <li><strong>15:00</strong> Close: winners announced</li>
+            </ul>
+        </section>
+    </section>
+
+    <section data-chapter="What you'll build">
+        <section class="divider">
+            <h1>An app people can use</h1>
+            <h3>with Timefold as the optimization engine</h3>
+        </section>
+        <section>
+            <h2>Somewhere near you…</h2>
+            <p class="fragment">A hospital struggles to plan its staff rotas <span class="highlight">fairly</span></p>
+            <p class="fragment">A food bank works out <span class="highlight">who drives where</span></p>
+            <p class="fragment">A volunteer group juggles too many people and too few <span class="highlight">time slots</span></p>
+        </section>
+        <section>
+            <h2>These are all <span class="highlight">planning problems</span></h2>
+        </section>
+        <section>
+            <h2>Who builds what</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="label">You build</div>
+                    <p>The <strong>app</strong>: website, mobile app, agent workflow, chatbot. Any language works.</p>
+                </div>
+                <div class="card">
+                    <div class="label">Timefold plans</div>
+                    <p>The <strong>planning model</strong>: ready-made, or your own.</p>
+                </div>
+                <div class="card">
+                    <div class="label">You bring</div>
+                    <p><strong>Realistic data</strong>: made-up but believable, at real-problem size.</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Your data goes in.<br/>The <span class="highlight">best plan</span> comes out.</h2>
+            <ol>
+                <li class="fragment"><strong>You describe the problem</strong> as JSON: what, to whom, which rules</li>
+                <li class="fragment"><strong>Timefold searches</strong>: tries many plans, scores each, keeps the best</li>
+                <li class="fragment"><strong>You get the plan back</strong> with a score, like <code>0hard/-12soft</code></li>
+            </ol>
+        </section>
+        <section>
+            <h2>Hard vs. soft</h2>
+            <ul class="plain">
+                <li class="fragment"><span class="tag hard">HARD</span> Never break. <code>0hard</code> means every one holds.</li>
+                <li class="fragment"><span class="tag">SOFT</span> Preferences. Closer to <code>0soft</code> is better.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>What it looks like</h2>
+            <pre><code class="language-json">POST /rotas
+{
+  "volunteers": [
+    { "name": "Amira", "skills": ["driving"], "maxHours": 6 },
+    { "name": "Tom",   "skills": ["packing"], "maxHours": 4 }
+  ],
+  "shifts": [
+    { "id": "sat-09", "start": "09:00", "end": "12:00", "skill": "driving" },
+    { "id": "sat-13", "start": "13:00", "end": "16:00", "skill": "packing" }
+  ]
+}
+
+200 OK
+{
+  "assignments": [
+    { "shift": "sat-09", "volunteer": "Amira" },
+    { "shift": "sat-13", "volunteer": "Tom" }
+  ],
+  "score": "0hard/0soft"
+}</code></pre>
+        </section>
+    </section>
+
+    <section data-chapter="Problem ideas">
+        <section class="divider">
+            <h1>Problem ideas</h1>
+            <h3>Start from a problem someone on your team has seen up close</h3>
+        </section>
+        <section>
+            <h2>Fair rotas for a care team or ward</h2>
+            <ul class="plain">
+                <li><span class="tag hard">HARD</span> Required skill on every shift</li>
+                <li><span class="tag hard">HARD</span> Minimum rest between shifts</li>
+                <li><span class="tag">SOFT</span> Spread nights and weekends fairly</li>
+                <li><span class="tag">SOFT</span> Respect preferred days off</li>
+            </ul>
+            <p class="small">Start with: A → Employee Shift Scheduling · B → employee scheduling quickstart</p>
+        </section>
+        <section>
+            <h2>Food-rescue and grocery deliveries</h2>
+            <ul class="plain">
+                <li><span class="tag hard">HARD</span> Each stop inside its time window</li>
+                <li><span class="tag hard">HARD</span> Never exceed van capacity</li>
+                <li><span class="tag">SOFT</span> Minimize total driving time</li>
+                <li><span class="tag">SOFT</span> Chilled food on the shortest routes</li>
+            </ul>
+            <p class="small">Start with: A → Field Service Routing · B → vehicle routing quickstart</p>
+        </section>
+        <section>
+            <h2>Your problem has rules a ready-made model can't express?</h2>
+            <p class="fragment"><span class="highlight">Build your own.</span></p>
+            <p class="small">More problem ideas on the website</p>
+        </section>
+    </section>
+
+    <section data-chapter="Teams and rules">
+        <section class="divider">
+            <h1>Teams of two to five</h1>
+            <h3>Arriving alone is normal: most people do</h3>
+        </section>
+        <section>
+            <h2>How teams form</h2>
+            <ol>
+                <li class="fragment">At the briefing, pitch your problem in one or two sentences</li>
+                <li class="fragment">People join the problem they care about most</li>
+                <li class="fragment">Organizers balance teams that are too big or too small</li>
+                <li class="fragment">Every team gets a problem, a name, and a table</li>
+            </ol>
+        </section>
+        <section class="divider">
+            <h1>Rules</h1>
+            <h3>Every project needs these to be judged</h3>
+        </section>
+        <section>
+            <h2>What every project needs</h2>
+            <ol>
+                <li><strong>Help people locally</strong>: a real planning problem in a local community</li>
+                <li><strong>Teams of two to five</strong>, formed on the day</li>
+                <li><strong>Use Timefold</strong> for the planning: ready-made or your own</li>
+                <li><strong>AI agents are welcome</strong>, but you must understand your code</li>
+            </ol>
+        </section>
+        <section>
+            <h2>And</h2>
+            <ol start="5">
+                <li><strong>Open tools and data are fine.</strong> Credit them.</li>
+                <li><strong>No real personal data.</strong> Names, addresses, health details: made-up or anonymized only.</li>
+                <li><strong>Follow the code of conduct</strong> and privacy policy of The AI Collective.</li>
+            </ol>
+            <p class="small">Breaking the rules can mean disqualification. Teams get a chance to explain first.</p>
+        </section>
+    </section>
+
+    <section data-chapter="Two ways to build">
+        <section class="divider">
+            <h1>Two ways to build</h1>
+            <h3>Both give you a Timefold model behind a REST API</h3>
+        </section>
+        <section>
+            <div class="cards">
+                <div class="card">
+                    <div class="label">Option A</div>
+                    <h3>Use a ready-made model</h3>
+                    <p>Fit your data to a model Timefold runs in production. Spend the day on your app.</p>
+                    <p class="small">You need: a free trial account. No Java.</p>
+                </div>
+                <div class="card">
+                    <div class="label">Option B</div>
+                    <h3>Build your own model</h3>
+                    <p>PRD Chat turns plain language into requirements. A quickstart gives you code to adapt.</p>
+                    <p class="small">You need: JDK 21+, Maven, Git, an AI agent, the hackathon license key.</p>
+                </div>
+            </div>
+            <p class="small">Custom models can score highest on modeling the problem.</p>
+        </section>
+    </section>
+
+    <section data-chapter="Option A: ready-made model">
+        <section class="divider">
+            <h2>Option A: a ready-made model</h2>
+            <h3>app.timefold.ai</h3>
+        </section>
+        <section>
+            <h2>Get an API key</h2>
+            <ol>
+                <li>Sign up for a free trial at <code>app.timefold.ai</code></li>
+                <li>Create an API key in the Platform</li>
+                <li>Keep it <span class="highlight">out of Git</span>: environment variable or git-ignored file</li>
+                <li>Pick the model that fits your problem</li>
+            </ol>
+        </section>
+        <section>
+            <h2>Pick a model</h2>
+            <ul class="tiles">
+                <li><strong>Field Service Routing</strong><br/>Visits for people on the road</li>
+                <li><strong>Employee Shift Scheduling</strong><br/>Shifts for staff and volunteers</li>
+                <li><strong>Pick-up and Delivery Routing</strong><br/>Moving goods from A to B</li>
+                <li><strong>Task Scheduling</strong><br/>Tasks for people over time</li>
+            </ul>
+            <p class="small">Stuck? Point your agent at <code>docs.timefold.ai/llms.txt</code></p>
+        </section>
+        <section>
+            <h2>Know what the model can and can't do</h2>
+            <p>A ready-made model supports a fixed set of rules.</p>
+            <p class="fragment">A rule you need isn't supported? <span class="highlight">Say so in your demo</span>, or switch to option B.</p>
+        </section>
+    </section>
+
+    <section data-chapter="Option B: build your own">
+        <section class="divider">
+            <h2>Option B: build your own</h2>
+            <h3>MCP server, license key, then a quickstart</h3>
+        </section>
+        <section>
+            <h2>Step 1: JDK 21 or higher and Maven</h2>
+            <pre><code class="language-bash"># macOS
+brew install --cask temurin@21
+brew install maven
+# Windows
+winget install EclipseAdoptium.Temurin.21.JDK
+winget install Apache.Maven
+# Ubuntu / Debian
+sudo apt install openjdk-21-jdk maven
+# Any OS, with SDKMAN
+sdk install java &lt;21.x-tem identifier from: sdk list java&gt;
+sdk install maven
+
+java -version   # openjdk version "21.0.x" or higher
+mvn -version    # Apache Maven 3.9.x, running on Java 21+</code></pre>
+        </section>
+        <section>
+            <h2>Step 2: connect the MCP server</h2>
+            <p class="small">Copy the server URL from <code>prd.timefold.ai</code></p>
+            <pre><code class="language-bash"># Claude Code
+claude mcp add --transport http timefold-prd &lt;MCP_SERVER_URL&gt;
+
+# Codex: ~/.codex/config.toml
+[mcp_servers.timefold-prd]
+url = "&lt;MCP_SERVER_URL&gt;"</code></pre>
+            <p class="small">Check: ask your agent "Which tools does the timefold-prd MCP server give you?"</p>
+        </section>
+        <section>
+            <h2>Step 3: the license key</h2>
+            <p>Download the hackathon license:
+                <a href="../timefold-license.pem" download="timefold-license.pem"><strong>timefold-license.pem</strong></a></p>
+            <pre><code class="language-bash"># Easiest: put it in your home directory
+mv ~/Downloads/timefold-license.pem ~/timefold-license.pem
+
+# Or point an environment variable at it
+export TIMEFOLD_LICENSE_PATH=/absolute/path/to/timefold-license.pem
+export TIMEFOLD_LICENSE="$(cat ./path/to/timefold-license.pem)"</code></pre>
+            <p class="small">Keep the name <code>timefold-license.pem</code> exactly, and don't commit it to your repository.</p>
+        </section>
+        <section>
+            <h2>Step 4: start from a quickstart</h2>
+            <ul class="plain">
+                <li>People assigned to shifts → <strong>Employee scheduling</strong></li>
+                <li>Drivers visiting stops → <strong>Vehicle routing</strong></li>
+                <li>Sessions in a room and slot → <strong>School timetabling</strong> or <strong>Meeting scheduling</strong></li>
+            </ul>
+            <pre><code class="language-bash">git clone https://github.com/TimefoldAI/timefold-quickstarts.git
+cd timefold-quickstarts/java/employee-scheduling
+mvn quarkus:dev   # open http://localhost:8080</code></pre>
+        </section>
+    </section>
+
+    <section data-chapter="Demo and judging">
+        <section class="divider">
+            <h1>No written submission</h1>
+            <h3>Your five-minute live demo is your entry</h3>
+        </section>
+        <section>
+            <h2>Half the score is the panel.<br/>Half is the <span class="highlight">room</span>.</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="label">Judges panel</div>
+                    <h3>50%</h3>
+                    <p>Four weighted criteria, scored one to five</p>
+                </div>
+                <div class="card">
+                    <div class="label">Audience vote</div>
+                    <h3>50%</h3>
+                    <p>Each team ranks its top three. Not your own.</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Judges panel criteria</h2>
+            <ul class="plain">
+                <li><strong>30%</strong> Community impact: a real, local problem; clear who benefits</li>
+                <li><strong>30%</strong> Modeling the problem: sensible hard and soft constraints, feasible plan</li>
+                <li><strong>20%</strong> Working solution: model and app work end to end, live, on realistic data</li>
+                <li><strong>20%</strong> Demo: problem, solution and result clear in five minutes</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Custom models can score <span class="highlight">highest</span> on modeling</h2>
+            <p>A well-configured ready-made model (A) can reach a three or four.</p>
+            <p class="fragment">A five needs <span class="highlight">custom constraints</span> for your community's specific rules (B), and a trade-off the model made that you can explain.</p>
+        </section>
+        <section>
+            <h2>Audience vote</h2>
+            <p>After the last demo, agree as a team on the three projects you'd most like to see used in your own community.</p>
+            <ul class="plain">
+                <li>First choice: <strong>3</strong> points</li>
+                <li>Second choice: <strong>2</strong> points</li>
+                <li>Third choice: <strong>1</strong> point</li>
+            </ul>
+            <p class="small">Ties: more judges points wins, then higher community impact.</p>
+        </section>
+        <section>
+            <h2>Prizes</h2>
+            <p><span class="highlight">€500</span> in Amazon vouchers</p>
+            <p class="fragment">Winners may be featured in The AI Collective's global newsletter: 300,000+ subscribers</p>
+        </section>
+    </section>
+
+    <section data-chapter="Help">
+        <h2>Getting help on the day</h2>
+        <ul class="plain">
+            <li><strong>Mentors:</strong> Timefold engineers walk the room. Raise a hand.</li>
+            <li><strong>Docs questions:</strong> ask your agent, point it at <code>docs.timefold.ai/llms.txt</code></li>
+        </ul>
+    </section>
+
+    <section class="hfh-final">
+        <div class="top">
+            <h1>Let's build!</h1>
+            <div class="countdown" data-end="2026-10-29T14:15:00Z">
+                <div class="label">Demos start in</div>
+                <div class="time">--:--:--</div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <div class="label">Everyone</div>
+                <a href="https://docs.timefold.ai">docs.timefold.ai</a>
+                <p class="small">For agents: <code>/llms.txt</code></p>
+            </div>
+            <div class="card">
+                <div class="label">Option A</div>
+                <a href="https://app.timefold.ai">app.timefold.ai</a>
+                <p class="small">Ready-made models, API key</p>
+            </div>
+            <div class="card">
+                <div class="label">Option B</div>
+                <a href="https://prd.timefold.ai/">prd.timefold.ai</a>
+                <p class="small">PRD Chat, MCP server</p>
+            </div>
+            <div class="card">
+                <div class="label">Option B</div>
+                <a href="https://github.com/TimefoldAI/timefold-quickstarts">timefold-quickstarts</a>
+                <p class="small">Quickstarts on GitHub</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script src="../src/web/tf-deck/dist/tf-deck.js"></script>
+<script>
+    // Navigation hint at the bottom of every slide, in the HUD so it follows its light/dark color.
+    // tf-deck creates the HUD only after its fonts load, so wait for it to appear.
+    (function () {
+        function addHint() {
+            const hud = document.querySelector('.tf-hud');
+            if (!hud) return false;
+            const hint = document.createElement('div');
+            hint.className = 'tf-nav-hint';
+            hint.innerHTML = 'Navigate with the <kbd>arrow keys</kbd> · <kbd>Esc</kbd> for the overview';
+            hud.appendChild(hint);
+            return true;
+        }
+        if (addHint()) return;
+        const observer = new MutationObserver(() => addHint() && observer.disconnect());
+        observer.observe(document.body, { childList: true });
+    })();
+</script>
+<script>
+    // Demos start at 14:15 GMT (London is on GMT on October 29)
+    (function () {
+        const pad = (n) => String(n).padStart(2, '0');
+        function tick() {
+            document.querySelectorAll('.countdown').forEach((el) => {
+                const left = Math.max(0, Math.floor((new Date(el.dataset.end) - Date.now()) / 1000));
+                el.querySelector('.time').textContent =
+                    `${pad(Math.floor(left / 3600))}:${pad(Math.floor(left / 60) % 60)}:${pad(left % 60)}`;
+                if (left === 0) el.querySelector('.label').textContent = 'Demos start now';
+            });
+        }
+        tick();
+        setInterval(tick, 1000);
+    })();
+</script>
+</body>
+</html>

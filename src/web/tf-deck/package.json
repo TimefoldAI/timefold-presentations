@@ -1,0 +1,19 @@
+{
+  "name": "tf-deck",
+  "private": true,
+  "description": "Timefold slide deck engine (Three.js). Builds dist/tf-deck.js, a single classic script that also works from file://.",
+  "scripts": {
+    "build": "esbuild src/main.js --bundle --minify --format=iife --target=es2020 --outfile=dist/tf-deck.js --legal-comments=linked",
+    "watch": "esbuild src/main.js --bundle --format=iife --target=es2020 --outfile=dist/tf-deck.js --sourcemap --watch",
+    "fonts": "node scripts/copy-fonts.mjs"
+  },
+  "dependencies": {
+    "highlight.js": "11.11.1",
+    "three": "0.170.0"
+  },
+  "devDependencies": {
+    "@fontsource/inter-tight": "5.1.0",
+    "@fontsource/jetbrains-mono": "5.1.0",
+    "esbuild": "0.24.0"
+  }
+}

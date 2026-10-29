@@ -1,0 +1,648 @@
+/******************************************************************************
+* Timefold deck theme. Slides are authored at 1920x1080 "CSS pixels";
+* the 3D stage scales them to the screen.
+******************************************************************************/
+
+@font-face { font-family: "Inter Tight"; font-weight: 400; font-display: swap; src: url("fonts/inter-tight-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter Tight"; font-weight: 500; font-display: swap; src: url("fonts/inter-tight-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter Tight"; font-weight: 600; font-display: swap; src: url("fonts/inter-tight-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter Tight"; font-weight: 700; font-display: swap; src: url("fonts/inter-tight-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter Tight"; font-weight: 400; font-display: swap; src: url("fonts/inter-tight-latin-ext-400-normal.woff2") format("woff2"); unicode-range: U+0100-02AF, U+1E00-1EFF, U+20A0-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Inter Tight"; font-weight: 600; font-display: swap; src: url("fonts/inter-tight-latin-ext-600-normal.woff2") format("woff2"); unicode-range: U+0100-02AF, U+1E00-1EFF, U+20A0-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "JetBrains Mono"; font-weight: 400; font-display: swap; src: url("fonts/jetbrains-mono-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-weight: 600; font-display: swap; src: url("fonts/jetbrains-mono-latin-600-normal.woff2") format("woff2"); }
+
+:root {
+    --tf-purple: #5307f9;
+    --tf-purple-light: #9677ff;
+    --tf-lavender: #ece6ff;
+    --tf-ink: #12131c;
+    --tf-ink-2: #3a3b47;
+    --tf-muted: #6b6d7c;
+    --tf-line: #e3e3ea;
+    --tf-bg: #f6f6f9;
+    --tf-paper: #ffffff;
+    --tf-orange: #ff7a1a;
+    --tf-teal: #18c6b7;
+    --tf-yellow: #f4be18;
+    --tf-green: #19c96b;
+    --tf-red: #c22b1f;
+
+    --tf-font: "PP Neue Montreal", "Inter Tight", "Helvetica Neue", Arial, sans-serif;
+    --tf-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    --tf-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+html.tf-live,
+html.tf-live body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    background: var(--tf-bg);
+}
+
+/* While the slides are being prepared they are laid out flat, but invisible. */
+.tf-live .tf-deck {
+    position: fixed;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.tf-stage,
+.tf-stage .tf-webgl,
+.tf-stage .tf-css3d {
+    position: fixed;
+    inset: 0;
+}
+
+/******************************************************************************
+* Slide
+******************************************************************************/
+
+.tf-slide {
+    box-sizing: border-box;
+    width: 1920px;
+    height: 1080px;
+    padding: 150px 170px 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: safe center;
+    align-items: flex-start;
+    overflow: hidden;
+    color: var(--tf-ink);
+    font-family: var(--tf-font);
+    font-size: 44px;
+    line-height: 1.35;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+.tf-live .tf-stage .tf-slide {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0s linear 0.5s;
+}
+
+.tf-live .tf-stage .tf-slide.present,
+.tf-live .tf-stage .tf-slide.leaving {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease;
+}
+
+.tf-slide * {
+    box-sizing: border-box;
+}
+
+/* Never squash content to fit: fitCode() shrinks code instead, and overflow should be visible while authoring. */
+.tf-slide > * {
+    flex-shrink: 0;
+}
+
+.tf-slide h1,
+.tf-slide h2,
+.tf-slide h3,
+.tf-slide h4 {
+    margin: 0 0 0.35em;
+    font-weight: 600;
+    color: inherit;
+    text-wrap: balance;
+}
+
+.tf-slide h1 { font-size: 128px; line-height: 1.0; letter-spacing: -0.035em; }
+.tf-slide h2 { font-size: 96px; line-height: 1.04; letter-spacing: -0.03em; }
+.tf-slide h3 { font-size: 68px; line-height: 1.1; letter-spacing: -0.02em; }
+.tf-slide h4 { font-size: 48px; line-height: 1.2; letter-spacing: -0.01em; }
+
+.tf-slide p {
+    margin: 0 0 0.6em;
+    color: var(--tf-ink-2);
+    max-width: 1500px;
+    text-wrap: pretty;
+}
+
+.tf-slide > :last-child { margin-bottom: 0; }
+
+.tf-slide a {
+    color: var(--tf-purple);
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 8px;
+}
+
+.tf-slide b,
+.tf-slide strong { font-weight: 600; }
+
+.tf-slide .small { font-size: 32px; color: var(--tf-muted); }
+
+.tf-slide :not(pre) > code {
+    font-family: var(--tf-mono);
+    font-size: 0.85em;
+    padding: 0.08em 0.3em;
+    border-radius: 8px;
+    background: var(--tf-lavender);
+    color: var(--tf-purple);
+}
+
+.highlight { color: var(--tf-purple); }
+.highlight-b { color: var(--tf-orange); }
+.positive { color: var(--tf-green); }
+.negative { color: var(--tf-red); }
+.commented { color: var(--tf-muted); }
+
+aside.notes { display: none; }
+
+/* Chapter label in the top left corner, with a "pixel" in front. */
+.tf-eyebrow {
+    position: absolute;
+    top: 78px;
+    left: 170px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--tf-purple);
+}
+
+.tf-eyebrow::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: var(--tf-purple);
+}
+
+/* A slide with nothing but a heading: make it a statement. */
+.tf-slide.statement h2 { font-size: 132px; max-width: 1580px; }
+.tf-slide.statement h3 { font-size: 104px; line-height: 1.06; letter-spacing: -0.03em; max-width: 1580px; }
+
+/******************************************************************************
+* Title & divider slides
+******************************************************************************/
+
+.tf-slide.title h1 {
+    font-size: 150px;
+    max-width: 1000px;
+}
+
+.tf-slide .kicker {
+    margin-bottom: 40px;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--tf-purple);
+}
+
+.tf-slide .byline {
+    margin-top: 40px;
+    font-size: 40px;
+    color: var(--tf-muted);
+}
+
+.tf-slide .byline strong { color: var(--tf-ink); font-weight: 500; }
+
+.tf-slide.divider { color: #fff; }
+.tf-slide.divider p { color: rgba(255, 255, 255, 0.82); }
+.tf-slide.divider h1,
+.tf-slide.divider h2 { font-size: 150px; line-height: 1.0; letter-spacing: -0.04em; max-width: 1500px; }
+.tf-slide.divider h3 { font-size: 96px; line-height: 1.06; letter-spacing: -0.03em; max-width: 1500px; }
+.tf-slide.divider .highlight { color: var(--tf-yellow); }
+.tf-slide.divider .kicker { color: rgba(255, 255, 255, 0.7); }
+
+/******************************************************************************
+* Lists
+******************************************************************************/
+
+.tf-slide ul,
+.tf-slide ol {
+    margin: 0 0 0.6em;
+    padding: 0;
+    list-style: none;
+    color: var(--tf-ink-2);
+}
+
+.tf-slide li {
+    position: relative;
+    padding-left: 64px;
+    margin: 0 0 0.45em;
+}
+
+.tf-slide ul > li::before {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 0.5em;
+    width: 16px;
+    height: 16px;
+    background: var(--tf-purple);
+}
+
+.tf-slide ol { counter-reset: tf-ol; }
+.tf-slide ol > li { counter-increment: tf-ol; padding-left: 84px; }
+
+.tf-slide ol > li::before {
+    content: counter(tf-ol, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 0.2em;
+    font-family: var(--tf-mono);
+    font-size: 0.7em;
+    font-weight: 600;
+    color: var(--tf-purple);
+}
+
+.tf-slide ul.plain > li { padding-left: 0; }
+.tf-slide ul.plain > li::before { content: none; }
+
+/* A grid of small cards, e.g. a list of use cases. */
+.tf-slide ul.tiles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.tf-slide ul.tiles > li {
+    margin: 0;
+    padding: 24px 28px;
+    font-size: 30px;
+    line-height: 1.2;
+    background: var(--tf-paper);
+    border: 1px solid var(--tf-line);
+    border-radius: 18px;
+    color: var(--tf-ink);
+}
+
+.tf-slide ul.tiles > li::before { content: none; }
+.tf-slide ul.tiles > li.more { background: transparent; border-style: dashed; color: var(--tf-muted); }
+
+.tf-slide .tag {
+    display: inline-block;
+    margin-left: 16px;
+    padding: 4px 12px;
+    vertical-align: 0.2em;
+    font-family: var(--tf-mono);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 0.06em;
+    border-radius: 8px;
+    color: var(--tf-purple);
+    background: var(--tf-lavender);
+}
+
+.tf-slide .tag.hard { color: #fff; background: var(--tf-red); }
+
+/******************************************************************************
+* Fragments
+******************************************************************************/
+
+.tf-slide .fragment {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.45s ease, transform 0.6s var(--tf-ease);
+}
+
+.tf-slide .fragment.visible {
+    opacity: 1;
+    transform: none;
+}
+
+/******************************************************************************
+* Images
+******************************************************************************/
+
+/* Layered diagrams (e.g. whatIsAPlanningProblem_0.svg, _1.svg, ...) stacked on one sheet of paper. */
+.tf-slide.layers { align-items: center; padding-top: 140px; padding-bottom: 110px; }
+
+.tf-layers {
+    display: grid;
+    width: 1110px;
+    height: 832px;
+    padding: 8px;
+    background: var(--tf-paper);
+    border-radius: 28px;
+    box-shadow: 0 2px 6px rgba(18, 19, 28, 0.05), 0 30px 70px -20px rgba(18, 19, 28, 0.18);
+}
+
+.tf-layers > img {
+    grid-area: 1 / 1;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.tf-layers > .fragment { transform: none; transition: opacity 0.35s ease; }
+
+.tf-slide figure { margin: 0; }
+.tf-slide figure figcaption { margin-top: 24px; font-size: 30px; color: var(--tf-muted); }
+
+.tf-slide .paper {
+    max-width: 1580px;
+    max-height: 700px;
+    border-radius: 24px;
+    background: var(--tf-paper);
+    box-shadow: 0 2px 6px rgba(18, 19, 28, 0.05), 0 30px 70px -20px rgba(18, 19, 28, 0.22);
+}
+
+.tf-slide img.icon { height: 1em; vertical-align: -0.15em; margin-right: 0.3em; }
+
+/******************************************************************************
+* Cards (e.g. the Q&A slide)
+******************************************************************************/
+
+.tf-slide .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    width: 100%;
+}
+
+.tf-slide .card {
+    padding: 44px 48px;
+    background: var(--tf-paper);
+    border: 1px solid var(--tf-line);
+    border-radius: 28px;
+    font-size: 38px;
+}
+
+.tf-slide .card .label {
+    margin-bottom: 28px;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--tf-muted);
+}
+
+.tf-slide .card img.qr { width: 260px; height: 260px; image-rendering: pixelated; }
+
+/******************************************************************************
+* Code
+******************************************************************************/
+
+.tf-slide pre {
+    position: relative;
+    width: 100%;
+    max-width: 1580px;
+    margin: 0;
+    padding: 44px 52px;
+    overflow: hidden;
+    font-family: var(--tf-mono);
+    font-size: 30px;
+    line-height: 1.5;
+    white-space: pre;
+    font-variant-ligatures: none;
+    color: #e6e6ef;
+    background: var(--tf-ink);
+    border-radius: 24px;
+    box-shadow: 0 30px 70px -24px rgba(18, 19, 28, 0.45);
+}
+
+.tf-slide pre code { font-family: inherit; }
+
+.tf-slide pre::after {
+    position: absolute;
+    top: 18px;
+    right: 24px;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #6f7186;
+}
+
+.tf-slide pre:has(code.language-java)::after { content: "Java"; }
+.tf-slide pre:has(code.language-bash)::after { content: "Shell"; }
+.tf-slide pre:has(code.language-python)::after { content: "Python"; }
+
+.tf-slide pre + p,
+.tf-slide pre + a,
+.tf-slide p + pre { margin-top: 32px; }
+.tf-slide pre + a { font-size: 30px; }
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-built_in { color: #b49dff; }
+.hljs-string,
+.hljs-regexp { color: #42e68e; }
+.hljs-comment,
+.hljs-quote { color: #7d7f93; font-style: italic; }
+.hljs-number,
+.hljs-literal,
+.hljs-symbol { color: #ff9337; }
+.hljs-title,
+.hljs-title.function_,
+.hljs-section { color: #22d3ee; }
+.hljs-title.class_,
+.hljs-type { color: #fad925; }
+.hljs-meta,
+.hljs-attr,
+.hljs-attribute { color: #ffba70; }
+.hljs-variable,
+.hljs-params { color: #e6e6ef; }
+
+/******************************************************************************
+* HUD: progress bar, footer, slide counter
+******************************************************************************/
+
+.tf-hud {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    font-family: var(--tf-font);
+    color: var(--tf-muted);
+    transition: color 0.6s ease;
+}
+
+.tf-hud.on-dark { color: rgba(255, 255, 255, 0.75); }
+
+.tf-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+}
+
+.tf-progress span {
+    display: block;
+    height: 100%;
+    background: var(--tf-purple);
+    transform-origin: left;
+    transition: transform 0.8s var(--tf-ease), background 0.6s ease;
+}
+
+.tf-hud.on-dark .tf-progress span { background: #fff; }
+
+.tf-footer,
+.tf-counter {
+    position: absolute;
+    bottom: clamp(12px, 2.2vh, 28px);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: clamp(11px, 1.25vh, 16px);
+}
+
+.tf-footer { left: clamp(16px, 2.4vw, 44px); }
+.tf-footer svg { height: 1.4em; width: auto; color: var(--tf-purple); transition: color 0.6s ease; }
+.tf-hud.on-dark .tf-footer svg { color: #fff; }
+
+.tf-counter {
+    right: clamp(16px, 2.4vw, 44px);
+    font-family: var(--tf-mono);
+    letter-spacing: 0.04em;
+}
+
+.tf-blackout {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.tf-hud.blackout .tf-blackout { opacity: 1; }
+
+/******************************************************************************
+* Overview (press O or Esc)
+******************************************************************************/
+
+.tf-overview .tf-stage .tf-slide {
+    opacity: 1 !important;
+    visibility: visible !important;
+    cursor: pointer;
+    background: var(--tf-paper);
+    border-radius: 48px;
+    box-shadow: 0 0 0 4px var(--tf-line);
+    transition: box-shadow 0.2s ease;
+}
+
+.tf-overview .tf-stage .tf-slide.divider { background: var(--tf-purple); }
+.tf-overview .tf-stage .tf-slide:hover { box-shadow: 0 0 0 28px var(--tf-purple-light); }
+.tf-overview .tf-stage .tf-slide.present { box-shadow: 0 0 0 36px var(--tf-purple); }
+.tf-overview .tf-hud .tf-footer,
+.tf-overview .tf-hud .tf-counter { opacity: 0; }
+
+/******************************************************************************
+* Print / PDF (open the deck with ?print-pdf and print to PDF)
+******************************************************************************/
+
+@page {
+    size: 1920px 1080px;
+    margin: 0;
+}
+
+html.tf-print body {
+    margin: 0;
+    background: var(--tf-bg);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+.tf-print .tf-slide {
+    position: relative;
+    break-after: page;
+    background-color: var(--tf-bg);
+    background-image:
+        linear-gradient(to right, rgba(18, 19, 28, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(18, 19, 28, 0.05) 1px, transparent 1px);
+    background-size: 64px 64px;
+}
+
+.tf-print .tf-slide.divider {
+    background-color: var(--tf-purple);
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+}
+
+.tf-print .tf-slide .fragment { transition: none; }
+
+@media (prefers-reduced-motion: reduce) {
+    .tf-slide .fragment { transform: none; }
+}
+
+/******************************************************************************
+* 3D scenes (<section data-scene="...">)
+******************************************************************************/
+
+.tf-slide .tf-step { display: none; }
+
+/* The slide's own content is only a fallback, for the overview and for print. */
+.tf-live .tf-stage .tf-slide.scene > :not(.tf-step) { visibility: hidden; }
+.tf-overview .tf-stage .tf-slide.scene > :not(.tf-step) { visibility: visible; }
+
+.tf-scene-label { pointer-events: none; }
+
+.tf-scene-label .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(40px) scale(0.6);
+    transform-origin: 50% 100%;
+    transition: opacity 0.35s ease, transform 0.7s var(--tf-ease);
+}
+
+.tf-scene-label.visible .inner {
+    opacity: 1;
+    transform: none;
+}
+
+.tf-scene-label .pill {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    height: 60px;
+    padding: 0 26px;
+    border-radius: 999px;
+    white-space: nowrap;
+    font-family: var(--tf-font);
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: #fff;
+    background: var(--tf-purple);
+    box-shadow: 0 12px 30px -8px rgba(83, 7, 249, 0.55);
+    -webkit-font-smoothing: antialiased;
+}
+
+.tf-scene-label .pill::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: #fff;
+}
+
+.tf-scene-label .stem { width: 3px; background: var(--tf-purple); }
+
+.tf-scene-label .tip {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--tf-purple);
+    box-shadow: 0 0 0 4px #fff;
+}
+
+.tf-scene-headline {
+    font-family: var(--tf-font);
+    font-size: 120px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.035em;
+    white-space: nowrap;
+    color: var(--tf-ink);
+    opacity: 0;
+    transition: opacity 1.2s ease 0.8s;
+    pointer-events: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+.tf-scene-headline.visible { opacity: 1; }
+.tf-scene-headline .highlight { color: var(--tf-purple); }
